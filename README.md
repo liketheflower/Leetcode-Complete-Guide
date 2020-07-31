@@ -5,6 +5,6 @@
 ## Easy
 
 ## Medium
-  #Binary Search
+<h3>Binary Search<h3/><br />
 1533. [Find the Index of the Large Integer (M) 1400](./1533.md) <br />
 ## Hard
