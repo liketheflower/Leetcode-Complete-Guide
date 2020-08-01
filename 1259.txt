@@ -1,0 +1,39 @@
+题意：
+
+偶数 个人站成一个圆，总人数为 num_people 。每个人与除自己外的一个人握手，所以总共会有 num_people / 2 次握手。
+
+将握手的人之间连线，请你返回连线不会相交的握手方案数。
+
+由于结果可能会很大，请你返回答案 模 10^9+7 后的结果。
+
+
+
+
+思路：
+1.以6 作为example
+2. 假设我们已经算好了N=2 和N=4 的握手方法
+3. 当N=6时,我们有一下几种选择, 让6与3 和1 握手， 使他被切成两部分， 这两部分是我们已经算好的了
+4. 简单的dp
+5. o(n^2)
+
+
+代码：
+class Solution {
+    public int numberOfWays(int N) {
+        int mod=1000000007;
+        long dp[]=new long[N+1];
+        dp[0]=1;
+        dp[2]=1;
+        for(int i=4;i<=N;i+=2){
+            long sum=0;
+            for(int j=i-1;j>=1;j-=2){
+                int left=j-1;
+                int right=i-j-1;
+                sum+=((dp[left]%mod)*(dp[right]%mod));
+                sum%=mod;
+            }
+            dp[i]=sum;
+        }
+        return (int)(dp[N]%mod);
+    }
+}
