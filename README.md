@@ -5,7 +5,8 @@
 ## Easy
 
 ## Medium
+1522. [Diameter of N-Ary Tree (M-) 1300](./1522.txt) <br />
 1533. [Find the Index of the Large Integer (M) 1400](./1533.txt) <br />
 ## Hard
-1516.[ Move Sub-Tree of N-Ary Tree (M+) 1700](./1516.txt) <br />
+1516.[ Move Sub-Tree of N-Ary Tree (H-) 1700](./1516.txt) <br />
  
