@@ -15,5 +15,6 @@ CF 分目测评估：<br />
 ### Tree
 1516.[ Move Sub-Tree of N-Ary Tree (H-) 1700](./1516.txt) <br />
 ### DP
+798. [Smallest Rotation with Highest Score (H) 1800](./798.txt) <br />
 1259. [ Handshakes That Don't Cross (H-) 1700](./1259.txt) <br />
  
