@@ -7,6 +7,8 @@ CF 分目测评估：<br />
 1300-1600 对应 medium<br />
 1700 - 2100 对应 hard<br />
 
+### Implementation
+#LCP 06. [拿硬币 (E) 800](./LCP06.txt) <br />
 ### DFS
 #1255. [Maximum Score Words Formed by Letters (H) 1800](./1255.txt) <br />
 ### Graph
