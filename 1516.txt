@@ -1,7 +1,7 @@
 题意：
 给你一颗n-arr 的树 和两个node： p 和 q, 你要把p 变成q 的child
 
-思路：先dfs 拿到p pparent q qparent 的referentce,然后根据不同的可能性来进行指针操作(只有几个case 要去考虑)
+思路：先dfs 拿到p pparent q qparent 的referentce,然后根据不同的可能性来进行指针操作(只有几个case 要去考虑,可参照题目给出例子)
 
 
 
