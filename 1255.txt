@@ -1,0 +1,57 @@
+题解：
+1.属于dfs 或者backtraing 系列
+2. 生成所有可能的combination -> 所有的subset, 跑时是2^n,由于n是14不太大的关系我们可以采用生成所有的方法
+3. 对每一个String组合进行分数计算,当然分数计算的前提是能够组成这个字母，然后选分数最大的那个组合就行啦！
+
+
+代码：
+
+class Solution {
+    int table[]=new int[26];
+    int res=0;
+    int score[];
+    public int maxScoreWords(String[] words, char[] letters, int[] score) {
+        this.score=score;
+        for(char c:letters){
+            table[c-'a']++;
+        }
+        dfs(words,0,new ArrayList<>());
+        return res;
+
+    }
+
+    public void dfs(String words[],int index,List<String>list){
+        if(index>=words.length){
+            return;
+        }
+        String cur=words[index];
+
+        list.add(cur);
+        dfs(words,index+1,list);
+        check(list);
+        list.remove(list.size()-1);
+        check(list);
+        dfs(words,index+1,list);
+    }
+
+    public void check(List<String>list){
+        int count[]=new int[26];
+        for(String s:list){
+            for(int i=0;i<s.length();i++){
+                count[s.charAt(i)-'a']++;
+            }
+        }
+        int sum=0;
+        boolean check=true;
+        for(int i=0;i<26;i++){
+            if(count[i]>table[i]){
+                check=false;
+                break;
+            }
+            sum+=(count[i]*score[i]);
+        }
+        if(check){
+            res=Math.max(res,sum);
+        }
+    }
+}
