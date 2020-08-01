@@ -1,0 +1,73 @@
+Given a root of an N-ary tree, you need to compute the length of the diameter of the tree.
+
+The diameter of an N-ary tree is the length of the longest path between any two nodes in the tree. This path may or may not pass through the root.
+
+
+
+题解：dfs 的post order
+
+
+1. 和binary tree diameter dp 的做法相似
+2. 每次post order 回来时要选最大的两个(或者一个)
+3. 这时候使用堆是一个比较好的数据结构
+
+
+代码：
+
+/*
+// Definition for a Node.
+class Node {
+    public int val;
+    public List<Node> children;
+
+    
+    public Node() {
+        children = new ArrayList<Node>();
+    }
+    
+    public Node(int _val) {
+        val = _val;
+        children = new ArrayList<Node>();
+    }
+    
+    public Node(int _val,ArrayList<Node> _children) {
+        val = _val;
+        children = _children;
+    }
+};
+*/
+
+class Solution {
+    int res=0;
+    public int diameter(Node root) {
+        dfs(root);
+        return res;
+    }
+
+    public int dfs(Node root){
+        if(root==null)return 0;
+
+
+        List<Node>childs=root.children;
+        if(childs.size()==0){
+            return 1;
+        }
+
+        PriorityQueue<Integer>pq=new PriorityQueue<>((a,b)->{
+            return b-a;
+        });
+
+        for(Node c:childs){
+            pq.add(dfs(c));
+        }
+
+        if(pq.size()==1){
+            res=Math.max(res,pq.peek());
+            return 1+pq.peek();
+        }else{
+            int top=pq.poll();
+            res=Math.max(res,top+pq.peek());
+            return top+1;
+        }
+    }
+}
