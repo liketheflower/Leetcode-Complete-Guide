@@ -1,0 +1,56 @@
+题解：
+1. BFS经典grid 走法
+2. queue 里面我们需要存一下几样东西,当前位置以及当前天数
+3. 转移： 四个反向以及天数加一
+
+代码：
+
+class Solution {
+public:
+    queue< vector<int> >q;
+    int orangesRotting(vector<vector<int>>& grid) {
+        int total=0;
+        for(int i=0;i<grid.size();i++){
+            for(int j=0;j<grid[0].size();j++){
+                if(grid[i][j]==0)continue;
+                if(grid[i][j]==2){
+                    q.push({i,j,0}); //[row,col,day]
+                }
+            }
+        }
+
+        while(q.size()!=0){
+            int size=q.size();
+            for(int i=0;i<size;i++){
+                vector<int>v=q.front();
+                q.pop();
+                int r=v[0],c=v[1],day=v[2];
+ 
+                total=day;
+                rote(grid,r+1,c,day+1);
+                rote(grid,r-1,c,day+1);
+                rote(grid,r,c+1,day+1);
+                rote(grid,r,c-1,day+1);
+            }
+        }
+
+        for(int i=0;i<grid.size();i++){
+            for(int j=0;j<grid[0].size();j++){
+                if(grid[i][j]==1)return -1;
+            }
+        }
+
+        return total;
+
+    }
+
+    void rote(vector<vector<int>>& grid,int r,int c,int day){
+        if(r<0||c<0||r>=grid.size()||c>=grid[0].size())return;
+        if(grid[r][c]==2)return;
+        if(grid[r][c]==0)return;
+        
+        grid[r][c]=2;
+
+        q.push({r,c,day});
+    }
+};
