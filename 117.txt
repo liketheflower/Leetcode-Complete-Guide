@@ -1,0 +1,50 @@
+本题 bfs 模板题，按bfs 方式走+一些小改动即可
+
+
+/*
+// Definition for a Node.
+class Node {
+    public int val;
+    public Node left;
+    public Node right;
+    public Node next;
+
+    public Node() {}
+    
+    public Node(int _val) {
+        val = _val;
+    }
+
+    public Node(int _val, Node _left, Node _right, Node _next) {
+        val = _val;
+        left = _left;
+        right = _right;
+        next = _next;
+    }
+};
+*/
+
+
+class Solution {
+    public Node connect(Node root) {
+        //bfs
+        Queue<Node>q=new LinkedList<>();
+        q.add(root);
+        
+        while(q.size()!=0){
+            int size=q.size();
+            Node first=q.poll();
+            if(first.left!=null)q.add(first.left);
+            if(first.right!=null)q.add(first.right);
+            
+            for(int i=1;i<size;i++){
+                Node node=q.poll();
+                first.next=node;
+                first=node;
+                if(node.left!=null)q.add(node.left);
+                if(node.right!=null)q.add(node.right);
+            }
+        }
+        return root;
+    }
+}
