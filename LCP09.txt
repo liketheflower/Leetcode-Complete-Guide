@@ -1,0 +1,32 @@
+思路： bfs+剪枝
+
+class Solution {
+    public int minJump(int[] A) {
+        
+        Queue<int[]>q=new LinkedList<>();
+        q.add(new int[]{0,0});
+
+        TreeSet<Integer>treeset=new TreeSet<>();
+        for(int i=1;i<A.length;i++)treeset.add(i);
+
+        while(q.size()!=0){
+            int pair[]=q.poll();
+            int i=pair[0],level=pair[1];
+            if(i+A[i]>=A.length)return level+1;
+            if(treeset.contains(i+A[i])){
+                treeset.remove(i+A[i]);
+                q.add(new int[]{i+A[i],level+1});
+            }
+            Set<Integer>set=new HashSet<>();
+            for(Integer key:treeset){
+                if(key>=i)break;
+                set.add(key);
+            }
+            for(Integer key:set){
+                treeset.remove(key);
+                q.add(new int[]{key,level+1});
+            }
+        }
+        return 0;
+    }
+}
