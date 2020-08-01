@@ -7,6 +7,8 @@ CF 分目测评估：<br />
 1300-1600 对应 medium<br />
 1700 - 2100 对应 hard<br />
 
+代码以c++ 和 Java 进行题解
+
 ### Greedy
 #LCP 06. [拿硬币 (E) 800](./LCP06.txt) <br />
 ### DFS
