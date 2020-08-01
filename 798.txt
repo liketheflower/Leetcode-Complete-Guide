@@ -1,0 +1,45 @@
+题意：rotate array by k， 如果k=1 并且数组是[2, 3, 1, 4, 0]， rotate后就是 [3,1,4,0,2]. 如果当前数字<=对应的index,分数加一，问k是多少使得分数最大。
+
+思路： 这题当然不能以n^2去解. 我们用熟悉的laze increment 方法设一个range (start+end) 看看每个index的数字经过多少rotation 会进入加分状态和多少rotation后进入无分状态
+
+代码：
+
+class Solution {
+    public int bestRotation(int[] A) {
+        //Afterward, any entries that are less than or equal to their index are worth 1 point. 
+        
+        //1. 每个index 的数字会在每一个index 一次
+        //2. 每个数字会在一个range 内加分
+        
+        //[1,2,3,4,5,6]
+        
+        int M=0,res=0;
+        int sum=0;
+        int start[]=new int[A.length];
+        int end[]=new int[A.length];
+        for(int i=0;i<A.length;i++){
+            int val=A[i];
+            if(val<=i)sum++;
+            if(val>=A.length||val==0)continue;
+            
+            int leave=val-1;
+            int move=i-leave;
+            if(move<0)move+=A.length;
+            
+            start[(i+1)%A.length]++;
+            end[move]++;
+        }
+        
+        M=sum;
+
+        for(int k=1;k<A.length;k++){
+            sum+=start[k];
+            sum-=end[k];
+            if(sum>M){
+                M=sum;
+                res=k;
+            }
+        }
+        return res;
+    }
+}
