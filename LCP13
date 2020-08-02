@@ -1,0 +1,248 @@
+思路：
+1. 经典旅商问题
+2. bit+dp 做法
+3. 先bfs 做好preprocessing 然后用旅商的dp 去搞
+
+
+代码：
+
+class Solution {
+    char grid[][];
+    int sr=-1,sc=-1;
+    int er=-1,ec=-1;
+    int mcnt=0;
+    int MAX=3000000;
+    int dp[][][];
+    List<int[]>stones=new ArrayList<>();
+    List<int[]>traps=new ArrayList<>();
+    int size;
+    int dis1[][];int dis2[][];int dis3[];
+    boolean visit[][];
+    Map<String,Integer>smap=new HashMap<>();
+    Map<String,Integer>tmap=new HashMap<>();
+    public int minimalSteps(String[] maze) {
+        int res=Integer.MAX_VALUE;
+        grid=new char[maze.length][maze[0].length()];
+        
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                grid[i][j]=maze[i].charAt(j);
+                if(grid[i][j]=='S'){
+                    sr=i;
+                    sc=j;
+                }
+                if(grid[i][j]=='T'){
+                    er=i;
+                    ec=j;
+                }
+               
+                if(grid[i][j]=='O'){
+                    stones.add(new int[]{i,j});
+                }
+                if(grid[i][j]=='M'){
+                    traps.add(new int[]{i,j});
+                }
+            }
+        }
+        
+
+        for(int i=0;i<stones.size();i++){
+            int pair[]=stones.get(i);
+            smap.put(pair[0]+","+pair[1],i);
+        }
+
+        for(int i=0;i<traps.size();i++){
+            int pair[]=traps.get(i);
+            tmap.put(pair[0]+","+pair[1],i);
+        }
+
+
+
+
+       
+
+        size=traps.size();
+        dp=new int[1<<(size)][Math.max(stones.size(),traps.size())][2];
+        
+        dis1=new int[16][40];//trap->stone
+        dis2=new int[40][16];
+        dis3=new int[40];
+
+        for(int i=0;i<dis1.length;i++){
+            Arrays.fill(dis1[i],-1);
+            dis3[i]=-1;
+        }
+
+        for(int i=0;i<16;i++){
+            Arrays.fill(dis2[i],-1);
+        }
+        
+
+        for(int i=0;i<traps.size();i++){
+            int pair[]=traps.get(i);
+            bfs1(pair[0],pair[1],i);
+        }
+
+        bfs2(sr,sc);
+
+        for(int i=0;i<dp.length;i++){
+            for(int j=0;j<dp[0].length;j++){
+                Arrays.fill(dp[i][j],-1);
+            }
+        }
+
+        
+        if(traps.size()==0)return bfs(sr,sc,er,ec);
+
+
+
+        for(int i=0;i<stones.size();i++){
+            int d=dis3[i];
+            if(d!=-1)res=Math.min(res,d+dfs((1<<(traps.size()))-1,i,1));
+        }
+        if(res>=2000000)return -1;
+        return res;
+
+    }
+
+    public int dfs(int path,int preIndex,int state){//0: trap 1:stone
+
+        if(dp[path][preIndex][state]!=-1)return dp[path][preIndex][state];
+
+        int next=1;
+        if(state==1)next=0;
+
+        int res=MAX;
+
+        if(state==0){
+            if(path==0){
+                int d=bfs(traps.get(preIndex)[0],traps.get(preIndex)[1],er,ec);
+                if(d!=-1){
+                    res=d;
+                }
+            }else{
+                for(int i=0;i<stones.size();i++){
+                    if(dis1[preIndex][i]!=-1){
+                        res=Math.min(res,dis1[preIndex][i]+dfs(path,i,next));
+                    }
+                }
+            }
+        }else{//state==1
+            int newpath=path;
+            for(int i=0;i<17;i++){
+                int bit=newpath&1;
+                if(bit==1&&dis2[preIndex][i]!=-1){   
+                    res=Math.min(res,dis2[preIndex][i]+dfs(path^(1<<i),i,next));  
+                }
+                newpath>>=1;
+            }
+        }
+
+        dp[path][preIndex][state]=res;
+        return res;
+    }
+
+    
+    
+    public void dfs(int r,int c){
+        if(r<0||c<0||r>=grid.length||c>=grid[0].length)return;
+        if(grid[r][c]=='#')return;
+        if(visit[r][c])return;
+        visit[r][c]=true;
+        dfs(r+1,c);
+        dfs(r-1,c);
+        dfs(r,c+1);
+        dfs(r,c-1);
+    }
+
+
+
+
+
+    //find distance
+    public int bfs1(int i,int j,int index){//stone bfs
+        int dx[]=new int[]{0,0,1,-1};
+        int dy[]=new int[]{1,-1,0,0};
+        Queue<int[]>q=new LinkedList<>();
+        q.add(new int[]{i,j,0});
+        Set<String>set=new HashSet<>();
+        set.add(i+","+j);
+        while(q.size()!=0){
+            int pair[]=q.poll();
+            int r=pair[0],c=pair[1];
+            if(grid[r][c]=='O'){
+                dis1[index][smap.get(r+","+c)]=pair[2];
+                dis2[smap.get(r+","+c)][index]=pair[2];
+            }
+            for(int x=0;x<4;x++){
+                int newr=pair[0]+dx[x];
+                int newc=pair[1]+dy[x];
+                if(in(set,newr,newc)){
+                    q.add(new int[]{newr,newc,pair[2]+1});
+                    set.add(newr+","+newc);
+                }
+            }
+        }
+        return -1;
+    }
+
+
+        public int bfs2(int i,int j){//stone bfs
+        int dx[]=new int[]{0,0,1,-1};
+        int dy[]=new int[]{1,-1,0,0};
+        Queue<int[]>q=new LinkedList<>();
+        q.add(new int[]{i,j,0});
+        Set<String>set=new HashSet<>();
+        set.add(i+","+j);
+        while(q.size()!=0){
+            int pair[]=q.poll();
+            int r=pair[0],c=pair[1];
+            if(grid[r][c]=='O'){
+                dis3[smap.get(r+","+c)]=pair[2];
+            }
+            for(int x=0;x<4;x++){
+                int newr=pair[0]+dx[x];
+                int newc=pair[1]+dy[x];
+                if(in(set,newr,newc)){
+                    q.add(new int[]{newr,newc,pair[2]+1});
+                    set.add(newr+","+newc);
+                }
+            }
+        }
+        return -1;
+    }
+
+    
+
+
+    public int bfs(int i,int j,int r,int c){
+        int dx[]=new int[]{0,0,1,-1};
+        int dy[]=new int[]{1,-1,0,0};
+        Queue<int[]>q=new LinkedList<>();
+        q.add(new int[]{i,j,0});
+        Set<String>set=new HashSet<>();
+        set.add(i+","+j);
+        while(q.size()!=0){
+            int pair[]=q.poll();
+            if(pair[0]==r&&pair[1]==c)return pair[2];
+            for(int x=0;x<4;x++){
+                int newr=pair[0]+dx[x];
+                int newc=pair[1]+dy[x];
+                if(in(set,newr,newc)){
+                    q.add(new int[]{newr,newc,pair[2]+1});
+                    set.add(newr+","+newc);
+                }
+            }
+        }
+        return -1;
+    }
+    
+
+    public boolean in(Set<String>set,int r,int c){
+        if(r<0||r>=grid.length||c<0||c>=grid[0].length)return false;
+        if(grid[r][c]=='#')return false;
+        String state=r+","+c;
+        if(set.contains(state))return false;
+        return true;
+    }
+}
