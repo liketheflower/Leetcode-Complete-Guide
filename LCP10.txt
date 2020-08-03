@@ -1,0 +1,64 @@
+
+思路：比较难的一题，dfs 后序遍历dp，但是要存什么比较难想
+
+1. 存的是两个，子树当行和双行的时间
+2. root=single+double*0.5
+3. 如果单行有过剩的可以移去另一边的双行
+
+代码：
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    Map<String,Integer>memo=new HashMap<>(); 
+    public double minimalExecTime(TreeNode root) {    
+       
+        double res[]=dfs(root);
+        return res[0]+res[1]*0.5;
+    }
+
+    public double[] dfs(TreeNode root){
+        if(root==null)return new double[]{0.0,0.0};//single,  together
+
+        double l[]=dfs(root.left);
+        double r[]=dfs(root.right);
+
+        int cur=root.val;
+
+        double res[]=new double[2];
+        double lsingle=l[0],ldouble=l[1];
+        double rsingle=r[0],rdouble=r[1];
+
+        double common=Math.min(lsingle,rsingle);
+        double extra=Math.max(lsingle,rsingle)-common;
+        if(lsingle>=rsingle){
+            if(extra>=rdouble){
+                extra-=rdouble;
+                rdouble*=2;
+            }else{
+                rdouble+=extra;
+                extra=0;
+            }
+        }else{
+            if(extra>=ldouble){
+                extra-=ldouble;
+                ldouble*=2;
+            }else{
+                ldouble+=extra;
+                extra=0;
+            }
+        }
+
+        res[0]+=cur+extra;
+        res[1]+=common*2+ldouble+rdouble;
+        return res;   
+    }
+    
+}
