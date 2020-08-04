@@ -1,0 +1,37 @@
+思路：
+1 . 只要dfs 就行了，如果收缩到终点，方法+1
+2. 跑时 o(k n)
+
+代码 ： 
+
+class Solution {
+    List<Integer>adjecent[];
+    int n;
+    int res=0;
+    public int numWays(int n, int[][] relation, int k) {
+        this.n=n;
+        adjecent=new ArrayList[n];
+
+        for(int i=0;i<n;i++){
+            adjecent[i]=new ArrayList<>();
+        }
+
+        for(int pair[]:relation){
+            adjecent[pair[0]].add(pair[1]);
+        }
+        dfs(0,k);
+        return res;
+    }
+
+    public void dfs(int root,int k){
+        if(k==0){
+            if(root==n-1)res++;
+            return;
+        }
+        List<Integer>childs=adjecent[root];
+
+        for(int c:childs){
+            dfs(c,k-1);
+        }
+    }
+}
