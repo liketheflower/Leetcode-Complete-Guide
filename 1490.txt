@@ -1,5 +1,7 @@
 思路：简单的n-tree 遍历
 
+
+代码：
 /*
 // Definition for a Node.
 class Node {
