@@ -1,0 +1,47 @@
+思路：简单的n-tree 遍历
+
+/*
+// Definition for a Node.
+class Node {
+    public int val;
+    public List<Node> children;
+
+    
+    public Node() {
+        children = new ArrayList<Node>();
+    }
+    
+    public Node(int _val) {
+        val = _val;
+        children = new ArrayList<Node>();
+    }
+    
+    public Node(int _val,ArrayList<Node> _children) {
+        val = _val;
+        children = _children;
+    }
+};
+*/
+
+class Solution {
+    Map<Node,Node>map=new HashMap<>();
+    public Node cloneTree(Node root) {
+        if(root==null)return null;
+        Node R=new Node(root.val);
+        dfs(root,R);
+        return R;
+    }
+
+
+    public void dfs(Node root,Node R){
+        if(root==null)return;
+
+        List<Node>childs=root.children;
+
+        for(Node c:childs){
+            Node node=new Node(c.val);
+            R.children.add(node);
+            dfs(c,node);
+        }
+    }
+}
