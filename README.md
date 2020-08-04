@@ -29,4 +29,6 @@ CF 分目测评估：<br />
 #1259. [ Handshakes That Don't Cross (H-) 1700](./1259.txt) <br />
 #LCP10. [ 二叉树任务调度 (H+) 2200](./LCP10.txt) <br />
 #LCP13. [ 寻宝 (H+) 2100](./LCP13.txt) <br />
+### Math
+#LCP3. [ 机器人大冒险 (M) 1500](./LCP3.txt) <br />
  
