@@ -1,0 +1,86 @@
+题意：力扣团队买了一个可编程机器人，机器人初始位置在原点(0, 0)。小伙伴事先给机器人输入一串指令command，机器人就会无限循环这条指令的步骤进行移动。指令有两种：
+
+U: 向y轴正方向移动一格
+R: 向x轴正方向移动一格。
+不幸的是，在 xy 平面上还有一些障碍物，他们的坐标用obstacles表示。机器人一旦碰到障碍物就会被损毁。
+
+给定终点坐标(x, y)，返回机器人能否完好地到达终点。如果能，返回true；否则返回false。
+
+
+
+思路：
+1.我们可以先计算出一次指令可以走的所有的点
+2. 因为是循环的指令，以后的点我们也可以推算出来
+3. 通过计算看看能不能走到终点，会不会碰到障碍物
+4. HashSet 是一个好的数据结构
+
+
+
+
+代码：
+
+class Solution {
+    public boolean robot(String s, int[][] A, int tx, int ty) {
+        Set<String>set=new HashSet<>();
+        int U=0,R=0;
+        int x=0,y=0;
+        boolean res=false;
+        List<int[]>pos=new ArrayList<>();
+        for(int pair[]:A){
+            set.add(pair[0]+","+pair[1]);
+        }
+        
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(c=='R'){
+                R++;
+            }else{
+                U++;
+            }
+        }
+
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(c=='R'){
+                x++;
+            }else{
+                y++;
+            }
+            if(set.contains(x+","+y))return false;
+            pos.add(new int[]{x,y});
+        }
+       
+        //每次循环点的转移方程 ： x+R*time y+U*time
+
+        set=new HashSet<>();
+        set.add("0,0");
+        //确定是否可以到达
+        for(int pair[]:pos){
+           if(tx>=pair[0]&&((tx-pair[0])%R)==0){
+               int time=(tx-pair[0])/R;
+               if(ty==pair[1]+time*U)res=true;
+           }
+           
+           set.add(pair[0]+","+pair[1]);
+        }
+       
+        //看会不会碰壁
+
+
+        for(int pair[]:A){
+    
+            int obsx=pair[0];
+            int obsy=pair[1];
+            if(obsx>tx||obsx>ty)continue;
+
+            int time=obsx/R;
+            
+            int orix=obsx-time*R;
+            int oriy=obsy-time*U;
+
+            if(set.contains(orix+","+oriy))return false;
+        }
+
+        return res;
+    }
+}
