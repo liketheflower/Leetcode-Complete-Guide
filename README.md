@@ -27,6 +27,7 @@ CF 分目测评估：<br />
 #1490.[ Clone N-tree (M-) 1300](./1490.txt) <br />
 #1516.[ Move Sub-Tree of N-Ary Tree (H-) 1700](./1516.txt) <br />
 ### DP
+#691. Stickers to Spell Word (H) 1900](./691.txt) <br />
 #798. [Smallest Rotation with Highest Score (H) 1900](./798.txt) <br />
 #1259. [ Handshakes That Don't Cross (H-) 1700](./1259.txt) <br />
 #LCP10. [ 二叉树任务调度 (H+) 2200](./LCP10.txt) <br />
