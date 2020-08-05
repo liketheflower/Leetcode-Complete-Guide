@@ -1,0 +1,132 @@
+思路：
+1.此题是好题,我们要把一个n子树转换成一个可用线段树操控的结构
+2. dfs 的代码, 给每个subtree assing 一个区间
+3. 线段树用了laze increment的技巧
+
+
+代码：
+
+class Solution {
+    Map<Integer,Node>map=new HashMap<>();
+    int id=0;
+    int mod=1000000007;
+    public int[] bonus(int n, int[][] leadership, int[][] operations) {
+        List<Integer>list=new ArrayList<>();
+        for(int i=1;i<=n;i++){
+            map.put(i,new Node(i));
+        }
+
+        for(int A[]:leadership){
+            map.get(A[0]).childs.add(map.get(A[1]));
+        }
+
+        dfs(map.get(1));
+
+
+
+        Seg seg=new Seg(0,n-1);
+
+        for(int A[]:operations){
+            int nodeid=A[1];
+            Node node=map.get(nodeid);
+            if(A[0]==1){//[r,r]
+                int coin=A[2];
+                seg.update(node.r,node.r,coin);
+            }
+            else if(A[0]==2){//[l,r]
+                int coin=A[2];
+                seg.update(node.l,node.r,coin);
+            }else{//query  [l,r]
+                long a=seg.query(node.l,node.r,0);
+                a%=mod;
+                list.add((int)(a));
+            }
+        }
+
+        return convert(list);
+    }
+
+    public int[] convert(List<Integer>list){
+        int res[]=new int[list.size()];
+        for(int i=0;i<list.size();i++){
+            res[i]=list.get(i);
+        }
+        return res;
+    }
+
+    public int dfs(Node root){
+         List<Node>childs = root.childs;
+         int min=Integer.MAX_VALUE;
+         for(Node c:childs){
+             min=Math.min(min,dfs(c));
+         }
+         int r=id;
+         min=Math.min(min,r);
+         int l=min;
+         id++;
+         root.l=l;
+         root.r=r;
+         return min;
+    }
+
+    class Seg{
+        int s,e;
+        Seg left,right;
+        long sum=0;
+        long add=0;
+        public Seg(int s,int e){
+            this.s=s;this.e=e;
+            if(s!=e){
+                int mid=s+(e-s)/2;
+                if(s<=mid)left=new Seg(s,mid);
+                if(e>=mid+1)right=new Seg(mid+1,e); 
+            }
+        }
+
+        public void update(int l,int r,int val){
+            if(l==s&&r==e){
+                this.add+=val;
+                this.sum+=(val*(r-l+1));
+                return;
+            }
+
+            int mid=s+(e-s)/2;
+            if(r<=mid){
+                left.update(l,r,val);
+            }
+            else if(l>=mid+1){
+                right.update(l,r,val);
+            }else{
+                left.update(l,mid,val);
+                right.update(mid+1,r,val);
+            }
+            this.sum+=(val*(r-l+1));
+        }
+
+        public long query(int l,int r,long newadd){
+            if(l==s&&r==e){
+                return this.sum+(newadd)*(r-l+1);
+            }
+            int mid=s+(e-s)/2;
+            newadd+=this.add;
+            if(r<=mid){
+                return left.query(l,r,newadd);
+            }
+            else if(l>=mid+1){
+                return right.query(l,r,newadd);
+            }else{
+                return left.query(l,mid,newadd)+right.query(mid+1,r,newadd);
+            }
+        }
+
+    }
+
+    class Node{//what the range would be for that particular node
+        int id;
+        int l=0,r=0;
+        List<Node>childs=new ArrayList<>();
+        public Node(int id){
+            this.id=id;
+        }
+    }
+}
