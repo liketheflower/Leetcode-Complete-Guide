@@ -33,4 +33,6 @@ CF 分目测评估：<br />
 #LCP13. [ 寻宝 (H+) 2100](./LCP13.txt) <br />
 ### Math
 #LCP3. [ 机器人大冒险 (M) 1500](./LCP3.txt) <br />
+### Segment Tree
+#LCP5. [ 发leetcoin (H+) 2300](./LCP5.txt) <br />
  
