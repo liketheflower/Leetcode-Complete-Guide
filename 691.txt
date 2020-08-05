@@ -1,0 +1,82 @@
+思路：
+1. 经典背包题
+2. 注意事项：一个可以取多次，所以用个old 来记录如果他不能再取
+
+
+代码：
+
+class Solution {
+    int table[]=new int[26];
+    public int minStickers(String[] A, String T) {
+        List<String>list=new ArrayList<>();
+
+        for(int i=0;i<T.length();i++){
+            table[T.charAt(i)-'a']++;
+        }
+
+        for(int i=0;i<A.length;i++){
+            boolean flag=false;
+            for(int j=i+1;j<A.length;j++){
+                if(check(A[i],A[j])){
+                    flag=true;
+                    break;
+                }
+            }
+            if(!flag){
+                list.add(A[i]);
+            }
+        }
+
+        int dp[]=new int[1<<(T.length())];
+        for(int i=0;i<dp.length;i++){
+           dp[i]=Integer.MAX_VALUE;
+        }
+        dp[0]=0;
+
+        for(int i=0;i<list.size();i++){
+            String s=list.get(i);
+            for(int j=1;j<dp.length;j++){
+                int cur=j;
+                int old=cur;
+                int cnt=0;
+                while(true){
+                    for(char c:s.toCharArray()){
+                        for(int x=0;x<T.length();x++){
+                            if((cur&(1<<x))!=0&&T.charAt(x)==c){
+                                cur=cur^(1<<x);//turn off it and use it=>break
+                                break;
+                            }
+                        }
+                    }
+                    if(old==cur)break;
+                    cnt++;
+                    if(dp[cur]!=Integer.MAX_VALUE){
+                        dp[j]=Math.min(dp[j],dp[cur]+cnt);
+                    }
+                    old=cur;
+                }
+            }
+        }
+
+        return dp[dp.length-1]==Integer.MAX_VALUE?-1:dp[dp.length-1];
+
+    }
+
+    public boolean check(String s1,String s2){
+        int t1[]=new int[26];
+        int t2[]=new int[26];
+
+        for(int i=0;i<s1.length();i++){
+            t1[s1.charAt(i)-'a']++;
+        }
+
+        for(int i=0;i<s2.length();i++){
+            t2[s2.charAt(i)-'a']++;
+        }
+
+        for(int i=0;i<26;i++){
+            if(table[i]!=0&&t1[i]>t2[i])return false;
+        }
+        return true;
+    }
+}
