@@ -21,8 +21,8 @@ CF 分目测评估：<br />
 ### Graph
 #1522. [Diameter of N-Ary Tree (M-) 1300](./1522.txt) <br />
 ### Binary Search
-#LCP12. [小张刷题计划 (M) 1500](./LCP12.txt) <br />
 #1533. [Find the Index of the Large Integer (M) 1500](./1533.txt) <br />
+#LCP12. [小张刷题计划 (M) 1500](./LCP12.txt) <br />
 ### Tree
 #1490.[ Clone N-tree (M-) 1300](./1490.txt) <br />
 #1516.[ Move Sub-Tree of N-Ary Tree (H-) 1700](./1516.txt) <br />
