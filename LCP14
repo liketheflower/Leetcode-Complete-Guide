@@ -1,0 +1,111 @@
+1. 这题的难处在于不能用 n^2完成
+2. 我们要用素数的处理方式
+3. 代码有两个版本，第二个是第一个的优化（最终版本）
+
+
+代码1：
+class Solution {
+    public int splitArray(int[] A) {
+    List<Integer>primes=new ArrayList<>();
+    int dp[]=new int[A.length]; 
+    Map<Integer,Integer>map=new HashMap<>();
+    int M=0;
+    for(int i:A)M=Math.max(i,M);
+
+    int res=0;
+
+    boolean[] isPrime = new boolean[M+1];
+       
+    for (int i = 2; i <isPrime.length; i++) {
+        isPrime[i] = true;
+    }
+       
+    for (int i = 2; i * i <isPrime.length; i++) {
+        if (!isPrime[i]) continue;
+        for (int j = i * i; j <isPrime.length; j += i) {
+            isPrime[j] = false;
+        }
+    }
+
+    for(int i=2;i<isPrime.length;i++){
+        if(isPrime[i])primes.add(i);
+    }
+
+    
+    for(int i=0;i<A.length;i++){
+        int val=A[i];
+        if(i==0)dp[0]=1;
+        else dp[i]=1+dp[i-1];
+        //dp[i]=1+dp[i-1];
+        for(int p:primes){
+            if(p>val)break;
+            if(val%p==0){
+                if(map.containsKey(p)){
+                    dp[i]=Math.min(dp[i],map.get(p));
+                }else{
+                    if(i==0)map.put(p,1);
+                    else map.put(p,dp[i-1]+1);
+                    //map.put(p,dp[i-1]+1);
+                }
+                while(val%p==0){
+                    val/=p;
+                }
+            }
+        }
+    }
+
+    return dp[dp.length-1];
+
+    }
+
+}
+
+
+
+
+
+
+代码2：
+class Solution {
+    public int splitArray(int[] A) {
+        
+        int max=0;
+        Map<Integer,Integer>map=new HashMap<>();
+        int dp[]=new int[A.length];
+        for(int i:A)max=Math.max(max,i);
+
+        int primes[]=new int[max+1];
+
+        for(int i=2;i<primes.length;i++){
+            if(primes[i]==0){//is prime
+                for(int j=i;j<primes.length;j+=i){
+                    primes[j]=i;
+                }
+            }
+        }
+
+        for(int i=0;i<A.length;i++){
+            int val=A[i];
+            
+            if(i==0)dp[i]=1;
+            else dp[i]=1+dp[i-1];
+            
+            //2 3 5 
+            while(val>1){
+                int p=primes[val];
+                if(map.containsKey(p)){
+                    dp[i]=Math.min(dp[i],map.get(p));
+                    if(dp[i-1]+1<map.get(p))map.put(p,dp[i-1]+1);
+                }else{
+                    if(i==0)map.put(p,1);
+                    else map.put(p,1+dp[i-1]);
+                }
+                val/=p;
+            }
+        }
+       
+
+
+        return dp[dp.length-1];
+    }
+}
