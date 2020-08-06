@@ -1,0 +1,12 @@
+自己体会。。。
+
+题目不好
+
+
+class Solution {
+    public int expectNumber(int[] A) {
+        Set<Integer>set=new HashSet<>();
+        for(int i : A)set.add(i);
+        return set.size();
+    }
+}
