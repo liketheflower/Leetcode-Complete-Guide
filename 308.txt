@@ -1,0 +1,101 @@
+二维线段树 (参照 quad tree)
+
+
+代码：
+class NumMatrix {
+    Seg seg;
+    int matrix[][];
+    public NumMatrix(int[][] matrix) {
+        this.matrix=matrix;
+        if(matrix.length>0&&matrix[0].length>0){
+            seg=new Seg(0,0,matrix.length-1,matrix[0].length-1);
+        }
+    }
+    
+    public void update(int row, int col, int val) {
+        int old=matrix[row][col];
+        matrix[row][col]=val;
+        seg.update(row,col,val-old);
+    }
+    
+    public int sumRegion(int row1, int col1, int row2, int col2) {
+        int res = seg.query(row1,col1,row2,col2);
+        return res;
+    }
+
+    class Seg{
+        Seg childs[]=new Seg[4];
+        int sr,sc,er,ec;
+        int sum=0;
+
+        public Seg(int sr,int sc,int er,int ec){
+            this.sr=sr;
+            this.er=er;
+            this.sc=sc;
+            this.ec=ec;
+
+            if(sr==er&&sc==ec){
+                this.sum=matrix[sr][sc];
+            }
+            else if(sr<=er&&sc<=ec){
+                int midr=sr+(er-sr)/2;
+                int midc=sc+(ec-sc)/2;
+
+                childs[0]=new Seg(sr,sc,midr,midc);
+                childs[1]=new Seg(sr,midc+1,midr,ec);
+                childs[2]=new Seg(midr+1,sc,er,midc);
+                childs[3]=new Seg(midr+1,midc+1,er,ec);
+
+                for(int i=0;i<4;i++){
+                    this.sum+=childs[i].sum;
+                }
+            }
+            
+        }
+
+        public void update(int r,int c,int add){
+            if(sr==er&&sc==ec&&sr==r&&sc==c){
+                this.sum+=add;
+                return;
+            }
+            this.sum+=add;
+            for(int i=0;i<4;i++){
+                Seg child=childs[i];
+                if(r>=child.sr&&c>=child.sc&&r<=child.er&&c<=child.ec){
+                    child.update(r,c,add);
+                }
+            }
+        }
+
+        public int query(int r1,int c1,int r2,int c2){
+            if(sr==r1&&sc==c1&&er==r2&&ec==c2){
+                return this.sum;
+            }
+
+            int res=0;
+            
+            for(int i=0;i<4;i++){
+                Seg child=childs[i];
+                int sub[]=overlap(child.sr,child.sc,child.er,child.ec,r1,c1,r2,c2);
+                if(sub==null){
+                    continue;
+                }
+                res+=child.query(sub[0],sub[1],sub[2],sub[3]);
+            }
+            return res;
+        }
+
+        public int[] overlap(int r1,int c1,int r2,int c2,int r3,int c3,int r4,int c4){
+            if(r3>r2||c3>c2||r4<r1||c4<c1)return null;
+            return new int[]{Math.max(r1,r3),Math.max(c1,c3),Math.min(r2,r4),Math.min(c2,c4)};
+        }
+        
+    }
+}
+
+/**
+ * Your NumMatrix object will be instantiated and called as such:
+ * NumMatrix obj = new NumMatrix(matrix);
+ * obj.update(row,col,val);
+ * int param_2 = obj.sumRegion(row1,col1,row2,col2);
+ */
