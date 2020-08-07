@@ -1,0 +1,62 @@
+在由 2D 网格表示的校园里有 n 位工人（worker）和 m 辆自行车（bike），n <= m。所有工人和自行车的位置都用网格上的 2D 坐标表示。
+
+我们为每一位工人分配一辆专属自行车，使每个工人与其分配到的自行车之间的曼哈顿距离最小化。
+
+p1 和 p2 之间的曼哈顿距离为 Manhattan(p1, p2) = |p1.x - p2.x| + |p1.y - p2.y|。
+
+返回每个工人与分配到的自行车之间的曼哈顿距离的最小可能总和。
+
+
+
+
+思路：
+1. 人选车
+2. 那么我们可以把车做成bit 状态表示
+3. 人有两种选择，选或者不选当前的车，但只能选一辆
+
+
+代码：
+
+class Solution {
+    int dis[][];
+    int workers[][];
+    int len=0;
+    int dp[][];
+    public int assignBikes(int[][] workers, int[][] bikes) {
+        this.workers=workers;
+        len=bikes.length;
+        dis=new int[workers.length][bikes.length];
+        for(int i=0;i<workers.length;i++){
+            for(int j=0;j<bikes.length;j++){
+                dis[i][j]=cal(workers[i][0],workers[i][1],bikes[j][0],bikes[j][1]);
+            }
+        }
+        dp=new int[workers.length][1<<len];
+        for(int i=0;i<dp.length;i++){
+            Arrays.fill(dp[i],-1);
+        }
+        int bikepath=(1<<bikes.length)-1;
+        return dfs(0,bikepath);
+    }
+
+    public int dfs(int index,int path){//index:worker
+        if(index>=workers.length)return 0;
+        if(dp[index][path]!=-1)return dp[index][path];
+        int p=path;
+        int res=Integer.MAX_VALUE;
+        for(int i=0;i<=len;i++){
+            int b=p&1;
+            p>>=1;
+            if(b==0)continue;
+            res=Math.min(res,dis[index][i]+dfs(index+1,path^(1<<i)));
+        }
+
+        dp[index][path]=res;
+        return res;
+
+    }
+
+    public int cal(int x1,int y1,int x2,int y2){
+        return Math.abs(x1-x2)+Math.abs(y1-y2);
+    }
+}
