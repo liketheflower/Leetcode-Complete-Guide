@@ -1,0 +1,38 @@
+思路：
+1. 用最大堆来maintain
+2. 这样可以找出前面最大的那个同时我们要注意他们是不是连续的
+
+代码：
+class Solution {
+    public int rob(int[] A) {
+        if(A.length==0)return 0;
+        PriorityQueue<int[]>pq=new PriorityQueue<>((a,b)->{
+            return b[0]-a[0];
+        });
+        for(int i=0;i<A.length;i++){
+            int cur=A[i];
+            if(pq.size()==0){
+                pq.add(new int[]{cur,i});
+            }
+            else if(pq.size()==1){
+                int top[]=pq.peek();
+                if(i-top[1]==1){
+                    pq.add(new int[]{cur,i});
+                }else{
+                    pq.add(new int[]{cur+top[0],i});
+                }
+            }else{
+                int one[]=pq.poll();
+                int two[]=pq.peek();
+                if(i-one[1]==1){
+                    pq.add(new int[]{cur+two[0],i});
+                }else{
+                    pq.add(new int[]{cur+one[0],i});
+                }
+                pq.add(one);
+            }
+
+        }
+        return pq.peek()[0];
+    }
+}
