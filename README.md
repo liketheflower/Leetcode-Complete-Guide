@@ -44,4 +44,6 @@ CF 分目测评估：<br />
 #LCP5. [ 发leetcoin (H+) 2300](./LCP5.txt) <br />
 ### Observation
 #1538. [ Guess the Majority in a Hidden Array (M+) 1700](./1538.txt) <br />
+### Sliding Window
+#76. [  Minimum Window Substring (M+) 1700](./76.txt) <br />
  
