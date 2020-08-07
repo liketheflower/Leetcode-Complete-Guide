@@ -13,11 +13,13 @@ CF 分目测评估：<br />
 #117. [Populating Next Right Pointers in Each Node II (M) 1400](./117.txt) <br />
 #994. [Rotting Orange (M) 1400](./994.txt) <br />
 #LCP 09. [最小跳跃次数 (H) 1800](./LCP09.txt) <br />
-### Greedy
-#LCP 06. [拿硬币 (E) 800](./LCP06.txt) <br />
 ### DFS
 #1255. [Maximum Score Words Formed by Letters (H-) 1700](./1255.txt) <br />
 #LCP7. [ 传递信息 (M) 1400](./LCP7.txt) <br />
+### Stack
+#1063. [Number of Valid Subarrays (H-) 1700](./1063.txt) <br />
+### Greedy
+#LCP 06. [拿硬币 (E) 800](./LCP06.txt) <br />
 ### Graph
 #1522. [Diameter of N-Ary Tree (M-) 1300](./1522.txt) <br />
 ### Binary Search
