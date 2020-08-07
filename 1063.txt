@@ -1,0 +1,44 @@
+给定一个整数数组 A，返回满足下面条件的 非空、连续 子数组的数目：
+
+子数组中，最左侧的元素不大于其他元素。
+
+
+[1,4,2,5,3]
+
+有 11 个有效子数组，分别是：[1],[4],[2],[5],[3],[1,4],[2,5],[1,4,2],[2,5,3],[1,4,2,5],[1,4,2,5,3] 
+
+
+
+思路：递增栈
+
+
+class Solution {
+    public int validSubarrays(int[] A) {
+        int res=0;
+        Stack<int[]>stack=new Stack<>();
+
+        for(int i=0;i<A.length;i++){
+            while(stack.size()>0&&A[i]<stack.peek()[0]){
+                res+=(i-stack.pop()[1]);
+            }
+            stack.push(new int[]{A[i],i});
+        }
+
+        
+
+        if(stack.size()==1){
+            res++;
+        }
+        else if(stack.size()>0){
+            int top=stack.pop()[1];
+            res++;
+            while(stack.size()!=0){
+                res+=top-stack.pop()[1];
+                res++;
+            }
+        }
+        
+
+        return res;
+    }
+}
