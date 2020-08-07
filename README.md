@@ -40,4 +40,6 @@ CF 分目测评估：<br />
 #LCP11. [  期望个数统计 (M-) 1400](./LCP11.txt) <br />
 ### Segment Tree
 #LCP5. [ 发leetcoin (H+) 2300](./LCP5.txt) <br />
+### Observation
+#1538. [ Guess the Majority in a Hidden Array (M+) 1700](./1538.txt) <br />
  
