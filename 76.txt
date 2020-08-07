@@ -1,0 +1,44 @@
+O (256 n)
+
+代码：
+
+class Solution {
+    public String minWindow(String s, String t) {
+        int res=Integer.MAX_VALUE;
+        String ss="";
+        Queue<Character>q=new LinkedList<>();
+        int ttable[]=new int[256];
+        int stable[]=new int[256];
+        for(int i=0;i<t.length();i++){
+            ttable[t.charAt(i)]++;
+        }
+        
+        
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            
+            stable[c]++;  
+            
+            q.add(c);
+            while(check(ttable,stable)){
+                if(res>q.size()){
+                    res=q.size();
+                    ss=s.substring(i-q.size()+1,i+1);
+                }
+                char front=q.poll();
+                stable[front]--;
+                
+            }
+            
+        }
+        
+        return ss;
+    }
+    
+    public boolean check(int ttable[],int stable[]){
+        for(int i=0;i<256;i++){
+            if(ttable[i]!=0&&ttable[i]>stable[i])return false;
+        }
+        return true;
+    }
+}
