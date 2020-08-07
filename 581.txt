@@ -1,0 +1,27 @@
+思路：
+1. 他的最终形态肯定是sort 好的
+2. 我们从前和后做two pointer 直到和最终形态不一样，那他中间那一块肯定是要全sort的subarray
+
+代码：
+class Solution {
+    public int findUnsortedSubarray(int[] A) {
+        int copy[]=new int[A.length];
+        for(int i=0;i<A.length;i++){
+            copy[i]=A[i];
+        }
+        Arrays.sort(copy);
+        int cnt1=0,cnt2=0;
+        for(int i=0;i<A.length;i++){
+            if(A[i]==copy[i])cnt1++;
+            else break;
+        }
+        
+        for(int i=A.length-1;i>=0;i--){
+            if(A[i]==copy[i])cnt2++;
+            else break;
+        }
+        
+        
+        return Math.max(0,A.length-cnt1-cnt2);
+    }
+}
