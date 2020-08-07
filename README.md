@@ -3,8 +3,8 @@
 题目会有我给予的相对难度评价 + CF的估测难度对应分数
 
 CF 分目测评估：<br />
-800-1200 对应 easy<br />
-1300-1700 对应 medium<br />
+800-1100 对应 easy<br />
+1200-1700 对应 medium<br />
 1700 - 2100 对应 hard<br />
 
 代码以c++ 和 Java 进行题解
@@ -36,6 +36,7 @@ CF 分目测评估：<br />
 #LCP13. [ 寻宝 (H+) 2100](./LCP13.txt) <br />
 #LCP14. [ 切分数组 (H+) 2200](./LCP14.txt) <br />
 ### Math
+#836. [ Rectangle Overlap (E+) 1100](./836.txt) <br />
 #LCP3. [ 机器人大冒险 (M) 1500](./LCP3.txt) <br />
 #LCP11. [  期望个数统计 (M-) 1400](./LCP11.txt) <br />
 ### Segment Tree
