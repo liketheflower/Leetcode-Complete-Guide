@@ -1,0 +1,22 @@
+思路：
+1. 只要其中一个越过另一个那他们就不相交，否则相反
+
+
+代码：
+
+class Solution {
+    public boolean isRectangleOverlap(int[] rec1, int[] rec2) {
+        int r1=rec1[0];
+        int c1=rec1[1];
+        int r2=rec1[2];
+        int c2=rec1[3];
+        
+        int r3=rec2[0];
+        int c3=rec2[1];
+        int r4=rec2[2];
+        int c4=rec2[3];
+        if(r4<=r1||r3>=r2||c4<=c1||c3>=c2)return false;
+        
+        return true;
+    }
+}
