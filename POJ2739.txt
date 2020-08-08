@@ -1,0 +1,142 @@
+思路：
+就是sliding window， 他要连续的素数，我们可以先把所有的素数做成一个list，然后在里面进行two pointer操作
+
+// Don't place your source in a package
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.math.*; 
+// Please name your class Main
+public class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+	    Scanner in = new Scanner(System.in);
+		//InputReader in = new InputReader(System.in);
+		//int T =in.nextInt();
+		PrintWriter out = new PrintWriter(System.out);
+		//for(int t=0;t<T;t++){
+		while(true){
+			int n=in.nextInt();
+			if(n==0)break;
+			Solution s=new Solution();
+			s.solution(n);
+		}
+			//int n=in.nextInt();
+			
+			//Solution s=new Solution();
+			//s.solution(n);
+		//}
+		out.flush();
+		in.close();
+	}
+ 
+}
+ 
+class Solution{
+	//constant variable
+	final int MAX=Integer.MAX_VALUE;
+	final int MIN=Integer.MIN_VALUE;
+	//////////////////////////////
+	
+	
+	//global variable
+
+	public void solution(int n){
+		boolean primes[]=primes(n);
+		Queue<Integer>q=new LinkedList<Integer>();
+		int sum=0,res=0;
+		for(int i=2;i<primes.length;i++){
+			if(primes[i]==true)continue;
+			//System.out.print(i+"  ");
+			sum+=i;
+			q.add(i);
+			while(sum>n){
+				sum-=q.poll();
+			}
+			if(sum==n)res++;
+		}
+		
+		msg(res+"");
+	}
+	
+	
+	
+	
+
+	
+	
+		
+	
+	//helper function I would use
+	public boolean[] primes(int n){
+		boolean A[]=new boolean[n+1];
+		for(int i=2;i<=n;i++){
+			if(A[i]==false){
+				for(int j=i+i;j<=n;j+=i){
+					A[j]=true;
+				}
+			}
+		}
+		return A;
+	}
+	
+	public void msg(String s){
+		System.out.println(s);
+	}
+	
+	public int[] kmpPre(String p){
+		int pre[]=new int[p.length()];
+		int l=0,r=1;
+		while(r<p.length()){
+			if(p.charAt(l)==p.charAt(r)){
+				pre[r]=l+1;
+				l++;r++;
+			}else{
+				if(l==0)r++;
+				else l=pre[l-1];
+			}
+		}
+		return pre;
+	}
+	
+	public boolean isP(String s){
+		int l=0,r=s.length()-1;
+		while(l<r){
+			if(s.charAt(l)!=s.charAt(r))return false;
+			l++;r--;
+		}
+		return true;
+	}
+	
+	public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+	
+	public boolean check(int grid[][],int r,int c){
+		if(r<0||c<0||r>=grid.length||c>=grid[0].length)return false;
+		return true;
+	}
+	
+	public int get(int A[],int i){
+		if(i<0||i>=A.length)return -1;
+		return A[i];
+	}
+	public int[] copy(int A[]){
+		int a[]=new int[A.length];
+		for(int i=0;i<a.length;i++)a[i]=A[i];
+		return a;
+	}
+	public void print1(long A[]){
+		for(long i:A)System.out.print(i+" ");
+		System.out.println();
+	}
+	public void print2(long A[][]){
+		for(int i=0;i<A.length;i++){
+			for(int j=0;j<A[0].length;j++){
+				System.out.print(A[i][j]+" ");
+			}System.out.println();
+		}
+	}
+}
