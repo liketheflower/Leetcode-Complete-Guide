@@ -19,6 +19,7 @@ CF 分目测评估：<br />
 ### Stack
 #1063. [Number of Valid Subarrays (H-) 1700](./1063.txt) <br />
 ### Greedy
+#45. [Jump Game II (H-) 1600](./45.txt) <br />
 #1326.[ Minimum Number of Taps to Open to Water a Garden   (H) 1800](./1326.txt) <br />
 #LCP 06. [拿硬币 (E) 800](./LCP06.txt) <br />
 ### Graph
