@@ -1,0 +1,14 @@
+思路：最贪心的选择
+
+class Solution {
+    public int jump(int[] nums) {
+        int res=0,next=0,max=0;
+        for(int i=0;i<nums.length-1;i++){
+            max=Math.max(max,i+nums[i]);
+            if(i==next){
+                next=max;res++;
+            }
+        }
+        return res;
+    }
+}
