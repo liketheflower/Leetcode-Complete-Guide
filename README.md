@@ -54,4 +54,7 @@ CF 分目测评估：<br />
 #76. [  Minimum Window Substring (M+) 1700](./76.txt) <br />
 ### Sort
 #581. [ Shortest Unsorted Continuous Subarray (E) 1000](./581.txt) <br />
+# ACM 练习
+### Two pointer
+#POJ2739. [ Sum of Consecutive Prime Numbers (M) 1400](./POJ2739.txt) <br />
  
