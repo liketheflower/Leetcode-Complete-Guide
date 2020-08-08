@@ -1,0 +1,48 @@
+class Solution {
+    public int minTaps(int n, int[] A) {
+        if(A.length==0)return -1;
+        int res=0;
+        List<int[]>list=new ArrayList<>();
+        for(int i=0;i<A.length;i++){
+            list.add(new int[]{Math.max(0,i-A[i]),Math.min(n,i+A[i])});
+        }
+        if(list.size()==0)return -1;
+        Collections.sort(list,(a,b)->{
+            if(a[0]==b[0])return b[1]-a[1];
+             return a[0]-b[0];
+        });
+
+        if(list.get(0)[0]>0)return -1;//can not cover start
+
+        PriorityQueue<int[]>pq=new PriorityQueue<>((a,b)->{
+            return b[1]-a[1];
+        });
+
+        int pre=-1;
+        int max=0;
+        for(int i=0;i<list.size();i++){
+            int pair[]=list.get(i);
+            if(pair[1]-pair[0]==0)continue;
+            if(pair[1]<=max)continue;
+            if(pair[0]-max>0)return -1;
+            while(pq.size()>0&&pq.peek()[2]>=pair[0]){
+                res--;
+                pq.poll();
+            }
+            res++;
+            max=pair[1];
+            if(pq.size()!=0)pre=pq.peek()[1];
+            pq.add(new int[]{pair[0],pair[1],pre});
+            
+            if(max>=n)break;
+        }
+
+        while(pq.size()!=0){
+            int pair[]=pq.poll();
+        }
+        
+        if(max<n)return -1;
+        return res;
+
+    }
+}
