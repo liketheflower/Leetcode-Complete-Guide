@@ -55,6 +55,8 @@ CF 分目测评估：<br />
 ### Sort
 #581. [ Shortest Unsorted Continuous Subarray (E) 1000](./581.txt) <br />
 # ACM 练习
+精刷200题
+参照以下link:https://github.com/yogykwan/acm-challenge-workbook
 ### Two pointer
 #POJ2739. [ Sum of Consecutive Prime Numbers (M) 1400](./POJ2739.txt) <br />
 ### 反转（开关）
