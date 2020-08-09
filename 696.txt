@@ -1,0 +1,25 @@
+代码：
+
+class Solution {
+    public int countBinarySubstrings(String s) {
+        char cur=s.charAt(0);
+        int cnt=1,res=0;
+        List<Integer>list=new ArrayList<>();
+        for(int i=1;i<s.length();i++){
+            char c=s.charAt(i);
+            if(c==cur){
+                cnt++;
+            }else{
+                list.add(cnt);
+                cur=c;
+                cnt=1;
+            }
+        }
+        list.add(cnt);
+        for(int i=1;i<list.size();i++){
+            res+=Math.min(list.get(i),list.get(i-1));
+        }
+
+        return res;
+    }
+}
