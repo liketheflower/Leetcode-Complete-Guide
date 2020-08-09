@@ -1,0 +1,178 @@
+思路：贪心问题
+1. 两边都要走一边（有可能有一个不行的）
+2.我们把他看成区间问题，如果遇到1 那我们 i,i+1,i+2的区间就要filp
+
+
+
+
+// Don't place your source in a package
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.math.*; 
+// Please name your class Main
+public class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+	    Scanner in = new Scanner(System.in);
+		//InputReader in = new InputReader(System.in);
+		//int T =in.nextInt();
+		PrintWriter out = new PrintWriter(System.out);
+		//for(int t=0;t<T;t++){
+		int A[]=new int[21];
+		for(int i=0;i<20;i++){
+			int n=in.nextInt();
+			A[i]=n;
+			
+		}
+			
+		Solution s=new Solution();
+		s.solution(A);
+		
+			//int n=in.nextInt();
+			
+			//Solution s=new Solution();
+			//s.solution(n);
+		//}
+		out.flush();
+		in.close();
+	}
+ 
+}
+ 
+class Solution{
+	//constant variable
+	final int MAX=Integer.MAX_VALUE;
+	final int MIN=Integer.MIN_VALUE;
+	//////////////////////////////
+	
+	
+	//global variable
+
+	public void solution(int A[]){
+		
+		int res1=0,res2=0;
+		
+		
+		int B[]=new int[A.length];
+		for(int i=0;i<20;i++){
+			B[i]=A[20-i-1];
+		}
+		
+		for(int i=0;i<20;i++){
+			if(A[i]==1){
+				if(i==19){
+					res1=100;//impossible
+					break;
+				}
+				res1++;
+				A[i+1]=flip(A[i+1]);
+				A[i+2]=flip(A[i+2]);
+			}
+		}
+		
+		for(int i=0;i<20;i++){
+			if(B[i]==1){
+				if(i==19){
+					res2=100;//impossible
+					break;
+				}
+				res2++;
+				B[i+1]=flip(B[i+1]);
+				B[i+2]=flip(B[i+2]);
+			}
+		}
+		
+		msg(min(res1,res2)+"");
+	}
+	
+	
+	
+	
+
+	
+	
+		
+	
+	//helper function I would use
+	public int flip(int i){
+		if(i==0)return 1;
+		else return 0;
+	}
+	
+	public boolean[] primes(int n){
+		boolean A[]=new boolean[n+1];
+		for(int i=2;i<=n;i++){
+			if(A[i]==false){
+				for(int j=i+i;j<=n;j+=i){
+					A[j]=true;
+				}
+			}
+		}
+		return A;
+	}
+	
+	public void msg(String s){
+		System.out.println(s);
+	}
+	
+	public int[] kmpPre(String p){
+		int pre[]=new int[p.length()];
+		int l=0,r=1;
+		while(r<p.length()){
+			if(p.charAt(l)==p.charAt(r)){
+				pre[r]=l+1;
+				l++;r++;
+			}else{
+				if(l==0)r++;
+				else l=pre[l-1];
+			}
+		}
+		return pre;
+	}
+	
+	public boolean isP(String s){
+		int l=0,r=s.length()-1;
+		while(l<r){
+			if(s.charAt(l)!=s.charAt(r))return false;
+			l++;r--;
+		}
+		return true;
+	}
+	
+	public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+	
+	public boolean check(int grid[][],int r,int c){
+		if(r<0||c<0||r>=grid.length||c>=grid[0].length)return false;
+		return true;
+	}
+	
+	public int get(int A[],int i){
+		if(i<0||i>=A.length)return -1;
+		return A[i];
+	}
+	public int[] copy(int A[]){
+		int a[]=new int[A.length];
+		for(int i=0;i<a.length;i++)a[i]=A[i];
+		return a;
+	}
+	public void print1(long A[]){
+		for(long i:A)System.out.print(i+" ");
+		System.out.println();
+	}
+	public void print2(long A[][]){
+		for(int i=0;i<A.length;i++){
+			for(int j=0;j<A[0].length;j++){
+				System.out.print(A[i][j]+" ");
+			}System.out.println();
+		}
+	}
+	
+	public int min(int a,int b){
+		return Math.min(a,b);
+	}
+}
