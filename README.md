@@ -65,4 +65,6 @@ CF 分目测评估：<br />
 #POJ 3185. [ The Water Bowls (M+) 1600](./POJ3185.txt) <br />
 ### Minimum Spanning Tree
 #POJ 1258. [ Agri-Net POJ  (M) 1600](./POJ1258.txt) <br />
+### Strong Connectly 
+#Source : https://iq.opengenus.org/tarjans-algorithm/
  
