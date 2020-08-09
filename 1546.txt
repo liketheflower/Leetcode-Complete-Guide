@@ -1,0 +1,39 @@
+思路：
+1.比较好的一题，需要运用到 dp+prefix sum+greedy
+2. prefix sum 就是用来找前面有没有这个target
+3. dp 是指当前index 最大的non overlaping subarray
+4. prefix 时存最大的index 这样保证前面有更多的选择（贪心思路）
+
+
+代码：
+class Solution {
+    public int maxNonOverlapping(int[] A, int T) {
+        int sum=0;
+        int dp[]=new int[A.length];
+        Map<Integer,Integer>map=new HashMap<>();
+        
+        for(int i=0;i<A.length;i++){
+            sum+=A[i];
+            if(sum==T){
+                dp[i]=1;
+            }
+            
+            int com=sum-T;
+            if(map.containsKey(com)){
+                dp[i]=Math.max(dp[i],dp[map.get(com)]+1);
+            }
+            dp[i]=Math.max(dp[i],get(dp,i-1));
+            
+            map.put(sum,i);
+        }
+        
+        int res=0;
+        for(int i:dp)res=Math.max(res,i);
+        return res;
+    }
+    
+    public int get(int A[],int i){
+        if(i<0)return 0;
+        return A[i];
+    }
+}
