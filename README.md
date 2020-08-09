@@ -21,6 +21,7 @@ CF 分目测评估：<br />
 ### Greedy
 #45. [Jump Game II (H-) 1600](./45.txt) <br />
 #1326.[ Minimum Number of Taps to Open to Water a Garden   (H) 1800](./1326.txt) <br />
+#1540.[ Can Convert String in K Moves   (M) 1500](./1540.txt) <br />
 #LCP 06. [拿硬币 (E) 800](./LCP06.txt) <br />
 ### Graph
 #1522. [Diameter of N-Ary Tree (M-) 1300](./1522.txt) <br />
