@@ -18,6 +18,7 @@ CF 分目测评估：<br />
 #LCP7. [ 传递信息 (M) 1400](./LCP7.txt) <br />
 ### Stack
 #1063. [Number of Valid Subarrays (H-) 1700](./1063.txt) <br />
+#1544. [Make The String Great (E+) 1100](./1544.txt) <br />
 ### Greedy
 #45. [Jump Game II (H-) 1600](./45.txt) <br />
 #1326.[ Minimum Number of Taps to Open to Water a Garden   (H) 1800](./1326.txt) <br />
