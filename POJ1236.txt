@@ -6,4 +6,4 @@ Given a network, answer at least how many nodes we need to spread information to
 and the minimum directed edges required to add so the whole graph becomes an SCC.
 
 思路：
-对于问题(1)，新的图中的零入度点是无法被其他学校支援的，所以这些点必须都提供新软件，非零入度点可以通过其他学校的支援得到软件，因此答案就是零入度点的个数。
+对于问题(1)，新的图中的零入度点是无法被其他学校支援的，所以这些点必须都提供新软件，非零入度点可以通过其他学校的支援得到软件，因此答案就是强连通零入度点的个数。
