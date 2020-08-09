@@ -66,5 +66,5 @@ CF 分目测评估：<br />
 ### Minimum Spanning Tree
 #POJ 1258. [ Agri-Net POJ  (M) 1600](./POJ1258.txt) <br />
 ### Strong Connectly 
-#Source : https://iq.opengenus.org/tarjans-algorithm/
+#Source : https://iq.opengenus.org/tarjans-algorithm/ (Tarjan for SCC)
  
