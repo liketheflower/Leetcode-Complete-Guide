@@ -62,6 +62,8 @@ CF 分目测评估：<br />
 #581. [ Shortest Unsorted Continuous Subarray (E) 1000](./581.txt) <br />
 ### String
 #696. [Count Binary Substrings (E) 1000](./696.txt) <br />
+### Game Theory
+#877. [Stone Game (M+) 1600](./877.txt) <br />
 # ACM 练习
 精刷200题<br/>
 参照以下link:https://github.com/yogykwan/acm-challenge-workbook
