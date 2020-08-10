@@ -71,4 +71,5 @@ CF 分目测评估：<br />
 ### Strong Connectly 
 #Source : https://iq.opengenus.org/tarjans-algorithm/ (Tarjan for SCC)<br>
 Tarjan 和Kosaraju’s 同等适用与找强连通
+#POJ 1236. [Network of Schools  (H+) 2200](./POJ1236.txt) <br />
  
