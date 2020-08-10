@@ -1,0 +1,40 @@
+思路：
+1.我们站在不同的立场来想
+2.如果我是alex，我想赢，我得拿更多
+3. 如果我是bob，我想让alex输，我得让他拿的最少
+
+
+代码：
+
+
+class Solution {
+    int dp[][];
+    public boolean stoneGame(int[] A) {
+        //alex first
+        dp=new int[A.length][A.length];
+        int sum=0;
+        for(int i:A)sum+=i;
+        for(int i=0;i<dp.length;i++)Arrays.fill(dp[i],-1);
+        
+        int max=dfs(A,0,A.length-1,0);
+        return max>(sum-max);
+    }
+    
+    public int dfs(int A[],int l,int r,int turn){//0 alex   1 lee
+        if(l>r)return 0;
+        if(dp[l][r]!=-1)return dp[l][r];
+        int next=1;
+        if(turn==1)next=0;
+        int res=0;
+        if(turn==0){
+            res=Math.max(res,A[l]+dfs(A,l+1,r,next));
+            res=Math.max(res,A[r]+dfs(A,l,r-1,next));
+        }else{
+            res=Integer.MAX_VALUE;
+            res=Math.min(res,A[l]+dfs(A,l+1,r,next));
+            res=Math.min(res,A[r]+dfs(A,l,r-1,next));
+        }
+        dp[l][r]=res;
+        return res;
+    }
+}
