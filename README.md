@@ -27,6 +27,7 @@ CF 分目测评估：<br />
 ### Graph
 #1522. [Diameter of N-Ary Tree (M-) 1300](./1522.txt) <br />
 ### Binary Search
+#69. [Sqrt(x) (E+) 11000](./69.txt) <br />
 #302. [包含全部黑色像素的最小矩形 (H-) 1700](./302.txt) <br />
 #1533. [Find the Index of the Large Integer (M) 1500](./1533.txt) <br />
 #LCP08. [剧情触发时间 (M) 1600](./LCP08.txt) <br />
