@@ -1,0 +1,66 @@
+思路：prefix一下上面和左面记录最长可到达的1就行了，然后是正方形的关系，取最小的一个
+
+
+代码：
+
+class Solution {
+    public int largest1BorderedSquare(int[][] grid) {
+        int res=0;
+        int left[][]=new int[grid.length][grid[0].length];
+        int top[][]=new int[grid.length][grid[0].length];
+        
+        for(int i=0;i<grid.length;i++){
+            int sum=0;
+            for(int j=0;j<grid[0].length;j++){
+                if(grid[i][j]==0){
+                    sum=0;
+                }else{
+                    sum++;
+                    left[i][j]=sum;
+                }
+            }
+        }
+        
+        for(int c=0;c<grid[0].length;c++){
+            int sum=0;
+            for(int r=0;r<grid.length;r++){
+                if(grid[r][c]==0){
+                    sum=0;
+                }else{
+                    sum++;
+                    top[r][c]=sum;
+                }
+            }
+        }
+        
+        for(int r=0;r<grid.length;r++){
+            for(int c=0;c<grid[0].length;c++){
+                if(grid[r][c]==0)continue;
+                res=Math.max(res,1);
+                
+                int t=get(top,r-1,c);
+                int l=get(left,r,c-1);
+                               
+                
+                if(t==0||l==0)continue;
+                
+                int min=Math.min(t,l);
+                
+                
+                for(int i=1;i<=min;i++){
+                    if(get(top,r-1,c-i)>=i&&get(left,r-i,c-1)>=i){
+                        res=Math.max(res,(1+i)*(1+i));
+                    }
+                }
+                
+            }
+        }
+        return res;
+        
+    }
+    
+    public int get(int A[][],int i,int j){
+        if(i<0||j<0||i>=A.length||j>=A[0].length)return 0;
+        return A[i][j];
+    }
+}
