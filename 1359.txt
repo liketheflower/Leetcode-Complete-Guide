@@ -1,0 +1,24 @@
+思路：
+1. 组合数学的思路
+2. 假设现在求n， n-1 已经算好，那么我的 D(n) p(n) 能怎么放呢
+
+
+代码：
+
+
+class Solution {
+    public int countOrders(int n) {
+        if(n==1)return 1;
+        int mod=1000000007;
+        long dp[]=new long[n];
+        dp[0]=1;
+        for(int i=1;i<dp.length;i++){
+            long pre=((i)*2)+1;
+            long cur=dp[i-1]*(pre*(pre+1)/2);
+            cur%=mod;
+            dp[i]=cur;
+            
+        }
+        return (int)(dp[n-1]);
+    }
+}
