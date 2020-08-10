@@ -1,0 +1,49 @@
+题意：
+1. 和石头游戏1 一样站在不同的立场去想就行，就是函数的转移有了一点的改变但总体原理一样
+
+
+代码：
+
+
+class Solution {
+    int dp[][][];
+    public int stoneGameII(int[] A) {
+        int sum=0;
+        for(int i : A){
+            sum+=i;
+        }
+        dp=new int[A.length][A.length*2][2];
+        
+        for(int i=0;i<dp.length;i++){
+            for(int j=0;j<dp[0].length;j++){
+                Arrays.fill(dp[i][j],-1);
+            }
+        }
+        
+        int back=dfs(A,0,1,0);
+        
+        return back;
+    }
+    
+    public int dfs(int A[],int index,int m,int turn){
+        if(index>=A.length)return 0;
+        if(dp[index][m][turn]!=-1)return dp[index][m][turn];
+        int res=Integer.MAX_VALUE;
+        if(turn==0)res=Integer.MIN_VALUE;
+        
+        int sum=0;
+        int X=2*m;
+        for(int i=0;i<X;i++){
+            if(index+i>=A.length)break;
+            sum+=A[index+i];
+            if(turn==0){
+                res=Math.max(res,sum+dfs(A,index+i+1,Math.max((i+1),m),1));
+            }else{
+                res=Math.min(res,dfs(A,index+i+1,Math.max((i+1),m),0));  
+            }
+        }
+        dp[index][m][turn]=res;
+        return res;
+        
+    }
+}
