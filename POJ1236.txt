@@ -6,5 +6,6 @@ Given a network, answer at least how many nodes we need to spread information to
 and the minimum directed edges required to add so the whole graph becomes an SCC.
 
 思路：
+跟HDU 2767 Proving Equivalences（题解）一样的题目
 1.第一个是求入度为零的强连通分量
 2.第二个答案是入度为零的强连通分量数和出度为零的强连通分量数更大的那个。
