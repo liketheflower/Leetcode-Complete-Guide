@@ -1,0 +1,21 @@
+思路：运用二分法模板就行
+
+
+代码：
+
+class Solution {
+    public int mySqrt(int x) {
+        long l=1,r=x;
+        int res=0;
+        while(l<=r){
+            long mid=l+(r-l)/2;
+            if(mid*mid<=x){
+                res=(int)(mid);
+                l=mid+1;
+            }else{
+                r=mid-1;
+            }
+        }
+        return res;
+    }
+}
