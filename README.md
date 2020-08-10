@@ -81,4 +81,5 @@ CF 分目测评估：<br />
 Source : https://iq.opengenus.org/tarjans-algorithm/ (Tarjan for SCC)<br>
 Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
 #POJ 1236. [Network of Schools  (H+) 2200](./POJ1236.txt) <br />
- 
+ ### 二分法
+ #POJ 3685. [Matrix (H) 1800](./POJ3685.txt) <br />
