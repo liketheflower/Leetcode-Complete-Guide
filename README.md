@@ -41,6 +41,7 @@ CF 分目测评估：<br />
 #691. [Stickers to Spell Word (H) 1900](./691.txt) <br />
 #798. [Smallest Rotation with Highest Score (H) 1900](./798.txt) <br />
 #1066. [Campus Bike II (H-) 1700](./1066.txt) <br />
+#1139. [Largest 1-Bordered Square (M) 1600](./1139.txt) <br />
 #1259. [ Handshakes That Don't Cross (H-) 1700](./1259.txt) <br />
 #1546. [ Maximum Number of Non-Overlapping Subarrays With Sum Equals Target (M+) 1600](./1546.txt) <br />
 #LCP10. [ 二叉树任务调度 (H+) 2200](./LCP10.txt) <br />
