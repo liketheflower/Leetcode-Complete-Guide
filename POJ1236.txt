@@ -9,3 +9,242 @@ and the minimum directed edges required to add so the whole graph becomes an SCC
 跟HDU 2767 Proving Equivalences（题解）一样的题目
 1.第一个是求入度为零的强连通分量
 2.第二个答案是入度为零的强连通分量数和出度为零的强连通分量数更大的那个。
+
+
+代码：
+
+// Don't place your source in a package
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.math.*; 
+// Please name your class Main
+public class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+	    Scanner in = new Scanner(System.in);
+		//InputReader in = new InputReader(System.in);
+		//int T =in.nextInt();
+		PrintWriter out = new PrintWriter(System.out);
+		//for(int t=0;t<T;t++){
+		
+		
+		int n =	in.nextInt();
+		List<Integer>adjecent[]=new ArrayList[n];
+		for(int i=0;i<n;i++){
+			adjecent[i]=new ArrayList<Integer>();
+		}
+		//while(in.hasNext()){
+			
+		for(int i=0;i<n;i++){
+			while(true){
+				int x=in.nextInt();
+				if(x==0)break;
+				adjecent[i].add(x-1);
+			}
+		}	
+			
+			
+				
+		Solution s=new Solution();
+		s.solution(n,adjecent);
+		//}
+		out.flush();
+		in.close();
+	}
+ 
+}
+ 
+class Solution{
+	//constant variable
+	final int MAX=Integer.MAX_VALUE;
+	final int MIN=Integer.MIN_VALUE;
+	//////////////////////////////
+	
+	
+	//global variable
+	List<Integer>adjecent[];
+	int dis[];
+	int low[];
+	int time=1;
+	int ssc=0;
+	int assign[];
+	Set<Integer>total=new HashSet<Integer>();
+	public void solution(int n,List<Integer>adjecent[]){
+		this.adjecent=adjecent;
+		
+		assign=new int[n];
+		dis=new int[n];
+		low=new int[n];
+		
+		for(int i=0;i<n;i++){
+			if(dis[i]==0){//not visit
+				tarjan(i,new HashSet<Integer>(),new Stack<Integer>());
+			}
+		}
+		
+		if(ssc==1){
+			msg(1+"");
+			msg(0+"");
+		}else{
+			Set<Integer>inset=new HashSet<Integer>();
+			Set<Integer>outset=new HashSet<Integer>();
+			int in[]=new int[ssc+1];
+			int out[]=new int[ssc+1];
+			for(int i=0;i<n;i++){
+				List<Integer>childs=adjecent[i];
+				for(int c:childs){
+					if(assign[i]!=assign[c]){
+						in[assign[i]]++;
+						out[assign[c]]++;
+						
+					}
+				}
+			}
+			
+			int incnt=0,outcnt=0;
+			for(int i:in){
+				if(i==0)incnt++;
+			}
+			for(int o:out){
+				if(o==0)outcnt++;
+			}
+			
+			msg((outcnt-1)+"");
+			msg((Math.max(outcnt,incnt)-1)+"");
+			
+		}
+		
+	}
+	
+	public void tarjan(int root,Set<Integer>set,Stack<Integer>stack){
+		List<Integer>childs=adjecent[root];
+		dis[root]=low[root]=time;
+
+		set.add(root);
+		stack.push(root);
+		time++;
+		
+		//core for tarjan
+		for(int c:childs){
+			if(dis[c]==0){
+				tarjan(c,set,stack);
+				low[root]=Math.min(low[root],low[c]);
+			}else if(set.contains(c)){
+				low[root]=Math.min(low[root],dis[c]);
+			}
+		}
+		
+		
+		//decide where each strong connect component belong
+		if(low[root]==dis[root]){//start
+			ssc++;
+			total.add(ssc);
+			int v=-1;
+			while(v!=root){
+				v=stack.pop();
+				assign[v]=ssc;
+			}
+		}
+	}
+	
+	
+
+	
+	
+		
+	
+	//helper function I would use
+	public int flip(int i){
+		if(i==0)return 1;
+		else return 0;
+	}
+	
+	public boolean[] primes(int n){
+		boolean A[]=new boolean[n+1];
+		for(int i=2;i<=n;i++){
+			if(A[i]==false){
+				for(int j=i+i;j<=n;j+=i){
+					A[j]=true;
+				}
+			}
+		}
+		return A;
+	}
+	
+	public void msg(String s){
+		System.out.println(s);
+	}
+	
+	public int[] kmpPre(String p){
+		int pre[]=new int[p.length()];
+		int l=0,r=1;
+		while(r<p.length()){
+			if(p.charAt(l)==p.charAt(r)){
+				pre[r]=l+1;
+				l++;r++;
+			}else{
+				if(l==0)r++;
+				else l=pre[l-1];
+			}
+		}
+		return pre;
+	}
+	
+	public boolean isP(String s){
+		int l=0,r=s.length()-1;
+		while(l<r){
+			if(s.charAt(l)!=s.charAt(r))return false;
+			l++;r--;
+		}
+		return true;
+	}
+	
+	public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+	
+	public boolean check(int grid[][],int r,int c){
+		if(r<0||c<0||r>=grid.length||c>=grid[0].length)return false;
+		return true;
+	}
+	
+	public int get(int A[],int i){
+		if(i<0||i>=A.length)return -1;
+		return A[i];
+	}
+	public int[] copy(int A[]){
+		int a[]=new int[A.length];
+		for(int i=0;i<a.length;i++)a[i]=A[i];
+		return a;
+	}
+	public void print1(long A[]){
+		for(long i:A)System.out.print(i+" ");
+		System.out.println();
+	}
+	public void print2(long A[][]){
+		for(int i=0;i<A.length;i++){
+			for(int j=0;j<A[0].length;j++){
+				System.out.print(A[i][j]+" ");
+			}System.out.println();
+		}
+	}
+	
+	public int min(int a,int b){
+		return Math.min(a,b);
+	}
+}
+
+	class Wrapper implements Comparable<Wrapper>{
+		int v1;int v2;int w;
+		public Wrapper(int v1,int v2,int w){
+			this.v1=v1;this.v2=v2;this.w=w;
+		}
+		
+		@Override
+		public int compareTo(Wrapper other) {
+			return this.w-other.w;
+		}
+	}
