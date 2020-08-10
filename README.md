@@ -71,6 +71,8 @@ CF 分目测评估：<br />
 参照以下link:https://github.com/yogykwan/acm-challenge-workbook
 ### Two pointer
 #POJ 2739. [ Sum of Consecutive Prime Numbers (M) 1400](./POJ2739.txt) <br />
+### DFS
+#POJ 1979. [ Red and Black (M) 1400](./POJ1979.txt) <br />
 ### 反转（开关）
 #POJ 3185. [ The Water Bowls (M+) 1600](./POJ3185.txt) <br />
 ### Minimum Spanning Tree
