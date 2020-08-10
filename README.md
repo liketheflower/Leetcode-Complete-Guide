@@ -25,6 +25,7 @@ CF 分目测评估：<br />
 #1540.[ Can Convert String in K Moves   (M) 1500](./1540.txt) <br />
 #LCP 06. [拿硬币 (E) 800](./LCP06.txt) <br />
 ### Graph
+#1192. [Critical Connection (H) 1900](./1192.txt) <br />
 #1522. [Diameter of N-Ary Tree (M-) 1300](./1522.txt) <br />
 ### Binary Search
 #69. [Sqrt(x) (E+) 11000](./69.txt) <br />
