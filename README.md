@@ -78,7 +78,7 @@ CF 分目测评估：<br />
 ### Minimum Spanning Tree
 #POJ 1258. [ Agri-Net POJ  (M) 1600](./POJ1258.txt) <br />
 ### Strong Connect Component (强连通)
-#Source : https://iq.opengenus.org/tarjans-algorithm/ (Tarjan for SCC)<br>
+Source : https://iq.opengenus.org/tarjans-algorithm/ (Tarjan for SCC)<br>
 Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
 #POJ 1236. [Network of Schools  (H+) 2200](./POJ1236.txt) <br />
  
