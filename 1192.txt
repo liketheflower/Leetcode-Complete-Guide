@@ -1,0 +1,103 @@
+思路：经典tarjan 算法
+
+
+代码：
+
+class Solution {
+    List<List<Integer>> res = new ArrayList<>();
+    List<Integer> adjecent[];
+    int dis[];
+    int low[];
+    int time=0;
+    boolean visit[];
+    public List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {
+        adjecent=new ArrayList[n];
+        for(int i=0;i<adjecent.length;i++){
+            adjecent[i]=new ArrayList<>();
+        }
+        dis=new int[n];
+        low=new int[n];
+        visit=new boolean[n];
+        for(List<Integer>pair:connections){
+            int v1=pair.get(0);
+            int v2=pair.get(1);
+            adjecent[v1].add(v2);
+            adjecent[v2].add(v1);
+        }
+        dfs(-1,0);
+        return res;
+    }
+
+    public void dfs(int parent,int root){
+        List<Integer>childs=adjecent[root];
+        dis[root]=low[root]=time++;
+        visit[root]=true;
+        for(int c:childs){
+            if(!visit[c]){
+                dfs(root,c);
+                
+                low[root]=Math.min(low[root],low[c]);
+                
+                if(low[c]>dis[root]){
+                    List<Integer>edge=new ArrayList<>();
+                    edge.add(root);
+                    edge.add(c);
+                    res.add(edge);
+                }
+            }else{
+                if(c!=parent){
+                    low[root]=Math.min(low[root],low[c]);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+c++：
+
+class Solution {
+public:
+    vector<vector<int>>res;
+    int time=0;
+    unordered_set<int>set;
+    vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {
+        vector<vector<int>>adjacent(n,vector<int>());
+        vector<int>low(n);
+        vector<int>t(n);
+        for(vector<int>&p:connections){
+            adjacent[p[0]].push_back(p[1]);
+            adjacent[p[1]].push_back(p[0]);
+        }
+        set.insert(0);
+        dfs(adjacent,low,t,-1,0);
+        return res;
+    }
+    
+    void dfs(vector<vector<int>>&adjacent,vector<int>&low,vector<int>&dis,int parent,int root){
+        dis[root]=time;
+        low[root]=time++;
+        vector<int>&childs=adjacent[root];
+        for(int &child:childs){
+            if(set.find(child)==set.end()){//not found
+                set.insert(child);
+                dfs(adjacent,low,dis,root,child);
+                if(low[child]<=dis[root]){
+                    low[root]=min(low[root],low[child]);
+                }else{
+                    vector<int>v={root,child};
+                    res.push_back(v);
+                }
+            }else{
+                if(child!=parent){
+                    low[root]=min(low[root],low[child]);
+                }
+            }
+        }
+    }
+};
