@@ -1,0 +1,26 @@
+思路：看终止条件，如果是0，0，说明回到原点那一定是circle.如果方向换了的话，他最后一定会bound 的经过多次移动
+
+
+代码：
+
+
+class Solution {
+    public boolean isRobotBounded(String instructions) {
+        int x=0,y=0;int i=0;
+        int dir[][]=new int[][]{{0,1},{1,0},{0,-1},{-1,0}};
+        for(char c:instructions.toCharArray()){
+            if(c=='G'){
+                x+=dir[i][0];
+                y+=dir[i][1];
+            }
+            else if(c=='R'){
+                i++;
+                if(i>=4)i-=4;
+            }else{
+                i--;
+                if(i<0)i+=4;
+            }
+        }
+        return (x==0&&y==0)||(i>0);
+    }
+}
