@@ -1,0 +1,17 @@
+思路：
+1. 暴力dp的话肯定是 n^2，类似longest increasing subsequence 的dp
+2. 但是我们n^2 的时候肯定是要找最大的那个，既然是最大那个，我们是不是可以记录一下
+
+
+代码：
+
+class Solution {
+    public int maxProfit(int[] A, int fee) {
+        int dp[]=new int[A.length];int max=-A[0];
+        for(int i=1;i<A.length;i++){
+            dp[i]=Math.max(dp[i-1],A[i]+max-fee);
+            max=Math.max(max,-A[i]+dp[i-1]);
+        }
+        return dp[dp.length-1];
+    }
+}
