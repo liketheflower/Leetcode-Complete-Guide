@@ -3,3 +3,11 @@
 1.给出一个图判断是不是三连通图，三连通图的意思是对于图中任意两点，至少有三条路是可以相互连通的。
 
 2.所有点之间都有3条独立的路径就表示点3连通图，如果任意删掉1个点，图仍然是双连通图，那么原图是3连通图。双连通图可以根据tarjan算法判断。
+
+
+cut point
+
+1.Apply DFS on a graph. Get the DFS tree.
+2.A node which is visited earlier is a "parent" of those nodes which are reached by it and visited later.
+3.If any child of a node does not have a path to any of the ancestors of its parent, it means that removing this node would make this child disjoint from the graph.
+4.There is an exception: the root of the tree. If it has more than one child, then it is an articulation point, otherwise not.
