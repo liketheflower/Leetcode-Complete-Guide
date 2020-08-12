@@ -1,0 +1,44 @@
+思路：
+1. 用stack 如果比top的小以及后面还有剩余的话就可以pop和加上去 （在前面没有这个字母的情况下才考虑去加）
+
+
+代码：
+
+class Solution {
+    public String smallestSubsequence(String text) {
+        Map<Character,Integer>map=new HashMap<>();
+        Map<Character,Integer>map1=new HashMap<>();
+        Stack<Character>stack=new Stack<>();
+        for(char c:text.toCharArray()){
+            if(!map.containsKey(c))map.put(c,0);
+            map.put(c,map.get(c)+1);
+        }
+        
+        
+        for(int i=0;i<text.length();i++){
+            char c=text.charAt(i);
+            map.put(c,map.get(c)-1);
+            if(map.get(c)==0)map.remove(c);
+            
+            if(map1.containsKey(c))continue;
+            
+            while(stack.size()!=0&&map.containsKey(stack.peek())&&c<stack.peek()){
+                char top=stack.pop();
+                map1.put(top,map1.get(top)-1);
+                if(map1.get(top)==0)map1.remove(top);
+            }
+            stack.push(c);
+            if(!map1.containsKey(c))map1.put(c,0);
+            map1.put(c,map1.get(c)+1);
+        }
+        
+        
+        
+        StringBuilder str=new StringBuilder();
+        while(stack.size()!=0){
+            str.append(""+stack.pop());
+        }
+        
+        return str.reverse().toString();
+    }
+}
