@@ -11,3 +11,241 @@ cut point
 2.A node which is visited earlier is a "parent" of those nodes which are reached by it and visited later.
 3.If any child of a node does not have a path to any of the ancestors of its parent, it means that removing this node would make this child disjoint from the graph.
 4.There is an exception: the root of the tree. If it has more than one child, then it is an articulation point, otherwise not.
+
+
+
+代码：
+
+
+// Don't place your source in a package
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.math.*; 
+// Please name your class Main
+public class Main {
+	
+	static StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+    
+ 
+    static int read() throws IOException {
+        in.nextToken();
+        return (int) in.nval;
+    }
+    static String readString() throws IOException {
+        in.nextToken();
+        return in.sval;
+	}
+	
+	
+	public static void main (String[] args) throws java.lang.Exception {
+	    //Scanner in = new Scanner(System.in);
+		//InputReader in = new InputReader(System.in);
+		//int T =in.nextInt();
+		PrintWriter out = new PrintWriter(System.out);
+		//for(int t=0;t<T;t++){
+		int N,M;
+		while((N = read()) != 0){
+			M=read();
+			if(N==0&&M==0)break;
+			
+			List<Integer>adjecent[]=new ArrayList[N];
+			for(int i=0;i<N;i++){
+				//if(adjecent[i]!=null)adjecent[i].celar();
+				 adjecent[i]=new ArrayList<Integer>();
+			}
+			
+			for(int i=0;i<M;i++){
+				int v1=read();int v2=read();
+				adjecent[v1].add(v2);
+				adjecent[v2].add(v1);
+			}
+			
+			Solution s=new Solution();
+			s.solution(adjecent,out);
+		}		
+				
+	
+		//}
+		out.flush();
+		//in.close();
+	}
+ 
+}
+ 
+class Solution{
+	//constant variable
+	final int MAX=Integer.MAX_VALUE;
+	final int MIN=Integer.MIN_VALUE;
+	List<Integer>adjecent[];
+	//////////////////////////////
+	
+	int low[];
+	int dis[];
+	int time=0;
+	boolean cut=false;
+	int ban=-1;
+	int root=-1;
+	public void solution(List<Integer>adjecent[],PrintWriter out){
+		this.adjecent=adjecent;
+		int n=adjecent.length;
+		dis=new int[n];
+		low=new int[n];
+		for(int i=0;i<adjecent.length;i++){
+			//ban i
+			//reset
+			ban=i;
+			Arrays.fill(dis,-1);
+			Arrays.fill(low,-1);
+			time=0;
+			
+			root=0;
+			if(i==0)root=1;
+			
+			tarjan(-1,root);
+			
+			if(time<n-1){
+				cut=true;
+			}
+			
+			if(cut){
+				out.println("NO");
+				return;
+			}
+			
+		}
+		out.println("YES");
+	}
+	
+	
+	
+
+
+	public void tarjan(int p,int r){
+		if(cut)return;
+		List<Integer>childs=adjecent[r];
+		dis[r]=low[r]=time;
+		time++;
+		
+		//core for tarjan
+		int son=0;
+		for(int c:childs){
+			if(ban==c||c==p)continue;
+			if(dis[c]==-1){
+				son++;
+				tarjan(r,c);
+				low[r]=Math.min(low[r],low[c]);
+				if((r==root&&son>1)||(low[c]>=dis[r]&&r!=root)){
+					cut=true;
+					return;
+				}
+			}else{
+				if(c!=p){
+					low[r]=Math.min(low[r],dis[c]);
+				}
+			}
+		}
+		
+	}
+	
+	
+
+	
+	
+		
+	
+	//helper function I would use
+	public int flip(int i){
+		if(i==0)return 1;
+		else return 0;
+	}
+	
+	public boolean[] primes(int n){
+		boolean A[]=new boolean[n+1];
+		for(int i=2;i<=n;i++){
+			if(A[i]==false){
+				for(int j=i+i;j<=n;j+=i){
+					A[j]=true;
+				}
+			}
+		}
+		return A;
+	}
+	
+	public void msg(String s){
+		System.out.println(s);
+	}
+	
+	public int[] kmpPre(String p){
+		int pre[]=new int[p.length()];
+		int l=0,r=1;
+		while(r<p.length()){
+			if(p.charAt(l)==p.charAt(r)){
+				pre[r]=l+1;
+				l++;r++;
+			}else{
+				if(l==0)r++;
+				else l=pre[l-1];
+			}
+		}
+		return pre;
+	}
+	
+	public boolean isP(String s){
+		int l=0,r=s.length()-1;
+		while(l<r){
+			if(s.charAt(l)!=s.charAt(r))return false;
+			l++;r--;
+		}
+		return true;
+	}
+	
+	public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+	
+	public boolean check(int grid[][],int r,int c){
+		if(r<0||c<0||r>=grid.length||c>=grid[0].length)return false;
+		return true;
+	}
+	
+	public int get(int A[],int i){
+		if(i<0||i>=A.length)return -1;
+		return A[i];
+	}
+	public int[] copy(int A[]){
+		int a[]=new int[A.length];
+		for(int i=0;i<a.length;i++)a[i]=A[i];
+		return a;
+	}
+	public void print1(long A[]){
+		for(long i:A)System.out.print(i+" ");
+		System.out.println();
+	}
+	public void print2(long A[][]){
+		for(int i=0;i<A.length;i++){
+			for(int j=0;j<A[0].length;j++){
+				System.out.print(A[i][j]+" ");
+			}System.out.println();
+		}
+	}
+	
+	public int min(int a,int b){
+		return Math.min(a,b);
+	}
+}
+
+	class Wrapper implements Comparable<Wrapper>{
+		int v1;int v2;int w;
+		public Wrapper(int v1,int v2,int w){
+			this.v1=v1;this.v2=v2;this.w=w;
+		}
+		
+		@Override
+		public int compareTo(Wrapper other) {
+			return this.w-other.w;
+		}
+	}
