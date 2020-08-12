@@ -1,0 +1,52 @@
+思路：
+
+abs(a-b) = max ((a-b),(b-a))
+abs(c-d) = max ((c-d),(d-c))
+
+abs(a-b) + abs(c-d) =max(abs(a-b))+max(abs(c-d))
+
+合理运用以上关系可以做到o(n)
+
+
+
+代码：
+
+class Solution {
+    public int maxAbsValExpr(int[] A1, int[] A2) {
+        int res=0;
+        
+        
+        
+        
+        
+        int M1=(A1[0]+A2[0]);//a+c
+        int M2=(A1[0]-A2[0]);//a-c
+        int M3=(-A1[0]+A2[0]);//-a+c
+        int M4=(-A1[0]-A2[0]);//-a-c
+            
+            
+        for(int j=1;j<A1.length;j++){
+            int M=0;
+            int b=A1[j];
+            int d=A2[j];
+            
+            M=Math.max(-b-d+M1+j,M);
+            
+            M=Math.max(-b+d+M2+j,M);
+            
+            M=Math.max(b-d+M3+j,M);
+            
+            M=Math.max(b+d+M4+j,M);
+            
+            res=Math.max(res,M);
+            
+            M1=Math.max(M1,A1[j]+A2[j]-j);//a+c
+            M2=Math.max(M2,A1[j]-A2[j]-j);//a-c
+            M3=Math.max(M3,-A1[j]+A2[j]-j);//-a+c
+            M4=Math.max(M4,-A1[j]-A2[j]-j);//-a-c
+            
+        }
+        
+        return res;
+    }
+}
