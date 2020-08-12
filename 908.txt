@@ -1,0 +1,18 @@
+思路：看最小和最大的数值就行，因为最小和最大能够达到的话，其他数字也能够达到
+
+
+代码：
+
+class Solution {
+    public int smallestRangeI(int[] A, int k) {
+        int min=Integer.MAX_VALUE;
+        int max=Integer.MIN_VALUE;
+        for(int i:A){
+            min=Math.min(min,i);
+            max=Math.max(max,i);
+        }
+        
+        int dif=(max-k)-(min+k);
+        return Math.max(0,dif);
+    }
+}
