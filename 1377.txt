@@ -1,0 +1,61 @@
+本题的难度在于题目难读懂，其实就是简单的dfs
+
+
+代码：
+
+class Solution {
+    List<Integer>adjecent[];
+    int t;
+    int target;
+    boolean visit[];
+    double res=0.0;
+    public double frogPosition(int n, int[][] edges, int t, int target) {
+        this.target=target;
+        this.t=t;
+        visit=new boolean[n+1];
+        adjecent=new ArrayList[n+1];
+        for(int i=0;i<adjecent.length;i++){
+            adjecent[i]=new ArrayList<>();
+        }
+        
+        for(int pair[]:edges){
+            int v1=pair[0],v2=pair[1];
+            adjecent[v1].add(v2);
+            adjecent[v2].add(v1);
+        }
+        visit[1]=true;
+        dfs(1,1.0,0);
+        return res;
+    }
+    
+    public void dfs(int root,double val,int time){
+        if(time>t){
+            return;
+        }
+        if(t==time&&root==target){
+            res=val;
+            return;
+        }
+        
+        List<Integer>childs=adjecent[root];
+        int cnt=0;
+        for(int c:childs){
+            if(!visit[c])cnt++;
+        }       
+        
+        if(cnt==0){
+            if(time<=t&&root==target){
+                res=val;
+            }
+            return;
+        }
+        double pro=1/(cnt+0.0);
+        
+        for(int c:childs){
+            if(visit[c])continue;
+            visit[c]=true;
+            dfs(c,val*pro,time+1);
+            visit[c]=false;
+        }
+    }
+}
