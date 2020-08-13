@@ -1,0 +1,90 @@
+class Solution {
+    int graph[][];
+    public int catMouseGame(int[][] graph) {
+        this.graph=graph;
+        int N=graph.length;
+        int dp[][][]=new int[N][N][3];
+        
+        Queue<int[]>q=new LinkedList<>();
+        
+        for(int i=0;i<N;i++){
+            for(int turn=1;turn<=2;turn++){//0:mouse , 1:cat
+                dp[0][i][turn]=1;//mouse win regardless of whose turn
+                q.add(new int[]{0,i,turn});
+                if(i!=0){
+                    dp[i][i][turn]=2;//cat win regardless of whose turn
+                    q.add(new int[]{i,i,turn});
+                }
+            }
+        }
+        
+        while(q.size()!=0){
+            int A[]=q.poll();
+            int currentWinner=dp[A[0]][A[1]][A[2]];
+            
+            
+            List<int[]>states=find(A);//previous
+            
+            for(int state[]:states){
+                int m=state[0];
+                int c=state[1];
+                int t=state[2];
+                if(dp[m][c][t]!=0)continue;
+                
+                if(t==currentWinner){
+                    dp[m][c][t]=currentWinner;
+                    q.add(new int[]{m,c,t});
+                    continue;
+                }
+                
+                boolean lose=true;
+                if(t==1){//mouse
+                    for(int prem:graph[m]){
+                        if(dp[prem][c][2]!=2){//not lost if not all win
+                            lose=false;
+                            break;
+                        }
+                    }
+                    if(lose){
+                         dp[m][c][t]=2;
+                         q.add(new int[]{m,c,t});
+                    }
+                    
+                }else if(t==2){//cat
+                    for(int prec:graph[c]){
+                        if(dp[m][prec][1]!=1&&prec!=0){
+                            lose=false;
+                            break;
+                        }
+                    }
+                    if(lose){
+                         dp[m][c][t]=1;
+                         q.add(new int[]{m,c,t});
+                    }
+                }
+            }
+        }
+        //mouse, cat
+        return dp[1][2][1];
+    }
+    
+    public List<int[]> find(int A[]){
+        List<int[]>res=new ArrayList<>();
+        int mouseP=A[0];int catP=A[1];
+        int turn=A[2];
+        if(turn==1){//curent turn is mouse,pre should be cat
+            int routes[]=graph[catP];
+            for(int pre:routes){
+                if(pre==0)continue;
+                res.add(new int[]{mouseP,pre,2});
+            }
+        }else{//curent turn is cat,pre should be mouse
+            int routes[]=graph[mouseP];
+            for(int pre:routes){
+                //if(pre==catP)continue;
+                res.add(new int[]{pre,catP,1});
+            }
+        }
+        return res;
+    }
+}
