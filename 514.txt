@@ -1,0 +1,42 @@
+思路：
+经典dp思路，选这个还是选其他的
+
+
+class Solution {
+    Map<Character,List<Integer>>map=new HashMap<>();
+    int dp[][];
+    public int findRotateSteps(String ring, String key) {
+        dp=new int[ring.length()][key.length()];
+        for(int i=0;i<ring.length();i++){
+            char c=ring.charAt(i);
+            if(!map.containsKey(c))map.put(c,new ArrayList<>());
+            map.get(c).add(i);
+        }
+        
+        for(int i=0;i<dp.length;i++){
+            Arrays.fill(dp[i],-1);
+        }
+        
+        return dfs(ring,key,0,0);
+    }
+    
+    public int dfs(String ring,String key,int cur,int index){
+        if(index>=key.length())return 0;
+        if(dp[cur][index]!=-1){
+            return dp[cur][index];
+        }
+        char c=key.charAt(index);
+        List<Integer>indexs=map.get(c);
+        
+        int res=Integer.MAX_VALUE;
+        int len=ring.length();
+        for(int i:indexs){
+            int dis=Math.min(Math.min(Math.abs(i-cur),Math.abs(cur-(i+len))),Math.abs((cur+len)-i));
+            res=Math.min(res,1+dis+dfs(ring,key,i,index+1));
+        }
+        dp[cur][index]=res;
+        return res;
+    }
+    
+    
+}
