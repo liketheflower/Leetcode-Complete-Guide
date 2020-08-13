@@ -75,6 +75,7 @@ CF 分目测评估：<br />
 #696. [Count Binary Substrings (E) 1000](./696.txt) <br />
 ### Game Theory
 #877. [Stone Game (M+) 1600](./877.txt) <br />
+#913. [Cat and Mouse (H+) 2400](./913.txt) <br />
 #1140. [Stone Game II (M+) 1600](./1140.txt) <br />
 
 # ACM 练习
