@@ -23,6 +23,7 @@ CF 分目测评估：<br />
 #1544. [Make The String Great (E+) 1100](./1544.txt) <br />
 ### Greedy
 #45. [Jump Game II (H-) 1600](./45.txt) <br />
+#910. [Smallest Range II (H-) 1700](./910.txt) <br />
 #1121. [Divide Array Into Increasing Sequence (H-) 1700](./1121.txt) <br />
 #1326.[ Minimum Number of Taps to Open to Water a Garden   (H) 1800](./1326.txt) <br />
 #1540.[ Can Convert String in K Moves   (M) 1500](./1540.txt) <br />
