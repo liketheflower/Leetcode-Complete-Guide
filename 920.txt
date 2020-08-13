@@ -1,0 +1,37 @@
+思路：
+1. 此题不太好想，但是可以先假设第一个肯定是往右的
+2. 根据第一个决定后面的该往左还是右
+
+
+
+代码：
+
+class Solution {
+    public int smallestRangeII(int[] A, int k) {
+        if(A.length==1)return 0;
+        if(A.length==2){
+            return Math.min(A[1]-A[0],Math.abs((A[0]+k)-(A[1]-k)));
+        }
+        
+        Arrays.sort(A);
+        int N=A.length;
+        int res=A[N-1]-A[0];
+
+        int cover=A[0]+k;
+        
+        for(int i=1;i<N;i++){
+            int cur=A[i];
+            int high=cur+k;
+            int low=cur-k;
+            
+            if(low<A[0]+k){//use high instead
+                res=Math.min(res,Math.max(cover,A[N-1]-k)-low);
+                cover=high;
+            }else{
+                res=Math.min(res,Math.max(cover,A[N-1]-k)-(A[0]+k));
+            }
+        }
+        
+        return res;
+    }
+}
