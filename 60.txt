@@ -1,0 +1,53 @@
+思路：
+用数学计算看看每一个位数应该取第几个还没有取的
+
+
+
+代码：
+
+
+class Solution {
+    boolean visit[]=new boolean[11];
+    public String getPermutation(int N, int k) {
+        StringBuilder str=new StringBuilder();
+        int fact[]=new int[11];
+        fact[1]=1;
+        for(int i=2;i<fact.length;i++){
+            fact[i]=fact[i-1]*i;
+        }
+        
+        int index=N-1;
+        k--;
+        while(k>0){
+            int group=k/fact[index];
+            
+            int digit=get(group+1);
+            
+            k%=fact[index];
+            index--;
+            str.append(digit+"");
+        }
+        
+        
+        while(str.toString().length()<N){
+            int digit=get(1);
+            str.append(digit+"");
+        }
+        
+        return str.toString();
+    }
+    
+    public int get(int ith){
+        int res=-1;
+        for(int i=1;i<visit.length;i++){
+            if(visit[i])continue;
+            ith--;
+            if(ith==0){
+                res=i;
+                visit[i]=true;
+                break;
+            }
+        }
+        return res;
+    }
+}
