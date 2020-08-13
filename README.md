@@ -56,6 +56,7 @@ CF 分目测评估：<br />
 #LCP14. [ 切分数组 (H+) 2200](./LCP14.txt) <br />
 ### Math
 #836. [ Rectangle Overlap (E+) 1100](./836.txt) <br />
+#60. [ Permutation Sequence (M+)) 1600](./60.txt) <br />
 #908. [ Smallest Range I (E+) 1100](./908.txt) <br />
 #1041. [Robot Bounded In Circle (M) 1500](./1041.txt) <br />
 #1131. [Maximum of Absolute Value Expression (M+) 1600](./1131.txt) <br />
