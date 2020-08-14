@@ -1,0 +1,33 @@
+思路：
+暴力
+
+
+
+代码：
+
+class Solution {
+    public List<List<Integer>> generate(int N) {
+        if(N==0){
+            return new ArrayList<>();
+        }
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer>first=new ArrayList<>();
+        first.add(1);
+        res.add(first);
+        for(int i=1;i<N;i++){
+            int size=i+1;
+            List<Integer>pre=res.get(i-1);
+            
+            List<Integer>cur=new ArrayList<>();
+            cur.add(1);
+            
+            for(int j=1;j<pre.size();j++){
+                cur.add(pre.get(j)+pre.get(j-1));
+            }
+            
+            cur.add(1);
+            res.add(cur);
+        }
+        return res;
+    }
+}
