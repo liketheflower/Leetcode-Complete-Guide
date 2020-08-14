@@ -1,0 +1,44 @@
+思路：
+暴力穷搜
+
+class Solution{
+    List<String> res=new ArrayList<>();
+    Map<Integer,Set<String>>map=new HashMap<>();
+    public List<String> removeInvalidParentheses(String s) {
+        int max=0;
+        dfs(s,0,0,0,"");
+        for(Integer key:map.keySet()){
+            max=Math.max(max,key);
+        }
+        
+        if(!map.containsKey(max))return new ArrayList<>();
+        return new ArrayList<>(map.get(max));
+    }
+    
+    public void dfs(String s,int index,int open,int close,String val){
+        if(index>=s.length()){
+            if(open!=close)return;
+            
+            int len=val.length();
+            if(!map.containsKey(len))map.put(len,new HashSet<>());
+            map.get(len).add(val);
+            
+            return;
+        }
+        if(close>open){
+            return;
+        }
+        
+        char cur=s.charAt(index);
+        if(cur=='('){
+            dfs(s,index+1,open+1,close,val+"(");
+            dfs(s,index+1,open,close,val);
+            
+        }else if(cur==')'){
+            dfs(s,index+1,open,close+1,val+")");
+            dfs(s,index+1,open,close,val);
+        }else{
+            dfs(s,index+1,open,close,val+cur);
+        }
+    }
+}
