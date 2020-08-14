@@ -1,0 +1,59 @@
+思路：
+1. 做后序遍历
+2. 因为是二叉搜索树的关系，左子树最大的要小于父节点，右子树最小的要大于父节点
+
+
+代码：
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    boolean res=true;
+    public boolean isValidBST(TreeNode root) {
+        dfs(root);
+        return res;
+    }
+    
+    public int[] dfs(TreeNode root){
+        if(root==null){
+            return null;
+        }
+        
+        int min=root.val;
+        int max=root.val;
+        
+        int l[]=dfs(root.left);
+        int r[]=dfs(root.right);
+        
+        if(r!=null){
+            int rmin=r[0];
+            if(rmin<=root.val){
+                res=false;
+            }
+            min=Math.min(r[0],min); max=Math.max(r[1],max);
+        }
+        
+        if(l!=null){
+            int lmax=l[1];
+            if(lmax>=root.val){
+                res=false;
+            }
+            min=Math.min(l[0],min);max=Math.max(max,l[1]);
+        }
+        
+        return new int[]{min,max};
+    }
+}
