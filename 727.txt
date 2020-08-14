@@ -1,0 +1,86 @@
+题目：给定字符串 S and T，找出 S 中最短的（连续）子串 W ，使得 T 是 W 的 子序列 。
+
+如果 S 中没有窗口可以包含 T 中的所有字符，返回空字符串 ""。如果有不止一个最短长度的窗口，返回开始位置最靠左的那个。
+
+
+
+
+
+输入：
+S = "abcdebdde", T = "bde"
+输出："bcde"
+解释：
+"bcde" 是答案，因为它在相同长度的字符串 "bdde" 出现之前。
+"deb" 不是一个更短的答案，因为在窗口中必须按顺序出现 T 中的元素。
+
+
+
+思路：
+1. dp 建立table （类似lcs 的table 做法）
+2. 从table 中找到关系然后反过来建回原有的string
+
+
+
+代码：
+
+
+class Solution {
+    public String minWindow(String s, String t) {
+       // System.out.println(s.length());
+        StringBuilder str=new StringBuilder();
+        int dp[][]=new int[t.length()+1][s.length()+1];
+
+        for(int i=1;i<dp.length;i++){
+            Arrays.fill(dp[i],-1);
+        }
+
+        
+
+        for(int i=1;i<dp.length;i++){
+            char tc=t.charAt(i-1);
+            for(int j=1;j<dp[0].length;j++){
+                char sc=s.charAt(j-1);
+                if(sc==tc){
+                    if(dp[i-1][j-1]!=-1){
+                        dp[i][j]=1+dp[i-1][j-1];
+                    }
+                }else{
+                    if(dp[i][j-1]!=-1){
+                        dp[i][j]=dp[i][j-1]+1;
+                    }
+                }
+            }
+        }
+
+        int min=Integer.MAX_VALUE;
+        int index=-1;
+        int N=dp.length;
+
+        for(int i=0;i<dp[0].length;i++){
+            if(dp[N-1][i]==-1)continue;
+            if(dp[N-1][i]<min){
+                min=dp[N-1][i];
+                index=i;
+            }
+        }
+        if(index==-1)return "";        
+        
+        int r=N-1;
+        int c=index;
+
+        while(r>0){
+            if(dp[r][c]!=min){
+                r--;
+            }else{
+                //System.out.print(dp[r][c]+"  ");
+                str.append(s.charAt(c-1));
+                min--;
+                if(dp[r][c]==1)break;
+                c--;
+            }
+        }
+
+        return str.reverse().toString();
+    }
+}
+
