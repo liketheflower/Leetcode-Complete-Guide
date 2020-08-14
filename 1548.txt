@@ -1,0 +1,92 @@
+题意：
+1. 给你一个图
+2. 你要按targetPath 走完
+3. 你可以走不一样的但是需要cost1
+4. 求最短的cost的路劲
+
+思路：
+先dp填好表，然后按表反推回路劲即可
+
+
+
+
+代码：
+
+
+class Solution {
+    List<Integer> res = new ArrayList<>();
+    List<Integer>adjacent[];
+    String names[];
+    String[] targetPath;
+    int dp[][];
+    public List<Integer> mostSimilar(int n, int[][] roads, String[] names, String[] targetPath) {
+        this.names=names;
+        this.targetPath=targetPath;
+
+        dp=new int[n][targetPath.length];
+        adjacent=new ArrayList[n];
+        for(int i=0;i<n;i++){
+            adjacent[i]=new ArrayList<>();
+        }
+
+        for(int pair[]:roads){
+            adjacent[pair[0]].add(pair[1]);
+            adjacent[pair[1]].add(pair[0]);
+        }
+
+        for(int i=0;i<dp.length;i++){
+            Arrays.fill(dp[i],-1);
+        }
+
+        int val=Integer.MAX_VALUE;
+        int start=-1;
+
+        for(int i=0;i<n;i++){
+            int back=dfs(i,0);
+            if(val>back){
+                val=back;
+                start=i;
+            }
+        }
+
+        res.add(start);
+
+        while(res.size()<targetPath.length){
+            int last=res.get(res.size()-1);
+            int index=res.size()-1;
+            if(!names[last].equals(targetPath[index]))val--;
+            
+            for(int i=0;i<dp.length;i++){
+                if(dp[i][index+1]==val&&adjacent[last].contains(i)){
+                    res.add(i);
+                    break;
+                }
+            }
+        }
+        return res;
+    }
+
+    public int dfs(int root,int index){
+        if(index>=targetPath.length)return 0;
+        if(dp[root][index]!=-1){
+            return dp[root][index];
+        }
+        String cur=targetPath[index];
+        List<Integer>childs=adjacent[root];
+        int res=Integer.MAX_VALUE;
+        int add=0;
+        if(!names[root].equals(targetPath[index]))add=1;
+        for(int child:childs){
+            res=Math.min(res,add+dfs(child,index+1));
+        }
+        dp[root][index]=res;
+        return res;
+    }
+}
+
+
+
+
+
+
+
