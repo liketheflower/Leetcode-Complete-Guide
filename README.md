@@ -47,6 +47,7 @@ CF 分目测评估：<br />
 #514. [ Freedom Trail (H) 1800](./514.txt) <br />
 #691. [Stickers to Spell Word (H) 1900](./691.txt) <br />
 #714. [Best Time to Buy and Sell Stock with Transaction Fee (M+) 1600](./714.txt) <br />
+#727. [Minimum Window Subsequence (H) 1800](./727.txt) <br />
 #798. [Smallest Rotation with Highest Score (H) 1900](./798.txt) <br />
 #1066. [Campus Bike II (H-) 1700](./1066.txt) <br />
 #1139. [Largest 1-Bordered Square (M) 1600](./1139.txt) <br />
