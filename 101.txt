@@ -1,0 +1,47 @@
+思路：
+用两个queue 走不同的方向即可
+
+
+
+代码：
+
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        Queue<TreeNode>q1=new LinkedList<>();
+        Queue<TreeNode>q2=new LinkedList<>();
+        q1.add(root);q2.add(root);
+        
+        while(q1.size()!=0&&q2.size()!=0){
+            TreeNode p1=q1.poll();
+            TreeNode p2=q2.poll();
+            if(p1==null&&p2!=null)return false;
+            if(p2==null&&p1!=null)return false;
+            if(p1==null&&p2==null)continue;
+            if(p1.val!=p2.val)return false;
+            
+            q1.add(p1.left);
+            q1.add(p1.right);
+            
+            q2.add(p2.right);
+            q2.add(p2.left);
+        }
+        if(q1.size()!=q2.size())return false;
+        return true;
+    }
+}
