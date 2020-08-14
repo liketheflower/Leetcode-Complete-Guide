@@ -82,6 +82,8 @@ CF 分目测评估：<br />
 #877. [Stone Game (M+) 1600](./877.txt) <br />
 #913. [Cat and Mouse (H+) 2400](./913.txt) <br />
 #1140. [Stone Game II (M+) 1600](./1140.txt) <br />
+### Implementation
+#118. [Pascal's Triangle (E) 900](./118.txt) <br />
 
 # ACM 练习
 精刷200题<br/>
