@@ -1,0 +1,43 @@
+思路：
+数据不大，暴力就好
+
+
+
+代码：
+
+class Solution {
+    Set<String>set=new HashSet<>();
+    int N,K;
+    public int[] numsSameConsecDiff(int N, int K) {
+        this.N=N;this.K=K;
+        for(int i=1;i<=9;i++){
+            dfs(i+"");
+        }
+        if(N==1)set.add("0");
+        int res[]=new int[set.size()];
+        
+        int i=0;
+        for(String s:set){
+            res[i++]=Integer.parseInt(s);
+        }
+        
+        return res;
+    }
+    
+    public void dfs(String s){
+        if(s.length()==N){
+            set.add(s);
+            return;
+        }
+        
+        int last=s.charAt(s.length()-1)-'0';
+        int next1=last+K;
+        int next2=last-K;
+        if(next1>=0&&next1<=9){
+            dfs(s+next1);
+        }
+        if(next2>=0&&next2<=9){
+            dfs(s+next2);
+        }
+    }
+}
