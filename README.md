@@ -15,6 +15,7 @@ CF 分目测评估：<br />
 #LCP 09. [最小跳跃次数 (H) 1800](./LCP09.txt) <br />
 ### DFS
 #301. [Remove Invalid Parentheses (H-) 1600](./301.txt) <br />
+#967. [ Numbers With Same Consecutive Differences (M) 1500](./967.txt) <br />
 #1255. [Maximum Score Words Formed by Letters (H-) 1700](./1255.txt) <br />
 #1377. [Frog Position After T Seconds (M+) 1600](./1377.txt) <br />
 #LCP7. [ 传递信息 (M) 1400](./LCP7.txt) <br />
