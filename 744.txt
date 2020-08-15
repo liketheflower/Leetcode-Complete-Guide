@@ -1,0 +1,20 @@
+经典二分模板：
+
+class Solution {
+public:
+    char nextGreatestLetter(vector<char>& A, char target) {
+        int l=0,r=A.size()-1;
+        int res=-1;
+        while(l<=r){
+            int mid=l+(r-l)/2;
+            if(A[mid]>target){
+                res=mid;
+                r=mid-1;
+            }else{
+                l=mid+1;
+            }
+        }
+        if(res==-1)res=0;
+        return A[res];
+    }
+};
