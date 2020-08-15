@@ -1,0 +1,79 @@
+思路：
+
+n*k*k 跑时 instead n*n*k
+
+
+代码：
+
+
+class Solution {
+    public List<List<Integer>> palindromePairs(String[] words) {
+        Set<List<Integer>>res=new HashSet<>();
+        Set<String>set=new HashSet<>();
+        Map<String,Integer>map=new HashMap<>();
+        
+         Map<String,Integer>revmap=new HashMap<>();
+        
+        for(int i=0;i<words.length;i++){
+            StringBuilder str=new StringBuilder();
+            str.append(words[i]);
+            String rev=str.reverse().toString();
+            
+            revmap.put(rev,i);
+            map.put(words[i],i);
+        }
+        
+
+        
+        for(int i=0;i<words.length;i++){
+            String s=words[i];
+            if(s.equals(""))continue;
+            if(isp(s,0,s.length()-1)){
+                if(map.containsKey("")){
+                    List<Integer>l=new ArrayList<>();
+                    l.add(i);l.add(map.get(""));
+                    res.add(l);
+                    
+                    List<Integer>ll=new ArrayList<>();
+                    ll.add(map.get(""));ll.add(i);
+                    res.add(ll);
+                }
+            }
+            
+            StringBuilder str=new StringBuilder();
+            for(int j=0;j<s.length();j++){
+                str.append(s.charAt(j)+"");
+                if(revmap.containsKey(str.toString())&&isp(s,j+1,s.length()-1)){
+                    int index=revmap.get(str.toString());
+                    
+                    if(index==i)continue;
+                    List<Integer>l=new ArrayList<>();
+                    l.add(i);l.add(index);res.add(l);
+                }
+            }
+            
+            StringBuilder rev=new StringBuilder(s);
+            s=rev.reverse().toString();
+            str=new StringBuilder();
+            for(int j=0;j<s.length();j++){
+                str.append(s.charAt(j)+"");
+                if(map.containsKey(str.toString())&&isp(s,j+1,s.length()-1)){
+                    int index=map.get(str.toString());
+                    if(index==i)continue;
+                    List<Integer>l=new ArrayList<>();
+                    l.add(index);l.add(i);res.add(l);
+                }
+            }
+        }
+        
+        return new ArrayList<>(res);
+    }
+    
+    public boolean isp(String s,int l,int r){
+        while(l<r){
+            if(s.charAt(l)!=s.charAt(r))return false;
+            l++;r--;
+        }
+        return true;
+    }
+}
