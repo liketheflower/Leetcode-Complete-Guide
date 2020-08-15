@@ -1,0 +1,40 @@
+思路：
+1. 滑动窗口
+2. 思路要改改，每次限定窗口内有几个unique 的字母
+3.这样问题就会变成 给你一个string， 找出最长的contains n unique chararavter and every character apppear least k times
+
+
+
+代码：
+
+class Solution {
+    public int longestSubstring(String s, int k) {
+        int res=0;
+        for(int size=1;size<=26;size++){
+            Queue<Character>q=new LinkedList<>();
+            Map<Character,Integer>map=new HashMap<>();
+            for(int i=0;i<s.length();i++){
+                char c=s.charAt(i);
+                q.add(c);
+                if(!map.containsKey(c))map.put(c,0);
+                map.put(c,map.get(c)+1);
+                while(q.size()>0&&map.size()>size){
+                    char front=q.poll();
+                    map.put(front,map.get(front)-1);
+                    if(map.get(front)==0)map.remove(front);
+                }
+                if(check(map,k)){
+                    res=Math.max(res,q.size());
+                }
+            }
+        }
+        return res;
+    }
+    
+    public boolean check(Map<Character,Integer>map,int k){
+        for(Character key:map.keySet()){
+            if(map.get(key)<k)return false;
+        }
+        return true;
+    }
+}
