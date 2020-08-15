@@ -37,6 +37,7 @@ CF 分目测评估：<br />
 ### Binary Search
 #69. [Sqrt(x) (E+) 11000](./69.txt) <br />
 #302. [包含全部黑色像素的最小矩形 (H-) 1700](./302.txt) <br />
+#744. [Find Smallest Letter Greater Than Target (M-) 1700](./744.txt) <br />
 #1533. [Find the Index of the Large Integer (M) 1500](./1533.txt) <br />
 #LCP08. [剧情触发时间 (M) 1600](./LCP08.txt) <br />
 #LCP12. [小张刷题计划 (M) 1500](./LCP12.txt) <br />
