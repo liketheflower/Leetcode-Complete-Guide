@@ -1,0 +1,56 @@
+思路：
+1. split 两个tree， 他的sum=左+右
+2. 那我们可以先求出总和，然后post order 减少重复的便利
+3. post order 属于dp 的一种
+
+
+代码：
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int sum=0;
+    long res=0;
+    int maxProduct(TreeNode* root) {
+        getsum(root);
+        dfs(root);
+        
+        res%=1000000007;
+        return res;
+    }
+    
+    void getsum(TreeNode* root){
+        if(root==NULL)return;
+        sum+=(root->val);
+        getsum(root->left);
+        getsum(root->right);
+    }
+    
+    
+    long dfs(TreeNode* root){
+        if(root==NULL)return 0;
+        
+        long l=dfs(root->left);
+        long r=dfs(root->right);
+        
+        long cur=l+r+root->val;
+        long other=sum-cur;
+        
+        long product=cur*other;
+        res=max(res,product);
+        
+        return cur;
+    }
+    
+    
+};
