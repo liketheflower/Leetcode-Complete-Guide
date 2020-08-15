@@ -1,0 +1,53 @@
+思路：
+因为puzzle 长度不大的原因，我们可以直接把他所有可能的submask给生成出来，然后看有几个这种完全一样的submask
+
+class Solution {
+    
+    public List<Integer> findNumOfValidWords(String[] words, String[] puzzles) {
+        Map<Integer,Integer>map=new HashMap<>();
+        List<Integer>res=new ArrayList<>();
+        
+        for(String w:words){
+            int code=encode(w);
+            if(!map.containsKey(code))map.put(code,0);
+            map.put(code,map.get(code)+1);
+        }
+        
+        
+        for(String puzzle:puzzles){
+            int first=1<<(puzzle.charAt(0)-'a');
+            Set<Integer>set=new HashSet<>();
+            dfs(puzzle,0,0,set);
+            int cnt=0;
+            for(Integer submask:set){
+                if(map.containsKey(submask)&&((submask&first)!=0)){
+                    cnt+=map.get(submask);
+                }
+            }
+            res.add(cnt);
+        }
+        
+        return res;
+    }
+    
+    public void dfs(String s,int i,int val,Set<Integer>set){
+        if(i>=s.length())return;
+        char cur=s.charAt(i);
+        
+        int take=val|(1<<(cur-'a'));
+        int untake=val;
+        
+        set.add(take);
+        set.add(untake);
+        dfs(s,i+1,take,set);
+        dfs(s,i+1,untake,set);
+    }
+    
+    public int encode(String s){
+        int n=0;
+        for(char c:s.toCharArray()){
+            n|=(1<<(c-'a'));
+        }
+        return n;
+    }
+}
