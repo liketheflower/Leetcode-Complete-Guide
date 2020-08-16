@@ -1,0 +1,23 @@
+思路：
+
+暴力可破万法
+
+
+
+
+代码：
+
+
+class Solution {
+    public boolean threeConsecutiveOdds(int[] A) {
+        boolean res=false;
+        for(int i=0;i<A.length-2;i++){
+            int cnt=0;
+            if(A[i]%2==1)cnt++;
+            if(A[i+1]%2==1)cnt++;
+            if(A[i+2]%2==1)cnt++;
+            if(cnt==3)return true;
+        }
+        return false;
+    }
+}
