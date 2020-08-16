@@ -90,6 +90,7 @@ CF 分目测评估：<br />
 #1140. [Stone Game II (M+) 1600](./1140.txt) <br />
 ### Implementation
 #118. [Pascal's Triangle (E) 900](./118.txt) <br />
+#1550. [ Three Consecutive Odds (E-) 700](./1550.txt) <br />
 ### Bit
 #1178. [Number of Valid Words for Each Puzzle (H-) 1700](./1178.txt) <br />
 
