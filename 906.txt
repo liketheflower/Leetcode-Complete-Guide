@@ -15,8 +15,6 @@ class Solution {
         long s=(long)(Math.sqrt(l))-10;
         long e=(long)(Math.sqrt(r))+10;
         
-        //System.out.println(s+"    "+e);
-        
         for(long i=1;i<=e;i++){
             String cur=i+"";
             
