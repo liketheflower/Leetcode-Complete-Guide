@@ -74,7 +74,7 @@ CF 分目测评估：<br />
 #908. [ Smallest Range I (E+) 1100](./908.txt) <br />
 #1041. [Robot Bounded In Circle (M) 1500](./1041.txt) <br />
 #1131. [Maximum of Absolute Value Expression (M+) 1600](./1131.txt) <br />
-#1551. [Minimum Operations to Make Array Equal (E+) 1100](./1551.txt) <br />
+#1551. [Minimum Operations to Make Array Equal (M-) 1200](./1551.txt) <br />
 #LCP3. [ 机器人大冒险 (M) 1500](./LCP3.txt) <br />
 #LCP11. [  期望个数统计 (M-) 1400](./LCP11.txt) <br />
 ### Segment Tree
