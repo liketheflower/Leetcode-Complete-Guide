@@ -49,6 +49,8 @@ CF 分目测评估：<br />
 #1339.[ Maximum Product of Splitted Binary Tree (M) 1500](./1339.txt) <br />
 #1490.[ Clone N-tree (M-) 1300](./1490.txt) <br />
 #1516.[ Move Sub-Tree of N-Ary Tree (H-) 1700](./1516.txt) <br />
+### Trie
+#208.[ Implement Trie (Prefix Tree) (M) 1500](./208.txt) <br />
 ### DP
 #198. [House Robber (M) 1400](./198.txt) <br />
 #514. [ Freedom Trail (H) 1800](./514.txt) <br />
