@@ -1,0 +1,60 @@
+思路：
+还是经典dp，取还是不取
+
+
+
+代码：
+
+class Solution {
+    int A[][];
+    int dp[][];
+    boolean check=true;
+    int T;
+    public int videoStitching(int[][] A, int T) {
+        this.A=A;this.T=T;
+        Arrays.sort(A,(a,b)->{
+            return a[0]-b[0];
+        });
+        
+        int max=0;
+        for(int pair[]:A){
+            max=Math.max(max,pair[1]);
+        }
+        
+        dp=new int[max+1][A.length];
+        
+        for(int i=0;i<dp.length;i++){
+            Arrays.fill(dp[i],-1);
+        }
+        
+        int res=dfs(0,0);
+        if(res>A.length)return -1;
+        return res;
+    }
+    
+    public int dfs(int pre,int index){
+        if(index>=A.length){
+            if(pre>=T)return 0;
+            return Integer.MAX_VALUE/2;
+        }
+        if(A[index][0]>pre&&pre<T){
+            return Integer.MAX_VALUE/2;
+        }
+       
+        if(dp[pre][index]!=-1)return dp[pre][index];
+        
+        int res=Integer.MAX_VALUE/2;
+        
+        res=Math.min(res,dfs(pre,index+1));
+        for(int i=index;i<A.length;i++){
+            if(A[i][0]>pre)break;
+            if(A[i][1]<=pre)continue;
+            res=Math.min(res,1+dfs(Math.max(A[i][1],pre),i+1));
+        }
+    
+        
+        dp[pre][index]=res;
+        return res;
+        
+    }
+}
