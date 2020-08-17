@@ -57,6 +57,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ### Trie
 #208.[ Implement Trie (Prefix Tree) (M) 1500](./208.txt) <br />
 ### DP
+#85. [Maximal Rectangle (H-) 1700](./85.txt) <br />
 #198. [House Robber (M) 1400](./198.txt) <br />
 #514. [ Freedom Trail (H) 1800](./514.txt) <br />
 #691. [Stickers to Spell Word (H) 1900](./691.txt) <br />
