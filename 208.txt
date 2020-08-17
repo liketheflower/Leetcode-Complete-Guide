@@ -1,0 +1,73 @@
+class Trie {
+
+    /** Initialize your data structure here. */
+    Node trie[];
+    Set<String>set;
+    public Trie() {
+        trie=new Node[26];
+        set=new HashSet<>();
+    }
+    
+    /** Inserts a word into the trie. */
+    public void insert(String word) {
+        set.add(word);
+        insert(word,0,trie);
+    }
+    
+    private void insert(String world,int index,Node trie[]){
+        if(index>=world.length()){
+            return;
+        }
+        char c=world.charAt(index);
+        if(trie[c-'a']==null){
+            trie[c-'a']=new Node(c);
+            insert(world,index+1,trie[c-'a'].childs);
+        }else{
+            insert(world,index+1,trie[c-'a'].childs);
+        }
+    }
+    
+    /** Returns if the word is in the trie. */
+    public boolean search(String word) {
+        if(set.contains(word)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    public boolean startsWith(String prefix) {
+        return startsWith(prefix,0,trie);
+    }
+    private boolean startsWith(String prefix,int index,Node trie[]){
+        if(index>=prefix.length()){
+            return true;
+        }
+        char c=prefix.charAt(index);
+        if(trie[c-'a']!=null){
+            return startsWith(prefix,index+1,trie[c-'a'].childs);
+        }else{
+            return false;
+        }
+        
+    }
+    
+}
+
+class Node{
+    char c;
+    Node childs[];
+    public Node(char c){
+        this.c=c;
+        childs=new Node[26];
+    }
+}
+
+/**
+ * Your Trie object will be instantiated and called as such:
+ * Trie obj = new Trie();
+ * obj.insert(word);
+ * boolean param_2 = obj.search(word);
+ * boolean param_3 = obj.startsWith(prefix);
+ */
