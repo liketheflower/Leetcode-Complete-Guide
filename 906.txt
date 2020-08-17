@@ -1,0 +1,66 @@
+思路：
+1. 首先此题的跑时降到 n^(1/4)
+2. 因为superpalindrom 的 跟值 n^(1/2) 是palindrom， 所以我们只需要其前半部分即可(能推出后半部分) => n^(1/4)
+
+
+代码：
+
+
+class Solution {
+    public int superpalindromesInRange(String L, String R) {
+        int res=0;
+        long l=Long.parseLong(L);
+        long r=Long.parseLong(R);
+        
+        long s=(long)(Math.sqrt(l))-10;
+        long e=(long)(Math.sqrt(r))+10;
+        
+        //System.out.println(s+"    "+e);
+        
+        for(long i=1;i<=e;i++){
+            String cur=i+"";
+            
+            
+            String pair[]=getP(cur);
+            
+            long small=Long.parseLong(pair[0]);
+            small=small*small;
+            long big=Long.parseLong(pair[1]);
+            big=big*big;
+            
+            
+            if(small>r)break;
+            if(small<=r&&small>=l&&isP(small+"")){
+                res++;
+            }
+            if(big<=r&&big>=l&&isP(big+"")){
+                res++;
+            }
+        }
+        
+        return res;
+    }
+    
+    public String[] getP(String s){
+        String res[]=new String[2];
+        StringBuilder rev=new StringBuilder(s);
+        
+        res[1]=s+rev.reverse().toString();
+        
+        rev=new StringBuilder(s.substring(0,s.length()-1));
+
+        res[0]=s+rev.reverse().toString();
+        
+        return res;
+    }
+    
+    public boolean isP(String s){
+        int l=0,r=s.length()-1;
+        while(l<r){
+            if(s.charAt(l)!=s.charAt(r))return false;
+            l++;r--;
+        }
+        return true;
+    }
+}
+
