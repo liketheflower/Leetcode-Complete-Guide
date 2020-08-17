@@ -23,6 +23,9 @@ CF 分目测评估：<br />
 #1063. [Number of Valid Subarrays (H-) 1700](./1063.txt) <br />
 #1081. [Smallest Subsequence of Distinct Characters (M+) 1600](./1081.txt) <br />
 #1544. [Make The String Great (E+) 1100](./1544.txt) <br />
+### LinkedList
+Node: LinkedList can be used as stack or queue or deque<br/>
+#950. [Reveal Cards In Increasing Order (M) 1500](./950.txt) <br />
 ### Greedy
 #45. [Jump Game II (H-) 1600](./45.txt) <br />
 #910. [Smallest Range II (H-) 1700](./910.txt) <br />
