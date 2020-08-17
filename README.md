@@ -66,6 +66,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1066. [Campus Bike II (H-) 1700](./1066.txt) <br />
 #1139. [Largest 1-Bordered Square (M) 1600](./1139.txt) <br />
 #1259. [ Handshakes That Don't Cross (H-) 1700](./1259.txt) <br />
+#1277. [Count Square Submatrices with All Ones (M) 1500](./1277.txt) <br />
 #1359. [Count All Valid Pickup and Delivery Options (H-) 1700](./1359.txt) <br />
 #1546. [ Maximum Number of Non-Overlapping Subarrays With Sum Equals Target (M+) 1600](./1546.txt) <br />
 #1548. [ The Most Similar Path in a Graph  (H) 1800](./1548.txt) <br />
