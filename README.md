@@ -35,7 +35,8 @@ CF 分目测评估：<br />
 #1192. [Critical Connection (H) 1900](./1192.txt) <br />
 #1522. [Diameter of N-Ary Tree (M-) 1300](./1522.txt) <br />
 ### Binary Search
-#69. [Sqrt(x) (E+) 11000](./69.txt) <br />
+#35. [Search Insert Position (E) 1000](./35.txt) <br />
+#69. [Sqrt(x) (E+) 1100](./69.txt) <br />
 #302. [包含全部黑色像素的最小矩形 (H-) 1700](./302.txt) <br />
 #744. [Find Smallest Letter Greater Than Target (M-) 1700](./744.txt) <br />
 #1533. [Find the Index of the Large Integer (M) 1500](./1533.txt) <br />
