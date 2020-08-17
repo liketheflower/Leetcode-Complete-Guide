@@ -31,8 +31,8 @@ class Solution {
             res=Math.max(res,A[r]+dfs(A,l,r-1,next));
         }else{
             res=Integer.MAX_VALUE;
-            res=Math.min(res,A[l]+dfs(A,l+1,r,next));
-            res=Math.min(res,A[r]+dfs(A,l,r-1,next));
+            res=Math.min(res,dfs(A,l+1,r,next));
+            res=Math.min(res,dfs(A,l,r-1,next));
         }
         dp[l][r]=res;
         return res;
