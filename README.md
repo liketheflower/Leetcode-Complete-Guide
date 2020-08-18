@@ -44,7 +44,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #153. [ Find Minimum in Rotated Sorted Array (M+) 1600](./153.txt) <br />
 #154. [ Find Minimum in Rotated Sorted Array II (H-) 1700](./154.txt) <br />
 #302. [包含全部黑色像素的最小矩形 (H-) 1700](./302.txt) <br />
-#744. [Find Smallest Letter Greater Than Target (M-) 1700](./744.txt) <br />
+#744. [Find Smallest Letter Greater Than Target (M-) 1200](./744.txt) <br />
+#1292. [Maximum Side Length of a Square with Sum Less than or Equal to Threshold (M+) 1600](./1292.txt) <br />
 #1533. [Find the Index of the Large Integer (M) 1500](./1533.txt) <br />
 #1552. [Magnetic Force Between Two Balls (M+) 1600](./1552.txt) <br />
 #LCP08. [剧情触发时间 (M) 1600](./LCP08.txt) <br />
