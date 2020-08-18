@@ -66,6 +66,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #714. [Best Time to Buy and Sell Stock with Transaction Fee (M+) 1600](./714.txt) <br />
 #727. [Minimum Window Subsequence (H) 1800](./727.txt) <br />
 #798. [Smallest Rotation with Highest Score (H) 1900](./798.txt) <br />
+#828. [Count Unique Characters of All Substrings of a Given String (H) 1900](./828.txt) <br />
 #1066. [Campus Bike II (H-) 1700](./1066.txt) <br />
 #1139. [Largest 1-Bordered Square (M) 1600](./1139.txt) <br />
 #1259. [ Handshakes That Don't Cross (H-) 1700](./1259.txt) <br />
