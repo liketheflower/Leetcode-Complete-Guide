@@ -1,0 +1,37 @@
+思路：
+岛屿变种题
+
+
+代码：
+
+class Solution {
+    int cnt=0;
+    boolean check=false;
+    public int numEnclaves(int[][] A) {
+        int res=0;
+        for(int i=0;i<A.length;i++){
+            for(int j=0;j<A[0].length;j++){
+                if(A[i][j]==1){
+                    cnt=0;
+                    check=false;
+                    dfs(A,i,j);
+                    if(!check)res+=cnt;
+                }
+            }
+        }
+        return res;
+    }
+    public void dfs(int A[][],int i,int j){
+        if(i<0||j<0||i>=A.length||j>=A[0].length){
+            check=true;
+            return;
+        }
+        if(A[i][j]==0)return;
+        A[i][j]=0;
+        cnt++;
+        dfs(A,i+1,j);
+        dfs(A,i-1,j);
+        dfs(A,i,j+1);
+        dfs(A,i,j-1);
+    }
+}
