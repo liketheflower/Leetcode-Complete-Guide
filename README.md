@@ -20,6 +20,7 @@ CF 分目测评估：<br />
 #1377. [Frog Position After T Seconds (M+) 1600](./1377.txt) <br />
 #LCP7. [ 传递信息 (M) 1400](./LCP7.txt) <br />
 ### Stack
+#316. [Remove Duplicate Letters (M+) 1600](./316.txt) <br />
 #1063. [Number of Valid Subarrays (H-) 1700](./1063.txt) <br />
 #1081. [Smallest Subsequence of Distinct Characters (M+) 1600](./1081.txt) <br />
 #1544. [Make The String Great (E+) 1100](./1544.txt) <br />
