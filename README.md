@@ -48,7 +48,6 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #302. [包含全部黑色像素的最小矩形 (H-) 1700](./302.txt) <br />
 #744. [Find Smallest Letter Greater Than Target (M-) 1200](./744.txt) <br />
 #1292. [Maximum Side Length of a Square with Sum Less than or Equal to Threshold (M+) 1600](./1292.txt) <br />
-#1388. [Pizza With 3n Slices (H) 1800](./1388.txt) <br />
 #1533. [Find the Index of the Large Integer (M) 1500](./1533.txt) <br />
 #1552. [Magnetic Force Between Two Balls (M+) 1600](./1552.txt) <br />
 #LCP08. [剧情触发时间 (M) 1600](./LCP08.txt) <br />
@@ -80,6 +79,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1259. [ Handshakes That Don't Cross (H-) 1700](./1259.txt) <br />
 #1277. [Count Square Submatrices with All Ones (M) 1500](./1277.txt) <br />
 #1359. [Count All Valid Pickup and Delivery Options (H-) 1700](./1359.txt) <br />
+#1388. [Pizza With 3n Slices (H) 1800](./1388.txt) <br />
 #1546. [ Maximum Number of Non-Overlapping Subarrays With Sum Equals Target (M+) 1600](./1546.txt) <br />
 #1548. [ The Most Similar Path in a Graph  (H) 1800](./1548.txt) <br />
 #LCP10. [ 二叉树任务调度 (H+) 2200](./LCP10.txt) <br />
