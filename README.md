@@ -113,6 +113,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #118. [Pascal's Triangle (E) 900](./118.txt) <br />
 #1550. [ Three Consecutive Odds (E-) 700](./1550.txt) <br />
 ### Bit
+#201. [Bitwise AND of Numbers Range (M+) 1600](./201.txt) <br />
 #1178. [Number of Valid Words for Each Puzzle (H-) 1700](./1178.txt) <br />
 
 # ACM 练习
