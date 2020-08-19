@@ -1,0 +1,38 @@
+思路：
+1.如果遇到一个比字母我们要先看看在不在stack里面，在的话直接跳过
+2.如果不在，我们肯定是要放进里面的，但是我们可以去看一下stack的peek是不是比他小以及后面还有没有其他字母这样stack 移掉了后面还有可以补上的
+
+
+代码：
+
+
+class Solution {
+    public String removeDuplicateLetters(String s) {
+        Set<Character>set=new HashSet<>();
+        int table[]=new int[26];
+        StringBuilder str=new StringBuilder();
+        for(int i=0;i<s.length();i++){
+            table[s.charAt(i)-'a']++;
+        }
+        
+        Stack<Character>stack=new Stack<>();
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            table[c-'a']--;
+            if(set.contains(c))continue;
+            
+            while(stack.size()>0&&c<stack.peek()&&table[stack.peek()-'a']>0){
+                set.remove(stack.peek());
+                stack.pop();
+            }
+            
+            stack.push(c);
+            set.add(c);
+        }
+        
+        while(stack.size()!=0){
+            str.append(stack.pop()+"");
+        }
+        return str.reverse().toString();
+    }
+}
