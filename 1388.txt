@@ -1,0 +1,45 @@
+思路：
+1. 类似house robber
+2. 我们要去 length/3 的pizza
+3. pizza 不能有相邻的
+4. 因为是圈的关系，我们要注意两个case
+
+
+
+代码：
+
+
+class Solution {
+    public int maxSizeSlices(int[] A) {
+        return Math.max(take(A,0,A.length-2),take(A,1,A.length-1));
+    }
+    
+    public int take(int A[],int l,int r){
+        
+        int res=0;
+        int dp[][]=new int[A.length][A.length/3+1];
+        //initialize
+        
+        for(int i=l;i<A.length;i++){
+            dp[i][1]=A[i];
+        }
+        
+        for(int i=l;i<=r;i++){
+            for(int cnt=2;cnt<dp[0].length;cnt++){
+                int max=0;
+                for(int j=l;j<i-1;j++){
+                    if(dp[j][cnt-1]!=0){
+                        max=Math.max(max,dp[j][cnt-1]);
+                    }
+                }
+                dp[i][cnt]=max+A[i];
+            }
+        }
+        
+        for(int i=0;i<dp.length;i++){
+            res=Math.max(res,dp[i][A.length/3]);
+        }
+        
+        return res;
+    }
+}
