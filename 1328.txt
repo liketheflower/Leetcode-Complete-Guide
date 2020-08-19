@@ -1,0 +1,33 @@
+思路：
+把所有可能的case 罗列出来就行，因为要最小，repalce ‘a’ 尽量，除非 ‘a’ 没地方可以放
+
+
+
+代码：
+
+class Solution {
+    public String breakPalindrome(String s) {
+        if(s.length()==1)return "";
+        int index=-1;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)!='a'){
+                if(s.length()%2==1&&i==s.length()/2)continue;
+                index=i;break;
+            }
+        }
+        if(index==-1){
+            return s.substring(0,s.length()-1)+"b";
+        }else{
+            StringBuilder str=new StringBuilder();
+            for(int i=0;i<s.length();i++){
+                if(i==index){
+                    str.append("a");
+                }else{
+                    str.append(s.charAt(i)+"");
+                }
+            }
+            return str.toString();
+        }
+    }
+}
+
