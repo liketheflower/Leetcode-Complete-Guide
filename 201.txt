@@ -1,0 +1,31 @@
+思路：
+
+1. 直接n 肯定爆炸
+2. 观察：所有 and 起来肯定最大是等于最小那个数字
+3. 我们看看什么时候最小那个数字的bit 会被turn off 掉就行，并且check 一下看看在不在range 范围内
+
+
+代码：
+
+
+class Solution {
+    public int rangeBitwiseAnd(int m, int n) {
+        int res=0;
+        int min=m;
+        long pre=0;
+        for(int i=0;i<32;i++){
+            int bit=min&1;
+            min>>=1;
+            if(bit!=0){
+                long cur=(1<<i);
+                long target=(cur-pre)+m;
+                if(target>n){
+                    res=res|(1<<i);
+                }
+                pre=pre|(1<<i);
+            }
+            
+        }
+        return res;
+    }
+}
