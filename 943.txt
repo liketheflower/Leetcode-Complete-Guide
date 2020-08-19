@@ -1,0 +1,94 @@
+思路：
+1. 先dfs+memo+bit 的方式填dp table
+2. 然后遍历table 去找到路线从而找到string
+
+
+代码：
+
+
+class Solution {
+    int dp[][][];
+    public String shortestSuperstring(String[] A) {
+        StringBuilder str=new StringBuilder();
+        int n=A.length;
+        int path=(1<<n)-1;
+        dp=new int[A.length][1<<A.length][2];
+        
+        for(int i=0;i<dp.length;i++){
+            for(int j=0;j<dp[0].length;j++){
+                Arrays.fill(dp[i][j],-1);
+            }
+        }
+        
+        int min=Integer.MAX_VALUE;
+        int index=-1;
+        
+        for(int i=0;i<A.length;i++){
+            int val=dfs(A,i,path^(1<<i));
+            dp[i][path^(1<<i)][0]=val+A[i].length();
+            if(min>dp[i][path^(1<<i)][0]){
+                min=dp[i][path^(1<<i)][0];
+                index=i;
+            }
+        }
+        
+        
+        path=path^(1<<index);
+        str.append(A[index]);
+        int cur=index;
+
+        
+        for(int i=0;i<A.length-1;i++){
+            cur=dp[cur][path][1];
+            String s=A[cur];
+            int common=overlap(str.toString(),s);
+            str.append(s.substring(common));
+            path=path^(1<<cur);
+        }
+        
+        
+        return str.toString();
+    }
+    
+    public int dfs(String A[],int pre,int path){
+        if(path==0){
+            dp[pre][path][1]=0;
+            return 0;
+        }
+        if(dp[pre][path][0]!=-1)return dp[pre][path][0];
+        int res=Integer.MAX_VALUE;
+        String s=A[pre];
+        
+        
+        int num=path;
+        int index=-1;
+        for(int i=0;i<32;i++){
+            int bit=num&1;
+            num>>=1;
+            if(bit==1){
+                int common=overlap(s,A[i]);
+                int v=A[i].length()-common+dfs(A,i,path^(1<<i));
+                if(res>v){
+                    res=v;
+                    index=i;
+                }
+               
+            }
+        }
+        dp[pre][path][0]=res;
+        dp[pre][path][1]=index;
+        return res;
+        
+    }
+    
+    public int overlap(String s1,String s2){
+        int n=Math.min(s1.length(),s2.length());
+        int res=0;
+        for(int i=0;i<n;i++){
+            String front=s2.substring(0,i+1);
+            String post=s1.substring(s1.length()-i-1);
+            if(front.equals(post))res=i+1;
+        }
+        return res;
+    }
+}
