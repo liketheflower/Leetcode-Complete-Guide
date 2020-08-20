@@ -1,0 +1,48 @@
+代码：
+
+
+class Solution {
+    int table[][]=new int[26][2];
+    public List<String> maxNumOfSubstrings(String s) {
+        List<String>res=new ArrayList<>();
+        Stack<int[]>stack=new Stack<>();
+
+        
+        for(int i=0;i<table.length;i++){
+            table[i][0]=Integer.MAX_VALUE;
+            table[i][1]=Integer.MIN_VALUE;
+        }
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            table[c-'a'][0]=Math.min(table[c-'a'][0],i);
+            table[c-'a'][1]=Math.max(table[c-'a'][1],i);
+        }
+        
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(i!=table[c-'a'][0])continue;
+            int l=table[c-'a'][0],r=table[c-'a'][1];
+            int back=expand(s,l,r);
+            if(back<0)continue;
+            while(stack.size()!=0&&back<stack.peek()[1]){
+                stack.pop();
+            }
+            stack.push(new int[]{l,back});
+        }
+        while(stack.size()!=0){
+            int pair[]=stack.pop();
+            res.add(s.substring(pair[0],pair[1]+1));
+        }
+        return res;
+    }
+    
+    public int expand(String s,int l, int r){
+        for(int i=l+1;i<=r;i++){
+            char c=s.charAt(i);
+            if(table[c-'a'][0]<l)return -1;//repeated
+            r=Math.max(r,table[c-'a'][1]);
+        }
+        return r;
+        
+    }
+}
