@@ -40,6 +40,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ### Graph
 #1153. [String Transform into another String (H-) 1700](./1153.txt) <br />
 #1192. [Critical Connection (H) 1900](./1192.txt) <br />
+#1361. [Validate Binary Tree Nodes (M) 1500](./1361.txt) <br />
 #1522. [Diameter of N-Ary Tree (M-) 1300](./1522.txt) <br />
 ### Binary Search
 #35. [Search Insert Position (E) 1000](./35.txt) <br />
