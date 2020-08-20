@@ -35,6 +35,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1121. [Divide Array Into Increasing Sequence (H-) 1700](./1121.txt) <br />
 #1326.[ Minimum Number of Taps to Open to Water a Garden   (H) 1800](./1326.txt) <br />
 #1328.[Break a Palindrome   (M-) 1300](./1328.txt) <br />
+#1520.[Maximum Number of Non-Overlapping Substrings  (H) 1900](./1520.txt) <br />
 #1540.[ Can Convert String in K Moves   (M) 1500](./1540.txt) <br />
 #LCP 06. [拿硬币 (E) 800](./LCP06.txt) <br />
 ### Graph
