@@ -1,0 +1,25 @@
+思路：
+一个hashset 可以搞定
+
+
+
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(String animals, String dinosaurs) {
+        // Write your code here
+        int cnt=0;
+        Set<Character>set=new HashSet<>();
+        for(char c:dinosaurs.toCharArray()){
+            set.add(c);
+        }
+        for(char c:animals.toCharArray()){
+            if(set.contains(c))cnt++;
+        }
+        return cnt;
+    }
+}
