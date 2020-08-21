@@ -1,0 +1,22 @@
+思路：
+LCS 填表发
+
+
+代码：
+
+class Solution {
+    public int findLength(int[] A, int[] B) {
+        int res=0;
+        int dp[][]=new int[A.length+1][B.length+1];
+        for(int i=1;i<dp.length;i++){
+            int a=A[i-1];
+            for(int j=1;j<dp[0].length;j++){
+                int b=B[j-1];
+                if(a!=b)continue;
+                dp[i][j]=1+dp[i-1][j-1];
+                res=Math.max(res,dp[i][j]);
+            }
+        }
+        return res;
+    }
+}
