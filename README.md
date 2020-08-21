@@ -73,6 +73,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #514. [ Freedom Trail (H) 1800](./514.txt) <br />
 #691. [Stickers to Spell Word (H) 1900](./691.txt) <br />
 #714. [Best Time to Buy and Sell Stock with Transaction Fee (M+) 1600](./714.txt) <br />
+#718. [ Maximum Length of Repeated Subarray (M) 1500](./718.txt) <br />
 #727. [Minimum Window Subsequence (H) 1800](./727.txt) <br />
 #741. [Cherry Pickup (H) 1800](./741.txt) <br />
 #798. [Smallest Rotation with Highest Score (H) 1900](./798.txt) <br />
