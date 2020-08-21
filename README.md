@@ -162,4 +162,4 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #B207. [ Mad Max  (H-) 1700](./b207.txt) <br />
  #B217. [ Longest common subsequence of three strings  (H) 1800](./b217.txt) <br />
  #B251. [ Largest tree sum path  (M+) 1600](./b251.txt) <br />
- 
+ #B299. [Subsequence Picking (H)1900](./b299.txt) <br />
