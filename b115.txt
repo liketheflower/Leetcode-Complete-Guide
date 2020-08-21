@@ -1,0 +1,29 @@
+思路：
+
+用prefix sum 即可
+
+
+代码：
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[] A) {
+        // Write your code here
+        Map<Integer,Integer>map=new HashMap<>();
+        int sum=0;
+        int res=-1;
+        for(int i=0;i<A.length;i++){
+            sum+=A[i];
+            if(sum==0)res=i+1;
+            if(map.containsKey(sum)){
+                res=Math.max(res,i-map.get(sum));
+            }
+            if(!map.containsKey(sum)){
+                map.put(sum,i);
+            }
+        }
+        return res;
+    }
+}
