@@ -158,6 +158,7 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  # Binary.io
  一个新的面试刷题网站<br/>
  #B6. [ Omitted  (M-) 1400](./b6.txt) <br />
+ #B13. [ Collecting Coins  (M-) 1400](./b13.txt) <br />
  #B14. [ Counting Dinosaurs  (E) 900](./b14.txt) <br />
  #B44. [ Largest Rectangle  (H-) 1700](./b44.txt) <br />
  #B48. [ Sunk Islands  (M) 1500](./b48.txt) <br />
