@@ -1,0 +1,76 @@
+思路：
+倒过来想
+
+
+
+代码：
+
+
+class Solution {
+    boolean visit1[][];
+    boolean visit2[][];
+    public List<List<Integer>> pacificAtlantic(int[][] grid) {
+        if(grid.length==0)return new ArrayList<>();
+        int r=grid.length;int c=grid[0].length;
+        List<List<Integer>>res=new ArrayList<>();
+        visit1=new boolean[r][c];
+        visit2=new boolean[r][c];
+        
+        for(int i=0;i<r;i++){
+            dfs(grid,i,0,visit1);
+        }
+        
+        for(int i=0;i<r;i++){
+            dfs(grid,i,c-1,visit2);
+        }
+        
+        
+        for(int i=0;i<c;i++){
+            dfs(grid,0,i,visit1);
+        }
+        
+        for(int i=0;i<c;i++){
+            dfs(grid,r-1,i,visit2);
+        }
+        
+        
+        
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                if(visit1[i][j]&&visit2[i][j]){
+                    List<Integer>l=new ArrayList<>();
+                    l.add(i);l.add(j);
+                    res.add(l);
+                }
+            }
+        }
+        return res;
+    }
+    
+    public void dfs(int grid[][],int r,int c,boolean visit[][]){
+        if(visit[r][c])return;
+        int cur=grid[r][c];
+        visit[r][c]=true;
+        
+        if(cur<=get(grid,r+1,c)){
+            dfs(grid,r+1,c,visit);
+        }
+        
+        if(cur<=get(grid,r-1,c)){
+            dfs(grid,r-1,c,visit);
+        }
+        
+        if(cur<=get(grid,r,c+1)){
+            dfs(grid,r,c+1,visit);
+        }
+        
+        if(cur<=get(grid,r,c-1)){
+            dfs(grid,r,c-1,visit);
+        }
+    }
+    
+    public int get(int grid[][],int r,int c){
+        if(r<0||c<0||r>=grid.length||c>=grid[0].length)return Integer.MIN_VALUE;
+        return grid[r][c];
+    }
+}
