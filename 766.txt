@@ -1,0 +1,37 @@
+思路：用bfs来便利他的顺序就是对的
+
+
+代码：
+
+class Solution {
+    public boolean isToeplitzMatrix(int[][] grid) {
+        Queue<int[]>q=new LinkedList<>();
+        boolean visit[][]=new boolean[grid.length][grid[0].length];
+        q.add(new int[]{grid.length-1,0});
+        visit[grid.length-1][0]=true;
+        while(q.size()!=0){
+            int size=q.size();
+            Set<Integer>set=new HashSet<>();
+            for(int i=0;i<size;i++){
+                int pair[]=q.poll();
+                set.add(grid[pair[0]][pair[1]]);
+                int r=pair[0];int c=pair[1];
+                if(inrange(grid,r-1,c)&&!visit[r-1][c]){
+                    visit[r-1][c]=true;
+                    q.add(new int[]{r-1,c});
+                }
+                if(inrange(grid,r,c+1)&&!visit[r][c+1]){
+                    visit[r][c+1]=true;
+                    q.add(new int[]{r,c+1});
+                }
+            }
+            if(set.size()>1)return false;
+        }
+        return true;
+    }
+    
+    public boolean inrange(int grid[][],int i,int j){
+        if(i<0||j<0||i>=grid.length||j>=grid[0].length)return false;
+        return true;
+    }
+}
