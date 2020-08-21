@@ -95,6 +95,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #60. [ Permutation Sequence (M+) 1600](./60.txt) <br />
 #463. [ Island Perimeter (E)) 900](./463.txt) <br />
 #836. [ Rectangle Overlap (E+) 1100](./836.txt) <br />
+#891. [ Sum of Subsequence Widths (H) 1800](./891.txt) <br />
 #908. [ Smallest Range I (E+) 1100](./908.txt) <br />
 #1024. [Vedio Stichting (M) 1600](./1024.txt) <br />
 #1041. [Robot Bounded In Circle (M) 1500](./1041.txt) <br />
