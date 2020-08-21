@@ -1,0 +1,38 @@
+思路：
+lc 的132pattern
+
+
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public boolean solve(int[] A) {
+        // Write your code here
+        boolean res=false;
+        int min=Integer.MAX_VALUE;
+        int mins[]=new int[A.length];
+        for(int i=0;i<A.length;i++){
+            min=Math.min(min,A[i]);
+            mins[i]=min;
+        }
+        
+        Stack<Integer>stack=new Stack<>();
+        for(int i=A.length-1;i>=0;i--){
+            min=get(mins,i-1);
+            while(stack.size()>0&&A[i]>stack.peek()){
+                int top=stack.pop();
+                if(min<top)return true;
+            }
+            stack.push(A[i]);
+        }
+        return res;
+    }
+    
+    public int get(int A[],int i){
+        if(i<0)return Integer.MAX_VALUE;
+        return A[i];
+    }
+}
