@@ -1,0 +1,42 @@
+思路：
+用二分法找到该数字处在的位置，那么最小肯定是其位置相邻的几个
+
+
+代码：
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[] A, int[] B) {
+        // Write your code here
+        Arrays.sort(A);
+        int res=Integer.MAX_VALUE;
+        for(int cur:B){
+            int l=0,r=A.length-1;
+            int index=-1;
+            while(l<=r){
+                int mid=l+(r-l)/2;
+                if(cur>=A[mid]){
+                    index=mid;
+                    l=mid+1;
+                }else{
+                    r=mid-1;
+                }
+            }
+            if(index==-1){
+                res=Math.min(res,A[0]-cur);
+            }else{
+                if(index+1<A.length){
+                    res=Math.min(res,Math.abs(A[index+1]-cur));
+                }
+                if(index-1>=0){
+                    res=Math.min(res,Math.abs(A[index-1]-cur));
+                }
+                res=Math.min(res,Math.abs(A[index]-cur));
+            }
+        }
+        return res;
+        
+    }
+}
