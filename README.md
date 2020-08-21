@@ -11,6 +11,7 @@ CF 分目测评估：<br />
 
 ### BFS
 #117. [Populating Next Right Pointers in Each Node II (M) 1400](./117.txt) <br />
+#766. [Toeplitz Matrix (M) 1400](./766.txt) <br />
 #994. [Rotting Orange (M) 1400](./994.txt) <br />
 #LCP 09. [最小跳跃次数 (H) 1800](./LCP09.txt) <br />
 ### DFS
