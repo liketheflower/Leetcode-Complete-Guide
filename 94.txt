@@ -1,0 +1,42 @@
+思路：
+1.用涂颜色的方式去判断是否是odd even
+2.如果revisit 一个走过的点->有cycle
+
+
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    int graph[][];
+    int color[];
+    boolean res=false;
+    public boolean solve(int[][] graph) {
+        // Write your code here
+        this.graph=graph;
+        color=new int[graph.length];
+        color[0]=1;
+        dfs(0,2);
+        //for(int i:color)System.out.println(i);
+        return res;
+    }
+    
+    public void dfs(int root,int col){
+        int next=1;
+        if(col==1)next=2;
+        int childs[]=graph[root];
+        for(int c:childs){
+            if(color[c]==0){
+                color[c]=col;
+                dfs(c,next);
+            }else{
+                if(c!=root&&color[c]==color[root]){
+                    res=true;
+                }
+            }
+        }
+    }
+}
+
