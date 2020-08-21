@@ -1,0 +1,41 @@
+思路：
+1. sliding window maximum
+2.用单调栈能做到o（n）
+
+
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public int[] solve(int[] A, int k) {
+        // Write your code here
+        int res[]=new int[A.length-k+1];
+        Map<Integer,Integer>map=new HashMap<>();
+        PriorityQueue<Integer>pq=new PriorityQueue<Integer>((a,b)->{
+            return b-a;
+        });
+        int index=0;
+        for(int i=0;i<A.length;i++){
+           // System.out.println(map);
+            int cur=A[i];
+            if(!map.containsKey(cur))map.put(cur,0);
+            map.put(cur,map.get(cur)+1);
+            pq.add(cur);
+            if(i+1<k)continue;
+            
+            if(i-k>=0){
+                int pre=A[i-k];
+                map.put(pre,map.get(pre)-1);
+                if(map.get(pre)==0)map.remove(pre);
+            }
+            while(pq.size()>0&&!map.containsKey(pq.peek()))pq.poll();
+            res[index++]=pq.peek();
+            
+        }
+        
+        return res;
+    }
+}
