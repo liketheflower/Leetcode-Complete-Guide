@@ -1,0 +1,63 @@
+思路：
+
+1.参照lc distinct subsequence 去找出unique subsequnce 以及记录他们的len
+2. o(26n^2)
+
+
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(String s, int k) {
+        // Write your code here
+        long res=0;
+        int n=s.length();
+        long dp[][]=new long[256][s.length()+1];
+        
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            long old[]=new long[s.length()];
+            for(int j=0;j<old.length;j++){
+                old[j]=dp[c][j];
+            }
+            
+            for(int len=1;len<=i;len++){
+                long sum=0;
+                for(int j=0;j<256;j++){
+                    if(j==c){
+                        sum+=old[len];
+                    }else{
+                        sum+=dp[j][len];
+                    }
+                }
+                dp[c][len+1]=sum;
+            }
+            dp[c][1]=1;
+        }
+        
+        for(int i=dp[0].length-1;i>=1;i--){//len
+            if(k==0)break;
+            for(int j=0;j<256;j++){
+                if(dp[j][i]==0)continue;
+                int cost=s.length()-i;
+                if(dp[j][i]>=k){
+                    res+=(cost*k);
+                    k=0;
+                    break;
+                }else{
+                    k-=dp[j][i];
+                    res+=(dp[j][i]*cost);
+                }
+            }
+        }
+        if(k==1){//empty
+            k--;
+            res+=s.length();
+        }
+        if(k!=0)return -1;
+        return (int)(res);
+    }
+}
