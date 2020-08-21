@@ -1,0 +1,41 @@
+思路：
+
+1. 可以sort
+2. 先看[1..n] 有多少种组合
+3. 看每次max 会加多少，之前的总min 是多少
+
+
+代码：
+
+
+class Solution {
+    public int sumSubseqWidths(int[] A) {
+        int mod=1000000007;
+        Arrays.sort(A);//can sort!
+        long res=0;
+        long pow[]=new long[A.length];
+        pow[0]=1;
+        for(int i=1;i<pow.length;i++){
+            pow[i]=pow[i-1]*2%mod;
+            //System.out.println(pow[i]);
+        }
+        
+        //[1]
+        //[2], [1,2]
+        
+        //[3]  [1,3]  [2,3]  [1,2,3]
+        long min=A[0];
+        
+        for(int i=1;i<A.length;i++){
+            int cur=A[i];
+            long combination=pow[i];
+            long newadd=((combination-1)*cur-min)%mod;
+            
+            res+=newadd;res%=mod;
+            min=min*2+(cur);
+            min%=mod;
+           
+        }
+        return (int)(res);
+    }
+}
