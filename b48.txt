@@ -1,0 +1,51 @@
+思路：
+经典岛屿变种
+
+
+代码：
+
+import java.util.*;
+
+
+class Solution {
+    boolean visit[][];
+    boolean touch=false;
+    List<int[]>list;
+    public int[][] solve(int[][] grid) {
+        // Write your code here
+        int r=grid.length;
+        int c=grid[0].length;
+        visit=new boolean[r][c];
+        
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                if(grid[i][j]==0||visit[i][j])continue;
+                touch=false;
+                list=new ArrayList<>();
+                dfs(grid,i,j);
+                if(!touch){
+                    for(int A[]:list){
+                        grid[A[0]][A[1]]=0;
+                    }
+                }
+                
+            }
+        }
+        return grid;
+    }
+    
+    public void dfs(int grid[][],int i,int j){
+        if(i<0||j<0||i>=grid.length||j>=grid[0].length){
+            touch=true;
+            return;
+        }
+        if(visit[i][j])return;
+        if(grid[i][j]==0)return;
+        visit[i][j]=true;
+        list.add(new int[]{i,j});
+        dfs(grid,i+1,j);
+        dfs(grid,i-1,j);
+        dfs(grid,i,j+1);
+        dfs(grid,i,j-1);
+    }
+}
