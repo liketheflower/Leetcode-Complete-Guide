@@ -1,0 +1,21 @@
+思路：
+？？？
+
+
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[] nums) {
+        // Write your code here
+        int cnt=0;
+        for(int i:nums){
+            String n=i+"";
+            if(n.length()%2==1)cnt++;
+        }
+        return cnt;
+    }
+}
