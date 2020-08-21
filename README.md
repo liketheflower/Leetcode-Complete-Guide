@@ -77,6 +77,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #727. [Minimum Window Subsequence (H) 1800](./727.txt) <br />
 #741. [Cherry Pickup (H) 1800](./741.txt) <br />
 #798. [Smallest Rotation with Highest Score (H) 1900](./798.txt) <br />
+#801. [Minimum Swaps To Make Sequences Increasing (M+) 1600](./801.txt) <br />
 #805. [Split Array With Same Average (H) 1800](./805.txt) <br />
 #828. [Count Unique Characters of All Substrings of a Given String (H) 1900](./828.txt) <br />
 #943. [Find the Shortest Superstring (H) 1900](./943.txt) <br />
