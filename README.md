@@ -122,6 +122,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #913. [Cat and Mouse (H+) 2400](./913.txt) <br />
 #1140. [Stone Game II (M+) 1600](./1140.txt) <br />
 ### Implementation
+#68. [Text Justification (H) 1800](./68.txt) <br />
 #118. [Pascal's Triangle (E) 900](./118.txt) <br />
 #1550. [ Three Consecutive Odds (E-) 700](./1550.txt) <br />
 ### Bit
