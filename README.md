@@ -160,10 +160,11 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #B6. [ Omitted  (M-) 1400](./b6.txt) <br />
  #B14. [ Counting Dinosaurs  (E) 900](./b14.txt) <br />
  #B48. [ Sunk Islands  (M) 1500](./b48.txt) <br />
+ #B115. [ Longest Zero Sublist Sum  (M) 1500](./b115.txt) <br />
  #B129. [ Pigeonhole  (E+) 1100](./b129.txt) <br />
  #B207. [ Mad Max  (H-) 1700](./b207.txt) <br />
  #B217. [ Longest common subsequence of three strings  (H) 1800](./b217.txt) <br />
  #B251. [ Largest tree sum path  (M+) 1600](./b251.txt) <br />
  #B286. [Minimum Difference (M)1500](./b286.txt) <br />
  #B299. [Subsequence Picking (H)1900](./b299.txt) <br />
-  #B503. [Small Large Medium (M+)1600](./b503.txt) <br />
+ #B503. [Small Large Medium (M+)1600](./b503.txt) <br />
