@@ -18,6 +18,7 @@ CF 分目测评估：<br />
 #301. [Remove Invalid Parentheses (H-) 1600](./301.txt) <br />
 #417. [Pacific Atlantic Water Flow (M+) 1600](./417.txt) <br />
 #967. [ Numbers With Same Consecutive Differences (M) 1500](./967.txt) <br />
+#979. [ Distribute Coins in Binary Tree (M+) 1600](./979.txt) <br />
 #1020. [ Number of Enclaves (M-) 1400](./1020.txt) <br />
 #1255. [Maximum Score Words Formed by Letters (H-) 1700](./1255.txt) <br />
 #1377. [Frog Position After T Seconds (M+) 1600](./1377.txt) <br />
