@@ -1,0 +1,31 @@
+思路：
+
+把数字放在对应的index 那进行swap， 如果发现不能swap（一样的时候），这个就是答案
+
+
+
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[] A) {
+        // Write your code here
+        for(int i=0;i<A.length;i++){
+            A[i]--;
+        }
+        for(int i=0;i<A.length;i++){
+            while(A[i]!=i){
+                int cur=A[i];
+                int target=A[cur];
+                if(cur==target)return cur+1;
+                int temp=cur;
+                A[i]=target;
+                A[temp]=temp;
+            }
+        }
+        return -1;
+    }
+}
