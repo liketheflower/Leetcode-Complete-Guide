@@ -117,6 +117,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #713. [ Subarray Product Less Than K (M) 1500](./713.txt) <br />
 ### Sort
 #581. [ Shortest Unsorted Continuous Subarray (E) 1000](./581.txt) <br />
+#1366. [ Rank Teams by Votes (M+) 1600](./1366.txt) <br />
 ### String
 #336. [Palindrome Pairs (H) 1800](./336.txt) <br />
 #696. [Count Binary Substrings (E) 1000](./696.txt) <br />
