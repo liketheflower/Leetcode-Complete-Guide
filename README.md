@@ -163,6 +163,7 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #B14. [ Counting Dinosaurs  (E) 900](./b14.txt) <br />
  #B44. [ Largest Rectangle  (H-) 1700](./b44.txt) <br />
  #B48. [ Sunk Islands  (M) 1500](./b48.txt) <br />
+ #B87. [ The quick brown fox  (M+) 1600](./b87.txt) <br />
  #B94. [ Detecting an odd length cycle  (H) 1800](./b94.txt) <br />
  #B115. [ Longest Zero Sublist Sum  (M) 1500](./b115.txt) <br />
  #B129. [ Pigeonhole  (E+) 1100](./b129.txt) <br />
