@@ -1,0 +1,73 @@
+思路:
+1. 先找出最小生成树cost
+2. 如果要确认这edge 在不在生成树里，我们先把这edge放进去看看最后的cost 是不是跟原来最小cost 一样
+
+
+
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public boolean solve(int[][] edges, int a, int b) {
+        // Write your code here
+        Arrays.sort(edges,(A,B)->{
+           return A[2]-B[2]; 
+        });
+        int cost=0;
+        int abcost=0;
+        int nums[]=new int[edges.length+1];
+        
+        reset(nums);
+        
+        for(int pair[]:edges){
+            int v1=pair[0];
+            int v2=pair[1];
+            if(v1==a&&v2==b){
+                abcost=pair[2];
+            }
+            if(v2==a&&v1==b){
+                 abcost=pair[2];
+            }
+            int r1=find(nums,v1);
+            int r2=find(nums,v2);
+            if(r1==r2)continue;
+            nums[r1]=r2;
+            cost+=pair[2];
+        }
+        
+        reset(nums);
+        
+        int aroot=find(nums,a);
+        int broot=find(nums,b);
+        nums[aroot]=nums[broot];
+        
+        for(int pair[]:edges){
+            int v1=pair[0];
+            int v2=pair[1];
+            int r1=find(nums,v1);
+            int r2=find(nums,v2);
+            if(r1==r2)continue;
+            nums[r1]=r2;
+            abcost+=pair[2];
+        }
+        
+        
+        return abcost==cost;
+    }
+    
+    public void reset(int nums[]){
+        for(int i=0;i<nums.length;i++){
+            nums[i]=i;
+        }
+    }
+    
+    public int find(int nums[],int x){
+        if(nums[x]==x)return x;
+        int root=find(nums,nums[x]);
+        nums[x]=root;
+        return root;
+    }
+}
