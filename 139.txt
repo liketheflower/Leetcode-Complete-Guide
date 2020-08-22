@@ -1,0 +1,20 @@
+代码：
+
+class Solution {
+    public boolean wordBreak(String s, List<String> wordDict) {
+        boolean dp[]=new boolean[s.length()+1];
+        dp[0]=true;
+        for(int i=1;i<=s.length();i++){
+            for(String w:wordDict){
+                if(i-w.length()<0)continue;
+                if(!dp[i-w.length()])continue;
+                int cur=i-1;
+                if(s.substring(i-w.length(),i).equals(w)){
+                    dp[i]=true;
+                    break;
+                }
+            }
+        }
+        return dp[s.length()];
+    }
+}
