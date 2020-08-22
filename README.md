@@ -171,4 +171,5 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #B251. [ Largest tree sum path  (M+) 1600](./b251.txt) <br />
  #B286. [Minimum Difference (M)1500](./b286.txt) <br />
  #B299. [Subsequence Picking (H)1900](./b299.txt) <br />
+ #B315. [Minimum Spanning Tree (H)1800](./b315.txt) <br />
  #B503. [Small Large Medium (M+)1600](./b503.txt) <br />
