@@ -1,0 +1,27 @@
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public boolean solve(String[] words, String s) {
+        // Write your code here
+        
+        boolean dp[]=new boolean[s.length()];
+        for(int i=0;i<s.length();i++){
+            for(String w:words){
+                if(w.length()>i+1)continue;
+                
+                if(i+1==w.length()&&s.substring(0,i+1).equals(w)){
+                    dp[i]=true;
+                }else{
+                    if(s.substring(i-w.length()+1,i+1).equals(w))dp[i]|=dp[i-w.length()];
+                    
+                }
+            }
+        }
+        return dp[s.length()-1];
+    }
+    
+}
