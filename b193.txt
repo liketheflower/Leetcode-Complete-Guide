@@ -1,0 +1,39 @@
+思路：
+基本树遍历
+
+
+代码：
+
+
+import java.util.*;
+
+/**
+ * public class Tree {
+ *   int val;
+ *   Tree left;
+ *   Tree right;
+ * }
+ */
+class Solution {
+    boolean res=true;
+    public boolean solve(Tree root) {
+        // Write your code here
+        dfs(root);
+        return res;
+    }
+    
+    public void dfs(Tree root){
+        if(root==null)return;
+        if(root.left==null&&root.right==null)return;
+        dfs(root.left);
+        dfs(root.right);
+        if(root.left==null){
+            if(root.val!=root.right.val)res=false;
+        }else if(root.right==null){
+            if(root.val!=root.left.val)res=false;
+        }else{
+            if(root.val!=(root.left.val+root.right.val))res=false;
+        }
+        
+    }
+}
