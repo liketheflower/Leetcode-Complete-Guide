@@ -155,7 +155,7 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #POJ 2229. [Sumsets (M) 1500](./POJ2229.txt) <br />
  <br/>
  <br/>
- # Binary.io
+ # BinarySearch.io
  一个新的面试刷题网站<br/>
  #B6. [ Omitted  (M-) 1400](./b6.txt) <br />
  #B13. [ Collecting Coins  (M-) 1400](./b13.txt) <br />
