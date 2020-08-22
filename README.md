@@ -174,4 +174,4 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #B299. [Subsequence Picking (H)1900](./b299.txt) <br />
  #B315. [Minimum Spanning Tree (H)1800](./b315.txt) <br />
  #B503. [Small Large Medium (M+)1600](./b503.txt) <br />
- #B591. [Small Large Medium (H)1800](./b591.txt) <br />
+ #B591. [Connect Forest (H)1800](./b591.txt) <br />
