@@ -1,0 +1,36 @@
+思路：
+
+避免重复计算
+
+
+代码：
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[] A) {
+        // Write your code here
+        
+        int res=0;
+        int fre[]=new int[10];
+        int sums[]=new int[10];
+        for(int i:A){
+            String s=i+"";
+            fre[s.length()]++;
+            sums[s.length()]+=i;
+        }
+        
+        for(int i=0;i<A.length;i++){
+            int cur=A[i];
+            for(int j=1;j<10;j++){
+                if(fre[j]!=0){
+                    res+=(int)((Math.pow(10,j)*cur*fre[j]+sums[j]));
+                }
+            }
+        }
+        
+        
+        return res;
+    }
+}
