@@ -1,0 +1,50 @@
+思路：
+先算好每个rank 位置有多少票，然后用comparatpr 一个个sort 就行
+
+
+
+代码：
+
+
+class Solution {
+    public String rankTeams(String[] votes) {
+        int rank[][]=new int[26][votes[0].length()];
+        Set<Integer>set=new HashSet<>();
+        StringBuilder str=new StringBuilder();
+        for(String s:votes){
+            for(int i=0;i<s.length();i++){
+                char c=s.charAt(i);
+                set.add(c-'A');
+                rank[c-'A'][i]++;
+            }
+        }
+        
+        
+        PriorityQueue<int[]>pq=new PriorityQueue<>((a,b)->{
+            int ai=a[0];
+            int bi=b[0];
+            for(int i=0;i<rank[0].length;i++){
+                if(rank[ai][i]!=rank[bi][i]){
+                    return rank[bi][i]-rank[ai][i];
+                }
+            }
+            return a[0]-b[0];
+        });
+        
+        
+        for(int i=0;i<26;i++){
+            if(!set.contains(i))continue;
+            pq.add(new int[]{i});
+        }
+        
+        
+        while(pq.size()!=0){
+            int top[]=pq.poll();
+            char c=(char)(top[0]+'A');
+            str.append(c+"");
+        }
+        
+        return str.toString();
+        
+    }
+}
