@@ -1,0 +1,96 @@
+思路：
+
+每颗树贡献直径的一半就可以
+
+
+
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    boolean visit[];
+    int graph[][];
+    List<Integer>all=new ArrayList<>();
+    int singlemax=0;
+    public int solve(int[][] graph) {
+        // Write your code here
+        visit=new boolean[graph.length];
+        this.graph=graph;
+        int res=0;
+        
+        for(int i=0;i<graph.length;i++){
+            if(visit[i])continue;
+            singlemax=Integer.MIN_VALUE;
+            visit[i]=true;
+            dfs(i);
+            res=Math.max(res,singlemax);
+            //System.out.println(singlemax);
+            all.add(Math.max(0,singlemax));
+        }
+        
+        List<Integer>diameters=new ArrayList<>();
+        
+        for(int dia:all){
+            int half=(dia+1)/2;
+            diameters.add(half);
+        }
+        
+        //System.out.println(diameters);
+        
+        Collections.sort(diameters,(a,b)->{
+            return b-a;
+        });
+        
+        //System.out.println(diameters);
+        int max=diameters.get(0);
+        diameters.remove(0);
+        
+        if(diameters.size()==1){
+            res=Math.max(res,max+1+diameters.get(0));
+        }
+        else if(diameters.size()==2){
+            res=Math.max(res,2+diameters.get(0)+diameters.get(1));
+            res=Math.max(res,1+max+diameters.get(0));
+        }
+        else if(diameters.size()>2){
+            res=Math.max(res,1+max+diameters.get(0));
+            res=Math.max(res,2+diameters.get(0)+diameters.get(1));
+        }
+        
+        
+        return res;
+    }
+    
+    public int dfs(int root){
+        int childs[]=graph[root];
+        List<Integer>list=new ArrayList<>();
+        
+        for(int c:childs){
+            if(!visit[c]){
+                visit[c]=true;
+                int h=dfs(c);
+                list.add(h);
+            }
+        }
+        
+        Collections.sort(list,(a,b)->{
+            return b-a;
+        });
+        
+        
+        if(list.size()==0){
+            return 1;
+        }
+        else if(list.size()==1){
+            singlemax=Math.max(list.get(0),singlemax);
+            return list.get(0)+1;
+        }
+        else{
+            singlemax=Math.max(list.get(0)+list.get(1),singlemax);
+            return Math.max(1+list.get(0),1+list.get(1));
+        }
+    }
+}
