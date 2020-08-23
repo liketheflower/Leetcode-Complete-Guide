@@ -1,0 +1,59 @@
+思路：
+1. dfs
+2. 记录一下parent， 不能走parent
+3. 如果遇到visit 过的肯定有cycle
+4. 无向图找cycle
+
+
+代码：
+
+
+class Solution {
+    boolean visit[][];
+    int sr=-1;int sc=-1;
+    boolean yes=false;
+    Set<String>set=new HashSet<>();
+    public boolean containsCycle(char[][] grid) {
+        visit=new boolean[grid.length][grid[0].length];
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                if(visit[i][j])continue;
+                dfs(grid,i,j,grid[i][j],-1,-1);
+                if(yes)return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    public void dfs(char[][] grid,int r,int c,char cc,int lastr,int lastc){
+        if(r<0||c<0||r>=grid.length||c>=grid[0].length)return;
+
+        if(grid[r][c]!=cc)return;
+       
+        
+        if(visit[r][c]&&grid[r][c]==cc){
+            yes=true;
+            return;
+        }
+        
+        
+        visit[r][c]=true;
+        if(r+1!=lastr||c!=lastc){
+            dfs(grid,r+1,c,cc,r,c);
+        }
+        
+        if(r-1!=lastr||c!=lastc){
+            dfs(grid,r-1,c,cc,r,c);
+        }
+        
+        if(r!=lastr||c+1!=lastc){
+            dfs(grid,r,c+1,cc,r,c);
+        }
+        
+        if(r!=lastr||c-1!=lastc){
+            dfs(grid,r,c-1,cc,r,c);
+        }
+    }
+    
+}
