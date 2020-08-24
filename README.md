@@ -164,6 +164,7 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #B6. [ Omitted  (M-) 1400](./b6.txt) <br />
  #B13. [ Collecting Coins  (M-) 1400](./b13.txt) <br />
  #B14. [ Counting Dinosaurs  (E) 900](./b14.txt) <br />
+ #B15. [ Tom Sawyer  (M+) 1600](./b15.txt) <br />
  #B27. [ LCS  (M) 1500](./b27.txt) <br />
  #B44. [ Largest Rectangle  (H-) 1700](./b44.txt) <br />
  #B48. [ Sunk Islands  (M) 1500](./b48.txt) <br />
