@@ -1,0 +1,56 @@
+思路：
+lc 828
+
+
+
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(String s) {
+        // Write your code here
+                if(s.length()==0)return 0;
+        int mod=1000000007;
+        long res=0;
+        long dp[]=new long[s.length()];
+        List<Integer>table[]=new ArrayList[26];
+        for(int i=0;i<table.length;i++){
+            table[i]=new ArrayList<>();
+        }
+        
+        dp[0]=1l;
+        table[s.charAt(0)-'a'].add(0);
+        
+        for(int i=1;i<s.length();i++){
+            char c=s.charAt(i);
+            List<Integer>indexs=table[c-'a'];
+            
+            if(indexs.size()==0){//new,unique
+                dp[i]=dp[i-1]+(i+1);   
+            }else{
+                int last=indexs.get(indexs.size()-1);
+                if(indexs.size()==1){
+                    dp[i]=dp[i-1]+(i+1)-2*(last+1);
+                }else{
+                    
+                   int last2=indexs.get(indexs.size()-2); 
+                    
+                   dp[i]=dp[i-1]+(i+1)-(last+1)-(last-last2);  
+                }
+            }
+            indexs.add(i);
+        }
+        
+        
+        
+        for(long i:dp){
+            res+=i;
+            res%=mod;
+        }
+        
+        return (int)(res);
+    }
+}
