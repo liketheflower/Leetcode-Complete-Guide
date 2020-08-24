@@ -1,0 +1,34 @@
+思路：
+1. 对mod 进行prefix sum
+
+
+代码：
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[] A, int k) {
+        // Write your code here
+        
+        Map<Integer,Integer>map=new HashMap<>();
+        int cnt=0;
+        int sum=0;
+        for(int i=0;i<A.length;i++){
+            sum+=A[i];
+            if(sum%k==0)cnt++;
+            
+            int mod=sum%k;
+            
+            if(map.containsKey(mod)){
+                cnt+=map.get(mod);
+            }
+            
+            if(!map.containsKey(mod))map.put(mod,0);
+            map.put(mod,map.get(mod)+1);
+            
+        }
+        
+        return cnt;
+    }
+}
