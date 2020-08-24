@@ -1,0 +1,45 @@
+思路：
+1. 把单数和双数分到不同的list最后merge 起来
+2. 注意，双数的next 要在最后设为null 避免cycle
+
+
+代码：
+
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode oddEvenList(ListNode head) {
+        ListNode odd=new ListNode(0);
+        ListNode even=new ListNode(0);
+        
+        ListNode ocur=odd;
+        ListNode ecur=even;
+        int cnt=1;
+        while(head!=null){
+            if(cnt%2==1){
+                ocur.next=head;
+                ocur=ocur.next;
+            }else{
+                ecur.next=head;
+                ecur=ecur.next;
+            }
+            cnt++;
+            head=head.next;
+        }
+        
+        ocur.next=even.next;
+        ecur.next=null;
+        
+        
+        return odd.next;
+    }
+}
