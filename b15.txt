@@ -1,0 +1,48 @@
+思路：
+1.把上一层最小的两个记录一下就行，类似minimim faliing path sum
+2. 确认一下index 是不是adjecent
+
+
+代码：
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[][] grid) {
+        // Write your code here
+        int dp[][]=new int[grid.length][grid[0].length];
+        PriorityQueue<int[]>pre=new PriorityQueue<>((a,b)->{
+            return a[0]-b[0];
+        });
+        
+        for(int i=0;i<grid[0].length;i++){
+            dp[0][i]=grid[0][i];
+            pre.add(new int[]{grid[0][i],i});
+        }
+        
+        
+        for(int i=1;i<grid.length;i++){
+            PriorityQueue<int[]>cur=new PriorityQueue<>((a,b)->{
+                return a[0]-b[0];
+            });
+            
+            for(int j=0;j<grid[0].length;j++){
+                
+                int top[]=pre.poll();
+                int sec[]=pre.peek();
+                pre.add(top);
+                
+                if(j!=top[1]){
+                    dp[i][j]=grid[i][j]+top[0];
+                }else{
+                     dp[i][j]=grid[i][j]+sec[0];
+                }
+                cur.add(new int[]{dp[i][j],j});
+                
+            }
+            pre=cur;
+        }
+        return pre.peek()[0];
+    }
+}
