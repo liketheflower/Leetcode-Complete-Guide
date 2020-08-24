@@ -1,0 +1,43 @@
+代码：
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        if(root==null)return new ArrayList<>();
+        List<Integer>res=new ArrayList<>();
+        Stack<TreeNode>stack=new Stack<>();
+        stack.push(root);
+        
+        while(stack.size()!=0){
+            TreeNode top=stack.peek();
+            if(top.left==null&&top.right==null){
+                stack.pop();
+                res.add(top.val);
+            }
+            else if(top.left==null){
+                top=stack.pop();
+                res.add(top.val);
+                stack.push(top.right);
+                top.right=null;
+            }else{
+                stack.push(top.left);
+                top.left=null;
+            }
+        }
+        return res;
+    }
+}
