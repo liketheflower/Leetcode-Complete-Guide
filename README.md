@@ -132,6 +132,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ### Implementation
 #68. [Text Justification (H) 1800](./68.txt) <br />
 #118. [Pascal's Triangle (E) 900](./118.txt) <br />
+#747. [Largest Number At Least Twice of Others (E) 900](./747.txt) <br />
 #1550. [ Three Consecutive Odds (E-) 700](./1550.txt) <br />
 ### Bit
 #201. [Bitwise AND of Numbers Range (M+) 1600](./201.txt) <br />
