@@ -1,0 +1,49 @@
+思路：
+ugly number3
+
+
+代码：
+
+#include "solution.hpp"
+using namespace std;
+#include <algorithm>
+
+class Solution {
+    public:
+    int solve(int n, int a, int b, int c) {
+        // Write your code here
+        if(a==1||b==1||c==1)return n;
+        long res=-1;
+        long l=1;
+        long r=1000000000000000;
+        n;
+        int ab=__gcd(a,b);
+        int ac=__gcd(a,c);
+        int bc=__gcd(b,c);
+        int abc=__gcd(a*b/ab,c);
+        //cout<<ab<<endl;
+        while(l<=r){
+            long mid=l+(r-l)/2;
+            
+            long acnt=mid/a;
+            long bcnt=mid/b;
+            long ccnt=mid/c;
+            
+            long abcnt=mid/(a*b/ab);
+            long accnt=mid/(a*c/ac);
+            long bccnt=mid/(b*c/bc);
+            long abccnt=mid/(a*b/ab*c/abc);
+            
+            long total=acnt+bcnt+ccnt-abcnt-accnt-bccnt+abccnt;
+            
+            if(total>=n){
+                res=mid;
+                r=mid-1;
+            }else{
+                l=mid+1;
+            }
+        }
+        
+        return (int)(res);
+    }
+};
