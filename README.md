@@ -190,5 +190,6 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #B357. [Longest Alternating Subsequence (M)1500](./b357.txt) <br />
  #B362. [Number Flip (E)900](./b362.txt) <br />
  #B503. [Small Large Medium (M+)1600](./b503.txt) <br />
+ #B539. [Divisible Numbers (H)1800](./b539.txt) <br />
  #B591. [Connect Forest (H)1800](./b591.txt) <br />
  #B682. [Concatenated Sums (M)1500](./b682.txt) <br />
