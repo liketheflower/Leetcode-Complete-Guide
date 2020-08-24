@@ -1,0 +1,36 @@
+思路：
+preorder 下去就行
+
+
+
+代码：
+
+
+import java.util.*;
+
+/**
+ * public class Tree {
+ *   int val;
+ *   Tree left;
+ *   Tree right;
+ * }
+ */
+class Solution {
+    int res=-10000;
+    public int solve(Tree root) {
+        // Write your code here
+        if(root==null)return 0;
+        dfs(root,0);
+        return res;
+    }
+    
+    public void dfs(Tree root,int val){
+        if(root==null)return;
+        
+        if(root.left==null&&root.right==null){
+            res=Math.max(res,val+root.val);
+        }
+        dfs(root.left,val+root.val);
+        dfs(root.right,val+root.val);
+    }
+}
