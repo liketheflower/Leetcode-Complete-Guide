@@ -1,0 +1,23 @@
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int n) {
+        // Write your code here
+        String s=n+"";
+        int index=-1;
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(c-'0'<3){
+                index=i;
+                break;
+            }
+        }
+        if(index==-1)return n;
+        String num=s.substring(0,index)+"3"+s.substring(index+1);
+        return Integer.parseInt(num);
+    }
+}
