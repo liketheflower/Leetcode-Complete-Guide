@@ -1,0 +1,138 @@
+思路：
+1. bfs
+2. 从最上面到最底部
+3. 有几种可能性，被单个cover，或者两个同时cover
+4. 两个同时cover 那些另做处理（sliding window 那个部分）
+
+
+代码：
+
+
+class Solution {
+    int mod=1000000007;
+    long hash1[];
+    long pow1[];
+    long hash2[];
+    long pow2[];
+    
+    public int[] movesToStamp(String stamp, String target) {
+        
+        //pre-checking
+        if(stamp.charAt(0)!=target.charAt(0)||stamp.charAt(stamp.length()-1)!=target.charAt(target.length()-1)){
+            return new int[]{};
+        }
+        Set<Character>set=new HashSet<>();
+        for(int i=0;i<stamp.length();i++){
+            set.add(stamp.charAt(i));
+        }
+        for(int i=0;i<target.length();i++){
+            if(!set.contains(target.charAt(i)))return new int[]{};
+        }
+        //////////////////////////////////////////////////////////
+        
+        
+        
+        
+        /////////////////////////////////////////////////
+        hash1=new long[stamp.length()];
+        pow1=new long[stamp.length()];
+        pow1[0]=1;
+        hash1[0]=stamp.charAt(0)%mod;
+        for(int i=1;i<stamp.length();i++){
+            hash1[i]=(hash1[i-1]*26+stamp.charAt(i))%mod;
+            pow1[i]=(pow1[i-1]*26)%mod;
+        }
+        hash2=new long[target.length()];
+        pow2=new long[target.length()];
+        pow2[0]=1;
+        hash2[0]=target.charAt(0)%mod;
+        for(int i=1;i<target.length();i++){
+            hash2[i]=(hash2[i-1]*26+target.charAt(i))%mod;
+            pow2[i]=(pow2[i-1]*26)%mod;
+        }
+        //////////////////////////////////////////////////
+        
+        boolean A[]=new boolean[target.length()];
+        LinkedList<Integer>deque=new LinkedList<>();
+        Queue<int[]>queue=new LinkedList<>();
+        for(int i=0;i<target.length()-stamp.length()+1;i++){
+            if(gethash1(0,stamp.length()-1)==gethash2(i,i+stamp.length()-1)&&target.substring(i,i+stamp.length()).equals(stamp)){
+                queue.add(new int[]{i,i+stamp.length()-1});
+                deque.addLast(i);
+                for(int j=i;j<=i+stamp.length()-1;j++)A[j]=true;//visit
+            }
+        }
+        
+        //bfs
+        while(queue.size()!=0){
+            int pair[]=queue.poll();
+            int start=pair[0];
+            int end=pair[1];
+            int maxL1=Math.min(stamp.length(),target.length()-end-1);
+            for(int i=maxL1;i>=1;i--){//back
+                if(A[end+i])continue;
+                if(gethash1(stamp.length()-i,stamp.length()-1)==gethash2(end+1,end+i)){
+                    queue.add(new int[]{end+1,end+i});
+                    for(int j=end+1;j<=end+i;j++)A[j]=true;
+                    deque.addFirst(end+i+1-stamp.length());
+                    break;
+                }
+            }
+            int maxL2=Math.min(stamp.length(),start);
+            for(int i=maxL2;i>=1;i--){
+                if(A[start-i])continue;
+                if(gethash1(0,i-1)==gethash2(start-i,start-1)){
+                    queue.add(new int[]{start-i,start-1});
+                    for(int j=start-i;j<=start-1;j++)A[j]=true;
+                    deque.addFirst(start-i);
+                    break;
+                }
+            }
+        }
+        int cnt=0;
+        for(int i=0;i<A.length;i++){
+            if(!A[i])cnt++;
+            else{
+                if(cnt!=0){//sliding window
+                    for(int j=0;j<stamp.length()-cnt;j++){
+                        if(gethash1(j,j+cnt-1)==gethash2(i-cnt,i-1)){
+                            for(int k=i-cnt;k<=i-1;k++)A[k]=true;
+                            deque.addFirst(i-cnt-j);
+                            break;
+                        }
+                        
+                    }
+                }
+                cnt=0;
+            }
+        }
+        
+        for(boolean T:A){
+            if(!T)return new int[]{};//some part is not cover
+        }
+     
+        /////////////////////////////////////////////////////////
+        int res[]=new int[deque.size()];
+        int index=0;
+        while(deque.size()!=0){
+            res[index++]=deque.removeFirst();
+        }
+        return res;
+    }
+    
+    //get rolling hash stamp
+    public long gethash1(int left,int right){
+        if(left==0)return hash1[right];
+        long res=(hash1[right]-hash1[left-1]*pow1[right-left+1])%mod;
+        if(res<0)res+=mod;
+        return res;
+    }
+    //get rolling hash target
+    public long gethash2(int left,int right){
+        if(left==0)return hash2[right];
+        long res=(hash2[right]-hash2[left-1]*pow2[right-left+1])%mod;
+        if(res<0)res+=mod;
+        return res;
+    }
+
+}
