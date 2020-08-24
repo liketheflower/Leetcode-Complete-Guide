@@ -167,6 +167,7 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #B27. [ LCS  (M) 1500](./b27.txt) <br />
  #B44. [ Largest Rectangle  (H-) 1700](./b44.txt) <br />
  #B48. [ Sunk Islands  (M) 1500](./b48.txt) <br />
+ #B58. [ High Frequency (E) 900](./b58.txt) <br />
  #B87. [ The quick brown fox  (M+) 1600](./b87.txt) <br />
  #B88. [ Connected Cities  (H-) 1700](./b88.txt) <br />
  #B94. [ Detecting an odd length cycle  (H) 1800](./b94.txt) <br />
