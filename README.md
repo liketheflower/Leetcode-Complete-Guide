@@ -172,6 +172,7 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #B87. [ The quick brown fox  (M+) 1600](./b87.txt) <br />
  #B88. [ Connected Cities  (H-) 1700](./b88.txt) <br />
  #B94. [ Detecting an odd length cycle  (H) 1800](./b94.txt) <br />
+ #B106. [ Unique subsequence  (H-) 1700](./b106.txt) <br />
  #B115. [ Longest Zero Sublist Sum  (M) 1500](./b115.txt) <br />
  #B129. [ Pigeonhole  (E+) 1100](./b129.txt) <br />
  #B193. [ Sum Tree  (M-) 1300](./b193.txt) <br />
