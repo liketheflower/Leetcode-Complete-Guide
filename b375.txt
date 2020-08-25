@@ -1,0 +1,66 @@
+思路：
+1. 人数据不大
+2.对每个人进行bfs 然后算每个点的总和
+3.取最小那个点
+
+
+代码：
+
+import java.util.*;
+
+
+class Solution {
+    int cost[][];
+    int reach[][];
+    public int solve(int[][] grid) {
+        // Write your code here
+        int cnt=0;
+        int res=Integer.MAX_VALUE;
+        reach=new int[grid.length][grid[0].length];
+        cost=new int[grid.length][grid[0].length];
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                if(grid[i][j]==2){
+                    cnt++;
+                    bfs(grid,i,j);
+                }
+            }
+        }
+        
+         for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                if(grid[i][j]!=1&&reach[i][j]==cnt){
+                    res=Math.min(res,cost[i][j]);
+                }
+            }
+        }
+        
+        return res;
+    }
+    public void bfs(int grid[][],int sr,int sc){
+        boolean visit[][]=new boolean[grid.length][grid[0].length];
+        visit[sr][sc]=true;
+        Queue<int[]>q=new LinkedList<>();
+        q.add(new int[]{sr,sc,0});
+        while(q.size()!=0){
+            int A[]=q.poll();
+            int r=A[0];
+            int c=A[1];
+            int level=A[2];
+            cost[r][c]+=level;
+            reach[r][c]++;
+            add(grid,r+1,c,level+1,visit,q);
+            add(grid,r-1,c,level+1,visit,q);
+            add(grid,r,c+1,level+1,visit,q);
+            add(grid,r,c-1,level+1,visit,q);
+        }
+    }
+    
+    public void add(int grid[][],int r,int c,int level,boolean visit[][],Queue<int[]>q){
+        if(r<0||c<0||r>=grid.length||c>=grid[0].length)return;
+        if(grid[r][c]==1)return;
+        if(visit[r][c])return;
+        visit[r][c]=true;
+        q.add(new int[]{r,c,level});
+    }
+}
