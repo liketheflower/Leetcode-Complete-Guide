@@ -1,0 +1,24 @@
+代码：
+
+
+class Solution {
+    public int findLHS(int[] A) {
+        int res=0;
+        Arrays.sort(A);
+        Map<Integer,Integer>start=new HashMap<>();
+        Map<Integer,Integer>end=new HashMap<>();
+        for(int i=0;i<A.length;i++){
+            end.put(A[i],i);
+            if(!start.containsKey(A[i])){
+                start.put(A[i],i);
+            }
+        }
+        
+        for(int i=1;i<A.length;i++){
+            if(A[i]-A[i-1]==1){
+                res=Math.max(res,end.get(A[i])-start.get(A[i-1])+1);
+            }
+        }
+        return res;
+    }
+}
