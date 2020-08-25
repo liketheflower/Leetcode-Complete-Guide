@@ -133,6 +133,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #906. [Super Palindrom (H) 1800](./906.txt) <br />
 #936. [Stamping The Sequence (H+) 2300](./936.txt) <br />
 ### Game Theory
+#292. [Nime Game (M-) 1400](./292.txt) <br />
 #877. [Stone Game (M+) 1600](./877.txt) <br />
 #913. [Cat and Mouse (H+) 2400](./913.txt) <br />
 #1140. [Stone Game II (M+) 1600](./1140.txt) <br />
