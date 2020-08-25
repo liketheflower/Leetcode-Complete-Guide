@@ -156,7 +156,7 @@ https://blog.csdn.net/u011613729/article/details/9788669
 ### DFS
 #POJ 1979. [ Red and Black (M) 1400](./POJ1979.txt) <br />
 ### 枚举
-#POJ 3185. [ Flip Game (H) 1800](./POJ1753.txt) <br />
+#POJ 1753. [ Flip Game (H) 1800](./POJ1753.txt) <br />
 ### 反转（开关）
 #POJ 3185. [ The Water Bowls (M+) 1600](./POJ3185.txt) <br />
 ### Minimum Spanning Tree
