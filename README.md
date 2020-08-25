@@ -202,6 +202,7 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #B299. [Subsequence Picking (H)1900](./b299.txt) <br />
  #B315. [Minimum Spanning Tree (H)1800](./b315.txt) <br />
  #B357. [Longest Alternating Subsequence (M)1500](./b357.txt) <br />
+ #B358. [Bus Fare (M)1600](./b358.txt) <br />
  #B362. [Number Flip (E)900](./b362.txt) <br />
  #B372. [Longest Even Sum Path (H)1800](./b372.txt) <br />
  #B375. [The Meeting Place (M)1500](./b375.txt) <br />
