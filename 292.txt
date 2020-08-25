@@ -1,0 +1,11 @@
+思路：
+
+只要留下4个，让别人先取，无论别人取多少我都能赢
+
+代码：
+
+class Solution {
+    public boolean canWinNim(int n) {
+        return n%4!=0;
+    }
+}
