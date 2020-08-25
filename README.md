@@ -205,3 +205,4 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #B591. [Connect Forest (H)1800](./b591.txt) <br />
  #B682. [Concatenated Sums (M)1500](./b682.txt) <br />
  #B688. [Number of K-Divisible Sublists (M)1500](./b688.txt) <br />
+ #B713. [Minimum Difference of Extremes (M-)1400](./b713.txt) <br />
