@@ -127,6 +127,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ### String
 #336. [Palindrome Pairs (H) 1800](./336.txt) <br />
 #696. [Count Binary Substrings (E) 1000](./696.txt) <br />
+#833. [Find And Replace in String (M) 1500](./833.txt) <br />
 #906. [Super Palindrom (H) 1800](./906.txt) <br />
 #936. [Stamping The Sequence (H+) 2300](./936.txt) <br />
 ### Game Theory
