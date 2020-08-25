@@ -1,0 +1,38 @@
+思路：
+1.dp
+2.每一个index 选一个票看看最远能到哪
+
+代码：
+
+import java.util.*;
+
+
+class Solution {
+    int dp[];
+    public int solve(int[] A) {
+        // Write your code here
+        Arrays.sort(A);
+        dp=new int[A.length];
+        Arrays.fill(dp,-1);
+        return dfs(A,0);
+    }
+    
+    public int dfs(int A[],int index){
+        if(index>=A.length)return 0;
+        if(dp[index]!=-1)return dp[index];
+        int res=Integer.MAX_VALUE;
+        int i=index;
+        res=Math.min(res,dfs(A,index+1)+2);//1day
+        
+        while(i<A.length&&A[i]-A[index]<7){
+            i++;
+        }
+        res=Math.min(res,dfs(A,i)+7);//7day
+        while(i<A.length&&A[i]-A[index]<30){
+            i++;
+        }
+        res=Math.min(res,dfs(A,i)+25);//30day
+        dp[index]=res;
+        return res;
+    }
+}
