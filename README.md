@@ -145,7 +145,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ### Bit
 #201. [Bitwise AND of Numbers Range (M+) 1600](./201.txt) <br />
 #1178. [Number of Valid Words for Each Puzzle (H-) 1700](./1178.txt) <br />
-
+### Hash
+#594. [Longest Harmonious Subsequence (E) 1000](./594.txt) <br />
 # ACM 练习
 精刷200题<br/>
 参照以下link:<br/>
