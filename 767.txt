@@ -1,0 +1,60 @@
+思路：
+
+1. 把出现次数最多的先用掉
+
+
+
+代码：
+
+
+class Solution {
+    public String reorganizeString(String s) {
+        StringBuilder str=new StringBuilder();
+        int table[]=new int[26];
+        for(int i=0;i<s.length();i++){
+            table[s.charAt(i)-'a']++;
+        }
+        
+        PriorityQueue<int[]>pq=new PriorityQueue<>((a,b)->{
+           return b[1]-a[1]; 
+        });
+        
+        for(int i=0;i<table.length;i++){
+            if(table[i]==0)continue;
+            pq.add(new int[]{i,table[i]});
+        }
+        
+        int top[]=pq.poll();
+        top[1]--;
+        if(top[1]!=0)pq.add(top);
+        str.append(""+(char)(top[0]+'a'));
+        
+        while(pq.size()>1){
+            int A[]=pq.poll();
+            int B[]=pq.poll();
+            
+            char last=str.toString().charAt(str.toString().length()-1);
+            char a=(char)(A[0]+'a');
+            char b=(char)(B[0]+'a');
+            
+            if(a!=last){
+                str.append(a+"");
+                A[1]--;
+                if(A[1]!=0)pq.add(A);
+                pq.add(B);
+            }else{
+                B[1]--;
+                str.append(b+"");
+                if(B[1]!=0)pq.add(B);
+                pq.add(A);
+            }
+        }
+        
+        if(pq.size()>0){
+            if(pq.peek()[1]>1)return  "";
+            str.append(""+(char)(pq.peek()[0]+'a'));
+        }
+        
+        return str.toString();
+    }
+}
