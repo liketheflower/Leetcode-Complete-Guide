@@ -37,6 +37,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #950. [Reveal Cards In Increasing Order (M) 1500](./950.txt) <br />
 ### Greedy
 #45. [Jump Game II (H-) 1600](./45.txt) <br />
+#767. [Reorganize String (M) 1500](./767.txt) <br />
 #910. [Smallest Range II (H-) 1700](./910.txt) <br />
 #1121. [Divide Array Into Increasing Sequence (H-) 1700](./1121.txt) <br />
 #1326.[ Minimum Number of Taps to Open to Water a Garden   (H) 1800](./1326.txt) <br />
