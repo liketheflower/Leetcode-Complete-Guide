@@ -174,7 +174,7 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  <br/>
  <br/>
  # BinarySearch.io
- 一个新的面试刷题网站<br/>
+ 一个不错新的面试刷题网站<br/>
  #B6. [ Omitted  (M-) 1400](./b6.txt) <br />
  #B13. [ Collecting Coins  (M-) 1400](./b13.txt) <br />
  #B14. [ Counting Dinosaurs  (E) 900](./b14.txt) <br />
