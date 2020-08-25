@@ -1,0 +1,36 @@
+思路：
+单调递增栈
+
+
+
+代码：
+
+
+class Solution {
+    public int largestRectangleArea(int[] A) {
+        int res=0;
+        Stack<int[]>stack=new Stack<>();
+        for(int i=0;i<A.length;i++){
+            res=Math.max(res,A[i]);
+            int cnt=0;
+            int min=Integer.MAX_VALUE;
+            while(stack.size()>0&&A[i]<=stack.peek()[0]){
+                int top[]=stack.pop();
+                cnt+=top[1];
+                min=Math.min(min,top[0]);
+                res=Math.max(res,cnt*min);
+            }
+            stack.push(new int[]{A[i],cnt+1});
+        }
+        
+        int cnt=0;
+        while(stack.size()!=0){
+            int top[]=stack.pop();
+            cnt+=top[1];
+            res=Math.max(res,top[0]*cnt);
+            
+        }
+        
+        return res;
+    }
+}
