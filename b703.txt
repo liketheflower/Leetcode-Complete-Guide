@@ -1,0 +1,67 @@
+思路：
+1. bfs
+2. 想成图，能够达到的放在一个图里，看看有几个独立的图
+
+
+代码：
+
+import java.util.*;
+
+
+class Solution {
+    boolean visit[];
+    Map<String,Integer>map=new HashMap<>();
+    int cnt=0;
+    public int solve(String[] A) {
+        // Write your code here
+        visit=new boolean[A.length];
+        
+        for(int i=0;i<A.length;i++){
+            map.put(A[i],i);
+        }
+        for(int i=0;i<A.length;i++){
+            if(visit[i])continue;
+            cnt++;
+            visit[i]=true;
+            bfs(A[i]);
+        }
+        return cnt;
+    }
+    
+    public void bfs(String s){
+        Queue<String>q=new LinkedList<>();
+        q.add(s);
+        while(q.size()!=0){
+            String top=q.poll();
+
+            for(int i=0;i<top.length();i++){
+                String pre=top.substring(0,i);
+                String post=top.substring(i+1);
+                String v1=pre+'A'+post;
+                String v2=pre+'C'+post;
+                String v3=pre+'G'+post;
+                String v4=pre+'T'+post;
+
+                if(map.containsKey(v1)&&!visit[map.get(v1)]){
+                    visit[map.get(v1)]=true;
+                    q.add(v1);
+                }
+                
+                if(map.containsKey(v2)&&!visit[map.get(v2)]){
+                    visit[map.get(v2)]=true;
+                    q.add(v2);
+                }
+                
+                if(map.containsKey(v3)&&!visit[map.get(v3)]){
+                    visit[map.get(v3)]=true;
+                    q.add(v3);
+                }
+                
+                if(map.containsKey(v4)&&!visit[map.get(v4)]){
+                    visit[map.get(v4)]=true;
+                    q.add(v4);
+                }
+            }
+        }
+    }
+}
