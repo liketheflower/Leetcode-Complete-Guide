@@ -186,6 +186,7 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  #B106. [ Unique subsequence  (H-) 1700](./b106.txt) <br />
  #B115. [ Longest Zero Sublist Sum  (M) 1500](./b115.txt) <br />
  #B129. [ Pigeonhole  (E+) 1100](./b129.txt) <br />
+ #B190. [ Minimum Bracket Addition  (E) 1000](./b190.txt) <br />
  #B193. [ Sum Tree  (M-) 1300](./b193.txt) <br />
  #B200. [ Odd number of digits  (E-) 800](./b200.txt) <br />
  #B207. [ Mad Max  (H-) 1700](./b207.txt) <br />
