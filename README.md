@@ -25,6 +25,7 @@ CF 分目测评估：<br />
 #1559. [Detect Cycles in 2D Grid (H-) 1700](./1559.txt) <br />
 #LCP7. [ 传递信息 (M) 1400](./LCP7.txt) <br />
 ### Stack
+#84. [Largest Rectangle in Histogram (H-) 1700](./84.txt) <br />
 #94. [Binary Tree Inorder Traversal (M-) 1400](./94.txt) <br />
 #316. [Remove Duplicate Letters (M+) 1600](./316.txt) <br />
 #1063. [Number of Valid Subarrays (H-) 1700](./1063.txt) <br />
