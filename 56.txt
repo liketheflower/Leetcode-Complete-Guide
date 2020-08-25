@@ -1,0 +1,32 @@
+思路：
+先sort 然后stack
+
+
+代码：
+
+
+class Solution {
+    public int[][] merge(int[][] A) {
+        Arrays.sort(A,(a,b)->{
+            return a[0]-b[0];
+        });
+        
+        Stack<int[]>stack=new Stack<>();
+        for(int i=0;i<A.length;i++){
+            int cur[]=A[i];
+            while(stack.size()>0&&cur[0]<=stack.peek()[1]){
+                cur[0]=Math.min(cur[0],stack.peek()[0]);
+                cur[1]=Math.max(cur[1],stack.pop()[1]);
+            }
+            stack.push(cur);
+            
+        }
+        
+        int res[][]=new int[stack.size()][2];
+        int index=stack.size()-1;
+        while(stack.size()!=0){
+            res[index--]=stack.pop();
+        }
+        return res;
+    }
+}
