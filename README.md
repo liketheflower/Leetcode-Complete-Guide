@@ -152,9 +152,9 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 https://github.com/yogykwan/acm-challenge-workbook<br/>
 https://blog.csdn.net/u011613729/article/details/9788669
 ### Two pointer
-#POJ 2739. [ Sum of Consecutive Prime Numbers (M) 1400](./POJ2739.txt) <br />
+#POJ 2739. [ Sum of Consecutive Prime Numbers (M) 1500](./POJ2739.txt) <br />
 ### DFS
-#POJ 1979. [ Red and Black (M) 1400](./POJ1979.txt) <br />
+#POJ 1979. [ Red and Black (M-) 1400](./POJ1979.txt) <br />
 ### 枚举
 #POJ 1753. [ Flip Game (H) 1800](./POJ1753.txt) <br />
 ### 反转（开关）
