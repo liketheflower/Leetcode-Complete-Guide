@@ -1,0 +1,40 @@
+代码：
+
+class Solution {
+    public String findReplaceString(String s, int[] indexes, String[] sources, String[] targets) {
+        StringBuilder str=new StringBuilder();
+        Map<Integer,String>map1=new HashMap<>();
+        Map<Integer,String>map2=new HashMap<>();
+        Map<Integer,String>valid=new HashMap<>();
+        for(int i=0;i<indexes.length;i++){
+            map1.put(indexes[i],sources[i]);
+            map2.put(indexes[i],targets[i]);
+        }
+        
+        for(int i=0;i<s.length();i++){
+            if(map1.containsKey(i)){
+                String source=map1.get(i);
+                if(i+source.length()-1>=s.length())continue;
+                String sub=s.substring(i,i+source.length());
+                if(sub.equals(source)){
+                    valid.put(i,map2.get(i));
+                }
+            }
+        }
+        
+        
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(valid.containsKey(i)){
+                str.append(valid.get(i));
+                String sou=map1.get(i);
+                for(int j=0;j<sou.length()-1;j++)i++;
+                
+            }else{
+                str.append(c+"");
+            }
+        }
+        return str.toString();
+        
+    }
+}
