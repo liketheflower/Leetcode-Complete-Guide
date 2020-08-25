@@ -1,0 +1,315 @@
+思路：
+1.枚举所有可能性，用bit 表示
+2. array 也要用bit 表示否则会爆炸
+3. 一个个试直到找到最小那个
+
+
+代码：
+
+// Don't place your source in a package
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.math.*; 
+// Please name your class Main
+public class Main {
+	
+	static StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+    
+ 
+    static int read() throws IOException {
+        in.nextToken();
+        return (int) in.nval;
+    }
+    static String readString() throws IOException {
+        in.nextToken();
+        return in.sval;
+	}
+	
+	
+	public static void main (String[] args) throws java.lang.Exception {
+	    Scanner in = new Scanner(System.in);
+		//InputReader in = new InputReader(System.in);
+		//int T =in.nextInt();
+		PrintWriter out = new PrintWriter(System.out);
+		//for(int t=0;t<T;t++){
+		int N,M;
+		/*while((N = read()) != 0){
+			M=read();
+			if(N==0&&M==0)break;
+			
+			List<Integer>adjecent[]=new ArrayList[N];
+			for(int i=0;i<N;i++){
+				//if(adjecent[i]!=null)adjecent[i].celar();
+				 adjecent[i]=new ArrayList<Integer>();
+			}
+			
+			for(int i=0;i<M;i++){
+				int v1=read();int v2=read();
+				adjecent[v1].add(v2);
+				adjecent[v2].add(v1);
+			}
+			
+			Solution s=new Solution();
+			s.solution(adjecent,out);
+		}*/
+		
+		int A[][]=new int[4][4];
+		for(int i=0;i<4;i++){
+			String s=in.next();
+			for(int j=0;j<s.length();j++){
+				if(s.charAt(j)=='b'){
+					A[i][j]=0;
+				}else{
+					A[i][j]=1;
+				}
+			}
+		}
+		Solution s=new Solution();
+		s.solution(A);		
+	
+		//}
+		out.flush();
+		//in.close();
+	}
+ 
+}
+ 
+class Solution{
+	//constant variable
+	final int MAX=Integer.MAX_VALUE;
+	final int MIN=Integer.MIN_VALUE;
+	List<Integer>adjecent[];
+	//////////////////////////////
+	
+	int code=0;
+	List<Integer>l=new ArrayList<Integer>();
+	public void solution(int A[][]){
+		//4*4 grid
+		//black:0  white:1
+		//turn all to zero
+		int encode=0;
+		int index=0;
+		for(int i=0;i<A.length;i++){
+			for(int j=0;j<A.length;j++){
+				if(A[i][j]==1){
+					encode=encode|(1<<index);
+				}
+				index++;
+			}
+		}
+		
+		if(check(encode)){
+			msg(0+"");
+			return;
+		}
+		
+		
+		dfs(0,0);
+		int res=MAX;
+		
+		Collections.sort(l,new Comparator<Integer>(){
+                     public int compare(Integer a,Integer b){
+                           // Write your logic here.
+						   return Integer.bitCount(a)-Integer.bitCount(b);
+                     }});
+		
+		for(int bit:l){
+			code=encode;
+			change(bit);
+			if(check(code)){
+				System.out.println(Integer.bitCount(bit));
+				return;
+			}
+		}
+		
+		
+		if(res==MAX){
+			System.out.println("Impossible");
+			return;
+		}
+		
+		
+	}
+	
+	public void change(int path){
+		for(int i=0;i<16;i++){
+            int b=path&1;
+            path>>=1;
+            if(b==1){
+                int r=i/4;
+                int c=i%4;
+                add(r,c);
+                add(r+1,c);
+                add(r-1,c);
+                add(r,c+1);
+                add(r,c-1);
+            }
+        }
+	}
+	
+	public void add(int i,int j){
+		if(i<0||j<0||i>=4||j>=4)return;
+		int pos=i*4+j;
+		
+		if((code&(1<<pos))!=0){
+			code^=(1<<pos);
+		}else{
+			code|=(1<<pos);
+		}
+	}
+	
+	public void dfs(int index,int bit){
+        if(index>=16){
+            l.add(bit);
+            return;
+        }
+        dfs(index+1,(bit|(1<<index)));
+        dfs(index+1,bit);
+    }
+	
+	public boolean check(int num){
+		int cnt=0;
+		for(int i=0;i<16;i++){
+			cnt+=((num&1));
+			num>>=1;
+		}
+		return cnt==0||cnt==16;
+	}
+	
+
+	
+	
+	
+
+
+	/*public void tarjan(int p,int r){
+		if(cut)return;
+		List<Integer>childs=adjecent[r];
+		dis[r]=low[r]=time;
+		time++;
+		
+		//core for tarjan
+		int son=0;
+		for(int c:childs){
+			if(ban==c||c==p)continue;
+			if(dis[c]==-1){
+				son++;
+				tarjan(r,c);
+				low[r]=Math.min(low[r],low[c]);
+				if((r==root&&son>1)||(low[c]>=dis[r]&&r!=root)){
+					cut=true;
+					return;
+				}
+			}else{
+				if(c!=p){
+					low[r]=Math.min(low[r],dis[c]);
+				}
+			}
+		}
+		
+	}*/
+	
+	
+
+	
+	
+		
+	
+	//helper function I would use
+	public int flip(int i){
+		if(i==0)return 1;
+		else return 0;
+	}
+	
+	public boolean[] primes(int n){
+		boolean A[]=new boolean[n+1];
+		for(int i=2;i<=n;i++){
+			if(A[i]==false){
+				for(int j=i+i;j<=n;j+=i){
+					A[j]=true;
+				}
+			}
+		}
+		return A;
+	}
+	
+	public void msg(String s){
+		System.out.println(s);
+	}
+	
+	public int[] kmpPre(String p){
+		int pre[]=new int[p.length()];
+		int l=0,r=1;
+		while(r<p.length()){
+			if(p.charAt(l)==p.charAt(r)){
+				pre[r]=l+1;
+				l++;r++;
+			}else{
+				if(l==0)r++;
+				else l=pre[l-1];
+			}
+		}
+		return pre;
+	}
+	
+	public boolean isP(String s){
+		int l=0,r=s.length()-1;
+		while(l<r){
+			if(s.charAt(l)!=s.charAt(r))return false;
+			l++;r--;
+		}
+		return true;
+	}
+	
+	public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+	
+	public boolean check(int grid[][],int r,int c){
+		if(r<0||c<0||r>=grid.length||c>=grid[0].length)return false;
+		return true;
+	}
+	
+	public int get(int A[],int i){
+		if(i<0||i>=A.length)return -1;
+		return A[i];
+	}
+	public int[] copy(int A[]){
+		int a[]=new int[A.length];
+		for(int i=0;i<a.length;i++)a[i]=A[i];
+		return a;
+	}
+	public void print1(long A[]){
+		for(long i:A)System.out.print(i+" ");
+		System.out.println();
+	}
+	public void print2(long A[][]){
+		for(int i=0;i<A.length;i++){
+			for(int j=0;j<A[0].length;j++){
+				System.out.print(A[i][j]+" ");
+			}System.out.println();
+		}
+	}
+	
+	public int min(int a,int b){
+		return Math.min(a,b);
+	}
+}
+
+	class Wrapper implements Comparable<Wrapper>{
+		int v1;int v2;int w;
+		public Wrapper(int v1,int v2,int w){
+			this.v1=v1;this.v2=v2;this.w=w;
+		}
+		
+		@Override
+		public int compareTo(Wrapper other) {
+			return this.w-other.w;
+		}
+	}
+
+
