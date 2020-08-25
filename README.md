@@ -148,7 +148,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 
 # ACM 练习
 精刷200题<br/>
-参照以下link:https://github.com/yogykwan/acm-challenge-workbook<br/>
+参照以下link:<br/>
+https://github.com/yogykwan/acm-challenge-workbook<br/>
 https://blog.csdn.net/u011613729/article/details/9788669
 ### Two pointer
 #POJ 2739. [ Sum of Consecutive Prime Numbers (M) 1400](./POJ2739.txt) <br />
