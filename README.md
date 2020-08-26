@@ -128,6 +128,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #581. [ Shortest Unsorted Continuous Subarray (E) 1000](./581.txt) <br />
 #1366. [ Rank Teams by Votes (M+) 1600](./1366.txt) <br />
 ### String
+#242. [Valid Anagram (E) 900](./242.txt) <br />
 #336. [Palindrome Pairs (H) 1800](./336.txt) <br />
 #696. [Count Binary Substrings (E) 1000](./696.txt) <br />
 #833. [Find And Replace in String (M) 1500](./833.txt) <br />
