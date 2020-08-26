@@ -78,6 +78,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #85. [Maximal Rectangle (H-) 1700](./85.txt) <br />
 #139. [Word Break (M) 1500](./139.txt) <br />
 #198. [House Robber (M) 1400](./198.txt) <br />
+#363. [Max Sum of Rectangle No Larger Than K (M) 1800](./363.txt) <br />
 #514. [ Freedom Trail (H) 1800](./514.txt) <br />
 #691. [Stickers to Spell Word (H) 1900](./691.txt) <br />
 #714. [Best Time to Buy and Sell Stock with Transaction Fee (M+) 1600](./714.txt) <br />
