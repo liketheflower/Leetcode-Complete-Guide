@@ -42,6 +42,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #767. [Reorganize String (M) 1500](./767.txt) <br />
 #910. [Smallest Range II (H-) 1700](./910.txt) <br />
 #1121. [Divide Array Into Increasing Sequence (H-) 1700](./1121.txt) <br />
+#1199. [Minimum Time Building Block (H) 1800](./1199.txt) <br />
 #1326.[ Minimum Number of Taps to Open to Water a Garden   (H) 1800](./1326.txt) <br />
 #1328.[Break a Palindrome   (M-) 1300](./1328.txt) <br />
 #1520.[Maximum Number of Non-Overlapping Substrings  (H) 1900](./1520.txt) <br />
