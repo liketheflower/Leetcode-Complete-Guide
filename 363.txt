@@ -1,0 +1,51 @@
+思路：
+1. prefix+treeset
+
+
+代码：
+
+class Solution {
+    public int maxSumSubmatrix(int[][] A, int k) {
+        int res=Integer.MIN_VALUE;
+        List<TreeSet<Integer>>pre=new ArrayList<>();
+        int arr[]=new int[(A[0].length+1)*A[0].length/2];
+        int id=0;
+        for(int i=0;i<A[0].length;i++){
+            int sum=0;
+            for(int j=i;j<A[0].length;j++){
+                sum+=A[0][j];
+                TreeSet<Integer>treeset=new TreeSet<>();
+                treeset.add(sum);
+                pre.add(treeset);
+                if(sum<=k)res=Math.max(res,sum);
+                arr[id++]=sum;
+            }
+        }
+        
+        
+        for(int r=1;r<A.length;r++){
+            int index=0;
+            for(int i=0;i<A[0].length;i++){
+                int sum=0;
+                for(int j=i;j<A[0].length;j++){
+                    sum+=A[r][j];
+                    arr[index]+=sum;
+                    if(arr[index]<=k)res=Math.max(res,arr[index]);
+                    if(sum<=k)res=Math.max(res,sum);
+                    TreeSet<Integer>treeset=pre.get(index);
+                    Integer up=treeset.higher(arr[index]-k-1);
+                    if(up!=null){
+                        res=Math.max(res,arr[index]-up);
+                    }
+                    treeset.add(arr[index]);
+                    index++;
+                }
+            }
+            
+        }
+        
+        
+        
+        return res;
+    }
+}
