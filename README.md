@@ -171,6 +171,7 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
  ### Binary Search 
  #POJ 3685. [Matrix (H) 1800](./POJ3685.txt) <br />
   ### DP 
+ #POJ 1837. [Balance (H-) 1700](./POJ1837.txt) <br />
  #POJ 2229. [Sumsets (M) 1500](./POJ2229.txt) <br />
  <br/>
  <br/>
