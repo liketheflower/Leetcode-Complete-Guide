@@ -173,6 +173,8 @@ Tarjan 和Kosaraju’s 同等适用与找强连通<br/><br/>
   ### DP 
  #POJ 1837. [Balance (H-) 1700](./POJ1837.txt) <br />
  #POJ 2229. [Sumsets (M) 1500](./POJ2229.txt) <br />
+ ### 贪心
+ #POJ 1844. [Sum (M+) 1600](./POJ1844.txt) <br /> 
  <br/>
  <br/>
  # BinarySearch.io
