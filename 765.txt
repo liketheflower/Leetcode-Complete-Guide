@@ -1,0 +1,30 @@
+class Solution {
+    public int minSwapsCouples(int[] A) {
+        Map<Integer,Integer>map=new HashMap<>();
+        int res=0;
+        for(int i=0;i<A.length;i++){
+            map.put(A[i],i);
+        }
+        
+        for(int i=0;i<A.length;i+=2){
+            int cur=A[i];
+            int next=A[i+1];
+            int orinext=next;
+            if(Math.abs(cur-next)==1&&Math.min(next,cur)%2==0){
+                continue;
+            }
+            
+            if(cur%2==0){
+                next=cur+1;
+            }else{
+                next=cur-1;
+            }
+            res++; 
+            int index=map.get(next);
+            map.put(orinext,index);
+            A[i]=A[index];
+            A[index]=orinext;
+        }
+        return res;
+    }
+}
