@@ -107,6 +107,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #LCP14. [ 切分数组 (H+) 2200](./LCP14.txt) <br />
 ### Math
 #60. [ Permutation Sequence (M+) 1600](./60.txt) <br />
+#172. [ Factorial Trailing Zeroes (M-) 1400](./172.txt) <br />
 #463. [ Island Perimeter (E)) 900](./463.txt) <br />
 #836. [ Rectangle Overlap (E+) 1100](./836.txt) <br />
 #891. [ Sum of Subsequence Widths (H) 1800](./891.txt) <br />
