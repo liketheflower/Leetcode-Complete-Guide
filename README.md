@@ -57,6 +57,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ### Maxflow - Bipartite Matching
 the size of a maximum flow in the resulting graph equals the size of a maximum
 matching in the original graph.<br/>
+size of a minimum node cover always equals the size of a maximum matching. <br/>
+The complement of a maximum independent set is a minimum vertex cover(MAX Flow).<br/>
 #1349. [Maximum Students Taking Exam (H+) 1900](./1349.txt) <br />
 #LCP04. [覆盖 (H+) 2000](./LCP04.txt) <br />
 ### Binary Search
