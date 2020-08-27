@@ -1,0 +1,44 @@
+思路：
+1.sparse table 经典用法
+2.Binary lifting
+
+
+
+代码：
+
+class TreeAncestor {
+    int sparse[][];
+    public TreeAncestor(int n, int[] parent) {
+        sparse=new int[parent.length][17];
+        for(int i=0;i<sparse.length;i++){
+            Arrays.fill(sparse[i],-1);
+        }
+        for(int i=0;i<parent.length;i++){
+            sparse[i][0]=parent[i];
+        }
+        
+        for(int i=1;i<sparse[0].length;i++){
+            for(int j=0;j<parent.length;j++){
+                if(sparse[j][i-1]==-1)continue;
+                sparse[j][i]=sparse[sparse[j][i-1]][i-1];
+            }
+        }
+       
+    }
+    
+    public int getKthAncestor(int node, int k) {
+       for(int i=17;i>=0;i--){
+           if((k&(1<<i))!=0){
+               if(node==-1)break;
+               node=sparse[node][i];
+           }
+       }
+        return node;
+    }
+}
+
+/**
+ * Your TreeAncestor object will be instantiated and called as such:
+ * TreeAncestor obj = new TreeAncestor(n, parent);
+ * int param_1 = obj.getKthAncestor(node,k);
+ */
