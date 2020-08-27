@@ -1,0 +1,44 @@
+代码：
+
+class Solution {
+    public List<String> subdomainVisits(String[] A) {
+        List<String>res=new ArrayList<>();
+        Map<String,Integer>map=new HashMap<>();
+        
+        
+        
+        for(String s:A){
+            String arr[]=s.split(" ");
+            Integer cnt=Integer.parseInt(arr[0]);
+            List<String>domain=new ArrayList<>();
+            int cur=0;
+            for(int i=0;i<arr[1].length();i++){
+                if(arr[1].charAt(i)=='.'){
+                    domain.add(arr[1].substring(cur,i));
+                    cur=i+1;
+                }
+            }
+            domain.add(arr[1].substring(cur,arr[1].length()));
+            
+            String last=domain.get(domain.size()-1);
+           
+            
+            if(!map.containsKey(last))map.put(last,0);
+            map.put(last,map.get(last)+cnt);
+            
+            
+            for(int i=domain.size()-2;i>=0;i--){
+                last=domain.get(i)+"."+last;
+                if(!map.containsKey(last))map.put(last,0);
+                map.put(last,map.get(last)+cnt);
+            }
+            
+        }
+        
+        
+        for(String s:map.keySet()){
+            res.add(map.get(s)+" "+s);
+        }
+        return res;
+    }
+}
