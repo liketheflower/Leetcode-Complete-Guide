@@ -1,4 +1,4 @@
- <img src="images/LeetCode_logo.png" width:50px height:30px align=right />  
+ <img src="images/LeetCode_logo.png" width=30% align=right />  
  
  # LeetCode 题解 + 报告 :memo:
 
