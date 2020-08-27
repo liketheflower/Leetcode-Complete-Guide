@@ -1,0 +1,44 @@
+
+给定一个会议时间安排的数组，每个会议时间都会包括开始和结束的时间 [[s1,e1],[s2,e2],...] (si < ei)，为避免会议冲突，同时要考虑充分利用会议室资源，请你计算至少需要多少间会议室，才能满足这些会议安排。
+
+输入: [[0, 30],[5, 10],[15, 20]]
+输出: 2
+
+
+输入: [[7,10],[2,4]]
+输出: 1
+
+
+class Solution {
+    public int minMeetingRooms(int[][] A) {
+        if(A.length==0)return 0;
+        Arrays.sort(A,(a,b)->{
+            return a[0]-b[0];
+        });
+        
+        int res=0;
+        TreeMap<Integer,Integer>treemap=new TreeMap<>();
+        treemap.put(A[0][1],1);
+
+        for(int i=1;i<A.length;i++){
+            int start=A[i][0];
+            int end=A[i][1];
+            Integer floor=treemap.floorKey(start);
+            if(floor==null){
+                if(!treemap.containsKey(end))treemap.put(end,0);
+                treemap.put(end,treemap.get(end)+1);
+            }else{
+                if(!treemap.containsKey(end))treemap.put(end,0);
+                treemap.put(end,treemap.get(end)+1);
+
+                treemap.put(floor,treemap.get(floor)-1);
+                if(treemap.get(floor)==0)treemap.remove(floor);
+            }
+        } 
+
+        for(Integer key:treemap.keySet()){
+            res+=treemap.get(key);
+        }
+        return res;
+    }
+}
