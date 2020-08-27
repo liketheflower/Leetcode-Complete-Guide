@@ -1,0 +1,38 @@
+思路：
+5 ： 1
+25 ： 6
+125 ： 31
+625 ： 156
+。。。
+
+
+代码：
+
+
+class Solution {
+    public int trailingZeroes(int n) {
+        if(n<5)return 0;
+        if(n==5)return 1;
+        long res=0;
+        
+        long mul=5;
+        long cnt=1;
+        List<long[]>list=new ArrayList<>();
+        while(mul<=n){
+
+            list.add(new long[]{mul,cnt});
+            mul*=5;
+            cnt=cnt*5+1;
+        }
+        int index=list.size()-1;
+        while(n>=5){
+            while(n<list.get(index)[0])index--;
+            long pair[]=list.get(index);
+            long module=n/pair[0];
+            n%=pair[0];
+            res+=(module*pair[1]);
+        }
+        
+        return (int)(res);
+    }
+}
