@@ -1,11 +1,14 @@
-# Leetcode 题解+报告
+ <img src="images/LeetCode_logo.png" width=50 align=left />  
+ 
+ # LeetCode 题解 + 报告 :memo:
 
-题目会有我给予的相对难度评价 + CF的估测难度对应分数
+题目会有我给予的相对难度评价 :heavy_plus_sign: CF的估测难度对应分数
 
-CF 分目测评估：<br />
-800-1100 对应 easy (E)<br />
-1200-1700 对应 medium (M)<br />
-1700 - 2100 对应 hard (H)<br />
+CF 分目测评估：
+---
+:green_book: **800-1100** 对应  Easy  **(E)** <br />
+:orange_book: **1200-1700** 对应  Medium  **(M)** <br />
+:closed_book: **1700 - 2100** 对应  Hard  **(H)** <br />
 
 代码以c++ 和 Java 进行题解
 
