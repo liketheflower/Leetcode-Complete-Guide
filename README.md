@@ -10,20 +10,20 @@ CF 分目测评估：<br />
 代码以c++ 和 Java 进行题解
 
 ### BFS
-#117. [Populating Next Right Pointers in Each Node II (M) 1400](.code/117.txt) <br />
-#766. [Toeplitz Matrix (M) 1400](.code/766.txt) <br />
-#994. [Rotting Orange (M) 1400](.code/994.txt) <br />
-#LCP 09. [最小跳跃次数 (H) 1800](.code/LCP09.txt) <br />
+#117. [Populating Next Right Pointers in Each Node II (M) 1400](./code/117.txt) <br />
+#766. [Toeplitz Matrix (M) 1400](./code/766.txt) <br />
+#994. [Rotting Orange (M) 1400](./code/994.txt) <br />
+#LCP 09. [最小跳跃次数 (H) 1800](./code/LCP09.txt) <br />
 ### DFS
-#301. [Remove Invalid Parentheses (H-) 1600](.code/301.txt) <br />
-#417. [Pacific Atlantic Water Flow (M+) 1600](.code/417.txt) <br />
-#967. [ Numbers With Same Consecutive Differences (M) 1500](.code/967.txt) <br />
-#979. [ Distribute Coins in Binary Tree (M+) 1600](.code/979.txt) <br />
+#301. [Remove Invalid Parentheses (H-) 1600](./code/301.txt) <br />
+#417. [Pacific Atlantic Water Flow (M+) 1600](./code/417.txt) <br />
+#967. [ Numbers With Same Consecutive Differences (M) 1500](./code/967.txt) <br />
+#979. [ Distribute Coins in Binary Tree (M+) 1600](./code/979.txt) <br />
 #1020. [ Number of Enclaves (M-) 1400](./1020.txt) <br />
-#1255. [Maximum Score Words Formed by Letters (H-) 1700](.code/1255.txt) <br />
-#1377. [Frog Position After T Seconds (M+) 1600](.code/1377.txt) <br />
-#1559. [Detect Cycles in 2D Grid (H-) 1700](.code/1559.txt) <br />
-#LCP7. [ 传递信息 (M) 1400](./LCP7.txt) <br />
+#1255. [Maximum Score Words Formed by Letters (H-) 1700](./code/1255.txt) <br />
+#1377. [Frog Position After T Seconds (M+) 1600](./code/1377.txt) <br />
+#1559. [Detect Cycles in 2D Grid (H-) 1700](./code/1559.txt) <br />
+#LCP7. [ 传递信息 (M) 1400](./code/LCP7.txt) <br />
 ### Stack
 #56. [Merge Intervals (M-) 1400](./56.txt) <br />
 #84. [Largest Rectangle in Histogram (H-) 1700](./84.txt) <br />
