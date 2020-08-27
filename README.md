@@ -55,6 +55,9 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1361. [Validate Binary Tree Nodes (M) 1500](./1361.txt) <br />
 #1522. [Diameter of N-Ary Tree (M-) 1300](./1522.txt) <br />
 ### Maxflow - Bipartite Matching
+the size of a maximum flow in the resulting graph equals the size of a maximum
+matching in the original graph.<br/>
+#1349. [Maximum Students Taking Exam (H+) 1900](./1349.txt) <br />
 #LCP04. [覆盖 (H+) 2000](./LCP04.txt) <br />
 ### Binary Search
 #35. [Search Insert Position (E) 1000](./35.txt) <br />
