@@ -1,0 +1,73 @@
+思路：
+1. 先用二分图找出最大流（maximum matching）
+2. 总node数- matching 就是最大不会有相交的
+
+
+
+代码：
+
+class Solution {
+    public int maxStudents(char[][] seats) {
+        //the maximum independent set on the bipartite graph is the solution
+        
+        //maximum independent=number of nodes- minimum path cover
+        
+        //minimum path cover = max flow
+        int graph[][]=new int[seats.length*seats[0].length+2][seats.length*seats[0].length+2];
+        int S=seats.length*seats[0].length;
+        int T=seats.length*seats[0].length+1;
+        int total=0;
+        int dir[][]=new int[][]{{0,-1},{-1,-1},{1,-1},{0,1},{-1,1},{1,1}};
+        for(int i=0;i<seats.length;i++){
+            for(int j=0;j<seats[0].length;j++){
+                if(seats[i][j]=='#')continue;
+                total++;
+                int id=i*seats[0].length+j;
+                if(j%2==0){//even
+                    for(int k=0;k<6;k++){
+                        int r=i+dir[k][0];
+                        int c=j+dir[k][1];
+                        if(r<0||r>=seats.length||c<0||c>=seats[0].length||seats[r][c]=='#')continue;
+                        graph[id][r*seats[0].length+c]=1;
+                        graph[S][id]=1;
+                    }
+                }else{//odd
+                    graph[id][T]=1;
+                }
+            }
+        }
+        
+        int flow=0;
+        while(true){
+            int path[]=new int[graph.length];
+            Arrays.fill(path,-1);
+            Queue<Integer>q=new LinkedList<>();
+            q.add(S);
+            boolean visit[]=new boolean[graph.length];
+            visit[S]=true;
+            while(q.size()!=0){
+                int parent=q.poll();
+                if(parent==T)break;
+                for(int i=0;i<graph.length;i++){
+                    if(graph[parent][i]==1&&!visit[i]){
+                        visit[i]=true;
+                        path[i]=parent;
+                        q.add(i);
+                    }
+                }
+            }
+            if(path[T]==-1)break;
+            int cur=T;
+            while(true){
+                int parent=path[cur];
+                graph[parent][cur]--;
+                graph[cur][parent]++;
+                cur=parent;
+                if(cur==S)break;
+            }
+            flow++;
+            
+        }
+        return total-flow;
+    }
+}
