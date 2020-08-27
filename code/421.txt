@@ -1,0 +1,65 @@
+代码：
+
+
+class Solution {
+    Trie root=new Trie();
+    int val=0;
+    public int findMaximumXOR(int[] A) {
+        int res=0;
+        for(int i=0;i<A.length;i++){
+            insert(31,A[i],root);
+        }
+        
+        for(int i=0;i<A.length;i++){
+            val=0;
+            q(31,A[i],root);
+            res=Math.max(res,val);
+        }
+        
+        return res;
+    }
+    
+    public void q(int index,int num,Trie root){
+        if(index<0)return;
+        
+        int bit=-1;
+        if((num&(1<<index))!=0)bit=1;
+        else bit=0;
+        
+        if(bit==0){
+            if(root.childs[1]==null){
+                q(index-1,num,root.childs[0]);
+            }else{
+                q(index-1,num,root.childs[1]);
+                val=val|(1<<index);
+            }
+        }else{
+            if(root.childs[0]==null){
+                q(index-1,num,root.childs[1]);
+            }else{
+                q(index-1,num,root.childs[0]);
+                val=val|(1<<index);
+            }
+        }
+    }
+    
+    public void insert(int index,int num,Trie root){
+        if(index<0)return;
+        
+        int bit=-1;
+        if((num&(1<<index))!=0)bit=1;
+        else bit=0;
+        
+        if(bit==0){
+            if(root.childs[0]==null)root.childs[0]=new Trie();
+            insert(index-1,num,root.childs[0]);
+        }else{
+            if(root.childs[1]==null)root.childs[1]=new Trie();
+            insert(index-1,num,root.childs[1]);
+        }
+    }
+    
+    class Trie{
+        Trie childs[]=new Trie[2];
+    }
+}
