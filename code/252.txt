@@ -1,0 +1,15 @@
+代码：
+
+
+class Solution {
+    public boolean canAttendMeetings(int[][] A) {
+        Arrays.sort(A,(a,b)->{
+            return a[0]-b[0];
+        });
+        for(int i=1;i<A.length;i++){
+            if(A[i][0]<A[i-1][1])return false;
+        }
+
+        return true;
+    }
+}
