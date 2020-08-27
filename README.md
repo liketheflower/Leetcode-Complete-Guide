@@ -139,6 +139,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #395. [Longest Substring with At Least K Repeating Characters (M+) 1700](./code/395.txt) <br />
 #713. [ Subarray Product Less Than K (M) 1500](./code/713.txt) <br />
 ### Sort
+#252. [ Meeting Room (E) 1000](./code/252.txt) <br />
 #581. [ Shortest Unsorted Continuous Subarray (E) 1000](./code/581.txt) <br />
 #1366. [ Rank Teams by Votes (M+) 1600](./code/1366.txt) <br />
 ### String
