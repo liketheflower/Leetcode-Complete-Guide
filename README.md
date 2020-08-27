@@ -82,6 +82,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1516.[ Move Sub-Tree of N-Ary Tree (H-) 1700](./code/1516.txt) <br />
 ### Trie
 #208.[ Implement Trie (Prefix Tree) (M) 1500](./code/208.txt) <br />
+#421.[ Maximum XOR of Two Numbers in an Array (M+) 1600](./code/421.txt) <br />
 ### DP
 #85. [Maximal Rectangle (H-) 1700](./code/85.txt) <br />
 #139. [Word Break (M) 1500](./code/139.txt) <br />
