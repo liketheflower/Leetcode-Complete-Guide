@@ -1,4 +1,4 @@
- <img src="images/LeetCode_logo.png" width=50 align=left top-margin:10px />  
+ <img src="images/LeetCode_logo.png" heght:10px align=left />  
  
  # LeetCode 题解 + 报告 :memo:
 
@@ -75,6 +75,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 1. The size of a maximum flow in the resulting graph equals the size of a maximum matching in the original graph.<br/>
 1. Size of a minimum node cover always equals the size of a maximum matching. <br/>
 1. The complement of a maximum independent set is a minimum vertex cover(MAX Flow).<br/>
+
 #1349. [Maximum Students Taking Exam (H+) 2000](./code/1349.txt) <br />
 #LCP04. [覆盖 (H+) 2000](./code/LCP04.txt) <br />
 
@@ -242,8 +243,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #POJ 1844. [Sum (M+) 1600](./code/POJ1844.txt) <br /> 
  
  ---
- # BinarySearch.io
-### :link: **一个不错新的面试刷题网站**<br/>
+ # :link: BinarySearch.io
+ **一个不错新的面试刷题网站**<br/>
  #B6. [Omitted  (M-) 1400](./code/b6.txt) <br />
  #B13. [Collecting Coins  (M-) 1400](./code/b13.txt) <br />
  #B14. [Counting Dinosaurs  (E) 900](./code/b14.txt) <br />
