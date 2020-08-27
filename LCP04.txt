@@ -1,0 +1,93 @@
+思路：
+1. 二分图匹配
+2. 这题求最多能放多少个，其实就是maximum matching
+3. 相邻的格子是不同的group
+
+
+代码：
+
+class Solution {
+    public int domino(int n, int m, int[][] broken) {
+        int grid[][]=new int[n][m];
+        for(int pair[]:broken){
+            grid[pair[0]][pair[1]]=-1;
+        }
+        int graph[][]=new int[m*n+2][m*n+2];
+        int S=m*n;
+        int T=m*n+1;
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                if(grid[i][j]==0){
+                    dfs(grid,i,j,1);
+                }
+            }
+        }
+        
+        int dir[][]=new int[][]{{0,-1},{-1,0},{1,0},{0,1}};
+
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                if(grid[i][j]==-1)continue;
+                int id=i*grid[0].length+j;
+                if(grid[i][j]==1){
+                    graph[S][id]=1;
+                    
+                    for(int pair[]:dir){
+                        int r=pair[0]+i;
+                        int c=pair[1]+j;
+                        if(r<0||c<0||r>=grid.length||c>=grid[0].length)continue;
+                        graph[id][r*grid[0].length+c]=1;
+                    }
+
+                }else{
+                    graph[id][T]=1;
+                }
+            }
+        }
+
+                
+        int flow=0;
+        while(true){
+            int path[]=new int[graph.length];
+            Arrays.fill(path,-1);
+            Queue<Integer>q=new LinkedList<>();
+            q.add(S);
+            boolean visit[]=new boolean[graph.length];
+            visit[S]=true;
+            while(q.size()!=0){
+                int parent=q.poll();
+                if(parent==T)break;
+                for(int i=0;i<graph.length;i++){
+                    if(graph[parent][i]==1&&!visit[i]){
+                        visit[i]=true;
+                        path[i]=parent;
+                        q.add(i);
+                    }
+                }
+            }
+            if(path[T]==-1)break;
+            int cur=T;
+            while(true){
+                int parent=path[cur];
+                graph[parent][cur]--;
+                graph[cur][parent]++;
+                cur=parent;
+                if(cur==S)break;
+            }
+            flow++;
+        }
+        return flow;
+    }
+
+    public void dfs(int grid[][],int r,int c,int color){
+        if(r<0||c<0||r>=grid.length||c>=grid[0].length)return;
+        if(grid[r][c]!=0)return;
+        int next=1;
+        if(color==1)next=2;
+        grid[r][c]=color;
+        dfs(grid,r+1,c,next);
+        dfs(grid,r-1,c,next);
+        dfs(grid,r,c+1,next);
+        dfs(grid,r,c-1,next);
+    }
+}
