@@ -154,6 +154,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #913. [Cat and Mouse (H+) 2400](./code/913.txt) <br />
 #1140. [Stone Game II (M+) 1600](./code/1140.txt) <br />
 ### Implementation
+#26. [Remove Duplicates from Sorted Array (H) 1800](./code/26.txt) <br />
 #68. [Text Justification (H) 1800](./code/68.txt) <br />
 #118. [Pascal's Triangle (E) 900](./code/118.txt) <br />
 #747. [Largest Number At Least Twice of Others (E) 900](./code/747.txt) <br />
