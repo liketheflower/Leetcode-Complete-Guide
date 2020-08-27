@@ -1,4 +1,4 @@
- <img src="images/LeetCode_logo.png" heght:10px align=left />  
+ <img src="images/LeetCode_logo.png" width:50px height:30px align=right />  
  
  # LeetCode 题解 + 报告 :memo:
 
@@ -213,38 +213,56 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ### Hash
 #594. [Longest Harmonious Subsequence (E) 1000](./code/594.txt) <br />
 
-## :pushpin: ACM 练习
+---
+# :pushpin: ACM 练习
 **精刷 200 题** <br />
 *参照以下 links:* <br />
 :link: https://github.com/yogykwan/acm-challenge-workbook <br />
 :link: https://blog.csdn.net/u011613729/article/details/9788669
 
+---
 ### Two pointer
 #POJ 2739. [Sum of Consecutive Prime Numbers (M) 1500](./code/POJ2739.txt) <br />
+
+---
 ### DFS
 #POJ 1979. [ Red and Black (M-) 1400](./code/POJ1979.txt) <br />
+
+---
 ### 枚举
 #POJ 1753. [ Flip Game (H) 1800](./code/POJ1753.txt) <br />
+
+---
 ### 反转（开关）
 #POJ 3185. [ The Water Bowls (M+) 1600](./code/POJ3185.txt) <br />
+
+---
 ### Minimum Spanning Tree
 #POJ 1258. [ Agri-Net POJ  (M) 1600](./code/POJ1258.txt) <br />
+
+---
 ### Strong Connect Component (强连通)
 :link: **Source:** https://iq.opengenus.org/tarjans-algorithm/ (Tarjan for SCC)<br />
 **Tarjan 和Kosaraju’s 同等适用与找强连通** <br />
 #POJ 1236. [Network of Schools  (H+) 2200](./code/POJ1236.txt) <br />
 #POJ 3713. [Transferring Sylla  (H+) 2200](./code/POJ3713.txt) <br />
+
+---
  ### Binary Search 
  #POJ 3685. [Matrix (H) 1800](./code/POJ3685.txt) <br />
+ 
+ ---
  ### DP 
  #POJ 1837. [Balance (H-) 1700](./code/POJ1837.txt) <br />
  #POJ 2229. [Sumsets (M) 1500](./code/POJ2229.txt) <br />
+ 
+ ---
  ### 贪心
  #POJ 1844. [Sum (M+) 1600](./code/POJ1844.txt) <br /> 
  
  ---
  # :link: BinarySearch.io
- **一个不错新的面试刷题网站**<br/>
+ ***一个不错新的面试刷题网站***<br/>
  #B6. [Omitted  (M-) 1400](./code/b6.txt) <br />
  #B13. [Collecting Coins  (M-) 1400](./code/b13.txt) <br />
  #B14. [Counting Dinosaurs  (E) 900](./code/b14.txt) <br />
