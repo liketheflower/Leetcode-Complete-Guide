@@ -1,0 +1,37 @@
+用sparse 可以做到o（n）
+
+代码：
+
+
+class Solution {
+    public int[] xorQueries(int[] A, int[][] queries) {
+        int res[]=new int[queries.length];
+        int sparse[][]=new int[A.length][21];
+        for(int i=0;i<A.length;i++){
+            sparse[i][0]=A[i];
+        }
+        
+        for(int i=1;i<21;i++){
+            for(int j=0;j<A.length;j++){
+                if(j+(1<<(i-1))>=A.length)break;
+                sparse[j][i]=sparse[j][i-1]^sparse[j+(1<<(i-1))][i-1];
+            }
+        }
+        
+        for(int j=0;j<queries.length;j++){
+            int pair[]=queries[j];
+            int start=pair[0],len=pair[1]-pair[0]+1;
+            
+            int val=0;
+            for(int i=20;i>=0;i--){
+                if((len&(1<<i))!=0){
+                    val=val^(sparse[start][i]);
+                    start+=(1<<i);
+                }
+            }
+            res[j]=val;
+        }
+        
+        return res;
+    }
+}
