@@ -1,0 +1,29 @@
+思路：
+背包
+
+
+
+代码：
+
+
+class Solution {
+    public int numRollsToTarget(int d, int f, int T) {
+        int mod=1000000007;
+        long dp[][]=new long[d+1][T+1];
+        
+        dp[0][0]=1;
+        
+        for(int i=1;i<=d;i++){
+            dp[i][0]=0;
+            for(int j=1;j<dp[0].length;j++){
+                
+                for(int k=1;k<=f;k++){
+                    if(k>j)continue;
+                    dp[i][j]+=dp[i-1][j-k];
+                    dp[i][j]%=mod;
+                }
+            }
+        }
+        return (int)(dp[d][T]);
+    }
+}
