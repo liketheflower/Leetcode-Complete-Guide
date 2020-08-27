@@ -128,6 +128,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ### Segment Tree
 #308. [ Range Sum Query 2D - Mutable (2D Segment Tree) (H) 2100](./code/308.txt) <br />
 #LCP5. [ 发leetcoin (H+) 2300](./code/LCP5.txt) <br />
+### Sparse Table
+#1483. [ Kth Ancestor of a Tree Node (H) 1800](./code/1483.txt) <br />
 ### Observation
 #1538. [ Guess the Majority in a Hidden Array (M+) 1700](./code/1538.txt) <br />
 ### Sliding Window
