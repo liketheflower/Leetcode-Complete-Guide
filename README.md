@@ -277,6 +277,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  ---
  ### 贪心
  #POJ 1844. [Sum (M+) 1600](./code/POJ1844.txt) <br /> 
+ #POJ 3614. [Sunscreen (H-) 1700](./code/POJ3614.txt) <br /> 
  
  ---
  # :link: BinarySearch.io
