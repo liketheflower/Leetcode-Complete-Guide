@@ -1,0 +1,66 @@
+代码：
+
+
+class WordDictionary {
+    Trie root=new Trie();
+    /** Initialize your data structure here. */
+    public WordDictionary() {
+        
+    }
+    
+    /** Adds a word into the data structure. */
+    public void addWord(String word) {
+        add(word,0,root);
+    }
+    
+    /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
+    public boolean search(String word) {
+        return query(word,0,root);
+    }
+    
+    public boolean query(String w,int index,Trie root){
+        if(index>=w.length())return root.state;
+        char c=w.charAt(index);
+        if(c=='.'){
+            for(int i=0;i<26;i++){
+                if(root.childs[i]==null)continue;
+                boolean ans=query(w,index+1,root.childs[i]);
+                if(ans)return true;
+            }
+            return false;
+
+        }else{
+            if(root.childs[c-'a']==null)return false;
+            return query(w,index+1,root.childs[c-'a']);
+        }
+        
+    }
+    
+    public void add(String w,int index,Trie root){
+        if(index>=w.length()){
+            root.state=true;
+            return;
+        }
+        char c=w.charAt(index);
+        
+        if(root.childs[c-'a']==null){
+            root.childs[c-'a']=new Trie();
+            add(w,index+1,root.childs[c-'a']);
+        }else{
+            add(w,index+1,root.childs[c-'a']);
+        }
+        
+    }
+    
+    class Trie{
+        Trie childs[]=new Trie[26];
+        boolean state=false;
+    }
+}
+
+/**
+ * Your WordDictionary object will be instantiated and called as such:
+ * WordDictionary obj = new WordDictionary();
+ * obj.addWord(word);
+ * boolean param_2 = obj.search(word);
+ */
