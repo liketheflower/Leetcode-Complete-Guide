@@ -1,0 +1,24 @@
+代码：
+
+
+class Solution {
+    public int[] corpFlightBookings(int[][] A, int n) {
+        int arr[]=new int[n];
+        int res[]=new int[n];
+        for(int pair[]:A){
+            arr[pair[0]-1]+=pair[2];
+            if(pair[1]<res.length){
+                arr[pair[1]]-=pair[2];
+            }
+        }
+        
+        int sum=0;
+        for(int i=0;i<res.length;i++){
+            sum+=arr[i];
+            res[i]=sum;
+        }
+        
+        
+        return res;
+    }
+}
