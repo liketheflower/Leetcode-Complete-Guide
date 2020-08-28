@@ -109,6 +109,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ---
 ### Trie
 #208. [Implement Trie (Prefix Tree) (M) 1500](./code/208.txt) <br />
+#211. [Design Add and Search Words Data Structure (M) 1500](./code/211.txt) <br />
 #421. [Maximum XOR of Two Numbers in an Array (M+) 1600](./code/421.txt) <br />
 
 ---
