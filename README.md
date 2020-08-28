@@ -54,6 +54,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ### Greedy
 #45. [Jump Game II (H-) 1600](./code/45.txt) <br />
 #253. [Meeting Room II (M) 1500](./code/253.txt) <br />
+#406. [Queue Reconstruction by Height (M) 1500](./code/406.txt) <br />
 #435. [Non-overlapping Intervals (M) 1500](./code/435.txt) <br />
 #765. [Couple Holding Hands (H-) 1600](./code/765.txt) <br />
 #767. [Reorganize String (M) 1500](./code/767.txt) <br />
