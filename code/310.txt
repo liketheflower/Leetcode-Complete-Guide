@@ -1,0 +1,31 @@
+思路：
+从leaf 开始做bfs 像中心缩小
+
+
+
+代码：
+
+class Solution {
+    public List<Integer> findMinHeightTrees(int n, int[][] edges) {
+        List<Integer>res=new ArrayList<>();
+        Map<Integer,Set<Integer>>map=new HashMap<>();
+        for(int i=0;i<n;i++)map.put(i,new HashSet<>());
+        for(int i=0;i<edges.length;i++){
+            map.get(edges[i][0]).add(edges[i][1]);
+            map.get(edges[i][1]).add(edges[i][0]);
+        }
+        while(map.size()>2){
+            List<Integer>leafs=new ArrayList<>();
+            for(Integer key:map.keySet()){
+                if(map.get(key).size()==1)leafs.add(key);
+            }
+            for(int i:leafs){
+                Set<Integer>childs=map.get(i);
+                for(Integer c:childs)map.get(c).remove(i);
+                map.remove(i);
+            }
+        }
+        for(Integer key:map.keySet())res.add(key);
+        return res;
+    }
+}
