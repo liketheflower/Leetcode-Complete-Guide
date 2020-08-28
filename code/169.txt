@@ -1,0 +1,23 @@
+代码：
+
+
+class Solution {
+    public int majorityElement(int[] A) {
+        int x=A[0];
+        int cnt=1;
+        for(int i=1;i<A.length;i++){
+            if(A[i]==x){
+                cnt++;
+            }else{
+                if(cnt==0){
+                    cnt=1;
+                    x=A[i];
+                }else{
+                    cnt--;
+                }
+            }
+        }
+        
+        return x;
+    }
+}
