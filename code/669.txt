@@ -1,0 +1,36 @@
+代码：
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public TreeNode trimBST(TreeNode root, int L, int R) {
+        if(root==null)return null;
+        int cur=root.val;
+        if(cur>=L&&cur<=R){
+            root.left=trimBST(root.left,L,cur);
+            root.right=trimBST(root.right,cur,R);
+            return root;
+        }
+        if(cur<L){
+            return trimBST(root.right,L,R);
+        }
+        if(cur>R){
+            return trimBST(root.left,L,R);
+        }
+        
+        return null;
+    }
+}
