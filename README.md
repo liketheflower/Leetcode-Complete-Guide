@@ -97,6 +97,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ### Tree
 #98. [Validate Binary Search Tree (M) 1500](./code/98.txt) <br />
 #101. [Symmetric Tree (M-) 1300](./code/101.txt) <br />
+#669. [Trim a Binary Search Tree (M-) 1400](./code/669.txt) <br />
 #1123. [Lowest Common Ancestor of Deepest Leaves (M) 1500](./code/1123.txt) <br />
 #1339. [Maximum Product of Splitted Binary Tree (M) 1500](./code/1339.txt) <br />
 #1490. [Clone N-tree (M-) 1300](./code/1490.txt) <br />
