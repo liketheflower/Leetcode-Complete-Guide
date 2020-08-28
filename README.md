@@ -224,6 +224,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ---
 ### Hash
 #594. [Longest Harmonious Subsequence (E) 1000](./code/594.txt) <br />
+---
 ### Divide Conquer
 #454. [4 sum II (M-) 1400](./code/454.txt) <br />
 ---
