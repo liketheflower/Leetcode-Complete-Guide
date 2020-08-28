@@ -1,0 +1,54 @@
+思路：
+1. 先把所有开始可能的给记录下来（避免重复计算）
+
+
+
+代码：
+class Solution {
+    int dp[][];
+    String s1;String s2;
+    public int getMaxRepetitions(String s1, int n1, String s2, int n2) {
+        dp=new int[s1.length()][2];
+        int res=0;
+        this.s1=s1;this.s2=s2;
+        for(int i=0;i<s1.length();i++){
+           record(i);
+        }
+        
+        long total=s1.length()*n1;
+        int cnt=0;
+        while(cnt<total){
+            int start=cnt%s1.length();
+            int add=(dp[start][0]-1)*s1.length()+dp[start][1]+(s1.length()-start);
+            if(cnt+add>total)break;
+            res++;
+            cnt+=add;
+        }
+        
+        return res/n2;
+    }
+    
+    public void record(int start){
+        int i=0;int j=start;
+        int cnt=0;boolean flag=true;
+        while(i<s2.length()){
+            if(cnt>s2.length()){
+                flag=false;
+                break;
+            }
+            if(s1.charAt(j)==s2.charAt(i))i++;
+            j++;
+            if(j==s1.length()){
+                j=0;
+                cnt++;
+            }
+        }
+        if(flag){
+            dp[start][0]=cnt;
+        }else{
+            dp[start][0]=1000000;
+        }
+        dp[start][1]=j;
+    }
+}
+
