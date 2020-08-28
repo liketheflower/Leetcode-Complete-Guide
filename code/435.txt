@@ -1,0 +1,33 @@
+思路：
+1. 按start 排序
+2. 如果当前跟前面的overlap， res++
+3. 选一个end 最小的使有更多选择
+4. stack 存的是当前有效的
+
+
+
+代码：
+
+
+class Solution {
+    public int eraseOverlapIntervals(int[][] A) {
+        if(A.length==0)return 0;
+        int res=0;
+        Arrays.sort(A,(a,b)->{
+           return a[0]-b[0]; 
+        });
+        
+        Stack<int[]>stack=new Stack<>();
+        stack.add(A[0]);
+        
+        for(int i=1;i<A.length;i++){
+            if(A[i][0]<stack.peek()[1]){
+                res++;
+                stack.peek()[1]=Math.min(stack.peek()[1],A[i][1]);
+            }else{
+                stack.push(A[i]);
+            }
+        }
+        return res;
+    }
+}
