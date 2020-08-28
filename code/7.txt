@@ -1,0 +1,25 @@
+class Solution {
+    public int reverse(int x) {
+        if(x==Integer.MIN_VALUE)return 0;
+        if(x==0)return 0;
+        if(x<0){
+            return -reverse(-x);
+        }
+        
+        String n=x+"";
+        StringBuilder str=new StringBuilder();
+        int index=0;
+        for(int i=n.length()-1;i>=0;i--){
+            if(n.charAt(i)=='0')continue;
+            index=i;
+            break;
+        }
+        
+        for(int i=index;i>=0;i--){
+            str.append(n.charAt(i)+"");
+        }
+        long v= Long.parseLong(str.toString());
+        if(v>Integer.MAX_VALUE)return 0;
+        return (int)(v);
+    }
+}
