@@ -161,7 +161,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ---
 ### Moore's Voting
 #169. [Majority Element (M-) 1200](./code/169.txt) <br />
-
+#229. [Majority Element (M) 1500](./code/229.txt) <br />
 
 ---
 ### Segment Tree
