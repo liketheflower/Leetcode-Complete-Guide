@@ -1,6 +1,6 @@
 思路：
 1. 先用二分图找出最大流（maximum matching）
-2. 总node数- matching 就是最大不会有相交的
+2. 总node数- matching 就是最大不会有相交的 (maximum independent set)
 
 
 
