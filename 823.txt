@@ -1,0 +1,30 @@
+代码：
+
+class Solution {
+    public int numFactoredBinaryTrees(int[] A) {
+        int mod=1000000007;
+        Arrays.sort(A);
+        long res=0;
+        Map<Integer,Long>map=new HashMap<>();
+        map.put(A[0],1l);
+       
+        
+        for(int i=1;i<A.length;i++){
+            long sum=1;
+            for(int j=i-1;j>=0;j--){
+                if(A[i]%A[j]==0&&map.containsKey(A[i]/A[j])){
+                    sum+=(map.get(A[j]))*(map.get(A[i]/A[j]));
+                    sum%=mod;
+                }
+            }
+            map.put(A[i],sum);
+        }
+
+        for(Integer key:map.keySet()){
+            res+=map.get(key);
+            res%=mod;
+        }
+        
+        return (int)(res%mod);
+    }
+}
