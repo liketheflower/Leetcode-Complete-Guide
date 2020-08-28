@@ -1,0 +1,50 @@
+class Solution {
+    public int kSimilarity(String A, String B) {
+        Set<String>set=new HashSet<>();
+        int start=0;
+        set.add(A);
+        
+        Queue<Pair>q=new LinkedList<>();
+        q.add(new Pair(A,0));
+        
+        while(q.size()!=0){
+            Pair pair=q.poll();
+            String s=pair.s;
+            int level=pair.level;
+            if(s.equals(B))return level;
+            
+            int pos=-1;
+            for(int i=0;i<s.length();i++){
+                if(s.charAt(i)!=B.charAt(i)){
+                    pos=i;
+                    break;
+                }
+            }
+            
+            for(int i=pos;i<s.length();i++){
+                if(s.charAt(i)==B.charAt(pos)){
+                    char arr[]=s.toCharArray();
+                    char temp=arr[pos];
+                    arr[pos]=arr[i];
+                    arr[i]=temp;
+                    String news=new String(arr);
+                    if(!set.contains(news)){
+                        q.add(new Pair(news,level+1));
+                    }
+                    
+                }
+            }
+        }
+        return -1;
+        
+    }
+    
+    class Pair{
+        int level;
+        String s;
+        public Pair(String s,int level){
+            this.s=s;
+            this.level=level;
+        }
+    }
+}
