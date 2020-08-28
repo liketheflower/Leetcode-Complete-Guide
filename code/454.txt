@@ -1,0 +1,34 @@
+思路：
+1. 暴力 n^4
+2. 拆分成两份，分别求到每一份的 所有组合 n^2
+3. 随便遍历其中一份，找互补
+
+
+代码：
+
+class Solution {
+    public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
+        int res=0;
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int i=0;i<A.length;i++){
+            for(int j=0;j<B.length;j++){
+                int cur=A[i]+B[j];
+                if(!map.containsKey(cur))map.put(cur,0);
+                map.put(cur,map.get(cur)+1);
+            }
+        }
+        
+        for(int i=0;i<C.length;i++){
+            for(int j=0;j<D.length;j++){
+                int cur=C[i]+D[j];
+                if(map.containsKey(-cur)){
+                    res+=map.get(-cur);
+                }
+                
+            }
+        }
+        
+        return res;
+        
+    }
+}
