@@ -127,6 +127,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #798. [Smallest Rotation with Highest Score (H) 1900](./code/798.txt) <br />
 #801. [Minimum Swaps To Make Sequences Increasing (M+) 1600](./code/801.txt) <br />
 #805. [Split Array With Same Average (H) 1800](./code/805.txt) <br />
+#823. [Binary Trees With Factors (M) 1500](./code/823.txt) <br />
 #828. [Count Unique Characters of All Substrings of a Given String (H) 1900](./code/828.txt) <br />
 #940. [Distinct Subsequences II (H) 1800](./code/940.txt) <br />
 #943. [Find the Shortest Superstring (H) 1900](./code/943.txt) <br />
