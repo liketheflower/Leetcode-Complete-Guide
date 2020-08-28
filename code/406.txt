@@ -1,0 +1,34 @@
+思路：
+1. 先从最高的拿起（如果一样先从前面人数最少的拿）
+2. 新拿的一定比之前所有的都要小
+3. 然后insert 在适当的位置就行
+
+
+代码：
+
+class Solution {
+    public int[][] reconstructQueue(int[][] A) {
+        int res[][]=new int[A.length][2];
+        if(A.length==0)return res;
+        
+        PriorityQueue<int[]>pq=new PriorityQueue<>((a,b)->{
+            if(a[0]==b[0])return a[1]-b[1];
+            return b[0]-a[0];
+        });
+        List<int[]>list=new ArrayList<>();
+        for(int pair[]:A)pq.add(pair);
+        
+        while(pq.size()!=0){
+            int top[]=pq.poll();
+            int cnt=top[1];
+            list.add(cnt,top);
+        }
+        
+        
+        
+        for(int i=0;i<list.size();i++){
+            res[i]=list.get(i);
+        }
+        return res;
+    }
+}
