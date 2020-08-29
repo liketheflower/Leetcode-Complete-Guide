@@ -1,0 +1,56 @@
+思路：
+1. 如果是alice， 我想去掉更多重复
+2. 如果我是bob， 想去掉最少的重复的
+
+
+
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[] A) {
+        // Write your code here
+        int mapsize=0;
+        int unique=0;
+        int res=0;
+        int turn=0;
+        
+        for(int i=0;i<A.length;i++){
+            mapsize++;
+            int j=i;
+            while(j<A.length&&A[j]==A[i]){
+                j++;
+            }
+            if(j-i==1){
+                unique++;
+            }
+            i=j-1;
+        }
+        
+        int more=A.length-unique;
+        
+        while(more>(mapsize-unique)){
+            if(turn%2==0){//Alice
+                if(more>=3){
+                    more-=2;
+                }else{
+                    more--;
+                    unique--;
+                }
+            }else{//Bob
+                if(unique!=0){
+                    unique--;
+                    more--;
+                }else{
+                    more-=2;
+                }
+            }
+            turn++;
+            res++;
+        }
+        return res;
+    }
+}
