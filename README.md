@@ -333,6 +333,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B539. [Divisible Numbers (H)1800](./code/b539.txt) <br />
  #B591. [Connect Forest (H)1800](./code/b591.txt) <br />
  #B682. [Concatenated Sums (M)1500](./code/b682.txt) <br />
+ #B687. [Candy Race with Different Types (M)1500](./code/b687.txt) <br />
  #B688. [Number of K-Divisible Sublists (M)1500](./code/b688.txt) <br />
  #B703. [Genetic Mutation (M+)1600](./code/b703.txt) <br />
  #B708. [Maximum Additive Score by Removing Numbers (H-)1700](./code/b708.txt) <br />
