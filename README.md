@@ -303,6 +303,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B44. [Largest Rectangle  (H-) 1700](./code/b44.txt) <br />
  #B48. [Sunk Islands  (M) 1500](./code/b48.txt) <br />
  #B58. [High Frequency (E) 900](./code/b58.txt) <br />
+ #B81. [Tree Pruning (M-) 1400](./code/b81.txt) <br />
  #B83. [Climing down the tree  (M-) 1400](./code/b83.txt) <br />
  #B87. [The quick brown fox  (M+) 1600](./code/b87.txt) <br />
  #B88. [Connected Cities  (H-) 1700](./code/b88.txt) <br />
