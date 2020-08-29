@@ -288,7 +288,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #POJ 3614. [Sunscreen (H-) 1700](./code/POJ3614.txt) <br /> 
  
  ---
- ### 最大流
+ ### 二分图匹配
  #POJ 1274. [The Perfect Stall (H-) 1700](./code/POJ1274.txt) <br /> 
 
  
