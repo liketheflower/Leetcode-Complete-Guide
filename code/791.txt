@@ -1,0 +1,24 @@
+class Solution {
+    public String customSortString(String s, String T) {
+        StringBuilder str=new StringBuilder();
+        int table[]=new int[26];
+        for(int i=0;i<T.length();i++){
+            table[T.charAt(i)-'a']++;
+        }
+        
+        for(int i=0;i<s.length();i++){
+            int t=table[s.charAt(i)-'a'];
+            table[s.charAt(i)-'a']=0;
+            for(int j=0;j<t;j++){
+                str.append(s.charAt(i));
+            }
+        }
+        
+        for(int i=0;i<26;i++){
+            for(int j=0;j<table[i];j++){
+                str.append((char)(i+'a')+"");
+            }
+        }
+        return str.toString();
+    }
+}
