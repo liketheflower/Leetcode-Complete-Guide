@@ -1,0 +1,38 @@
+思路：
+postorder
+
+
+代码：
+
+
+import java.util.*;
+
+/**
+ * public class Tree {
+ *   int val;
+ *   Tree left;
+ *   Tree right;
+ * }
+ */
+class Solution {
+    public Tree solve(Tree root) {
+        // Write your code here
+        
+        int val=dfs(root);
+        if(val==0)return null;
+        return root;
+    }
+    
+    public int dfs(Tree root){
+        if(root==null)return 0;
+        int l=dfs(root.left);
+        int r=dfs(root.right);
+        if(l==0){
+            root.left=null;
+        }
+        if(r==0){
+            root.right=null;
+        }
+        return root.val|l|r;
+    }
+}
