@@ -213,7 +213,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #877. [Stone Game (M+) 1600](./code/877.txt) <br />
 #913. [Cat and Mouse (H+) 2400](./code/913.txt) <br />
 #1140. [Stone Game II (M+) 1600](./code/1140.txt) <br />
-#B731. [Deleting Repeated Integers Game (M+)1600](./code/b731.txt) <br />
+
 
 ---
 ### Implementation
@@ -337,3 +337,4 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B703. [Genetic Mutation (M+)1600](./code/b703.txt) <br />
  #B708. [Maximum Additive Score by Removing Numbers (H-)1700](./code/b708.txt) <br />
  #B713. [Minimum Difference of Extremes (M-)1400](./code/b713.txt) <br />
+ #B731. [Deleting Repeated Integers Game (M+)1600](./code/b731.txt) <br />
