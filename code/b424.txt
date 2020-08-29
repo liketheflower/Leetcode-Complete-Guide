@@ -1,0 +1,52 @@
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[] A) {
+        // Write your code here
+        int res=0;
+        int sum=0;
+        int pre[]=new int[A.length];
+        for(int i=0;i<A.length;i++){
+            sum+=(A[i]*(i+1));
+            if(i==0){
+                pre[i]=A[i];
+            }else{
+                pre[i]=A[i]+pre[i-1];
+            }
+        }
+        res=sum;
+        
+        
+        for(int i=0;i<A.length;i++){
+            //move current i
+            int cur=A[i];
+            int post=pre[pre.length-1]-pre[i];
+            int newsum=sum-post-cur*(i+1);//a new sum after remove that element
+            int newpre[]=new int[A.length-1];
+            int index=0;
+            
+            for(int j=0;j<A.length;j++){
+                if(i==j)continue;
+                if(index==0){
+                    newpre[index++]=A[j];
+                }else{
+                    newpre[index]=newpre[index-1]+A[j];
+                    index++;
+                }
+            }
+            
+            res=Math.max(res,cur+newsum+newpre[newpre.length-1]);
+            res=Math.max(res,cur*A.length+newsum);
+            for(int j=0;j<newpre.length;j++){
+                int toadd=newpre[newpre.length-1]-newpre[j];
+                res=Math.max(res,toadd+newsum+cur*(j+2));
+            }
+        }
+        
+        return res;
+    }
+}
