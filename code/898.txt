@@ -1,0 +1,24 @@
+思路：
+1. or 的属性，只会越来越大
+2. 一下代码看似n^2 实则 o（n）
+
+
+代码：
+
+class Solution {
+    public int subarrayBitwiseORs(int[] nums) {
+        Set<Integer>res=new HashSet<>();
+        Set<Integer>pre=new HashSet<>();
+        pre.add(nums[0]);
+        res.add(nums[0]);
+        for(int i=1;i<nums.length;i++){
+            int n=nums[i];
+            Set<Integer>set=new HashSet<>();
+            for(int x:pre)set.add(x|n);
+            set.add(n);
+            res.addAll(set);
+            pre=set;
+        }
+        return res.size();
+    }
+}
