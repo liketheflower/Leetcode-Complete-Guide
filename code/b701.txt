@@ -1,0 +1,36 @@
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[][] A) {
+        // Write your code here
+        if(A.length<2)return 0;
+        int res=Integer.MAX_VALUE;
+        int min=Integer.MAX_VALUE;
+        Arrays.sort(A,(a,b)->{
+            return a[0]-b[0];
+        });
+        
+        PriorityQueue<int[]>pq=new PriorityQueue<>((a,b)->{
+            return a[0]-b[0];
+        });
+        
+        for(int i=0;i<A.length;i++){
+            int start=A[i][0];int end=A[i][1];
+            int cnt=end-start+1;
+            
+            while(pq.size()>0&&pq.peek()[0]<start){
+                int pair[]=pq.poll();
+                min=Math.min(min,pair[1]);
+            }
+            if(min!=Integer.MAX_VALUE)res=Math.min(res,cnt+min);
+            pq.add(new int[]{end,cnt});
+            
+        }
+        if(res==Integer.MAX_VALUE)return 0;
+        return res;
+    }
+}
