@@ -1,0 +1,28 @@
+思路：
+有连续两个就可以移掉，但是移掉后前后会结合，所以用stack
+
+
+代码：
+
+import java.util.*;
+
+
+class Solution {
+    public boolean solve(int[] A) {
+        // Write your code here
+        int cnt=0;
+        Stack<Integer>stack=new Stack<>();
+        for(int cur:A){
+            if(stack.size()==0){
+                stack.push(cur);
+            }else{
+                if(cur==stack.peek()){
+                    stack.pop();cnt++;
+                }else{
+                    stack.push(cur);
+                }
+            }
+        }
+        return cnt%2==1;
+    }
+}
