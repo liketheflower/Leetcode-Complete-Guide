@@ -326,6 +326,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B362. [Number Flip (E)900](./code/b362.txt) <br />
  #B372. [Longest Even Sum Path (H)1800](./code/b372.txt) <br />
  #B375. [The Meeting Place (M)1500](./code/b375.txt) <br />
+ #B438. [0-1 Knapsack (M+)1600](./code/b438.txt) <br />
  #B459. [Anagram Substrings  (M-) 1400](./code/b459.txt) <br />
  #B503. [Small Large Medium (M+)1600](./code/b503.txt) <br />
  #B539. [Divisible Numbers (H)1800](./code/b539.txt) <br />
