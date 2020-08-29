@@ -283,6 +283,11 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #POJ 3614. [Sunscreen (H-) 1700](./code/POJ3614.txt) <br /> 
  
  ---
+ ### 最大流
+ #POJ 1274. [The Perfect Stall (H-) 1700](./code/POJ1274.txt) <br /> 
+
+ 
+ ---
  # :link: BinarySearch.io
  ***一个不错新的面试刷题网站***<br/>
  #B6. [Omitted  (M-) 1400](./code/b6.txt) <br />
