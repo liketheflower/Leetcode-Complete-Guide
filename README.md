@@ -213,6 +213,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #877. [Stone Game (M+) 1600](./code/877.txt) <br />
 #913. [Cat and Mouse (H+) 2400](./code/913.txt) <br />
 #1140. [Stone Game II (M+) 1600](./code/1140.txt) <br />
+#B731. [Deleting Repeated Integers Game (M+)1600](./code/b731.txt) <br />
 
 ---
 ### Implementation
