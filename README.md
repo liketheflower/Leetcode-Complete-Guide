@@ -225,6 +225,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ---
 ### Bit
 #201. [Bitwise AND of Numbers Range (M+) 1600](./code/201.txt) <br />
+#898. [Bitwise ORs of Subarrays (M+) 1600](./code/898.txt) <br />
 #1178. [Number of Valid Words for Each Puzzle (H-) 1700](./code/1178.txt) <br />
 
 ---
