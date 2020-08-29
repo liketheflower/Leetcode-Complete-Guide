@@ -46,8 +46,8 @@ CF 分目测评估：
 ---
 ### LinkedList
 Note: LinkedList can be used as stack or queue or deque<br/><br/>
-#2. [Add Two Numbers (M-) 1400](./code/2.txt) <br />
-#328. [Odd Even Linked List (M-) 1400](./code/328.txt) <br />
+#2. [Add Two Numbers (M-) 1300](./code/2.txt) <br />
+#328. [Odd Even Linked List (M-) 1300](./code/328.txt) <br />
 #950. [Reveal Cards In Increasing Order (M) 1500](./code/950.txt) <br />
 
 ---
