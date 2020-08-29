@@ -1,0 +1,80 @@
+思路：
+rolling hash
+
+
+代码：
+
+class Solution {
+    int mod=1000000007;
+    long pow[];
+    List<Integer>res=new ArrayList<>();
+    Map<Long,Integer>map=new HashMap<>();
+    List<long[]>allhash=new ArrayList<>();
+    public List<Integer> findSubstring(String s, String[] words) {
+        if(s.length()==0||words.length==0)return new ArrayList<>();
+        pow=new long[s.length()];
+        pow[0]=1;
+        for(int i=1;i<s.length();i++){
+            pow[i]=(pow[i-1]*26)%mod;
+        }
+        
+        long shash[]=hash(s);
+        for(String w:words){
+            allhash.add(hash(w));
+        }
+        
+        for(int i=0;i<allhash.size();i++){
+            long h=gethash(allhash.get(i),0,words[i].length()-1);
+            if(!map.containsKey(h))map.put(h,0);
+            map.put(h,map.get(h)+1);
+        }
+        
+        
+        for(int i=0;i<s.length();i++){
+            if(i+words.length*words[0].length()>s.length())break;
+            List<long[]>list=new ArrayList<>();
+            for(int j=i;j<i+words.length*words[0].length();j+=words[0].length()){
+                list.add(new long[]{gethash(shash,j,j+words[0].length()-1),j,j+words[0].length()});
+            }
+            
+            if(check(s,list)){
+                res.add(i);
+            }
+        }
+        
+        return res;
+    }
+    
+    public boolean check(String s,List<long[]>list){
+        Map<Long,Integer>record=new HashMap<>();
+        for(long pair[]:list){
+            if(!record.containsKey(pair[0]))record.put(pair[0],0);
+            record.put(pair[0],record.get(pair[0])+1);
+        }
+
+        if(record.size()!=map.size())return false;
+        for(Long key:record.keySet()){
+            if(!map.containsKey(key))return false;
+            if(map.get(key)!=record.get(key))return false;
+        }
+        
+        return true;
+    }
+    
+    
+    public long[] hash(String s){
+        long h[]=new long[s.length()];
+        h[0]=s.charAt(0);
+        for(int i=1;i<s.length();i++){
+            h[i]=(h[i-1]*26+s.charAt(i))%mod;
+        }
+        return h;
+    }
+    
+    public long gethash(long hash[],int left,int right){
+        if(left==0)return hash[right];
+        long res=(hash[right]-hash[left-1]*pow[right-left+1])%mod;
+        if(res<0)res+=mod;
+        return res;
+    }
+}
