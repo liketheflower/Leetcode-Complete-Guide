@@ -348,8 +348,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B731. [Deleting Repeated Integers Game (M+)1600](./code/b731.txt) <br />
 
  ---
- # :link: CodeForce Contest
- ### :punch: Codeforces Round #666 (Div. 2)
+ # :punch: CodeForce Contest
+ ### Codeforces Round #666 (Div. 2)
  A. [Juggling Letters ](./code/666A.txt) <br />
  B. [Power Sequence ](./code/666B.txt) <br />
  C. [Multiples of Length ](./code/666C.txt) <br />
