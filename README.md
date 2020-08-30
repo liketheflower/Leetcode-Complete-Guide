@@ -349,6 +349,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B709. [Arrange Symbols to Create Sum (M+)1600](./code/b709.txt) <br />
  #B713. [Minimum Difference of Extremes (M-)1400](./code/b713.txt) <br />
  #B731. [Deleting Repeated Integers Game (M+)1600](./code/b731.txt) <br />
+ #B733. [Matrix Prefix Sum (M-)1300](./code/b733.txt) <br />
 
  ---
  # :punch: CodeForce Contest
