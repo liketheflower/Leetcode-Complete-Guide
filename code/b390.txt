@@ -1,0 +1,26 @@
+思路：
+lazy increment
+
+
+import java.util.*;
+
+
+class Solution {
+    public int[] solve(int[] A, int[][] operations) {
+        // Write your code here
+        int res[]=new int[A.length];
+        int record[]=new int[A.length];
+        for(int pair[]:operations){
+            record[pair[0]]+=pair[2];
+            if(pair[1]+1<A.length){
+                record[pair[1]+1]-=pair[2];
+            }
+        }
+        int sum=0;
+        for(int i=0;i<A.length;i++){
+            sum+=record[i];
+            res[i]=A[i]+sum;
+        }
+        return res;
+    }
+}
