@@ -1,0 +1,39 @@
+代码：
+
+
+import java.util.*;
+
+/**
+ * public class Tree {
+ *   int val;
+ *   Tree left;
+ *   Tree right;
+ * }
+ */
+class Solution {
+    int cnt=0;
+    public int solve(Tree root) {
+        // Write your code here
+        dfs(root);
+        return cnt;
+    }
+    
+    public Set<Integer> dfs(Tree root){
+        if(root==null)return new HashSet<>();
+        Set<Integer>l=dfs(root.left);
+        Set<Integer>r=dfs(root.right);
+        
+        if(l.size()>1){
+            return l;
+        }
+        if(r.size()>1){
+            return r;
+        }
+        Set<Integer>cur=new HashSet<>();
+        cur.add(root.val);
+        cur.addAll(l);
+        cur.addAll(r);
+        if(cur.size()==1)cnt++;
+        return cur;
+    }
+}
