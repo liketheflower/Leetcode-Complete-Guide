@@ -1,0 +1,33 @@
+思路：
+stack 经典用法
+
+import java.util.*;
+
+
+class Solution {
+    public String solve(String s) {
+        // Write your code here
+        StringBuilder str=new StringBuilder();
+        Stack<Character>stack=new Stack<>();
+        
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(stack.size()==0){
+                stack.push(c);
+            }else{
+                if(stack.peek()==c){
+                    while(i<s.length()&&s.charAt(i)==stack.peek()){
+                        i++;
+                    }
+                    i--;
+                    stack.pop();
+                }
+                else{
+                    stack.push(c);
+                }
+            }
+        }
+        while(stack.size()!=0)str.append(stack.pop()+"");
+        return str.reverse().toString();
+    }
+}
