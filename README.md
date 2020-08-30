@@ -357,3 +357,4 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  A. [Juggling Letters ](./code/666A.txt) <br />
  B. [Power Sequence ](./code/666B.txt) <br />
  C. [Multiples of Length ](./code/666C.txt) <br />
+ D. [Stoned Game ](./code/666D.txt) <br />
