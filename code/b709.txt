@@ -1,0 +1,46 @@
+思路：
+背包
+
+
+代码：
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[] A, int target) {
+        // Write your code here
+        Map<Integer,Integer>pre=new HashMap<>();
+        pre.put(A[0],1);
+        if(A[0]!=0){
+            pre.put(-A[0],1);
+        }else{
+            pre.put(-A[0],2);
+        }
+        
+        
+        for(int i=1;i<A.length;i++){
+            Map<Integer,Integer>cur=new HashMap<>();
+            
+            for(Integer key:pre.keySet()){
+                int v=key;
+                int v1=v+A[i];
+                int v2=v-A[i];
+                if(!cur.containsKey(v1)){
+                    cur.put(v1,0);
+                }
+                cur.put(v1,cur.get(v1)+pre.get(key));
+                
+                if(!cur.containsKey(v2)){
+                    cur.put(v2,0);
+                }
+                cur.put(v2,cur.get(v2)+pre.get(key));
+            }
+            pre=cur;
+        }
+        
+        if(!pre.containsKey(target))return 0;
+        return pre.get(target);
+        
+    }
+}
