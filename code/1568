@@ -1,0 +1,102 @@
+思路：
+1. 用tarjan 找critical point
+2. 如果自身是个强连通，按照图的属性，我们要移除两个（把他想成一个环）
+
+
+代码：
+
+
+class Solution {
+    int cnt=0;
+    boolean visit[][];
+    int graph[][];
+    List<Integer>adjecent[];
+    int dis[],low[];
+    int time=1;
+    boolean cut=false;int root=-1;
+    public int minDays(int[][] grid) {
+        
+        int r=grid.length,c=grid[0].length;
+        adjecent=new ArrayList[r*c];
+        dis=new int[r*c];low=new int[r*c];
+        for(int i=0;i<adjecent.length;i++)adjecent[i]=new ArrayList<>();
+        visit=new boolean[r][c];
+        int sum=0;
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                sum+=grid[i][j];
+                if(grid[i][j]==0||visit[i][j])continue;
+                if(root==-1)root=i*grid[0].length+j;
+                cnt++;
+                dfs(grid,i,j);
+            }
+        }
+        
+        if(cnt>1)return 0;
+        if(sum==2)return 2;
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                if(grid[i][j]==0)continue;
+                mark(grid,i,j,i+1,j);
+                mark(grid,i,j,i-1,j);
+                mark(grid,i,j,i,j+1);
+                mark(grid,i,j,i,j-1);
+            }
+        }
+        tarjan(-1,root);
+        
+        if(cut)return 1;
+        return 2;
+        
+       
+    }
+    
+        public void tarjan(int p,int r){
+            if(cut)return;
+            List<Integer>childs=adjecent[r];
+            dis[r]=low[r]=time;
+            time++;
+
+            //core for tarjan, finding critical point
+            int son=0;
+            for(int c:childs){
+                if(c==p)continue;
+                if(dis[c]==0){
+                    son++;
+                    tarjan(r,c);
+                    low[r]=Math.min(low[r],low[c]);
+                    if((r==root&&son>1)||(low[c]>=dis[r]&&r!=root)){
+                        cut=true;
+                        return;
+                    }
+                }else{
+                    if(c!=p){
+                        low[r]=Math.min(low[r],dis[c]);
+                    }
+                }
+            }
+
+        }
+    
+    public void mark(int grid[][],int r,int c,int r1,int c1){
+        if(r1<0||c1<0||r1>=grid.length||c1>=grid[0].length)return;
+        if(grid[r1][c1]==0)return;
+        
+        int id1=r*grid[0].length+c;
+        int id2=r1*grid[0].length+c1;
+        adjecent[id1].add(id2);
+        adjecent[id2].add(id1);
+        
+    }
+    
+    public void dfs(int grid[][],int i,int j){
+        if(i<0||j<0||i>=grid.length||j>=grid[0].length)return;
+        if(grid[i][j]==0)return;
+        if(visit[i][j])return;
+        visit[i][j]=true;
+        dfs(grid,i+1,j);
+        dfs(grid,i-1,j);
+        dfs(grid,i,j+1);
+        dfs(grid,i,j-1);
+    }
+}
