@@ -1,0 +1,79 @@
+思路：
+因为只有01的关系， 我们把有可能的case 都想一下的话发现greedy 是可以wordk的
+
+
+代码：
+
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(String s, int ab, int ba) {//01   10
+        // Write your code here
+        
+        //not necessary remove all
+        int res=0;
+        Stack<Character>stack=new Stack<>();
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(stack.size()==0){
+                stack.push(c);
+            }else{
+                if(ab>ba){//01
+                    if(c=='1'){
+                        if(stack.peek()=='0'){
+                            stack.pop();
+                            res+=ab;
+                        }else{
+                            stack.push(c);
+                        }
+                    }else{
+                        stack.push(c);
+                    }
+                }else{//10
+                    if(c=='0'){
+                        if(stack.peek()=='1'){
+                            stack.pop();
+                            res+=ba;
+                        }else{
+                            stack.push(c);
+                        }
+                    }else{
+                        stack.push(c);
+                    }
+                }
+            }
+        }
+        
+        StringBuilder str=new StringBuilder();
+        while(stack.size()!=0){
+            str.append(stack.pop()+"");
+        }
+        s=str.reverse().toString();
+        stack=new Stack<>();
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(stack.size()==0){
+                stack.push(c);
+            }
+            else{
+                if(c=='1'){
+                    if(stack.peek()=='0'){
+                        stack.pop();res+=ab;
+                    }else{
+                        stack.push(c);
+                    }
+                }else{
+                   if(stack.peek()=='1'){
+                        stack.pop();res+=ba;
+                    }else{
+                        stack.push(c);
+                    } 
+                }
+            }
+        }
+        
+        return res;
+    }
+}
