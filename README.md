@@ -224,6 +224,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #26. [Remove Duplicates from Sorted Array (H) 1800](./code/26.txt) <br />
 #68. [Text Justification (H) 1800](./code/68.txt) <br />
 #118. [Pascal's Triangle (E) 900](./code/118.txt) <br />
+#202. [Happy Number (E) 800](./code/202.txt) <br />
 #747. [Largest Number At Least Twice of Others (E) 900](./code/747.txt) <br />
 #1550. [Three Consecutive Odds (E-) 700](./code/1550.txt) <br />
 
