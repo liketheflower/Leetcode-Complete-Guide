@@ -1,6 +1,6 @@
 思路：
 1.用涂颜色的方式去判断是否是odd even
-2.如果revisit 一个走过的点->有cycle
+2.如果revisit 一个走过的点->有cycle, 然后通过颜色判断是odd 还是even
 
 
 代码：
@@ -32,7 +32,7 @@ class Solution {
                 color[c]=col;
                 dfs(c,next);
             }else{
-                if(c!=root&&color[c]==color[root]){
+                if(c!=root&&color[c]==color[root]){ //cycle
                     res=true;
                 }
             }
