@@ -354,7 +354,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B713. [Minimum Difference of Extremes (M-)1400](./code/b713.txt) <br />
  #B731. [Deleting Repeated Integers Game (M+)1600](./code/b731.txt) <br />
  #B733. [Matrix Prefix Sum (M-)1300](./code/b733.txt) <br />
-
+ #B733. [Maximal Points from Deleting Two Character Substrings (H-)1700](./code/b736.txt) <br />
+ 
  ---
  # :punch: CodeForce Contest
  ### Codeforces Round #666 (Div. 2)
