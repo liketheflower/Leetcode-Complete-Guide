@@ -331,6 +331,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B286. [Minimum Difference (M)1500](./code/b286.txt) <br />
  #B299. [Subsequence Picking (H)1900](./code/b299.txt) <br />
  #B315. [Minimum Spanning Tree (H)1800](./code/b315.txt) <br />
+ #B342. [Equal Piles (M-)1400](./code/b342.txt) <br />
  #B357. [Longest Alternating Subsequence (M)1500](./code/b357.txt) <br />
  #B358. [Bus Fare (M)1600](./code/b358.txt) <br />
  #B362. [Number Flip (E)900](./code/b362.txt) <br />
