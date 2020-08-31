@@ -1,0 +1,32 @@
+思路：
+1. simulate 一下就能发现规律从而做到优化
+2. 注意数字可能会有重复
+
+
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[] A) {
+        // Write your code here
+        int cnt=0;
+        int res=0;
+        Arrays.sort(A);
+        Set<Integer>set=new HashSet<>();
+        set.add(A[0]);
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int i=0;i<A.length;i++){
+            if(!map.containsKey(A[i]))map.put(A[i],0);
+            map.put(A[i],map.get(A[i])+1);
+        }
+        
+        for(int i=A.length-1;i>=0;i--){
+            if(set.contains(A[i]))continue;
+            set.add(A[i]);
+            cnt+=map.get(A[i]);
+            res+=cnt;
+        }
+        return res;
+        
+    }
+}
