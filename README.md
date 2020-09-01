@@ -65,6 +65,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1199. [Minimum Time Building Block (H) 1800](./code/1199.txt) <br />
 #1326.[Minimum Number of Taps to Open to Water a Garden   (H) 1800](./code/1326.txt) <br />
 #1328.[Break a Palindrome   (M-) 1300](./code/1328.txt) <br />
+#1383.[Maximum Performance of a Team   (H-) 1700](./code/1383.txt) <br />
 #1520.[Maximum Number of Non-Overlapping Substrings  (H) 1900](./code/1520.txt) <br />
 #1540.[Can Convert String in K Moves  (M) 1500](./code/1540.txt) <br />
 #LCP 06. [拿硬币 (E) 800](./code/LCP06.txt) <br />
