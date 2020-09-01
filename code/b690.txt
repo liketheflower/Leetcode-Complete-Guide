@@ -1,0 +1,30 @@
+import java.util.*;
+
+
+class Solution {
+    public boolean solve(int[] A, int k) {
+        // Write your code here
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int i:A){
+            if(!map.containsKey(i%k))map.put(i%k,0);
+            map.put(i%k,map.get(i%k)+1);
+        }
+
+        for(Integer key:map.keySet()){
+            if(key==(k-key)%k){
+                if(map.get(key)%2!=0){
+                    return false;
+                }
+            }else{
+                if(!map.containsKey((k-key)%k)){
+                    return false;
+                }
+                int a=map.get((k-key)%k);
+                int b=map.get(key);
+                if(a!=b)return false;
+            }
+        }
+        return true;
+        
+    }
+}
