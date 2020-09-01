@@ -244,6 +244,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #30. [Substring with Concatenation of All Words(H-) 1700](./code/30.txt) <br />
 #409. [Longest Palindrom (E) 900](./code/409.txt) <br />
 #594. [Longest Harmonious Subsequence (E) 1000](./code/594.txt) <br />
+#1267. [Count Servers that Communicate (M-) 1300](./code/1267.txt) <br />
 
 ---
 ### Divide Conquer
