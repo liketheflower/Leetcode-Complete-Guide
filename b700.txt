@@ -1,0 +1,39 @@
+思路：
+1. 经典 palindrom remove dp
+2. 如果 n*n*k 的话肯定超时
+3. 换一个思路，这问题可以看成找出最小移走几个可以使其是palindrom， 然后看看这个最小的是否小于或者等于k，这样就不用把k 加进状态里面
+
+
+代码：
+
+import java.util.*;
+
+
+class Solution {
+    int dp[][];
+    public boolean solve(String s, int k) {
+        // Write your code here
+        dp=new int[s.length()][s.length()];
+        for(int i=0;i<dp.length;i++){
+            Arrays.fill(dp[i],-1);
+        }
+        return dfs(s,0,s.length()-1)<=k;
+    }
+    
+    public int dfs(String s,int l,int r){
+        if(l>=r){
+            return 0;
+        }
+        if(dp[l][r]!=-1)return dp[l][r];
+        
+        int res=Integer.MAX_VALUE;
+        if(s.charAt(l)==s.charAt(r)){
+            res=Math.min(res,dfs(s,l+1,r-1));
+        }else{
+            res=Math.min(res,1+dfs(s,l+1,r));
+            res=Math.min(res,1+dfs(s,l,r-1));
+        }
+        dp[l][r]=res;
+        return res;
+    }
+}
