@@ -1,0 +1,28 @@
+思路：
+1. 先把前面k 个以第一个loop 的方式弄出来
+2. 后面的差都会比前面小的关系可以guarantee
+
+
+代码：
+
+
+class Solution {
+    public int[] constructArray(int n, int k) {
+        int A[]=new int[n];
+        A[0]=1;
+        
+        for(int i=1;i<=k;i++){
+            if(i%2==1){
+                A[i]=A[i-1]+(k-i+1);
+            }else{
+                A[i]=A[i-1]-(k-i+1);
+            }
+        }
+        
+        for(int i=k+1;i<A.length;i++){
+            A[i]=i+1;
+        }
+        
+        return A;
+    }
+}
