@@ -293,6 +293,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  ---
  ### DP 
+ #POJ 1159. [Palindrom (H-) 1700](./code/POJ1159.txt) <br />
  #POJ 1458. [Balance (M) 1500](./code/POJ1458.txt) <br />
  #POJ 1837. [Balance (H-) 1700](./code/POJ1837.txt) <br />
  #POJ 2229. [Sumsets (M) 1500](./code/POJ2229.txt) <br />
