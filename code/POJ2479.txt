@@ -1,0 +1,318 @@
+// Don't place your source in a package
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.math.*; 
+// Please name your class Main
+public class Main {
+	
+	static StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+    
+ 
+    static int read() throws IOException {
+        in.nextToken();
+        return (int) in.nval;
+    }
+    static String readString() throws IOException {
+        in.nextToken();
+        return in.sval;
+	}
+	
+	
+	public static void main (String[] args) throws java.lang.Exception {
+	    Scanner in = new Scanner(System.in);
+		PrintWriter out = new PrintWriter(System.out);
+		//InputReader in = new InputReader(System.in);
+		
+		int T=in.nextInt();
+		for(int t=0;t<T;t++){
+			int n=in.nextInt();
+			int A[]=new int[n];
+			in.nextLine();
+			String nums=in.nextLine();
+			String arr[]=nums.split(" ");
+			for(int i=0;i<n;i++){
+				A[i]=Integer.parseInt(arr[i]);
+			}
+			
+			Solution sol=new Solution();
+			sol.solution(A);
+		}
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		//for(int t=0;t<T;t++){
+		//int C,L;
+		/*while((N = read()) != 0){
+			M=read();
+			if(N==0&&M==0)break;
+			
+			List<Integer>adjecent[]=new ArrayList[N];
+			for(int i=0;i<N;i++){
+				//if(adjecent[i]!=null)adjecent[i].celar();
+				 adjecent[i]=new ArrayList<Integer>();
+			}
+			
+			for(int i=0;i<M;i++){
+				int v1=read();int v2=read();
+				adjecent[v1].add(v2);
+				adjecent[v2].add(v1);
+			}
+			
+			Solution s=new Solution();
+			s.solution(adjecent,out);
+		}*/
+		
+		/*int A[][]=new int[4][4];
+		for(int i=0;i<4;i++){
+			String s=in.next();
+			for(int j=0;j<s.length();j++){
+				if(s.charAt(j)=='b'){
+					A[i][j]=0;
+				}else{
+					A[i][j]=1;
+				}
+			}
+		}*/
+		
+				
+				//out.flush();
+		
+		}
+ 
+}
+ 
+class Solution{
+	//constant variable
+	final int MAX=Integer.MAX_VALUE;
+	final int MIN=Integer.MIN_VALUE;
+	List<Integer>adjecent[];
+	//////////////////////////////
+ 
+
+ 
+	
+	public void solution(int A[]){
+			int res=Integer.MIN_VALUE;
+			int pre[]=new int[A.length];
+			int post[]=new int[A.length];
+			Arrays.fill(pre,MIN);
+			Arrays.fill(post,MIN);
+			int sum=0;
+			int min=0;
+			for(int i=0;i<A.length;i++){
+				sum+=A[i];
+				pre[i]=Math.max(g(pre,i-1),sum-min);
+				if(i!=0)min=Math.min(min,sum);
+				
+				
+			}
+			
+			//print1(pre);
+			
+			sum=0;min=0;
+			for(int i=A.length-1;i>=0;i--){
+				
+				sum+=A[i];
+				post[i]=Math.max(g(post,i+1),sum-min);
+				if(i!=A.length-1)min=Math.min(min,sum);
+			}
+			
+			for(int i=0;i<A.length-1;i++){
+				res=Math.max(res,pre[i]+g1(post,i+1));
+			}
+			
+			
+			
+			msg(res+"");
+			
+			
+	}
+	
+	public int g(int A[],int i){
+		if(i<0||i>=A.length)return Integer.MIN_VALUE;
+		return A[i];
+	}
+
+	public int g1(int A[],int i){
+		if(i<0||i>=A.length)return 0;
+		return A[i];
+	}
+ 
+	
+	
+ 
+ 
+	
+	
+	
+ 
+ 
+	/*public void tarjan(int p,int r){
+		if(cut)return;
+		List<Integer>childs=adjecent[r];
+		dis[r]=low[r]=time;
+		time++;
+		
+		//core for tarjan
+		int son=0;
+		for(int c:childs){
+			if(ban==c||c==p)continue;
+			if(dis[c]==-1){
+				son++;
+				tarjan(r,c);
+				low[r]=Math.min(low[r],low[c]);
+				if((r==root&&son>1)||(low[c]>=dis[r]&&r!=root)){
+					cut=true;
+					return;
+				}
+			}else{
+				if(c!=p){
+					low[r]=Math.min(low[r],dis[c]);
+				}
+			}
+		}
+		
+	}*/
+	
+	
+ 
+	
+	
+		
+	
+	//helper function I would use
+	public void ascii(String s){
+		for(char c:s.toCharArray()){
+			System.out.print((c-'a')+" ");
+		}
+		msg("");
+	}
+	
+	public int flip(int i){
+		if(i==0)return 1;
+		else return 0;
+	}
+	
+	public boolean[] primes(int n){
+		boolean A[]=new boolean[n+1];
+		for(int i=2;i<=n;i++){
+			if(A[i]==false){
+				for(int j=i+i;j<=n;j+=i){
+					A[j]=true;
+				}
+			}
+		}
+		return A;
+	}
+	
+	public void msg(String s){
+		System.out.println(s);
+	}
+	
+	public int[] kmpPre(String p){
+		int pre[]=new int[p.length()];
+		int l=0,r=1;
+		while(r<p.length()){
+			if(p.charAt(l)==p.charAt(r)){
+				pre[r]=l+1;
+				l++;r++;
+			}else{
+				if(l==0)r++;
+				else l=pre[l-1];
+			}
+		}
+		return pre;
+	}
+	
+	public boolean isP(String s){
+		int l=0,r=s.length()-1;
+		while(l<r){
+			if(s.charAt(l)!=s.charAt(r))return false;
+			l++;r--;
+		}
+		return true;
+	}
+	
+	public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+	
+	public boolean check(int grid[][],int r,int c){
+		if(r<0||c<0||r>=grid.length||c>=grid[0].length)return false;
+		return true;
+	}
+	
+	public int get(int A[],int i){
+		if(i<0||i>=A.length)return 0;
+		return A[i];
+	}
+	public int[] copy1(int A[]){
+		int a[]=new int[A.length];
+		for(int i=0;i<a.length;i++)a[i]=A[i];
+		return a;
+	}
+	
+	public int[] copy2(int A[]){
+		int a[]=new int[A.length];
+		for(int i=0;i<a.length;i++)a[i]=A[i];
+		return a;
+	}
+	
+	
+	public void print1(int A[]){
+		for(long i:A)System.out.print(i+" ");
+		System.out.println();
+	}
+	public void print2(int A[][]){
+		for(int i=0;i<A.length;i++){
+			for(int j=0;j<A[0].length;j++){
+				System.out.print(A[i][j]+" ");
+			}System.out.println();
+		}
+	}
+	
+	public int min(int a,int b){
+		return Math.min(a,b);
+	}
+	
+	
+	public int[][] matrixdp(int[][] grid) {
+        if(grid.length==0)return new int[][]{};
+        int res[][]=new int[grid.length][grid[0].length];
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                res[i][j]=grid[i][j]+get(res,i-1,j)+get(res,i,j-1)-get(res,i-1,j-1);
+            }
+        }
+        return res;
+    }
+    
+    public int get(int grid[][],int i,int j){
+        if(i<0||j<0||i>=grid.length||j>=grid[0].length)return 0;
+        return grid[i][j];
+    }
+	
+}
+ 
+	class Wrapper implements Comparable<Wrapper>{
+		int spf;int cnt;
+		public Wrapper(int spf,int cnt){
+			this.spf=spf;
+			this.cnt=cnt;
+		}
+		
+		@Override
+		public int compareTo(Wrapper other) {
+			return this.spf-other.spf;
+		}
+	}
