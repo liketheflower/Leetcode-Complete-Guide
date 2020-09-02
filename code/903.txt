@@ -1,0 +1,37 @@
+class Solution {
+    public int numPermsDISequence(String s) {
+        int mod=1000000007;
+        long dp[][]=new long[s.length()+1][s.length()+1]; 
+        dp[0][0]=1;
+        long res=0;
+        
+        
+        for(int i=0;i<s.length();i++){//end with i+1
+            char c=s.charAt(i);
+            int M=i+1;
+            for(int cur=0;cur<=M;cur++){
+                long sum=0;
+                if(c=='D'){
+                    for(int pre=cur;pre<=i;pre++){
+                        sum+=dp[i][pre];sum%=mod;
+                    }
+                }else{
+                    for(int pre=0;pre<cur;pre++){
+                        sum+=dp[i][pre];sum%=mod;
+                    }
+                }
+                dp[i+1][cur]=sum;
+            }
+        }
+        
+
+        
+        for(int i=0;i<=s.length();i++){
+            res+=dp[s.length()][i];
+            res%=mod;
+        }
+        
+        return (int)(res);
+        
+    }
+}
