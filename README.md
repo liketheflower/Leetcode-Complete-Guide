@@ -374,14 +374,14 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  A. [Diverse Strings (800) ](./code/550A.txt) <br />
  B. [Parity Alternated Deletions (900)](./code/550B.txt) <br />
  C. [Two Shuffled Sequences (1000)](./code/550C.txt) <br />
- D. [Equalize Them All (1400)](./code/550D.txt) <br />
- E. [Median String (1900)](./code/550E.txt) <br />
+ D. [Equalize Them All (1400)    (排序)](./code/550D.txt) <br />
+ E. [Median String (1900)   (数学位算)](./code/550E.txt) <br />
  F. [Graph Without Long Directed Paths(1700)  (二分图解)](./code/550F.txt) <br />
  
  ### Codeforces Round #666 (Div. 2)
  A. [Juggling Letters (800) ](./code/666A.txt) <br />
  B. [Power Sequence (1500)](./code/666B.txt) <br />
- C. [Multiples of Length (1600)](./code/666C.txt) <br />
- D. [Stoned Game (1800)](./code/666D.txt) <br />
- E. [Monster Invader (2300)](./code/666E.txt) <br />
+ C. [Multiples of Length (1600)    (贪心)](./code/666C.txt) <br />
+ D. [Stoned Game (1800)    (游戏)](./code/666D.txt) <br />
+ E. [Monster Invader (2300)    (复杂dp)](./code/666E.txt) <br />
  
