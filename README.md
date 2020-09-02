@@ -189,6 +189,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 
 ---
 ### Observation
+#667. [Beautiful Arrangement II (M) 1500](./code/667.txt) <br />
 #1109. [Corporate Flight Bookings (M) 1500](./code/1109.txt) <br />
 #1538. [Guess the Majority in a Hidden Array (M+) 1700](./code/1538.txt) <br />
 
