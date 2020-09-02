@@ -378,3 +378,4 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  A. [Diverse Strings (800) ](./code/550A.txt) <br />
  B. [Parity Alternated Deletions (900)](./code/550B.txt) <br />
  C. [Two Shuffled Sequences (1000)](./code/550C.txt) <br />
+ D. [Equalize Them All (1400)](./code/550D.txt) <br />
