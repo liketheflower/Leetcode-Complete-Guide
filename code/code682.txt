@@ -1,0 +1,27 @@
+代码：
+
+
+class Solution {
+    public int calPoints(String[] ops) {
+        Stack<Integer>stack=new Stack<>();
+        int cur=0;
+        for(String s:ops){
+            if(s.equals("D")){
+                stack.push(stack.peek()*2);
+            }
+            else if(s.equals("C")){
+                stack.pop();
+            }
+            else if(s.equals("+")){
+                int last=stack.pop();
+                int sum=stack.peek()+last;
+                stack.push(last);stack.push(sum);
+            }else{
+                stack.push(Integer.parseInt(s));
+            }
+        }
+        
+        while(stack.size()!=0)cur+=stack.pop();
+        return cur;
+    }
+}
