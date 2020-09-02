@@ -367,6 +367,13 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  ---
  # :punch: CodeForce Contest
+ 
+ ### Codeforces Round #550 (Div. 3)
+ A. [Diverse Strings (800) ](./code/550A.txt) <br />
+ B. [Parity Alternated Deletions (900)](./code/550B.txt) <br />
+ C. [Two Shuffled Sequences (1000)](./code/550C.txt) <br />
+ D. [Equalize Them All (1400)](./code/550D.txt) <br />
+ 
  ### Codeforces Round #666 (Div. 2)
  A. [Juggling Letters (800) ](./code/666A.txt) <br />
  B. [Power Sequence (1500)](./code/666B.txt) <br />
@@ -374,8 +381,3 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  D. [Stoned Game (1800)](./code/666D.txt) <br />
  E. [Monster Invader (2300)](./code/666E.txt) <br />
  
-  ### Codeforces Round #550 (Div. 3)
- A. [Diverse Strings (800) ](./code/550A.txt) <br />
- B. [Parity Alternated Deletions (900)](./code/550B.txt) <br />
- C. [Two Shuffled Sequences (1000)](./code/550C.txt) <br />
- D. [Equalize Them All (1400)](./code/550D.txt) <br />
