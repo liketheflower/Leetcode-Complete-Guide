@@ -376,6 +376,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  C. [Two Shuffled Sequences (1000)](./code/550C.txt) <br />
  D. [Equalize Them All (1400)](./code/550D.txt) <br />
  E. [Median String (1900)](./code/550E.txt) <br />
+ F. [Graph Without Long Directed Paths(1700)  (二分图解)](./code/550F.txt) <br />
  
  ### Codeforces Round #666 (Div. 2)
  A. [Juggling Letters (800) ](./code/666A.txt) <br />
