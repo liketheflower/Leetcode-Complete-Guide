@@ -218,6 +218,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #811. [Subdomain Visit Count (E) 800](./code/811.txt) <br />
 #906. [Super Palindrom (H) 1800](./code/906.txt) <br />
 #936. [Stamping The Sequence (H+) 2300](./code/936.txt) <br />
+#1163. [Last Substring in Lexicographical Order (H-) 1700](./code/1163.txt) <br />
 
 ---
 ### Game Theory
@@ -225,7 +226,6 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #877. [Stone Game (M+) 1600](./code/877.txt) <br />
 #913. [Cat and Mouse (H+) 2400](./code/913.txt) <br />
 #1140. [Stone Game II (M+) 1600](./code/1140.txt) <br />
-#1163. [Last Substring in Lexicographical Order (H-) 1700](./code/1163.txt) <br />
 
 ---
 ### Implementation
