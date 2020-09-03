@@ -1,0 +1,73 @@
+class Suffix implements Comparable<Suffix>{
+	int index;
+	int rank;
+	int next;
+	public Suffix(int i,int rank,int next){
+		this.index=i;
+		this.rank=rank;
+		this.next=next;
+	}
+	
+	@Override
+	public int compareTo(Suffix other) {
+		if(this.rank==other.rank){
+			return this.next-other.next;
+		}
+		return this.rank-other.rank;
+	}
+}
+
+
+//method
+	public int[] suffixArray(String s){
+		int n=s.length();
+		Suffix A[]=new Suffix[n];
+		
+		for(int i=0;i<n;i++){
+			A[i]=new Suffix(i,s.charAt(i)-'a',0);
+		}
+		
+		for(int i=0;i<n;i++){
+			if(i==n-1){
+				A[i].next=-1;
+			}else{
+				A[i].next=A[i+1].rank;
+			}
+		}
+		Arrays.sort(A);
+		
+		for(int len=4;len<A.length;len<<=1){
+			int in[]=new int[A.length];
+			int rank=0;
+			int pre=A[0].rank;
+			A[0].rank=rank;
+			in[A[0].index]=0;
+			for(int i=1;i<A.length;i++){//rank for the first two letter
+				if(A[i].rank==pre&&A[i].next==A[i-1].next){
+					pre=A[i].rank;
+					A[i].rank=rank;
+				}else{
+					pre=A[i].rank;
+					A[i].rank=++rank;
+				}
+				in[A[i].index]=i;
+			}
+			
+			for(int i=0;i<A.length;i++){
+				int next=A[i].index+len/2;
+				if(next>=A.length){
+					A[i].next=-1;
+				}else{
+					A[i].next=A[in[next]].rank;
+				}
+			}
+			Arrays.sort(A);
+		}
+		
+		
+		int su[]=new int[A.length];
+		for(int i=0;i<su.length;i++){
+			su[i]=A[i].index;
+		}
+		return su;
+	}
