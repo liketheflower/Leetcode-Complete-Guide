@@ -36,7 +36,7 @@ class Suffix implements Comparable<Suffix>{
 		}
 		Arrays.sort(A);
 		
-		for(int len=4;len<A.length;len<<=1){
+		for(int len=4;len<A.length*2;len<<=1){
 			int in[]=new int[A.length];
 			int rank=0;
 			int pre=A[0].rank;
