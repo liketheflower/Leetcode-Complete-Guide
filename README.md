@@ -123,6 +123,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ---
 ### DP
 #85. [Maximal Rectangle (H-) 1700](./code/85.txt) <br />
+#120. [Triangle (M-) 1300](./code/120.txt) <br />
 #139. [Word Break (M) 1500](./code/139.txt) <br />
 #198. [House Robber (M) 1400](./code/198.txt) <br />
 #363. [Max Sum of Rectangle No Larger Than K (M) 1800](./code/363.txt) <br />
