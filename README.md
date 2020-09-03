@@ -164,6 +164,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #60. [Permutation Sequence (M+) 1600](./code/60.txt) <br />
 #172. [Factorial Trailing Zeroes (M-) 1400](./code/172.txt) <br />
 #463. [Island Perimeter (E)) 900](./code/463.txt) <br />
+#598. [Range Addition II (E)) 900](./code/598.txt) <br />
 #836. [Rectangle Overlap (E+) 1100](./code/836.txt) <br />
 #891. [Sum of Subsequence Widths (H) 1800](./code/891.txt) <br />
 #908. [Smallest Range I (E+) 1100](./code/908.txt) <br />
