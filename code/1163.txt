@@ -1,0 +1,69 @@
+思路：后缀数组
+
+class Solution {
+    public String lastSubstring(String s) {
+        int n=s.length();
+        Suffix A[]=new Suffix[n];
+        for(int i=0;i<n;i++){
+            A[i]=new Suffix(i,s.charAt(i)-'a',0);
+        }
+        
+        for(int i=0;i<n;i++){
+            if(i==n-1){
+                A[i].next=-1;
+            }else{
+                A[i].next=A[i+1].rank;
+            }
+        }
+        
+        Arrays.sort(A);
+        
+        for(int len=4;len<n*2;len*=2){
+            int in[]=new int[n];
+            int pre=A[0].rank;
+            int rank=0;
+            A[0].rank=0;
+            in[A[0].index]=0;
+            for(int i=1;i<n;i++){
+                if(A[i].rank==pre&&A[i].next==A[i-1].next){
+                    pre=A[i].rank;
+                    A[i].rank=rank;
+                }else{
+                    pre=A[i].rank;
+                    A[i].rank=++rank;
+                }
+                in[A[i].index]=i;
+            }
+            for(int i=0;i<n;i++){
+                int pos=len/2+A[i].index;
+                if(pos>=n){
+                    A[i].next=-1;
+                }else{
+                    A[i].next=A[in[pos]].rank;
+                }
+            }
+            Arrays.sort(A);
+            
+        }
+        return s.substring(A[A.length-1].index);
+    }
+    
+    class Suffix implements Comparable<Suffix>{
+        int rank;
+        int next;
+        int index;
+        public Suffix(int index,int rank,int next){
+            this.index=index;
+            this.rank=rank;
+            this.next=next;
+        }
+        
+        @Override
+        public int compareTo(Suffix other) {
+            if(this.rank==other.rank){
+                return this.next-other.next;
+            }
+            return this.rank-other.rank;
+        }
+    }
+}
