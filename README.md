@@ -391,4 +391,4 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  
   #  Algorithm Template 
-  #[Suffix Array](./template/suffixArray.txt) <br />
+  [Suffix Array](./template/suffixArray.txt) <br />
