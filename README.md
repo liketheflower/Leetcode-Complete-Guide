@@ -399,8 +399,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  B. [Minimum Product ](./code/667B.txt) <br />
  C. [Yet Another Array Restoration](./code/667C.txt) <br />
  D. [Decrease the Sum of Digits](./code/667D.txt) <br />
- E. [Two Platforms ](./code/667E.txt) <br />
- F. [Subsequences of Length Two ](./code/667F.txt) <br />
+ E. [Two Platforms (双指针+dp)](./code/667E.txt) <br />
+ F. [Subsequences of Length Two (dp)](./code/667F.txt) <br />
  
  
   #  Algorithm Template 
