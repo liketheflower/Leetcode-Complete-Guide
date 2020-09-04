@@ -1,0 +1,57 @@
+class Solution {
+    public int maxCandies(int[] status, int[] candies, int[][] keys, int[][] containedBoxes, int[] initialBoxes) {
+        int res=0;
+        int n=status.length;
+        
+        boolean mykeys[]=new boolean[n];
+        Set<Integer>close=new HashSet<>(); //not open box
+        Queue<Integer>q=new LinkedList<>();
+        
+        for(int box:initialBoxes){
+            q.add(box);
+        }
+        
+        while(q.size()!=0){
+            int box=q.poll();
+            if(status[box]==0){
+                if(mykeys[box]==true){
+                    res+=candies[box];
+                    int key[]=keys[box];
+                    int newbox[]=containedBoxes[box];
+                    for(int newb:newbox){
+                        q.add(newb);
+                    }
+
+                    for(int k:key){
+                        mykeys[k]=true;
+                        if(close.contains(k)){
+                            close.remove(k);
+                            q.add(k);
+                        }
+                    }
+                }else{
+                    close.add(box);
+                }
+                
+            }else{
+                res+=candies[box];
+                int key[]=keys[box];
+                int newbox[]=containedBoxes[box];
+                for(int newb:newbox){
+                    q.add(newb);
+                }
+                
+                for(int k:key){
+                    mykeys[k]=true;
+                    if(close.contains(k)){
+                        close.remove(k);
+                        q.add(k);
+                    }
+                }
+                
+            }
+        }
+        
+        return res;
+    }
+}
