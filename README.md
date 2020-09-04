@@ -394,6 +394,13 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  D. [Stoned Game (1800)    (游戏)](./code/666D.txt) <br />
  E. [Monster Invader (2300)    (复杂dp)](./code/666E.txt) <br />
  
+ ### Codeforces Round #667 (Div. 3)
+ A. [Yet Another Two Integers Problem  ](./code/667A.txt) <br />
+ B. [Minimum Product ](./code/667B.txt) <br />
+ C. [Yet Another Array Restoration](./code/667C.txt) <br />
+ D. [Decrease the Sum of Digits](./code/667D.txt) <br />
+ E. [Two Platforms ](./code/667E.txt) <br />
+ 
  
   #  Algorithm Template 
   [Suffix Array (后缀数组 (nlog^2 n))](./template/suffixArray.txt) <br />
