@@ -1,0 +1,383 @@
+// Don't place your source in a package
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.math.*; 
+// Please name your class Main
+public class Main {
+	
+	static StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+    
+ 
+    static int read() throws IOException {
+        in.nextToken();
+        return (int) in.nval;
+    }
+    static String readString() throws IOException {
+        in.nextToken();
+        return in.sval;
+	}
+	
+	
+	public static void main (String[] args) throws java.lang.Exception {
+	    Scanner in = new Scanner(System.in);
+		PrintWriter out = new PrintWriter(System.out);
+		//InputReader in = new InputReader(System.in);
+		
+		
+		int n=in.nextInt();
+		int k=in.nextInt();
+		
+		String s1=in.next();
+		String s2=in.next();
+		
+		Solution sol=new Solution();
+		sol.solution(n,k,s1,s2);
+		
+		
+		out.flush();	
+		
+		
+		
+
+		
+		}
+ 
+}
+ 
+class Solution{
+	//constant variable
+	final int MAX=Integer.MAX_VALUE;
+	final int MIN=Integer.MIN_VALUE;
+	//Set<Integer>adjecent[];
+	//////////////////////////////
+ 
+
+ 
+	//int dp[][][];
+	//Map<String,int[]>map=new HashMap<>();
+	char c1,c2;
+	int dp[][][];
+	public void solution(int n,int k, String s1,String s2){
+		//s2 only has len2
+		
+		if(s2.charAt(0)==s2.charAt(1)){
+			int cnt=0;
+			for(int i=0;i<s1.length();i++){
+				if(s1.charAt(i)==s2.charAt(0))cnt++;
+			}
+			cnt=Math.min(s1.length(),cnt+k);
+			cnt--;
+			cnt=cnt*(1+cnt)/2;
+			msg(cnt+"");
+			return;
+		}
+		
+		c1=s2.charAt(0);
+		c2=s2.charAt(1);
+		dp=new int[s1.length()+1][s1.length()+1][s1.length()+1];
+		for(int i=0;i<dp.length;i++){
+			for(int j=0;j<dp[0].length;j++){
+				Arrays.fill(dp[i][j],-1);
+			}
+		}
+		
+		int res = dfs(s1,0,k,0);
+		
+		/*for(int i=0;i<dp.length;i++){
+			for(int j=0;j<dp[0].length;j++){
+				print1(dp[i][j]);
+			}
+		}*/
+		
+		msg(res+"");
+	}
+	
+	public int dfs(String s1,int i,int k,int pre){
+		if(i>=s1.length())return 0;
+		if(dp[i][k][pre]!=-1)return dp[i][k][pre];
+		char c=s1.charAt(i);
+		int res=0;
+		if(c==c1){
+			res=Math.max(res,dfs(s1,i+1,k,pre+1));
+			if(k>0){
+				res=Math.max(res,pre+dfs(s1,i+1,k-1,pre));
+			}
+		}
+		else if(c==c2){
+			if(k>0){
+				res=Math.max(res,dfs(s1,i+1,k-1,pre+1));
+			}
+			res=Math.max(res,pre+dfs(s1,i+1,k,pre));
+		}else{
+			res=Math.max(res,dfs(s1,i+1,k,pre));
+			if(k>0){
+				res=Math.max(res,pre+dfs(s1,i+1,k-1,pre));
+				res=Math.max(res,dfs(s1,i+1,k-1,pre+1));
+			}
+		}
+		
+		//msg(i+"  "+k+"  "+pre);
+		
+		dp[i][k][pre]=res;
+		return res;
+	}
+	
+	
+ 
+	
+	
+	
+ 
+	
+	
+	
+ 
+ 
+	/*public void tarjan(int p,int r){
+		if(cut)return;
+		List<Integer>childs=adjecent[r];
+		dis[r]=low[r]=time;
+		time++;
+		
+		//core for tarjan
+		int son=0;
+		for(int c:childs){
+			if(ban==c||c==p)continue;
+			if(dis[c]==-1){
+				son++;
+				tarjan(r,c);
+				low[r]=Math.min(low[r],low[c]);
+				if((r==root&&son>1)||(low[c]>=dis[r]&&r!=root)){
+					cut=true;
+					return;
+				}
+			}else{
+				if(c!=p){
+					low[r]=Math.min(low[r],dis[c]);
+				}
+			}
+		}
+		
+	}*/
+	
+	
+ 
+	
+	
+		
+	
+	//helper function I would use
+	public void ascii(String s){
+		for(char c:s.toCharArray()){
+			System.out.print((c-'a')+" ");
+		}
+		msg("");
+	}
+	
+	public int flip(int i){
+		if(i==0)return 1;
+		else return 0;
+	}
+	
+	public boolean[] primes(int n){
+		boolean A[]=new boolean[n+1];
+		for(int i=2;i<=n;i++){
+			if(A[i]==false){
+				for(int j=i+i;j<=n;j+=i){
+					A[j]=true;
+				}
+			}
+		}
+		return A;
+	}
+	
+	public void msg(String s){
+		System.out.println(s);
+	}
+	
+	public int[] kmpPre(String p){
+		int pre[]=new int[p.length()];
+		int l=0,r=1;
+		while(r<p.length()){
+			if(p.charAt(l)==p.charAt(r)){
+				pre[r]=l+1;
+				l++;r++;
+			}else{
+				if(l==0)r++;
+				else l=pre[l-1];
+			}
+		}
+		return pre;
+	}
+	
+	public boolean isP(String s){
+		int l=0,r=s.length()-1;
+		while(l<r){
+			if(s.charAt(l)!=s.charAt(r))return false;
+			l++;r--;
+		}
+		return true;
+	}
+	
+	public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+	
+	public boolean check(int grid[][],int r,int c){
+		if(r<0||c<0||r>=grid.length||c>=grid[0].length)return false;
+		return true;
+	}
+	
+	public int get(int A[],int i){
+		if(i<0||i>=A.length)return 0;
+		return A[i];
+	}
+	public int[] copy1(int A[]){
+		int a[]=new int[A.length];
+		for(int i=0;i<a.length;i++)a[i]=A[i];
+		return a;
+	}
+	
+	public int[] copy2(int A[]){
+		int a[]=new int[A.length];
+		for(int i=0;i<a.length;i++)a[i]=A[i];
+		return a;
+	}
+	
+	
+	public void print1(int A[]){
+		for(long i:A)System.out.print(i+" ");
+		System.out.println();
+	}
+	public void print2(int A[][]){
+		for(int i=0;i<A.length;i++){
+			for(int j=0;j<A[0].length;j++){
+				System.out.print(A[i][j]+" ");
+			}System.out.println();
+		}
+	}
+	
+	public int min(int a,int b){
+		return Math.min(a,b);
+	}
+	
+	
+	public int[][] matrixdp(int[][] grid) {
+        if(grid.length==0)return new int[][]{};
+        int res[][]=new int[grid.length][grid[0].length];
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                res[i][j]=grid[i][j]+get(res,i-1,j)+get(res,i,j-1)-get(res,i-1,j-1);
+            }
+        }
+        return res;
+    }
+    
+    public int get(int grid[][],int i,int j){
+        if(i<0||j<0||i>=grid.length||j>=grid[0].length)return 0;
+        return grid[i][j];
+    }
+	
+	public int[] suffixArray(String s){
+		int n=s.length();
+		Suffix A[]=new Suffix[n];
+		
+		for(int i=0;i<n;i++){
+			A[i]=new Suffix(i,s.charAt(i)-'a',0);
+		}
+		
+		for(int i=0;i<n;i++){
+			if(i==n-1){
+				A[i].next=-1;
+			}else{
+				A[i].next=A[i+1].rank;
+			}
+		}
+		Arrays.sort(A);
+		
+		for(int len=4;len<A.length*2;len<<=1){
+			int in[]=new int[A.length];
+			int rank=0;
+			int pre=A[0].rank;
+			A[0].rank=rank;
+			in[A[0].index]=0;
+			for(int i=1;i<A.length;i++){//rank for the first two letter
+				if(A[i].rank==pre&&A[i].next==A[i-1].next){
+					pre=A[i].rank;
+					A[i].rank=rank;
+				}else{
+					pre=A[i].rank;
+					A[i].rank=++rank;
+				}
+				in[A[i].index]=i;
+			}
+			
+			for(int i=0;i<A.length;i++){
+				int next=A[i].index+len/2;
+				if(next>=A.length){
+					A[i].next=-1;
+				}else{
+					A[i].next=A[in[next]].rank;
+				}
+			}
+			
+			
+			Arrays.sort(A);
+		}
+		
+		
+		int su[]=new int[A.length];
+		for(int i=0;i<su.length;i++){
+			su[i]=A[i].index;
+		}
+		return su;
+	}
+	
+}
+
+//suffix array Struct
+class Suffix implements Comparable<Suffix>{
+	int index;
+	int rank;
+	int next;
+	public Suffix(int i,int rank,int next){
+		this.index=i;
+		this.rank=rank;
+		this.next=next;
+	}
+	
+	@Override
+	public int compareTo(Suffix other) {
+		if(this.rank==other.rank){
+			return this.next-other.next;
+		}
+		return this.rank-other.rank;
+	}
+	
+	public String toString(){
+		return this.index+"   "+this.rank+"   "+this.next+"  ";
+	}
+}
+
+
+
+
+ 
+class Wrapper implements Comparable<Wrapper>{
+	int spf;int cnt;
+	public Wrapper(int spf,int cnt){
+		this.spf=spf;
+		this.cnt=cnt;
+	}
+		
+	@Override
+	public int compareTo(Wrapper other) {
+		return this.spf-other.spf;
+	}
+}
+
+
