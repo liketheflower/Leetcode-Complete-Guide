@@ -1,0 +1,59 @@
+class Solution {
+    public int findLengthOfShortestSubarray(int[] A) {
+        if(A.length==1)return 0;
+
+        int res=Integer.MAX_VALUE;
+        int len1=-1;
+        int len2=-1;
+        TreeMap<Integer,Integer>right=new TreeMap<>();
+        TreeMap<Integer,Integer>left=new TreeMap<>();
+        left.put(A[0],0);right.put(A[A.length-1],A.length-1);
+        
+        for(int i=1;i<A.length;i++){
+            if(A[i]>=A[i-1]){
+                left.put(A[i],i);
+                if(i==A.length-1)return 0;
+                continue;
+            }
+            res=Math.min(res,A.length-(i));
+            len1=(i);
+            break;
+        }
+
+        for(int i=A.length-2;i>=0;i--){
+            if(A[i]<=A[i+1]){
+                right.put(A[i],i);
+                res=Math.min(res,i+1);
+                continue;
+            }
+            res=Math.min(res,i+1);
+            len2=A.length-(i+1);
+            break;
+        }
+        
+        
+        for(int i=0;i<len1;i++){
+            int l=i+1;
+            Integer ceil=right.ceilingKey(A[i]);
+            if(ceil==null)break;
+            int index=right.get(ceil);
+            int r=A.length-index;
+            res=Math.min(res,A.length-(i+1+r));
+            
+        }
+        
+       for(int i=A.length-2;i>=0;i--){
+            if(A[i]<=A[i+1]){
+                Integer floor=left.floorKey(A[i]);
+                if(floor==null)break;
+                int r=A.length-(i);
+                int l=left.get(floor)+1;
+                res=Math.min(res,A.length-(l+r));
+            }
+            break;
+        }
+        
+        
+        return res;
+    }
+}
