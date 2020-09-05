@@ -1,0 +1,38 @@
+class Solution {
+public:
+    bool res=true;
+    bool isBipartite(vector<vector<int>>& graph) {
+        int n=graph.size();
+        vector<int>colors(n,-1);
+        
+        for(int i=0;i<n;i++){
+            if(colors[i]!=-1)continue;
+            dfs(colors,graph,i,0);
+        }
+        
+        return res;
+    }
+    
+  
+    
+    void dfs(vector<int>&colors,vector<vector<int>>& graph,int cur,int color){
+        colors[cur]=color;
+        int nextcolor=1;
+        
+        if(color==1)nextcolor=0;
+        else if(color==0)nextcolor=1;
+        
+        vector<int>neighbors=graph[cur];
+        for(int ne:neighbors){
+            if(colors[ne]==-1){
+                dfs(colors,graph,ne,nextcolor);
+            }else{
+                if(colors[ne]==color){
+                    res=false;
+                    return;
+                }
+            }
+        }
+    }
+};
+
