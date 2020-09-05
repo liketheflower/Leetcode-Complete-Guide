@@ -106,6 +106,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1292. [Maximum Side Length of a Square with Sum Less than or Equal to Threshold (M+) 1600](./code/1292.txt) <br />
 #1533. [Find the Index of the Large Integer (M) 1500](./code/1533.txt) <br />
 #1552. [Magnetic Force Between Two Balls (M+) 1600](./code/1552.txt) <br />
+#1574. [ Shortest Subarray to be Removed to Make Array Sorted (M+) 1600](./code/1574.txt) <br />
 #LCP08. [剧情触发时间 (M) 1600](./code/LCP08.txt) <br />
 #LCP12. [小张刷题计划 (M) 1500](./code/LCP12.txt) <br />
 
