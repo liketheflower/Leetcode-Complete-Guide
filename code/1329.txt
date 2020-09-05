@@ -1,0 +1,47 @@
+class Solution {
+    boolean visit[][];
+    public int[][] diagonalSort(int[][] A) {
+        int r=A.length;
+        int c=A[0].length;
+        int res[][]=new int[r][c];
+        res[r-1][0]=A[r-1][0];
+        visit=new boolean[r][c];
+        visit[r-1][0]=true;
+        Queue<int[]>q=new LinkedList<>();
+        q.add(new int[]{r-1,0});
+        while(q.size()!=0){
+            int size=q.size();
+            List<int[]>pos=new ArrayList<>();
+            for(int i=0;i<size;i++){
+                int top[]=q.poll();
+                if(check(A,top[0],top[1]+1)){
+                    pos.add(new int[]{top[0],top[1]+1});
+                    visit[top[0]][top[1]+1]=true;
+                    
+                }
+                if(check(A,top[0]-1,top[1])){
+                    pos.add(new int[]{top[0]-1,top[1]});
+                    visit[top[0]-1][top[1]]=true;
+                }
+            }
+            List<Integer>sort=new ArrayList<>();
+            for(int pair[]:pos){
+                q.add(pair);
+                sort.add(A[pair[0]][pair[1]]);
+            }
+            Collections.sort(sort);
+            Collections.reverse(sort);
+            for(int i=0;i<sort.size();i++){
+                int pair[]=pos.get(i);
+                res[pair[0]][pair[1]]=sort.get(i);
+            }
+        }
+        return res;
+        
+    }
+    public boolean check(int A[][],int i,int j){
+        if(i<0||j<0||i>=A.length||j>=A[0].length)return false;
+        if(visit[i][j])return false;
+        return true;
+    }
+}
