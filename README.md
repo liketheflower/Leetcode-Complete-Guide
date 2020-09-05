@@ -159,6 +159,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1277. [Count Square Submatrices with All Ones (M) 1500](./code/1277.txt) <br />
 #1359. [Count All Valid Pickup and Delivery Options (H-) 1700](./code/1359.txt) <br />
 #1388. [Pizza With 3n Slices (H) 1800](./code/1388.txt) <br />
+#1402. [Reducing Dishes (H-) 1600](./code/1402.txt) <br />
 #1546. [Maximum Number of Non-Overlapping Subarrays With Sum Equals Target (M+) 1600](./code/1546.txt) <br />
 #1548. [The Most Similar Path in a Graph  (H) 1800](./code/1548.txt) <br />
 #1563. [Stone Game V (H-) 1700](./code/1563.txt) <br />
