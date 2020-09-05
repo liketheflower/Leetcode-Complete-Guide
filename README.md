@@ -158,6 +158,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1548. [The Most Similar Path in a Graph  (H) 1800](./code/1548.txt) <br />
 #1563. [Stone Game V (H-) 1700](./code/1563.txt) <br />
 #1563. [Number of Ways to Reorder Array to Get Same BST (H) 1900](./code/1569.txt) <br />
+#1575. [Count All Possible Routes (H) 1800](./code/1575.txt) <br />
 #LCP10. [二叉树任务调度 (H+) 2200](./code/LCP10.txt) <br />
 #LCP13. [寻宝 (H+) 2100](./code/LCP13.txt) <br />
 #LCP14. [切分数组 (H+) 2200](./code/LCP14.txt) <br />
