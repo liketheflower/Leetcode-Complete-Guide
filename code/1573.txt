@@ -1,0 +1,38 @@
+思路：
+1.组合数学
+2. 两部分可以选
+
+
+代码：
+
+class Solution {
+    public int numWays(String s) {
+        long res=0;
+        int mod=1000000007;
+        int cnt=0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='1')cnt++;
+        }
+        if(cnt%3!=0)return 0;
+        if(cnt==0){
+            long len=s.length()-1;
+            long ans=len*(len-1)/2;
+            return (int)(ans%mod);
+            
+        }
+        int target=cnt/3;
+        Map<Integer,Integer>map=new HashMap<>();
+        cnt=0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='0')continue;
+            cnt++;
+            map.put(cnt,i);
+        }
+        
+        long gap1=map.get(target+1)-map.get(target)-1;
+        long gap2=map.get(target*2+1)-map.get(target*2)-1;
+        
+        res=(gap1+1)*(gap2+1);
+        return (int)(res%mod);
+    }
+}
