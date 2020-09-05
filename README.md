@@ -13,6 +13,10 @@ CF 分目测评估：
 ***(代码以 C++ 和 Java 进行题解)***
 
 ---
+### Array
+#1572. [Matrix Diagonal Sum (E) 800](./code/1572.txt) <br />
+
+---
 ### BFS
 #117. [Populating Next Right Pointers in Each Node II (M) 1400](./code/117.txt) <br />
 #310. [Minimum Height Tree (M+) 1600](./code/310.txt) <br />
