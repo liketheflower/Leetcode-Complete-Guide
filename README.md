@@ -20,6 +20,7 @@ CF 分目测评估：
 #854. [K-Similar String (H) 1800](./code/854.txt) <br />
 #994. [Rotting Orange (M) 1400](./code/994.txt) <br />
 #1298. [Maximum Candies You Can Get from Boxes (H-) 1700](./code/1298.txt) <br />
+#1329. [Sort the Matrix Diagonally (M) 1500](./code/1329.txt) <br />
 #LCP 09. [最小跳跃次数 (H) 1800](./code/LCP09.txt) <br />
 
 ---
