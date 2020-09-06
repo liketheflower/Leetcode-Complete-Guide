@@ -1,6 +1,7 @@
 思路：
 1.add edge instead remove
 2. union find
+3. 理由：想象minimum spanning tree
 
 
 代码：
