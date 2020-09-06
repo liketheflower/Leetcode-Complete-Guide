@@ -1,0 +1,25 @@
+import java.util.*;
+
+
+class Solution {
+    public String[] solve(String s, int n) {
+        // Write your code here
+        int size=0;
+        if(s.length()%n==0){
+            size=s.length()/n;
+        }else{
+            size=s.length()/n+1;
+        }
+        String res[]=new String[size];
+        int j=0;
+        for(int i=0;i<s.length();i+=n){
+            
+            if(i+n>s.length()){
+                res[j++]=s.substring(i);    
+            }else{
+                res[j++]=s.substring(i,i+n);
+            }
+        }
+        return res;
+    }
+}
