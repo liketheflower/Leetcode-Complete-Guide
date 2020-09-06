@@ -269,6 +269,10 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #454. [4 sum II (M-) 1400](./code/454.txt) <br />
 
 ---
+### Union Find
+#1579. [Remove Max Number of Edges to Keep Graph Fully Traversable (H) 1900](./code/1579.txt) <br />
+
+---
 # :pushpin: ACM 练习
 **精刷 200 题** <br />
 *参照以下 links:* <br />
