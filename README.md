@@ -425,7 +425,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  ### Codeforces Round #668 (Div. 2)
  A. [Permutation Forgery  ](./code/668A.txt) <br />
  B. [Array Cancellation](./code/668B.txt) <br />
-
+ C. [Balanced Bitstring](./code/668C.txt) <br />
  
  
   #  Algorithm Template 
