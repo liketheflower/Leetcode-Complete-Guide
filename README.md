@@ -333,6 +333,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  ***一个不错新的面试刷题网站***<br/>
  #B6. [Omitted  (M-) 1400](./code/b6.txt) <br />
  #B11. [Unival Tree Count  (M-) 1300](./code/b11.txt) <br />
+ #B12. [Longest Substring with K Distinct Characters  (H-) 1600](./code/b12.txt) <br />
  #B13. [Collecting Coins  (M-) 1400](./code/b13.txt) <br />
  #B14. [Counting Dinosaurs  (E) 900](./code/b14.txt) <br />
  #B15. [Tom Sawyer  (M+) 1600](./code/b15.txt) <br />
