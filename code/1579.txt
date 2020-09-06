@@ -1,0 +1,115 @@
+思路：
+1.add edge instead remove
+2. union find
+
+
+代码：
+
+class Solution {
+    boolean visit[];
+    List<Integer>adjecent[];
+    public int maxNumEdgesToRemove(int n, int[][] edges) {
+        int A[]=new int[n];
+        int B[]=new int[n];
+        for(int i=0;i<n;i++){
+            A[i]=i;
+            B[i]=i;
+        }
+        int res=0;
+        for(int pair[]:edges){
+            if(pair[0]!=3)continue;
+            int v1=pair[1]-1;
+            int v2=pair[2]-1;
+            
+            int root1=find(A,v1);
+            int root2=find(A,v2);
+            
+            int root3=find(B,v1);
+            int root4=find(B,v2);
+            if(root1==root2&&root3==root4){
+                res++;
+            }else{
+                A[root1]=root2;
+                B[root1]=root2;
+            }
+        }
+        
+        for(int pair[]:edges){
+            if(pair[0]==3)continue;
+            int v1=pair[1]-1;
+            int v2=pair[2]-1;
+            
+            if(pair[0]==1){
+                int root1=find(A,v1);
+                int root2=find(A,v2);
+                if(root1==root2)res++;
+                else{
+                    A[root1]=root2;
+                }
+            }else{
+                int root3=find(B,v1);
+                int root4=find(B,v2);
+                if(root3==root4)res++;
+                else{
+                    B[root3]=root4;
+                }
+            }
+        }
+        
+        
+        visit=new boolean[n];
+        adjecent=new ArrayList[n];
+        for(int i=0;i<n;i++)adjecent[i]=new ArrayList<>();
+        
+        for(int pair[]:edges){
+            if(pair[0]==3||pair[0]==1)
+            {
+                int v1=pair[1]-1;
+                int v2=pair[2]-1;
+                adjecent[v1].add(v2);
+                adjecent[v2].add(v1);
+            }
+        }
+        dfs(0);
+        for(boolean b:visit){
+            if(!b)return -1;
+        }
+        
+        
+        visit=new boolean[n];
+        adjecent=new ArrayList[n];
+        for(int i=0;i<n;i++)adjecent[i]=new ArrayList<>();
+        for(int pair[]:edges){
+            if(pair[0]==3||pair[0]==2)
+            {
+                int v1=pair[1]-1;
+                int v2=pair[2]-1;
+                adjecent[v1].add(v2);
+                adjecent[v2].add(v1);
+            }
+        }
+        dfs(0);
+        for(boolean b:visit){
+            if(!b)return -1;
+        }
+        
+        return res;
+    }
+    
+    public void dfs(int root){
+        visit[root]=true;
+        List<Integer>childs=adjecent[root];
+        for(int c:childs){
+            if(visit[c])continue;
+            dfs(c);
+        }
+    }
+    
+    
+    public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+}
