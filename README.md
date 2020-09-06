@@ -414,12 +414,18 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  E. [Monster Invader (2300)    (复杂dp)](./code/666E.txt) <br />
  
  ### Codeforces Round #667 (Div. 3)
- A. [Yet Another Two Integers Problem  ](./code/667A.txt) <br />
- B. [Minimum Product ](./code/667B.txt) <br />
- C. [Yet Another Array Restoration](./code/667C.txt) <br />
- D. [Decrease the Sum of Digits](./code/667D.txt) <br />
- E. [Two Platforms (双指针+dp)](./code/667E.txt) <br />
- F. [Subsequences of Length Two (dp)](./code/667F.txt) <br />
+ A. [Yet Another Two Integers Problem (800) ](./code/667A.txt) <br />
+ B. [Minimum Product (1100)](./code/667B.txt) <br />
+ C. [Yet Another Array Restoration (1200)](./code/667C.txt) <br />
+ D. [Decrease the Sum of Digits (1500)](./code/667D.txt) <br />
+ E. [Two Platforms (双指针+dp) (1800)](./code/667E.txt) <br />
+ F. [Subsequences of Length Two (dp) (2100)](./code/667F.txt) <br />
+ 
+  
+ ### Codeforces Round #668 (Div. 2)
+ A. [Permutation Forgery  ](./code/668A.txt) <br />
+ B. [Array Cancellation](./code/668B.txt) <br />
+
  
  
   #  Algorithm Template 
