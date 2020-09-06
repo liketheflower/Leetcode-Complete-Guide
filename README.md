@@ -431,3 +431,6 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
   #  Algorithm Template 
   [Suffix Array (后缀数组 (nlog^2 n))](./template/suffixArray.txt) <br />
+  
+  #  CodeForce 高分精算 
+
