@@ -347,6 +347,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B83. [Climing down the tree  (M-) 1400](./code/b83.txt) <br />
  #B87. [The quick brown fox  (M+) 1600](./code/b87.txt) <br />
  #B88. [Connected Cities  (H-) 1700](./code/b88.txt) <br />
+ #B91. [Chunky strings  (E) 900](./code/b91.txt) <br />
  #B94. [Detecting an odd length cycle  (H) 1800](./code/b94.txt) <br />
  #B97. [Repeated Deletion  (M-) 1400](./code/b97.txt) <br />
  #B106. [Unique subsequence  (H-) 1700](./code/b106.txt) <br />
