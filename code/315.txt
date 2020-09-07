@@ -1,0 +1,57 @@
+class Solution {
+    public List<Integer> countSmaller(int[] nums) {
+        if(nums.length==0)return new ArrayList<>();
+        List<Integer>list=new ArrayList<>();
+        Node A[]=divide(nums,0,nums.length-1);
+        int res[]=new int[nums.length];
+        for(Node node:A){
+            nums[node.pos]=node.cnt;
+        }
+        for(int i:nums)list.add(i);
+        return list;
+    }
+    
+    public Node[] divide(int A[],int l,int r){
+        if(l==r){
+            return new Node[]{new Node(l,A[l])};
+        }
+        int mid=l+(r-l)/2;
+        Node ll[]=divide(A,l,mid);
+        Node rr[]=divide(A,mid+1,r);
+        return merge(ll,rr);
+    }
+    
+    public Node[] merge(Node l[], Node r[]){
+        Node res[]=new Node[l.length+r.length];
+        int i=0,j=0,k=0;
+        while(i<l.length&&j<r.length){
+            if(l[i].val>r[j].val){
+                l[i].cnt+=(r.length-j);
+                res[k++]=l[i++];
+            }else{
+                res[k++]=r[j++];
+            }
+        }
+        
+        while(j<r.length){
+            res[k++]=r[j++];
+        }
+        while(i<l.length){
+            res[k++]=l[i++];
+        }
+        
+        
+        return res;
+        
+    }
+    
+    class Node{
+        int cnt=0;
+        int pos=-1;
+        int val=0;
+        public Node(int pos,int val){
+            this.pos=pos;
+            this.val=val;
+        }
+    }
+}
