@@ -267,6 +267,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 
 ---
 ### Divide Conquer
+#315. [Count of Smaller Numbers After Self(H-) 1700](./code/315.txt) <br />
 #454. [4 sum II (M-) 1400](./code/454.txt) <br />
 
 ---
