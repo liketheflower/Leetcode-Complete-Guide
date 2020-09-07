@@ -355,6 +355,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B94. [Detecting an odd length cycle  (H) 1800](./code/b94.txt) <br />
  #B97. [Repeated Deletion  (M-) 1400](./code/b97.txt) <br />
  #B106. [Unique subsequence  (H-) 1700](./code/b106.txt) <br />
+ #B111. [List Min Replacement  (E) 1000](./code/b111.txt) <br />
  #B115. [Longest Zero Sublist Sum  (M) 1500](./code/b115.txt) <br />
  #B129. [Pigeonhole  (E+) 1100](./code/b129.txt) <br />
  #B190. [Minimum Bracket Addition  (E) 1000](./code/b190.txt) <br />
