@@ -1,0 +1,118 @@
+思路：
+1.对prefixe 进行divide conquer
+2. 如果他之前的prefix 是sort 好的就能进行二分搜索
+3. 可以进行merger sort，因为左边的所有肯定是右边的前面的
+
+
+代码：
+
+
+class Solution {
+    int low=-1,high=-1;
+    public int countRangeSum(int[] A, int low, int high) {
+        if(A.length==0)return 0;
+        this.low=low;
+        this.high=high;
+        long pre[]=new long[A.length];
+        long sum=0;
+        for(int i=0;i<A.length;i++){
+            sum+=A[i];
+            pre[i]=sum;
+        }
+        Node nodes[]=divide(pre,0,pre.length-1);
+        
+        int res=0;
+        for(Node node:nodes){
+            res+=node.cnt;
+        }
+        
+        return res;
+        
+    }
+    
+    public Node[] divide(long A[],int l,int r){
+        if(l==r){
+            return new Node[]{new Node(A[l])};
+        }
+        int mid=l+(r-l)/2;
+        Node ll[]=divide(A,l,mid);
+        Node rr[]=divide(A,mid+1,r);
+        return merge(ll,rr);
+    }
+    
+    public Node[] merge(Node l[],Node r[]){
+        Node res[]=new Node[l.length+r.length];
+        long A[]=new long[l.length];
+        for(int i=0;i<A.length;i++){
+            A[i]=l[i].val;
+        }
+        
+        for(int i=0;i<r.length;i++){
+            Node node=r[i];
+            long cur=node.val;
+            node.cnt+=bin(A,cur);
+        }
+        
+        
+        int i=0,j=0,k=0;
+        while(i<l.length&&j<r.length){
+            if(l[i].val>r[j].val){
+                res[k++]=l[i++];
+            }else{//put the right
+                 res[k++]=r[j++];
+            }
+        }
+        
+        while(i<l.length){
+            res[k++]=l[i++];
+        }
+        while(j<r.length){
+            res[k++]=r[j++];
+        }
+        
+        
+        return res;
+    }
+    
+    public int bin(long A[],long cur){
+        if(low>cur-A[A.length-1]){
+            return 0;
+        }
+        if(high<cur-A[0])return 0;
+        int l=0,r=A.length-1;
+        int i=0,j=A.length-1;
+        while(l<=r){
+            int mid=l+(r-l)/2;
+            if(cur-A[mid]>=low){
+                i=mid;
+                r=mid-1;
+            }else{
+                l=mid+1;
+            }
+        }
+        l=0;r=A.length-1;
+        while(l<=r){
+            int mid=l+(r-l)/2;
+            if(cur-A[mid]<=high){
+                j=mid;
+                l=mid+1;
+            }else{
+                r=mid-1;
+            }
+        }
+
+        
+        if(cur-A[i]<low)return j-i;
+        return j-i+1;
+    }
+    
+    
+    class Node{
+        long val;
+        int cnt;
+        public Node(long val){
+            this.val=val;
+            if(this.val>=low&&this.val<=high)cnt++;
+        }
+    }
+}
