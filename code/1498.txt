@@ -1,0 +1,46 @@
+思路：
+
+1. sort
+2. 看看现在数字能到达的最大是多少(二分法)
+3. 能到达之前的所有subset 都能与现在这个数进行组合
+
+
+代码：
+
+
+class Solution {
+    long mod=1000000007;
+    long pow[];
+    public int numSubseq(int[] A, int T) {
+        long res=0;
+        Arrays.sort(A);
+        pow=new long[A.length+1];
+        pow[1]=2;
+        for(int i=2;i<pow.length;i++){
+            pow[i]=(pow[i-1]*2)%mod;
+        }
+        
+        for(int i=0;i<A.length;i++){
+            int cur=A[i];
+            if(cur*2<=T)res++;
+            int l=i+1,r=A.length-1;
+            int pos=-1;
+            while(l<=r){
+                int mid=l+(r-l)/2;
+                if(A[mid]+cur<=T){
+                    pos=mid;
+                    l=mid+1;
+                }else{
+                    r=mid-1;
+                }
+            }
+            if(pos!=-1){
+                int len=pos-i;
+                res+=(pow[len]-1);
+                res%=mod;
+            }
+        }
+        
+        return (int)(res);
+    }
+}
