@@ -435,6 +435,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  B. [Array Cancellation](./code/668B.txt) <br />
  C. [Balanced Bitstring](./code/668C.txt) <br />
  D. [Tree Tag (game)](./code/668D.txt) <br />
+ E. [Fixed Point Removal (线段树+二分法)](./code/668E.txt) <br />
  
  ### Codeforces Round #669 (Div. 2)
  A. [Ahahahahahahahaha  ](./code/669A.txt) <br />
