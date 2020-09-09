@@ -12,6 +12,8 @@ CF 分目测评估：
 
 ***(代码以 C++ 和 Java 进行题解)***
 
+想参加每日挑战？:link: https://github.com/JunBinLiang/Leetcode-Complete-Guide/tree/master/challange <br />
+
 ---
 ### Array
 #1572. [Matrix Diagonal Sum (E) 800](./code/1572.txt) <br />
