@@ -1,10 +1,11 @@
+ # [想参加每日挑战？](https://github.com/JunBinLiang/Leetcode-Complete-Guide/tree/master/challange) <br />
+ 
  <img src="images/LeetCode_logo.png" width=30% align=right />  
  
  # LeetCode 题解 + 报告 :memo:
 
 题目会有我给予的相对难度评价 :heavy_plus_sign: CF的估测难度对应分数<br>
 
-[想参加每日挑战？](https://github.com/JunBinLiang/Leetcode-Complete-Guide/tree/master/challange) <br />
 
 CF 分目测评估：
 ---
