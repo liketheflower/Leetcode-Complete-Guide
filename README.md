@@ -405,7 +405,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 9 
+ 统计(1800+ 题量)： 10 
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -425,6 +425,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  C. [Friends and Gifts (1500)    ](./code/611C.txt) <br />
  D. [Christmas Trees (1800)    (BFS)](./code/611D.txt) <br />
  E. [New Year Parties (1800)    (Greedy)](./code/611E.txt) <br />
+ F. [DIY Garland (2200)    (Greedy+Tree+Heap)](./code/611F.txt) <br />
  
  ### Codeforces Round #666 (Div. 2)
  A. [Juggling Letters (800) ](./code/666A.txt) <br />
