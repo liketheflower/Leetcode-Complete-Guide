@@ -288,6 +288,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1579. [Remove Max Number of Edges to Keep Graph Fully Traversable (H) 1900](./code/1579.txt) <br />
 
 ---
+<br /><br />
+
 # :pushpin: ACM 练习
 **精刷 200 题** <br />
 *参照以下 links:* <br />
@@ -342,6 +344,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  ### 二分图匹配
  #POJ 1274. [The Perfect Stall (H-) 1700](./code/POJ1274.txt) <br /> 
 
+ <br /><br />
  
  ---
  # :link: BinarySearch.io
@@ -407,6 +410,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B731. [Deleting Repeated Integers Game (M+)1600](./code/b731.txt) <br />
  #B733. [Matrix Prefix Sum (M-)1300](./code/b733.txt) <br />
  #B736. [Maximal Points from Deleting Two Character Substrings (H-)1700](./code/b736.txt) <br />
+ 
+ <br /><br />
  
  ---
  # :punch: CodeForce Contest
