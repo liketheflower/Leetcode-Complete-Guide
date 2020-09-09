@@ -3,6 +3,6 @@
 
 |Date | Problem | Difficuilty  | Tags |
 | :------------:|:------------ |:---------------:| :-----|
-|9/09/2020|[803A](https://codeforces.com/problemset/problem/803/A)|[Maximal Binary Matrix](https://github.com/wisdompeak/CodeForces/tree/master/Edu_Round_20/A.Maximal-Binary-Matrix)|M+|Greedy|
+|9/09/2020|[131](https://leetcode.com/problems/palindrome-partitioning/)|[Palindrome Partitioning](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/131.txt)|M|DFS|
 ||||
 
