@@ -154,6 +154,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #940. [Distinct Subsequences II (H) 1800](./code/940.txt) <br />
 #943. [Find the Shortest Superstring (H) 1900](./code/943.txt) <br />
 #1000. [Minimum Cost to Merge Stones (H+) 2000](./code/1000.txt) <br />
+#1012. [Numbers With Repeated Digits (H) 1800](./code/1012.txt) <br />
 #1027. [Longest Arithmetic Subsequence (M) 1500](./code/1027.txt) <br />
 #1066. [Campus Bike II (H-) 1700](./code/1066.txt) <br />
 #1139. [Largest 1-Bordered Square (M) 1600](./code/1139.txt) <br />
