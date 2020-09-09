@@ -138,6 +138,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #139. [Word Break (M) 1500](./code/139.txt) <br />
 #198. [House Robber (M) 1400](./code/198.txt) <br />
 #363. [Max Sum of Rectangle No Larger Than K (M) 1800](./code/363.txt) <br />
+#403. [Frog Jump (H-) 1700](./code/403.txt) <br />
 #466. [Count Repetition (H) 1800](./code/466.txt) <br />
 #514. [Freedom Trail (H) 1800](./code/514.txt) <br />
 #691. [Stickers to Spell Word (H) 1900](./code/691.txt) <br />
