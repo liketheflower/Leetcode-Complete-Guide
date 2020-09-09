@@ -1,0 +1,40 @@
+class Solution {
+    public boolean containsNearbyAlmostDuplicate(int[] A, int k, int t) {
+        List<int[]>list=new ArrayList<>();
+        for(int i=0;i<A.length;i++){
+            list.add(new int[]{A[i],i});
+        }
+        Collections.sort(list,(a,b)->{
+            if(a[0]==b[0])return a[1]-b[1];
+            return Long.compare(a[0],b[0]);
+        });
+        Queue<int[]>q=new LinkedList<>();
+        TreeSet<Integer>treeset=new TreeSet<>();
+        for(int i=0;i<list.size();i++){
+            int pair[]=list.get(i);
+            long a=pair[0];
+            while(q.size()!=0&&a-q.peek()[0]>t){
+                int top[]=q.poll();
+                treeset.remove(top[1]);
+            }
+            
+            Integer high=treeset.higher(pair[1]);
+            Integer low=treeset.lower(pair[1]);
+            
+            if(high!=null){
+                int h=high;
+                if(Math.abs(pair[1]-h)<=k)return true;
+            }
+            if(low!=null){
+                int l=low;
+                if(Math.abs(pair[1]-l)<=k)return true;
+            }
+            
+            treeset.add(pair[1]);
+            q.add(pair);
+        }
+        
+        return false;
+        
+    }
+}
