@@ -2,7 +2,9 @@
  
  # LeetCode 题解 + 报告 :memo:
 
-题目会有我给予的相对难度评价 :heavy_plus_sign: CF的估测难度对应分数
+题目会有我给予的相对难度评价 :heavy_plus_sign: CF的估测难度对应分数<br>
+
+想参加每日挑战？:link: https://github.com/JunBinLiang/Leetcode-Complete-Guide/tree/master/challange <br />
 
 CF 分目测评估：
 ---
@@ -12,7 +14,6 @@ CF 分目测评估：
 
 ***(代码以 C++ 和 Java 进行题解)***
 
-想参加每日挑战？:link: https://github.com/JunBinLiang/Leetcode-Complete-Guide/tree/master/challange <br />
 
 ---
 ### Array
