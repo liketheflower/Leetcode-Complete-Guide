@@ -1,0 +1,65 @@
+思路：
+1.digit dp
+2.digit dp的核心是要记住prefix 是不是跟bound 一样，如果一样注意不要outbound
+
+代码：
+
+class Solution {
+    int dp[][][];
+    public int numDupDigitsAtMostN(int N) {
+        //at least 1 repeat digit
+        if(N<=10)return 0;
+        String s=N+"";
+        int cnt=0;
+        int first=s.charAt(0)-'0';
+        dp=new int[s.length()][1<<10][2];
+        
+        for(int i=0;i<dp.length;i++){
+            for(int j=0;j<dp[0].length;j++){
+                Arrays.fill(dp[i][j],-1);
+            }
+        }
+        
+        for(int i=1;i<=first;i++){
+            if(i==first){
+                 System.out.println(i+"  "+dfs(s,1,1<<i,1));
+                cnt+=dfs(s,1,1<<i,1);
+            }else{
+                System.out.println(i+"  "+dfs(s,1,1<<i,0));
+                cnt+=dfs(s,1,1<<i,0);
+            }
+        }
+        cnt+=dfs(s,1,0,0);//0 
+        return N-cnt;
+    }
+    
+    public int dfs(String s,int index,int bit,int state){
+        if(index>=s.length())return 1;
+        if(dp[index][bit][state]!=-1)return dp[index][bit][state];
+        int digit=s.charAt(index)-'0';
+        int res=0;
+        if(state==1){//smae prefix
+            for(int i=0;i<=digit;i++){
+                if((bit&(1<<i))!=0)continue;
+                if(i==digit){
+                    res+=dfs(s,index+1,(bit|(1<<i)),1);
+                }else{
+                    res+=dfs(s,index+1,(bit|(1<<i)),0);
+                }
+            }
+            
+        }else{
+            for(int i=0;i<10;i++){
+                if((bit&(1<<i))!=0)continue;
+                if(i==0&&bit==0&&index==s.length()-1)continue;
+                if(i==0&&bit==0)res+=dfs(s,index+1,0,0);
+                else res+=dfs(s,index+1,(bit|(1<<i)),0);
+            }
+            
+        }
+        dp[index][bit][state]=res;
+        return res;
+    }
+
+}
+
