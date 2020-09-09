@@ -1,0 +1,33 @@
+class Solution {
+    boolean dp[][][];
+    Map<Integer,Integer>map=new HashMap<>();
+    public boolean canCross(int[] A) {
+        
+        for(int i=0;i<A.length;i++){
+            map.put(A[i],i);
+        }
+        dp=new boolean[A.length][A.length][2];
+        return dfs(A,0,0);
+    }
+    
+    public boolean dfs(int A[],int i,int jump){
+        if(i>=A.length-1)return true;
+        if(dp[i][jump][1])return dp[i][jump][0];
+        boolean res=false;
+        
+        if(map.containsKey(A[i]+jump)&&jump!=0){
+            res|=dfs(A,map.get(A[i]+jump),jump);
+        }
+        
+        if(map.containsKey(A[i]+jump+1)){
+            res|=dfs(A,map.get(A[i]+jump+1),jump+1);
+        }
+        if(map.containsKey(A[i]+jump-1)&&jump-1>0){
+            res|=dfs(A,map.get(A[i]+jump-1),jump-1);
+        }
+        
+        dp[i][jump][0]=res;
+        dp[i][jump][1]=true;
+        return res;
+    }
+}
