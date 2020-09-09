@@ -405,7 +405,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 7 
+ 统计(1800+ 题量)： 9 
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -418,6 +418,13 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  D. [Equalize Them All (1400)    (排序)](./code/550D.txt) <br />
  E. [Median String (1900)   (数学位算)](./code/550E.txt) <br />
  F. [Graph Without Long Directed Paths(1700)  (二分图解)](./code/550F.txt) <br />
+ 
+  ### Codeforces Round #611 (Div. 3)
+ A. [Minutes Before the New Year (800) ](./code/611A.txt) <br />
+ B. [Candies Division (900)](./code/611B.txt) <br />
+ C. [Friends and Gifts (1500)    ](./code/611C.txt) <br />
+ D. [Christmas Trees (1800)    (BFS)](./code/611D.txt) <br />
+ E. [New Year Parties (1800)    (Greedy)](./code/611E.txt) <br />
  
  ### Codeforces Round #666 (Div. 2)
  A. [Juggling Letters (800) ](./code/666A.txt) <br />
