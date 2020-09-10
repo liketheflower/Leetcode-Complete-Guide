@@ -416,7 +416,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 11
+ 统计(1800+ 题量)： 12
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -478,3 +478,4 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
   
   #  CodeForce 高分精算 
   383C. [Propagating tree	(DIV 1) (2000) 树状区间线段树 ](./code/383C.txt) <br />
+  1062D. [Fun with Integers	(DIV 1) (1800) DFS ](./code/1062D.txt) <br />
