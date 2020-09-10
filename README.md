@@ -467,6 +467,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  D. [Discrete Centrifugal Jumps  (dp+stack)](./code/669D.txt) <br />
  
   ### Educational Codeforces Round 83 (Div. 2)
+ 1312C. [ Adding Power	(DIV 2) (1400) number theory](./code/1312C.txt) <br />
  1312D. [ Count the Arrays	(DIV 2) (1700) 组合数学+number theory](./code/1312D.txt) <br />
  1312E. [ Array Shrinking	(DIV 2) (2100) 区间dp](./code/1312E.txt) <br />
  
