@@ -1,0 +1,48 @@
+	
+	/*Below equations are valid
+		(a * b) % m = ((a % m) * (b % m)) % m
+		(a + b) % m = ((a % m) + (b % m)) % m
+
+		// m is added to handle negative numbers
+		(a - b + m) % m = ((a % m) - (b % m) + m) % m 
+
+		But, 
+		(a / b) % m may NOT be same as ((a % m)/(b % m)) % m
+	*/
+	
+	/*
+		The task is to compute a/b under modulo m.
+		1) First check if inverse of b under modulo m exists or not. 
+		a) If inverse doesn't exists (GCD of b and m is not 1), 
+			  print "Division not defined"
+		b) Else return  "(inverse * a) % m" 
+	
+	*/
+	
+	
+	//number theory
+  
+  
+  init(){
+      long mod=998244353;
+      fact=new long[m+1];
+      fact[0]=1;
+      fact[1]=1;
+      for(int i=2;i<fact.length;i++){
+          fact[i]=fact[i-1]*i;
+          fact[i]%=mod;
+      }
+  }
+
+  
+  
+	
+	public long C(int i,int j){ // C(20,3)=20!/(17!*3!)
+		//return fact[i].divide(fact[i-j].multiply(fact[j]));
+		long mod=998244353;
+		long a=fact[i];
+		long b=((fact[i-j]%mod)*(fact[j]%mod))%mod;
+		BigInteger B= BigInteger.valueOf(b);
+		long binverse=B.modInverse(BigInteger.valueOf(mod)).longValue();
+		return ((a)*(binverse%mod))%mod;
+	}
