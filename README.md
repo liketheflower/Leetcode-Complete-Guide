@@ -478,4 +478,4 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
   
   #  CodeForce 高分精算 
   383C. [Propagating tree	(DIV 1) (2000) 树状区间线段树 ](./code/383C.txt) <br />
-  1062D. [Fun with Integers	(DIV 1) (1800) DFS ](./code/1062D.txt) <br />
+  1062D. [Fun with Integers	(DIV 2) (1800) Graph ](./code/1062D.txt) <br />
