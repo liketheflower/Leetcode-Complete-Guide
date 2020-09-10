@@ -4,5 +4,6 @@
 |Date | Problem | Difficuilty + Solution  | Tags |
 | :------------:|:------------ |:---------------:| :-----|
 |9/09/2020|[131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/131.txt)|DFS|
+|9/10/2020|[39. Combination Sum](https://leetcode.com/problems/combination-sum/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/39.txt)|DFS|
 |||||
 
