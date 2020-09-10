@@ -1,0 +1,23 @@
+class Solution {
+    List<List<Integer>> res=new ArrayList<>();
+    int T;
+    public List<List<Integer>> combinationSum(int[] A, int target) {
+        T=target;
+        Arrays.sort(A);
+        dfs(A,new ArrayList<>(),0,0);
+        return res;
+    }
+    
+    public void dfs(int A[],List<Integer>list,int sum,int index){
+        if(sum==T){
+            res.add(new ArrayList<>(list));
+            return;
+        }
+        for(int i=index;i<A.length;i++){
+            if(sum+A[i]>T)break;
+            list.add(A[i]);
+            dfs(A,list,sum+A[i],i);
+            list.remove(list.size()-1);
+        }
+    }
+}
