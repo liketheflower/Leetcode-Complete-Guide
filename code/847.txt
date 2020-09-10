@@ -1,0 +1,34 @@
+class Solution {
+    public int shortestPathLength(int[][] graph) {
+        int n=graph.length;
+        int path=(1<<n)-1;
+        boolean visit[][]=new boolean[n][path+1];
+        Queue<int[]>q=new LinkedList<>();
+        for(int i=0;i<n;i++){
+            visit[i][path^(1<<i)]=true;
+            q.add(new int[]{i,path^(1<<i),0});
+        }
+        
+        while(q.size()!=0){
+            int tuple[]=q.poll();
+            int node=tuple[0];
+            int remain=tuple[1];
+            int level=tuple[2];
+            int childs[]=graph[node];
+            if(remain==0)return level;
+            for(int c:childs){
+                if((remain&(1<<c))==0){
+                    if(visit[c][remain])continue;
+                    q.add(new int[]{c,remain,level+1});
+                    visit[c][remain]=true;
+                }else{
+                    if(visit[c][remain^(1<<c)])continue;
+                    q.add(new int[]{c,remain^(1<<c),level+1});
+                    visit[c][remain^(1<<c)]=true;
+                }
+                
+            }
+        }
+        return -1;
+    } 
+}
