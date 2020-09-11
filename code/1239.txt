@@ -1,0 +1,50 @@
+class Solution {
+    int res=0;
+    public int maxLength(List<String> arr) {
+        List<String>list=new ArrayList<>();
+        for(String s:arr){
+            if(check(s))list.add(s);
+        }
+        
+        List<Integer>codes=new ArrayList<>();
+        for(String s:list){
+            codes.add(encode(s));
+        }
+        
+        dfs(codes,0,0);
+        return res;
+    }
+    
+    public void dfs(List<Integer>list,int index,int val){
+        res=Math.max(res,Integer.bitCount(val));
+        if(index>=list.size())return;
+        
+        
+        for(int i=index;i<list.size();i++){
+            int code=list.get(i);
+            if((code&val)!=0)continue;
+            dfs(list,i+1,val|(code));
+        }
+    }
+    
+    
+    
+    public int encode(String s){
+        int res=0;
+        for(char c:s.toCharArray()){
+            int pos=c-'a';
+            res|=(1<<pos);
+        }
+        return res;
+    }
+    
+    public boolean check(String s){
+        int table[]=new int[26];
+        for(char c:s.toCharArray()){
+            table[c-'a']++;
+            if(table[c-'a']>1)return false;
+        }
+        return true;
+    }
+
+}
