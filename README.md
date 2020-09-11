@@ -128,6 +128,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #236. [Lowest Common Ancestor of a Binary Tree   (M-) 1400](./code/236.txt) <br />
 #654. [Maximum Binary Tree (M-) 1400](./code/654.txt) <br />
 #669. [Trim a Binary Search Tree (M-) 1400](./code/669.txt) <br />
+#1080. [Insufficient Nodes in Root to Leaf Paths (M) 1500](./code/1080.txt) <br />
 #1123. [Lowest Common Ancestor of Deepest Leaves (M) 1500](./code/1123.txt) <br />
 #1339. [Maximum Product of Splitted Binary Tree (M) 1500](./code/1339.txt) <br />
 #1490. [Clone N-tree (M-) 1300](./code/1490.txt) <br />
