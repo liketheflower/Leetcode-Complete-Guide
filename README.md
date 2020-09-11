@@ -422,7 +422,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 12
+ 统计(1800+ 题量)： 15
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -461,16 +461,16 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
   
  ### Codeforces Round #668 (Div. 2)
- A. [Permutation Forgery  ](./code/668A.txt) <br />
- B. [Array Cancellation](./code/668B.txt) <br />
- C. [Balanced Bitstring](./code/668C.txt) <br />
- D. [Tree Tag (game)](./code/668D.txt) <br />
- E. [Fixed Point Removal (线段树+二分法)](./code/668E.txt) <br />
+ A. [Permutation Forgery  (800)](./code/668A.txt) <br />
+ B. [Array Cancellation (1000)](./code/668B.txt) <br />
+ C. [Balanced Bitstring (1500)] (./code/668C.txt) <br />
+ D. [Tree Tag (1900)(game)](./code/668D.txt) <br />
+ E. [Fixed Point Removal (2300)(线段树+二分法)](./code/668E.txt) <br />
  
  ### Codeforces Round #669 (Div. 2)
- A. [Ahahahahahahahaha  ](./code/669A.txt) <br />
- B. [Big Vova](./code/669B.txt) <br />
- D. [Discrete Centrifugal Jumps  (dp+stack)](./code/669D.txt) <br />
+ A. [Ahahahahahahahaha  (1100)](./code/669A.txt) <br />
+ B. [Big Vova (1300)](./code/669B.txt) <br />
+ D. [Discrete Centrifugal Jumps (2200) (dp+stack)](./code/669D.txt) <br />
  
   ### Educational Codeforces Round 83 (Div. 2)
  1312B. [ Bogo Sort	(DIV 2) (1000) ](./code/1312B.txt) <br />
