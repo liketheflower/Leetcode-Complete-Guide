@@ -18,6 +18,7 @@ CF 分目测评估：
 
 ---
 ### Array
+#41. [First Missing Positive (H-) 1600](./code/41.txt) <br />
 #442. [Find All Duplicates in an Array (M-) 1400](./code/442.txt) <br />
 #1572. [Matrix Diagonal Sum (E) 800](./code/1572.txt) <br />
 
