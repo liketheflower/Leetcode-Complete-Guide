@@ -463,7 +463,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  ### Codeforces Round #668 (Div. 2)
  A. [Permutation Forgery  (800)](./code/668A.txt) <br />
  B. [Array Cancellation (1000)](./code/668B.txt) <br />
- C. [Balanced Bitstring (1500)(game)](./code/668C.txt) <br />
+ C. [Balanced Bitstring (1500)](./code/668C.txt) <br />
  D. [Tree Tag (1900)(game)](./code/668D.txt) <br />
  E. [Fixed Point Removal (2300)(线段树+二分法)](./code/668E.txt) <br />
  
