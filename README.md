@@ -42,6 +42,7 @@ CF 分目测评估：
 #979. [Distribute Coins in Binary Tree (M+) 1600](./code/979.txt) <br />
 #1020. [Number of Enclaves (M-) 1400](./1020.txt) <br />
 #1239. [Maximum Length of a Concatenated String with Unique Characters (M) 1500](./1239.txt) <br />
+#1240. [Tiling a Rectangle with the Fewest Squares (H+) 2000](./1240.txt) <br />
 #1255. [Maximum Score Words Formed by Letters (H-) 1700](./code/1255.txt) <br />
 #1377. [Frog Position After T Seconds (M+) 1600](./code/1377.txt) <br />
 #1559. [Detect Cycles in 2D Grid (H-) 1700](./code/1559.txt) <br />
