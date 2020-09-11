@@ -1,6 +1,7 @@
 思路：
 1.在做dfs 的同时我们要限制他能使用的方块
-2. 如果方块超过了指定数量，return (类似binary search， 去看是不是能用这么多个方块去完成)
+2. 如果方块超过了指定数量
+3. 二分法
 
 代码：
 
@@ -13,14 +14,21 @@ class Solution {
         max=Math.max(n,m);
         min=Math.min(n,m);
         
-        for(int i=1;i<=max;i++){
-            dfs(grid,0,0,i);
+        int l=1,r=m*n;
+        int res=-1;
+        while(l<=r){
+            int mid=l+(r-l)/2;
+            finish=false;
+            dfs(grid,0,0,mid);
             if(finish){
-                return i;
+                res=mid;
+                r=mid-1;
+            }else{
+                l=mid+1;
             }
         }
         
-        return -1;
+        return res;
     }
     
     public void dfs(int grid[][],int level,int sum,int maximum){
