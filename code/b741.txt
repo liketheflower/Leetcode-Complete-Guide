@@ -1,0 +1,63 @@
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[][] edges, int[][] queries) {
+        // Write your code here
+        int res=0;
+        int max=0;
+        for(int pair[]:edges){
+            max=Math.max(pair[0],max);
+             max=Math.max(pair[1],max);
+        }
+        int nums[]=new int[max+1];
+        for(int i=0;i<nums.length;i++){
+            nums[i]=i;
+        }
+        
+        Arrays.sort(edges,(a,b)->{
+            return a[2]-b[2];
+        });
+        Arrays.sort(queries,(a,b)->{
+            return a[2]-b[2];
+        });
+        int j=0;
+        int last=0;
+        for(int pair[]:edges){
+            int v1=pair[0];
+            int v2=pair[1];
+            int w=pair[2];//w is sorted
+           
+            
+            
+            while(j<queries.length){
+                if(queries[j][2]>=w)break;
+                int vv1=queries[j][0];
+                int vv2=queries[j][1];
+                if(find(nums,vv1)==find(nums,vv2)&&queries[j][2]>=last)res++;
+                j++;
+            }
+            
+            int r1=find(nums,v1);
+            int r2=find(nums,v2);
+            nums[r1]=r2;
+            last=w;
+        }
+        
+        while(j<queries.length){
+            int vv1=queries[j][0];
+            int vv2=queries[j][1];
+            if(find(nums,vv1)==find(nums,vv2)&&queries[j][2]>=last)res++;
+            j++;
+        }
+        
+        return res;
+    }
+    
+    public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+}
