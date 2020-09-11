@@ -1,0 +1,88 @@
+思路：
+1.在做dfs 的同时我们要限制他能使用的方块
+2. 如果方块超过了指定数量，return (类似binary search， 去看是不是能用这么多个方块去完成)
+
+代码：
+
+class Solution {
+    int res=Integer.MAX_VALUE;
+    int max;int min;
+    boolean finish=false;
+    public int tilingRectangle(int n, int m) {
+        int grid[][]=new int[n][m];
+        max=Math.max(n,m);
+        min=Math.min(n,m);
+        
+        for(int i=1;i<=max;i++){
+            dfs(grid,0,0,i);
+            if(finish){
+                return i;
+            }
+        }
+        
+        return -1;
+    }
+    
+    public void dfs(int grid[][],int level,int sum,int maximum){
+        if(sum==grid.length*grid[0].length){
+            finish=true;
+            return;
+        }
+        if(level>=maximum)return;
+        if(finish)return;
+        boolean found=false;
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                if(grid[i][j]!=0)continue;
+                for(int fill=1;fill<=max;fill++){
+                    if(canfill(grid,i,j,fill)){
+                        found=true;
+                        color(grid,i,j,fill);
+                        dfs(grid,level+1,sum+fill*fill,maximum);
+                        reset(grid,i,j,fill);
+                    }else{
+                        break;
+                    }
+                }
+                if(found)break;
+            }
+            if(found)break;
+        }
+    }
+    
+    
+    public boolean canfill(int grid[][],int i,int j,int len){
+        if(i+len-1>=grid.length||j+len-1>=grid[0].length)return false;
+        for(int r=i;r<=i+len-1;r++){
+            for(int c=j;c<=j+len-1;c++){
+                if(grid[r][c]!=0)return false;
+            }
+        }
+        return true;
+    }
+    
+    public void reset(int grid[][],int i,int j,int len){
+        for(int r=i;r<=i+len-1;r++){
+            for(int c=j;c<=j+len-1;c++){
+                grid[r][c]=0;
+            }
+        }
+    }
+    
+     public void color(int grid[][],int i,int j,int len){
+        for(int r=i;r<=i+len-1;r++){
+            for(int c=j;c<=j+len-1;c++){
+                grid[r][c]=len;
+            }
+        }
+    }
+    
+    public void print(int grid[][]){
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                System.out.print(grid[i][j]+" ");
+            }System.out.println();
+        }
+        System.out.println("***********");
+    }
+}
