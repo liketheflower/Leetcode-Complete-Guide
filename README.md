@@ -415,6 +415,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B733. [Matrix Prefix Sum (M-)1300](./code/b733.txt) <br />
  #B736. [Maximal Points from Deleting Two Character Substrings (H-)1700](./code/b736.txt) <br />
  #B742. [Even Frequency (E)800](./code/b742.txt) <br />
+ #B744. [Lowest Sum of Pair Larger than Target(M-)1400](./code/b744.txt) <br />
  
  <br /><br />
  
