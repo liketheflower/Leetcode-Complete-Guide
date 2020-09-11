@@ -41,6 +41,7 @@ CF 分目测评估：
 #967. [Numbers With Same Consecutive Differences (M) 1500](./code/967.txt) <br />
 #979. [Distribute Coins in Binary Tree (M+) 1600](./code/979.txt) <br />
 #1020. [Number of Enclaves (M-) 1400](./1020.txt) <br />
+#1239. [Maximum Length of a Concatenated String with Unique Characters (M) 1500](./1239.txt) <br />
 #1255. [Maximum Score Words Formed by Letters (H-) 1700](./code/1255.txt) <br />
 #1377. [Frog Position After T Seconds (M+) 1600](./code/1377.txt) <br />
 #1559. [Detect Cycles in 2D Grid (H-) 1700](./code/1559.txt) <br />
