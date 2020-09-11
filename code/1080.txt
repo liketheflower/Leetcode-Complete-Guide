@@ -1,0 +1,58 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    int limit;
+    Map<TreeNode,Integer>map=new HashMap<>();
+    public TreeNode sufficientSubset(TreeNode root, int limit) {
+        if(root==null)return root;
+        this.limit=limit;
+        post(root);
+        if(map.get(root)<limit)return null;//delete root
+        dfs(null,root,0,0);
+        return root;
+    }
+    
+    public void dfs(TreeNode parent,TreeNode root,int sum,int d){
+        if(root==null)return;
+        if(map.get(root)+sum<limit){
+            if(d==0){
+                parent.left=null;
+            }else{
+                parent.right=null;
+            }
+        }else{
+            dfs(root,root.left,sum+root.val,0);
+            dfs(root,root.right,sum+root.val,1);
+        }
+        
+    }
+    
+    
+    //return the smallest path and recode in map for later use
+    public int post(TreeNode root){
+        if(root==null)return -1000000000;
+        if(root.left==null&&root.right==null){
+            map.put(root,root.val);
+            return root.val;
+        }
+        int l=post(root.left);
+        int r=post(root.right);
+        int max=Math.max(l,r);
+        map.put(root,root.val+max);
+        return root.val+max;
+    }
+
+}
