@@ -1,0 +1,51 @@
+class Solution {
+    long mod=1000000007;
+    long in,de,T;
+    int jump[];int cost[];
+    Map<Long,Long>map=new HashMap<>();
+    public int busRapidTransit(int target, int in, int de, int[] jump, int[] cost) {
+        this.in=in;
+        this.de=de;
+        this.T=target;
+        this.jump=jump;
+        this.cost=cost;
+        int res = (int)(dfs(T)%mod); //reverse thinking
+        //System.out.println(map);
+        return res;
+    }
+
+    public long dfs(long pos){
+        if(pos==0)return 0;
+        if(pos==1)return in;
+        if(map.containsKey(pos))return map.get(pos);
+
+        long res=Long.MAX_VALUE;
+
+        res=Math.min(res,in*pos+dfs(0));
+        for(int i=0;i<jump.length;i++){
+
+            if(pos%jump[i]==0){
+                long j=pos-pos/jump[i];
+                res=Math.min(res,cost[i]+dfs(pos/jump[i]));
+                res=Math.min(res,j*in+dfs(pos/jump[i]));
+            }else{
+                long m=pos%jump[i];
+                long mm=jump[i]-m;
+                //two choice, go forward or backward
+               
+                long j=pos-((pos-m)/jump[i]);
+                long jj=pos-((pos+mm)/jump[i]);
+
+                res=Math.min(res,(in*m)+cost[i]+dfs((pos-m)/jump[i]));
+                res=Math.min(res,(de*mm)+cost[i]+dfs((pos+mm)/jump[i]));
+
+
+                res=Math.min(res,(in*m)+j*in+dfs((pos-m)/jump[i]));
+                res=Math.min(res,(de*mm)+jj*in+dfs((pos+mm)/jump[i]));
+            }
+           
+        }
+        map.put(pos,res);
+        return res;
+    }
+}
