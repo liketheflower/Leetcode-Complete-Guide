@@ -1,0 +1,119 @@
+class Solution {
+    List<Integer>adjecent[];
+    int N;
+    boolean visit1[];
+    int time=1;
+    int low[];int dis[];
+    public int chaseGame(int[][] edges, int startA, int startB) {
+        N=edges.length;
+        visit1=new boolean[N+1];
+        low=new int[N+1];dis=new int[N+1];
+        adjecent=new ArrayList[N+1];
+        for(int i=0;i<adjecent.length;i++){
+            adjecent[i]=new ArrayList<>();
+        }
+
+        for(int pair[]:edges){
+            int v1=pair[0];int v2=pair[1];
+            adjecent[v1].add(v2);
+            adjecent[v2].add(v1);
+        }
+
+        int A[]=new int[N+1];
+        int B[]=new int[N+1];
+        bfs(startA,A);
+        bfs(startB,B);
+
+        if(A[startB]==1)return 1; //catch directly
+        
+        dfs(0,1);//tarjan
+        Set<Integer>set=new HashSet<>();
+        Map<Integer,List<Integer>>map=new HashMap<>();
+
+        for(int i=1;i<low.length;i++){
+            if(!map.containsKey(low[i])){
+                map.put(low[i],new ArrayList<>());
+            }
+            map.get(low[i]).add(i);
+        }
+
+        for(Integer group:map.keySet()){
+            List<Integer>circle=map.get(group);
+            if(circle.size()<=3)continue;
+
+            for(int pos:circle){
+                set.add(pos);
+                if(A[pos]-B[pos]>1)return -1;//can not catch
+            }
+        }
+
+        
+        //bfs one more time for b
+        int res=A[startB];
+        int dis[]=new int[N+1];
+        Arrays.fill(dis,-1);
+        set.add(startB);
+        Queue<int[]>q=new LinkedList<>();
+        q.add(new int[]{startB,0});
+        while(q.size()!=0){
+            int pair[]=q.poll();
+            int root=pair[0];
+            int level=pair[1];
+            if(A[root]-level>1){
+                res=Math.max(res,A[root]);
+            }
+            
+            dis[root]=level;
+            List<Integer>childs=adjecent[root];
+            for(int c:childs){
+                if(set.contains(c))continue;
+                set.add(c);
+                q.add(new int[]{c,level+1});
+            }
+        }
+
+        
+        
+
+
+        return res;
+    }
+
+    public void bfs(int s,int dis[]){
+        boolean visit[]=new boolean[N+1];
+        Queue<int[]>q=new LinkedList<>();
+        visit[s]=true;
+        q.add(new int[]{s,0});
+        while(q.size()!=0){
+            int pair[]=q.poll();
+            int root=pair[0];
+            int level=pair[1];
+            dis[root]=level;
+            List<Integer>childs=adjecent[root];
+            for(int c:childs){
+                if(visit[c])continue;
+                visit[c]=true;
+                q.add(new int[]{c,level+1});
+            }
+        }
+    }
+
+    public void dfs(int parent,int root){
+        List<Integer>childs=adjecent[root];
+        dis[root]=low[root]=time++;
+        visit1[root]=true;
+        for(int c:childs){
+            if(!visit1[c]){
+                dfs(root,c);
+                
+                low[root]=Math.min(low[root],low[c]);
+                
+            }else{
+                if(c!=parent){
+                    low[root]=Math.min(low[root],low[c]);
+                }
+            }
+        }
+    }
+
+}
