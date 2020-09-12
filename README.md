@@ -296,6 +296,15 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1579. [Remove Max Number of Edges to Keep Graph Fully Traversable (H) 1900](./code/1579.txt) <br />
 
 ---
+
+---
+### 力扣秋季赛
+#LCP17. [速算机器人 (E) 900](./code/LCP17.txt) <br />
+#LCP18. [早餐组合   (M-) 1400](./code/LCP18.txt) <br />
+#LCP19. [秋叶收藏集   (M+) 1600](./code/LCP19.txt) <br />
+#LCP20. [快速公交   (H) 1800](./code/LCP20.txt) <br />
+
+---
 <br /><br />
 
 # :pushpin: ACM 练习
