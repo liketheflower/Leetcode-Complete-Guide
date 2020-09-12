@@ -1,0 +1,69 @@
+代码：
+
+
+/**
+ * // This is the Master's API interface.
+ * // You should not implement it, or speculate about its implementation
+ * interface Master {
+ *     public int guess(String word) {}
+ * }
+ */
+class Solution {
+    public void findSecretWord(String[] word, Master master) {
+        List<String>all=new ArrayList<>();
+        List<Pair>cur=new ArrayList<>();
+        int guess=0;
+        Random ran = new Random();
+        for(String s:word){
+            all.add(s);
+        }
+        
+        while(guess<10&&all.size()>0){
+            int pos=ran.nextInt(all.size());
+            List<String>list=new ArrayList<>();
+            int match=master.guess(all.get(pos));
+            if(match==0)continue;
+            
+            cur.add(new Pair(all.get(pos),match));
+            
+            for(int i=0;i<all.size();i++){
+                if(i==pos)continue;
+                boolean good=true;
+                String s=all.get(i);
+                
+                for(Pair pair:cur){
+                    match=pair.match;
+                    String a=pair.s;
+                    int cnt=com(a,s);
+                    if(cnt!=match){
+                        good=false;
+                        break;
+                    }
+                    
+                }
+                if(good){
+                    list.add(s);
+                }
+            }
+            all=list;
+        }
+        
+    }
+    
+    public int com(String a,String b){
+        int cnt=0;
+        for(int i=0;i<a.length();i++){
+            if(a.charAt(i)==b.charAt(i))cnt++;
+        }
+        return cnt;
+    }
+    
+    class Pair{
+        String s;
+        int match;
+        public Pair(String s,int match){
+            this.s=s;
+            this.match=match;
+        }
+    }
+}
