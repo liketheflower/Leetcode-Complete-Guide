@@ -1,0 +1,46 @@
+class Solution {
+    public int minimumOperations(String s) {
+       
+        char A[]=s.toCharArray();
+        int res=Integer.MAX_VALUE;
+        int dp[]=new int[A.length];
+        
+        int red=0,yellow=0;
+        int table[][]=new int[A.length][2];
+        PriorityQueue<int[]>pq=new PriorityQueue<>((a,b)->{
+            return b[0]-a[0];
+        });
+
+        for(int i=0;i<A.length;i++){
+            if(A[i]=='y')yellow++;
+            else red++;
+            table[i][0]=red;
+            table[i][1]=yellow;
+        }
+
+        int sum=0;
+        for(int i=0;i<A.length;i++){
+            if(A[i]=='y')sum--;
+            else sum++;
+            
+            if(i==0){
+                pq.add(new int[]{sum,i});
+                continue;
+            }
+
+            int top[]=pq.peek();
+            int index=top[1];
+            dp[i]=table[index][1]+table[i][0]-table[index][0];
+            pq.add(new int[]{sum,i});
+        }        
+
+        
+        int y=0;
+        for(int i=A.length-1;i>=2;i--){
+            if(A[i]=='y')y++;
+            res=Math.min(res,y+dp[i-1]);
+        }
+
+        return res;
+    }
+}
