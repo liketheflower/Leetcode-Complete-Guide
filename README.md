@@ -303,6 +303,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #LCP18. [早餐组合   (M-) 1400](./code/LCP18.txt) <br />
 #LCP19. [秋叶收藏集   (M+) 1600](./code/LCP19.txt) <br />
 #LCP20. [快速公交   (H) 1800](./code/LCP20.txt) <br />
+#LCP21. [追逐游戏   (H) 1900](./code/LCP21.txt) <br />
 
 ---
 <br /><br />
