@@ -1,0 +1,87 @@
+class Solution {
+    int A[];int B[];
+    public boolean isTransformable(String s, String t) {
+        if(s.length()!=t.length())return false;
+        if(s.equals(t))return true;
+        int A[]=new int[s.length()];
+        int B[]=new int[t.length()];
+        
+        for(int i=0;i<s.length();i++){
+            A[i]=s.charAt(i)-'a';
+            B[i]=t.charAt(i)-'a';
+        }
+        
+        
+		this.A=A;
+		Seg root=new Seg(0,A.length-1);
+		Map<Integer,Queue<Integer>>map=new HashMap<>();
+		for(int i=0;i<A.length;i++){
+			if(!map.containsKey(A[i]))map.put(A[i],new LinkedList<>());
+			map.get(A[i]).add(i);
+		}
+        
+		for(int i=0;i<B.length;i++){
+			if(!map.containsKey(B[i])||map.get(B[i]).size()==0){
+				return false;
+			}
+			int index=map.get(B[i]).poll();
+			int min=Integer.MAX_VALUE;
+			if(index>0)min=root.query(0,index-1);
+			if(min<B[i]){//someone less than it
+				return false;
+			}else{
+				A[index]=Integer.MAX_VALUE;
+				root.update(index);
+			}
+		}
+		return true;
+    }
+    
+    class Seg{
+        int l,r;
+        int min=Integer.MAX_VALUE;
+        Seg left=null,right=null;
+        public Seg(int l,int r){
+            this.l=l;
+            this.r=r;
+            if(l!=r){
+                int mid=l+(r-l)/2;
+                if(l<=mid)left=new Seg(l,mid);
+                if(r>=mid+1)right=new Seg(mid+1,r);
+                if(left!=null)min=Math.min(left.min,min);
+                if(right!=null)min=Math.min(right.min,min);
+            }else{
+                min=A[l];
+            }
+        }
+        public int query(int s,int e){
+            if(l==s&&r==e){
+                return min;
+            }
+            int mid=l+(r-l)/2; //left :  to mid-1,
+            if(e<=mid){
+                return left.query(s,e);
+            }
+            else if(s>=mid+1){
+                return right.query(s,e);
+            }else{
+                return Math.min(left.query(s,mid),right.query(mid+1,e));
+            }
+        }
+
+        public void update(int index){
+            if(l==r){
+                min=A[l];
+                return;
+            }
+            int mid=l+(r-l)/2;
+            if(index<=mid){
+                left.update(index);
+            }else{
+                right.update(index);
+            }
+            this.min=Math.min(left.min,right.min);
+        }
+    }
+    
+}
