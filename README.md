@@ -431,6 +431,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  #B741. [Graph Weight Queries (H)1800](./code/b741.txt) <br />
  #B742. [Even Frequency (E)800](./code/b742.txt) <br />
  #B744. [Lowest Sum of Pair Larger than Target(M-)1400](./code/b744.txt) <br />
+ #B747. [Minimum Time to Finish K Tasks(H-)1700](./code/b747.txt) <br />
  
  <br /><br />
  
