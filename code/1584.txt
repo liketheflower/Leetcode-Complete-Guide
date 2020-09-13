@@ -1,0 +1,45 @@
+class Solution {
+    public int minCostConnectPoints(int[][] points) {
+        if(points.length==1)return 0;
+        int nums[]=new int[points.length];
+        for(int i=0;i<nums.length;i++){
+            nums[i]=i;
+        }
+        List<int[]>edges=new ArrayList<>();
+        for(int i=0;i<points.length;i++){
+            for(int j=i+1;j<points.length;j++){
+                int cost=cal(points[i][0],points[j][0],points[i][1],points[j][1]);
+                edges.add(new int[]{i,j,cost});
+            }
+        }
+        int res=0;
+        Collections.sort(edges,(a,b)->{
+            return a[2]-b[2];
+        });
+        
+        for(int pair[]:edges){
+            
+            int v1=pair[0];
+            int v2=pair[1];
+            int r1=find(nums,v1);
+            int r2=find(nums,v2);
+            if(r1==r2)continue;
+            nums[r1]=r2;
+            res+=pair[2];
+           // System.out.println(v1+"  "+v2+"  "+pair[2]);
+        }
+        
+        return res;
+    }
+    
+    public int cal(int x1,int x2,int y1,int y2){
+        return Math.abs(x1-x2)+Math.abs(y1-y2);
+    }
+    
+    public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+}
