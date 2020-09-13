@@ -442,7 +442,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 15
+ 统计(1800+ 题量)： 16
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
