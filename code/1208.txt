@@ -1,0 +1,18 @@
+class Solution {
+    public int equalSubstring(String s, String t, int max) {
+        int res=0;
+        Queue<Integer>q=new LinkedList<>();
+        int sum=0;
+        for(int i=0;i<s.length();i++){
+            int a=s.charAt(i)-'a';
+            int b=t.charAt(i)-'a';
+            sum+=Math.abs(a-b);
+            q.add(Math.abs(a-b));
+            while(q.size()>0&&sum>max){
+                sum-=q.poll();
+            }
+            res=Math.max(res,q.size());
+        }
+        return res;
+    }
+}
