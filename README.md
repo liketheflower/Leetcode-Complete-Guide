@@ -233,6 +233,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #76. [Minimum Window Substring (M+) 1700](./code/76.txt) <br />
 #395. [Longest Substring with At Least K Repeating Characters (M+) 1700](./code/395.txt) <br />
 #713. [Subarray Product Less Than K (M) 1500](./code/713.txt) <br />
+#1208. [Get Equal Substrings Within Budget (M-) 1400](./code/1208.txt) <br />
 
 ---
 ### Sort
