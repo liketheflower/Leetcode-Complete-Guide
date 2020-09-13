@@ -1,0 +1,39 @@
+import java.util.*;
+
+
+class Solution {
+    public int solve(int[][] A, int k) {
+        // Write your code here
+        if(A.length==0||k==0)return 0;
+        int res=Integer.MAX_VALUE;
+        Arrays.sort(A,(a,b)->{
+            return a[0]-b[0];
+        });
+       
+       for(int i=k-1;i<A.length;i++){
+           List<int[]>two=new ArrayList<>();
+           for(int j=0;j<=i;j++){
+               two.add(new int[]{A[j][1],A[j][2]});
+           }
+           int a=A[i][0];
+           
+           Collections.sort(two,(x,y)->{
+               return x[0]-y[0]; 
+           });
+           PriorityQueue<Integer>pq=new PriorityQueue<>((x,y)->{
+                 return y-x;
+           });
+           for(int j=0;j<two.size();j++){
+               int three=two.get(j)[1];
+               pq.add(three);
+               if(pq.size()>k)pq.poll();
+               if(pq.size()==k)res=Math.min(res,pq.peek()+a+two.get(j)[0]);
+
+           }
+           
+       }
+       
+       return res;
+    }
+}
+ 
