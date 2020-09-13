@@ -7,5 +7,6 @@
 |9/10/2020|[39. Combination Sum](https://leetcode.com/problems/combination-sum/)|[ M-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/39.txt)|DFS|
 |9/11/2020|[1240. tiling-a-rectangle-with-the-fewest-squares](https://leetcode.com/problems/tiling-a-rectangle-with-the-fewest-squares/)|[ H+](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1240.txt)|DFS|
 |9/12/2020|[1584. Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1584.txt)|MST|
+|9/13/2020|[1582. Special Positions in a Binary Matrix](https://leetcode.com/problems/special-positions-in-a-binary-matrix/)|[E](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1582.txt)|Array|
 |||||
 
