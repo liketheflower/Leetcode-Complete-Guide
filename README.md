@@ -496,6 +496,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  A. [Subset Mex ](./code/770A.txt) <br />
  B. [Maximum Product ](./code/770B.txt) <br />
  C. [Link Cut Centroids ](./code/770C.txt) <br />
+ D. [Three Sequences ](./code/770D.txt) <br />
  
   ### Educational Codeforces Round 83 (Div. 2)
  1312B. [ Bogo Sort	(DIV 2) (1000) ](./code/1312B.txt) <br />
