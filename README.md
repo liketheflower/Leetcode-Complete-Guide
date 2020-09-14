@@ -492,6 +492,11 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  B. [Big Vova (1300)](./code/669B.txt) <br />
  D. [Discrete Centrifugal Jumps (2200) (dp+stack)](./code/669D.txt) <br />
  
+ ### Codeforces Round #670 (Div. 2)
+ A. [Subset Mex ](./code/770A.txt) <br />
+ B. [Maximum Product ](./code/770B.txt) <br />
+ C. [Link Cut Centroids ](./code/770C.txt) <br />
+ 
   ### Educational Codeforces Round 83 (Div. 2)
  1312B. [ Bogo Sort	(DIV 2) (1000) ](./code/1312B.txt) <br />
  1312C. [ Adding Power	(DIV 2) (1400) number theory](./code/1312C.txt) <br />
