@@ -460,7 +460,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
   ### Codeforces Round #640 (Div. 4)
  A. [Sum of Round Numbers (800) ](./code/640A.txt) <br />
  B. [Same Parity Summands (1200)](./code/640B.txt) <br />
-  
+ C. [K-th Not Divisible by n (1200)](./code/640C.txt) <br />
+ 
 
  
   ### Codeforces Round #611 (Div. 3)
