@@ -463,6 +463,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  C. [K-th Not Divisible by n (1200)](./code/640C.txt) <br />
  D. [Alice, Bob and Candies (1300)](./code/640D.txt) <br />
  E. [Special Element (1500) (暴力)](./code/640E.txt) <br />
+ F. [Binary String Reconstruction (1500) (暴力+观察)](./code/640F.txt) <br />
  
   ### Codeforces Round #611 (Div. 3)
  A. [Minutes Before the New Year (800) ](./code/611A.txt) <br />
