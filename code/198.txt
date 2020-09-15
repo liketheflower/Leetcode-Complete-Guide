@@ -36,3 +36,26 @@ class Solution {
         return pq.peek()[0];
     }
 }
+
+
+
+o(n) 解法
+
+
+class Solution {
+    public int rob(int[] A) {
+        int dp[]=new int[A.length];
+        int res=0;
+        for(int i=0;i<A.length;i++){
+            dp[i]=Math.max(get(dp,i-1),A[i]+get(dp,i-2));
+            res=Math.max(res,dp[i]);
+        }
+        return res;
+    }
+    
+    public int get(int A[],int i){
+        if(i<0)return 0;
+        return A[i];
+    }
+}
+
