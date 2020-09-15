@@ -1,0 +1,22 @@
+class Solution {
+    public int thirdMax(int[] A) {
+        long a=Long.MIN_VALUE;
+        long b=Long.MIN_VALUE;
+        long c=Long.MIN_VALUE;
+        for(int cur:A){
+            a=Math.max(a,cur);
+        }
+        for(int cur:A){
+            if(cur==a)continue;
+            b=Math.max(b,cur);
+        }
+        
+        for(int cur:A){
+            if(cur==a||cur==b)continue;
+            c=Math.max(c,cur);
+        }
+        if(c==Long.MIN_VALUE)return (int)(Math.max(a,b));
+        
+        return (int)(c);
+    }
+}
