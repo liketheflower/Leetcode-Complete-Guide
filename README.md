@@ -21,7 +21,6 @@ CF 分目测评估：
 #41. [First Missing Positive (H-) 1600](./code/41.txt) <br />
 #414. [Third Maximum Number (E) 900](./code/414.txt) <br />
 #442. [Find All Duplicates in an Array (M-) 1400](./code/442.txt) <br />
-#565. [Array Nesting (M-) 1400](./code/565.txt) <br />
 #1572. [Matrix Diagonal Sum (E) 800](./code/1572.txt) <br />
 #1582. [Special Positions in a Binary Matrix(E) 900](./code/1582.txt) <br />
 
@@ -43,6 +42,7 @@ CF 分目测评估：
 #131. [Palindrome Partitioning (M) 1500](./code/131.txt) <br />
 #301. [Remove Invalid Parentheses (H-) 1600](./code/301.txt) <br />
 #417. [Pacific Atlantic Water Flow (M+) 1600](./code/417.txt) <br />
+#565. [Array Nesting (M-) 1400](./code/565.txt) <br />
 #967. [Numbers With Same Consecutive Differences (M) 1500](./code/967.txt) <br />
 #979. [Distribute Coins in Binary Tree (M+) 1600](./code/979.txt) <br />
 #1020. [Number of Enclaves (M-) 1400](./1020.txt) <br />
