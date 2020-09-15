@@ -1,0 +1,27 @@
+class Solution {
+    public double new21Game(int N, int K, int W) {
+        if(K==0)return 1;
+        double res=0;
+        double dp[]=new double[N+1];
+        dp[0]=1.0;
+        double sum=dp[0];
+        for(int i=1;i<dp.length;i++){
+            dp[i]=sum/W;
+            if(i<K){
+                sum+=dp[i];
+            }
+            
+            if(i-W>=0&&i-W<K){
+                sum-=dp[i-W];
+            }
+        }
+        
+        
+
+        for(int i=K;i<=N;i++){
+            res+=dp[i];
+        }
+        
+        return res;
+    }
+}
