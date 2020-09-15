@@ -1,0 +1,27 @@
+思路：
+1.只有两种情况
+2.第一眼望去，感觉如果k>=2， 总能sort （想一想k=2的情况发现可以，那么k>2 肯定也没问题）
+
+
+代码：
+
+class Solution {
+    public String orderlyQueue(String s, int k) {
+        String res=s;
+        if(k==1){
+            for(int i=0;i<s.length();i++){
+                char first=s.charAt(0);
+                s=s.substring(1)+first;
+                if(s.compareTo(res)<0){
+                    res=s;
+                }
+            }
+            return res;
+            
+        }else{
+            char A[]=s.toCharArray();
+            Arrays.sort(A);
+            return new String(A);
+        }
+    }
+}
