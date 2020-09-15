@@ -1,0 +1,34 @@
+class Solution {
+    public int maxProfit(int[] A) {
+        int res=0;
+        int price=Integer.MAX_VALUE;
+        int profit=0;
+        int dp[]=new int[A.length];
+        for(int i=0;i<A.length;i++){
+            if(A[i]<price){
+                price=A[i];
+            }else{
+                profit=Math.max(profit,A[i]-price);
+            }
+            dp[i]=profit;
+        }
+        int max=Integer.MIN_VALUE;
+        int right[]=new int[A.length];
+        for(int i=A.length-1;i>=0;i--){
+            max=Math.max(max,A[i]);
+            right[i]=max;
+        }
+        
+
+        
+        for(int i=A.length-2;i>=1;i--){
+            int p=A[i];
+            int MAX=right[i+1];
+            res=Math.max(res,Math.max(0,MAX-p)+dp[i-1]);
+            res=Math.max(res,dp[i]);
+        }
+        res=Math.max(res,dp[dp.length-1]);
+        
+        return res;
+    }
+}
