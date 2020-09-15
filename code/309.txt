@@ -1,0 +1,15 @@
+class Solution {
+    public int maxProfit(int[] A) {
+        if(A.length==0)return 0;
+        int dp[]=new int[A.length];
+        
+        //A[i]-A[j]+dp[j-2]
+        int max=-A[0];
+        for(int i=1;i<A.length;i++){
+            dp[i]=Math.max(dp[i-1],A[i]+max);
+            if(i-2>=0)max=Math.max(max,dp[i-2]-A[i]);
+            else max=Math.max(max,-A[i]);
+        }
+        return dp[A.length-1];
+    }
+}
