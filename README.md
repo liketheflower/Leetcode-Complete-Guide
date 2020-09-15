@@ -452,7 +452,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 16
+ 统计(1800+ 题量)： 17
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -513,10 +513,10 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  D. [Discrete Centrifugal Jumps (2200) (dp+stack)](./code/669D.txt) <br />
  
  ### Codeforces Round #670 (Div. 2)
- A. [Subset Mex ](./code/770A.txt) <br />
- B. [Maximum Product ](./code/770B.txt) <br />
- C. [Link Cut Centroids ](./code/770C.txt) <br />
- D. [Three Sequences ](./code/770D.txt) <br />
+ A. [Subset Mex (900) ](./code/770A.txt) <br />
+ B. [Maximum Product (1200)](./code/770B.txt) <br />
+ C. [Link Cut Centroids (1700)](./code/770C.txt) <br />
+ D. [Three Sequences (2200)](./code/770D.txt) <br />
  
   ### Educational Codeforces Round 83 (Div. 2)
  1312B. [ Bogo Sort	(DIV 2) (1000) ](./code/1312B.txt) <br />
