@@ -9,5 +9,6 @@
 |9/12/2020|[1584. Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1584.txt)|MST|
 |9/13/2020|[1582. Special Positions in a Binary Matrix](https://leetcode.com/problems/special-positions-in-a-binary-matrix/)|[E](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1582.txt)|Array|
 |9/14/2020|[729. My Calendar I](https://leetcode.com/problems/my-calendar-i/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/729.txt)|Map|
+|9/15/2020|[899. Orderly Queue](https://leetcode.com/problems/orderly-queue/)|[H-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/899.txt)|Sort|
 |||||
 
