@@ -10,5 +10,6 @@
 |9/13/2020|[1582. Special Positions in a Binary Matrix](https://leetcode.com/problems/special-positions-in-a-binary-matrix/)|[E](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1582.txt)|Array|
 |9/14/2020|[729. My Calendar I](https://leetcode.com/problems/my-calendar-i/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/729.txt)|Map|
 |9/15/2020|[899. Orderly Queue](https://leetcode.com/problems/orderly-queue/)|[H-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/899.txt)|Sort|
+|9/15/2020|[198. House Robber](https://leetcode.com/problems/house-robber/)|[H-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/198.txt)|DP|
 |||||
 
