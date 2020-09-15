@@ -11,6 +11,6 @@
 |9/14/2020|[729. My Calendar I](https://leetcode.com/problems/my-calendar-i/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/729.txt)|Map|
 |9/15/2020|[899. Orderly Queue](https://leetcode.com/problems/orderly-queue/)|[H-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/899.txt)|Sort|
 |9/16/2020|[198. House Robber](https://leetcode.com/problems/house-robber/)|[M-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/198.txt)|DP|
-|9/17/2020|[213. House Robber II](https://leetcode.com/problems/house-robber-ii/)|[M-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/213.txt)|DP|
+|9/17/2020|[213. House Robber II](https://leetcode.com/problems/house-robber-ii/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/213.txt)|DP|
 |||||
 
