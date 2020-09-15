@@ -1,0 +1,37 @@
+class Solution {
+    public int removeStones(int[][] A) {
+        int res=0;
+        int nums[]=new int[A.length];
+        for(int i=0;i<nums.length;i++){
+            nums[i]=i;
+        }
+        for(int i=0;i<A.length;i++){
+            for(int j=i+1;j<A.length;j++){
+                if(A[i][0]!=A[j][0]&&A[i][1]!=A[j][1])continue;
+                int r1=find(nums,i);
+                int r2=find(nums,j);
+                if(r1!=r2){
+                    nums[r1]=r2;
+                }
+            }
+        }
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int i=0;i<nums.length;i++){
+            int r=find(nums,i);
+            if(!map.containsKey(r))map.put(r,0);
+            map.put(r,map.get(r)+1);
+        }
+
+        for(Integer root:map.keySet()){
+            res+=Math.max(0,map.get(root)-1);
+        }
+        return res;
+    }
+    
+    public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+}
