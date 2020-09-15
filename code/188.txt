@@ -1,0 +1,39 @@
+class Solution {
+    int dp[][];
+    public int maxProfit(int k, int[] A) {
+        int n=A.length;
+        if (2*k>=n) { //special case
+            int res = 0;
+            for (int i = 1; i < n; i++) {
+                res += Math.max(0, A[i] - A[i - 1]);
+            }
+            return res;
+        }
+        
+        k=Math.min(k,A.length);
+        dp=new int[k+1][A.length];
+        for(int i=0;i<dp.length;i++){
+            Arrays.fill(dp[i],-1);
+        }
+        int res = dfs(A,k,A.length-1);
+        
+        return res;
+    }
+    
+    public int dfs(int A[],int k,int index){
+        if(index<0)return 0;
+        if(k==0)return 0;
+        if(dp[k][index]!=-1)return dp[k][index];
+        int res=0;
+        int sell=A[index];
+        res=Math.max(res,dfs(A,k,index-1));
+        for(int i=index-1;i>=0;i--){
+            int p=A[i];
+            res=Math.max(res,Math.max(0,sell-p+dfs(A,k-1,i-1)));
+        }
+        dp[k][index]=res;
+        return res;
+    }
+    
+    
+}
