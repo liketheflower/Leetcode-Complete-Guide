@@ -461,6 +461,9 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
  B. [Hydra (2000) (集合相交)](./code/150B.txt) <br />
  
+ 
+  ### Codeforces Round #306 (Div. 2)
+ 
  ### Codeforces Round #550 (Div. 3)
  A. [Diverse Strings (800) ](./code/550A.txt) <br />
  B. [Parity Alternated Deletions (900)](./code/550B.txt) <br />
