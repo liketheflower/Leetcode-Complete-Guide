@@ -12,5 +12,6 @@
 |9/15/2020|[899. Orderly Queue](https://leetcode.com/problems/orderly-queue/)|[H-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/899.txt)|Sort|
 |9/16/2020|[198. House Robber](https://leetcode.com/problems/house-robber/)|[M-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/198.txt)|DP|
 |9/17/2020|[213. House Robber II](https://leetcode.com/problems/house-robber-ii/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/213.txt)|DP|
+|9/18/2020|[1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows](https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/)|[H](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1439.txt)|BFS|
 |||||
 
