@@ -1,0 +1,48 @@
+class Solution {
+    public boolean canTransform(String s, String t) {
+        if(s.equals(t))return true;
+        if(s.length()!=t.length())return false;
+        if(!check(s,t))return false;
+        
+        List<int[]>l1=new ArrayList<>();
+        List<int[]>l2=new ArrayList<>();
+        
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)!='X'){
+                l1.add(new int[]{s.charAt(i)-'A',i});
+            }
+            
+            if(t.charAt(i)!='X'){
+                l2.add(new int[]{t.charAt(i)-'A',i});
+            }
+        }
+        
+        for(int i=0;i<l1.size();i++){
+            int pair1[]=l1.get(i);
+            int pair2[]=l2.get(i);
+            if(pair1[0]!=pair2[0])return false;
+            if(s.charAt(pair1[1])=='L'){
+                if(pair1[1]<pair2[1])return false;
+                
+            }else{//R
+                
+                if(pair1[1]>pair2[1])return false;
+            }
+        }
+        
+        return true;
+    }
+    
+    public boolean check(String s,String t){
+        int ta[]=new int[26];
+        for(int i=0;i<s.length();i++){
+            ta[s.charAt(i)-'A']++;
+            ta[t.charAt(i)-'A']--;
+        }
+        
+        for(int i:ta){
+            if(i!=0)return false;
+        }
+        return true;
+    }
+}
