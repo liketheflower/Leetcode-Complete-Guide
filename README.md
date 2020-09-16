@@ -177,6 +177,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #828. [Count Unique Characters of All Substrings of a Given String (H) 1900](./code/828.txt) <br />
 #837. [New 21 Game (M+) 1600](./code/823.txt) <br />
 #903. [Valid Permutations for DI Sequence (H) 1800](./code/903.txt) <br />
+#918. [Maximum Sum Circular Subarray (M) 1500](./code/918.txt) <br />
 #940. [Distinct Subsequences II (H) 1800](./code/940.txt) <br />
 #943. [Find the Shortest Superstring (H) 1900](./code/943.txt) <br />
 #1000. [Minimum Cost to Merge Stones (H+) 2000](./code/1000.txt) <br />
