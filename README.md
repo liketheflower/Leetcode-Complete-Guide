@@ -463,7 +463,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  
   ### Codeforces Round #306 (Div. 2)
-  A. [Two Substrings (1500) ](./code/306A.txt) <br />
+  A. [Two Substrings (1500)  (dp) ](./code/306A.txt) <br />
  
  ### Codeforces Round #550 (Div. 3)
  A. [Diverse Strings (800) ](./code/550A.txt) <br />
