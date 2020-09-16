@@ -258,6 +258,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 
 ---
 ### String
+#6. [ZigZag Conversion (M-) 1300](./code/6.txt) <br />
 #242. [Valid Anagram (E) 900](./code/242.txt) <br />
 #336. [Palindrome Pairs (H) 1800](./code/336.txt) <br />
 #696. [Count Binary Substrings (E) 1000](./code/696.txt) <br />
