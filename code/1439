@@ -1,0 +1,62 @@
+思路：
+1. 这其实是一道变种的bfs 题
+2.初始是所有都是0
+3.如果用heap + loop k次的话时间复杂度不会太慢，因为每一次expand 是expand n个， 所以复杂度最高 k*n
+
+
+
+代码：
+
+class Solution {
+    public int kthSmallest(int[][] A, int k) {
+        int r=A.length;
+        int res=0;
+        Set<String>set=new HashSet<>();
+        PriorityQueue<int[]>pq=new PriorityQueue<>((a,b)->{
+            return a[r]-b[r];
+        });
+        
+        int sum=0;
+        for(int i=0;i<A.length;i++){
+            sum+=A[i][0];
+        }
+        
+        int first[]=new int[r+1];
+        first[r]=sum;
+        pq.add(first);
+        set.add(hash(first));
+        
+        for(int i=0;i<k;i++){//bfs
+            int top[]=pq.poll();
+            res=top[r];
+            for(int j=0;j<r;j++){
+                if(top[j]+1>=A[0].length)continue;
+                int arr[]=copy(top);
+                arr[r]-=A[j][arr[j]];
+                arr[j]++;
+                arr[r]+=A[j][arr[j]];
+                String h=hash(arr);
+                if(!set.contains(h)){
+                    set.add(h);
+                    pq.add(arr);
+                }
+            }
+        }
+        
+        return res;
+    }
+    
+    public int[] copy(int A[]){
+        int arr[]=new int[A.length];
+        for(int i=0;i<A.length;i++)arr[i]=A[i];
+        return arr;
+    }
+    
+    public String hash(int A[]){
+        StringBuilder str=new StringBuilder();
+        for(int i:A){
+            str.append(i+",");
+        }
+        return str.toString();
+    }
+}
