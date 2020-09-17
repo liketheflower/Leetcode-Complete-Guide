@@ -459,7 +459,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 18
+ 统计(1800+ 题量)： 19
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -471,6 +471,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
   B. [Preparing Olympiad (1400)  (BitMask+BruteForce) ](./code/306B.txt) <br />
   C. [ Divisibility by Eight (1500) ](./code/306C.txt) <br />
   D. [ Regular Bridge (1900)  (Graph+Math) ](./code/306D.txt) <br />
+  E. [ Brackets in Implications (2200)  (Implementation+Math) ](./code/306E.txt) <br />
  
  ### Codeforces Round #550 (Div. 3)
  A. [Diverse Strings (800) ](./code/550A.txt) <br />
