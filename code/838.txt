@@ -1,0 +1,55 @@
+class Solution {
+    public String pushDominoes(String s) {
+        StringBuilder str=new StringBuilder();
+        int A[]=new int[s.length()];
+        Queue<Integer>q=new LinkedList<>();
+        Set<Integer>set=new HashSet<>();
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='R'){
+                A[i]=2;
+                q.add(i);
+                set.add(i);
+            }
+            if(s.charAt(i)=='L'){
+                A[i]=1;
+                q.add(i);
+                set.add(i);
+            }
+        }
+        
+        while(q.size()!=0){
+            int size=q.size();
+            Set<Integer>add=new HashSet<>();
+            
+            for(int i=0;i<size;i++){
+                int top=q.poll();
+                if(A[top]==1){
+                    if(top-1>=0&&!set.contains(top-1)){
+                        A[top-1]+=A[top];
+                        add.add(top-1);
+                    }
+                }
+                if(A[top]==2){
+                    if(top+1<A.length&&!set.contains(top+1)){
+                        A[top+1]+=A[top];
+                        add.add(top+1);
+                    }
+                }
+            }
+            
+            for(int i:add){
+                q.add(i);
+                set.add(i);
+            }
+        }
+        
+        
+        for(int i:A){
+            if(i==3||i==0)str.append(".");
+            if(i==2)str.append("R");
+            if(i==1)str.append("L");
+        }
+        
+        return str.toString();
+    }
+}
