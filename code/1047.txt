@@ -1,0 +1,16 @@
+class Solution {
+    public String removeDuplicates(String s) {
+        Stack<Character>stack=new Stack<>();
+        StringBuilder str=new StringBuilder();
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(stack.size()>0&&stack.peek()==c){
+                stack.pop();
+            }else{
+                stack.push(c);
+            }
+        }
+        while(stack.size()!=0)str.append(stack.pop()+"");
+        return str.reverse().toString();
+    }
+}
