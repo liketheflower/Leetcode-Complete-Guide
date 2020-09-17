@@ -472,6 +472,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  ### Codeforces Round #295 (Div. 2)
  
  A. [Pangram (800)   ](./code/295A.txt) <br />
+ B. [Two Buttons (1400)   ](./code/295B.txt) <br />
  
   ### Codeforces Round #306 (Div. 2)
   A. [Two Substrings (1500)  (dp) ](./code/306A.txt) <br />
