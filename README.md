@@ -469,6 +469,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  B. [Hydra (2000) (集合相交)](./code/150B.txt) <br />
  
  
+ ### Codeforces Round #295 (Div. 2)
+ 
   ### Codeforces Round #306 (Div. 2)
   A. [Two Substrings (1500)  (dp) ](./code/306A.txt) <br />
   B. [Preparing Olympiad (1400)  (BitMask+BruteForce) ](./code/306B.txt) <br />
