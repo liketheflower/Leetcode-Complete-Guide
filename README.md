@@ -45,6 +45,7 @@ CF 分目测评估：
 #301. [Remove Invalid Parentheses (H-) 1600](./code/301.txt) <br />
 #417. [Pacific Atlantic Water Flow (M+) 1600](./code/417.txt) <br />
 #565. [Array Nesting (M-) 1400](./code/565.txt) <br />
+#838. [ Push Dominoes (M) 1500](./code/838.txt) <br />
 #967. [Numbers With Same Consecutive Differences (M) 1500](./code/967.txt) <br />
 #979. [Distribute Coins in Binary Tree (M+) 1600](./code/979.txt) <br />
 #1020. [Number of Enclaves (M-) 1400](./1020.txt) <br />
