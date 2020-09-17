@@ -65,6 +65,7 @@ CF 分目测评估：
 #316. [Remove Duplicate Letters (M+) 1600](./code/316.txt) <br />
 #682. [Baseball Game (E+) 1100](./code/682.txt) <br />
 #735. [Asteroid Collision (M-) 1400](./code/735.txt) <br />
+#1047. [Remove All Adjacent Duplicates In String (E) 1000](./code/1047.txt) <br />
 #1063. [Number of Valid Subarrays (H-) 1700](./code/1063.txt) <br />
 #1081. [Smallest Subsequence of Distinct Characters (M+) 1600](./code/1081.txt) <br />
 #1003. [Check If Word Is Valid After Substitutions (M-) 1400](./code/1003.txt) <br />
