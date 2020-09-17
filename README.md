@@ -309,6 +309,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #594. [Longest Harmonious Subsequence (E) 1000](./code/594.txt) <br />
 #1267. [Count Servers that Communicate (M-) 1300](./code/1267.txt) <br />
 #1282. [Group the People Given the Group Size They Belong To (M-) 1300](./code/1282.txt) <br />
+#1396. [Design Underground System (M) 1500](./code/1396.txt) <br />
 
 ---
 ### Divide Conquer
