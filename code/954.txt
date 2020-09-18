@@ -1,0 +1,41 @@
+class Solution {
+    public boolean canReorderDoubled(int[] A) {
+        List<Integer>pos=new ArrayList<>();
+        List<Integer>neg=new ArrayList<>();
+        int cnt=0;
+        for(int i:A){
+            if(i==0){
+                cnt++;continue;
+            }
+            if(i>0){
+                pos.add(i);
+            }else{
+                neg.add(i);
+            }
+        }
+        Collections.sort(pos);
+        Collections.sort(neg,(a,b)->{
+             return b-a;
+         });
+        
+        return check(pos)&check(neg)&(cnt%2==0);
+    }
+    
+    public boolean check(List<Integer>list){
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int i:list){
+            if(!map.containsKey(i))map.put(i,0);
+            map.put(i,map.get(i)+1);
+        }
+        
+        for(int i:list){
+            if(!map.containsKey(i))continue;
+            if(!map.containsKey(i*2))return false;
+            map.put(i,map.get(i)-1);
+            if(map.get(i)==0)map.remove(i);
+            map.put(i*2,map.get(i*2)-1);
+            if(map.get(i*2)==0)map.remove(i*2);
+        }
+        return true;
+    }
+}
