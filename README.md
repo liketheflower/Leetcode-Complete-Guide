@@ -560,6 +560,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
   757A. [ Gotta Catch Em' All!	 (1000) ](./code/757A.txt) <br />
   514A. [ Chewbaсca and Number	 (1200) ](./code/514A.txt) <br />
   804B. [ Minimum number of steps	 (1400) (Math+Observation) ](./code/804B.txt) <br />
+  687A. [ NP Hard Problem	 (1500) (二分图) ](./code/687A.txt) <br />
  
   #  Algorithm Template 
   [Suffix Array (后缀数组 (nlog^2 n))](./template/suffixArray.txt) <br />
