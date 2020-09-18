@@ -554,6 +554,10 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  1312D. [ Count the Arrays	(DIV 2) (1700) 组合数学+number theory](./code/1312D.txt) <br />
  1312E. [ Array Shrinking	(DIV 2) (2100) 区间dp](./code/1312E.txt) <br />
  
+ 
+   ### NYU Progteam Spring Break Practice 3/16/2020
+  https://vjudge.net/contest/362056
+ 
   #  Algorithm Template 
   [Suffix Array (后缀数组 (nlog^2 n))](./template/suffixArray.txt) <br />
   [Combination C(n,k) in mod ](./template/Combination.txt) <br />
@@ -564,5 +568,4 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
   1392D. [Omkar and Bed Wars	(Global) (1700) DP ](./code/1392D.txt) <br />
   1392F. [Omkar and Landslide	(Global) (2400) Math+observation ](./code/1392F.txt) <br />
   
-  # NYU Progteam Spring Break Practice 3/16/2020
-  https://vjudge.net/contest/362056
+
