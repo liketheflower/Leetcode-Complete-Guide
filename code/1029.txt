@@ -1,0 +1,29 @@
+class Solution {
+    int dp[][][];
+    public int twoCitySchedCost(int[][] A) {
+        dp=new int[A.length][A.length/2+1][A.length/2+1];
+        for(int i=0;i<dp.length;i++){
+            for(int j=0;j<dp[0].length;j++){
+                Arrays.fill(dp[i][j],-1);
+            }
+        }
+        return dfs(A,0,A.length/2,A.length/2); 
+    }
+    
+    public int dfs(int A[][],int i,int a,int b){
+        if(i>=A.length)return 0;
+        if(dp[i][a][b]!=-1)return dp[i][a][b];
+        int acost=A[i][0];
+        int bcost=A[i][1];
+        
+        int res=Integer.MAX_VALUE;
+        if(a>0){
+            res=Math.min(res,acost+dfs(A,i+1,a-1,b));
+        }
+        if(b>0){
+            res=Math.min(res,bcost+dfs(A,i+1,a,b-1)); 
+        }
+        dp[i][a][b]=res;
+        return res;
+    }
+}
