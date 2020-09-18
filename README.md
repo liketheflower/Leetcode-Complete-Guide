@@ -554,7 +554,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  1312D. [ Count the Arrays	(DIV 2) (1700) 组合数学+number theory](./code/1312D.txt) <br />
  1312E. [ Array Shrinking	(DIV 2) (2100) 区间dp](./code/1312E.txt) <br />
  
- 
+ <br><br><br>
    ### NYU Progteam Spring Break Practice 3/16/2020
   https://vjudge.net/contest/362056<br/><br/>
   757A. [ Gotta Catch Em' All!	 (1000) ](./code/757A.txt) <br />
