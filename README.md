@@ -557,6 +557,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  <br><br><br>
    ### NYU Progteam Spring Break Practice 3/16/2020
   https://vjudge.net/contest/362056<br/><br/>
+  
+  709. [ Juicer (900) ](./code/709A.txt) <br />
   757A. [ Gotta Catch Em' All!	 (1000) ](./code/757A.txt) <br />
   514A. [ Chewbaсca and Number	 (1200) ](./code/514A.txt) <br />
   804B. [ Minimum number of steps	 (1400) (Math+Observation) ](./code/804B.txt) <br />
