@@ -563,3 +563,6 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
   1062D. [Fun with Integers	(DIV 2) (1800) Graph ](./code/1062D.txt) <br />
   1392D. [Omkar and Bed Wars	(Global) (1700) DP ](./code/1392D.txt) <br />
   1392F. [Omkar and Landslide	(Global) (2400) Math+observation ](./code/1392F.txt) <br />
+  
+  # NYU Progteam Spring Break Practice 3/16/2020
+  https://vjudge.net/contest/362056
