@@ -308,6 +308,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #220. [Contains Duplicate III (M) 1500](./code/220.txt) <br />
 #409. [Longest Palindrom (E) 900](./code/409.txt) <br />
 #594. [Longest Harmonious Subsequence (E) 1000](./code/594.txt) <br />
+#954. [Array of Doubled Pairs(M-) 1400](./code/954.txt) <br />
 #1267. [Count Servers that Communicate (M-) 1300](./code/1267.txt) <br />
 #1282. [Group the People Given the Group Size They Belong To (M-) 1300](./code/1282.txt) <br />
 #1396. [Design Underground System (M) 1500](./code/1396.txt) <br />
