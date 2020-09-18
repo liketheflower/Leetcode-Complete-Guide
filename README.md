@@ -556,7 +556,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  
    ### NYU Progteam Spring Break Practice 3/16/2020
-  https://vjudge.net/contest/362056<br/>
+  https://vjudge.net/contest/362056<br/><br/>
   757A. [ Gotta Catch Em' All!	 (1000) ](./code/757A.txt) <br />
  
   #  Algorithm Template 
