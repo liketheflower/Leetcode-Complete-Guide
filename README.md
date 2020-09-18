@@ -563,6 +563,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
   804B. [ Minimum number of steps	 (1400) (Math+Observation) ](./code/804B.txt) <br />
   687A. [ NP Hard Problem	 (1500) (二分图) ](./code/687A.txt) <br />
   782B. [ The Meeting Place Cannot Be Changed	 (1600) (Binary Search) ](./code/782B.txt) <br />
+  484A. [ Bits	 (1700) (Bit+Greedy) ](./code/484A.txt) <br />
   706D. [ Vasiliy's Multiset	 (1800) (Trie) ](./code/706D.txt) <br />
   
  
