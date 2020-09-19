@@ -1,0 +1,54 @@
+class Solution {
+    int cost[][];
+    int dp[][];
+    public int minDistance(int[] A, int k) {
+        Arrays.sort(A);
+        cost=new int[A.length][A.length];
+        for(int i=0;i<A.length;i++){
+            for(int j=i+1;j<A.length;j++){
+                cost[i][j]=cal(A,i,j);
+            }
+        }
+        
+        dp=new int[A.length][k+1];
+        for(int i=0;i<dp.length;i++)Arrays.fill(dp[i],-1);
+        int val= dfs(A,A.length-1,k);
+        return val;
+    }
+        
+    public int dfs(int A[],int index,int k){
+        if(index<0)return 0;
+        if(k==1){
+            return cost[0][index];
+        }
+        
+        if(dp[index][k]!=-1)return dp[index][k];
+        
+        int res=Integer.MAX_VALUE;
+        
+        for(int i=index;i>=0;i--){
+            res=Math.min(res,cost[i][index]+dfs(A,i-1,k-1));
+            if(i-1>=0)res=Math.min(res,cost[i-1][index]+dfs(A,i-1,k-1));
+        }
+        dp[index][k]=res;
+        return res;
+    }
+    
+    public int cal(int A[],int l,int r){
+        int size=r-l+1;
+        int res=0;
+        int index=0;
+        if(size%2==1){
+            index=(r-l)/2+l;
+            for(int i=l;i<=r;i++){
+                res+=Math.abs(A[i]-A[index]);
+            }
+        }else{
+            int median=(A[(r-l)/2+l+1]-A[(r-l)/2+l])/2+A[(r-l)/2+l];
+            for(int i=l;i<=r;i++){
+                res+=Math.abs(A[i]-median);
+            }
+        }
+        return res;
+    } 
+}
