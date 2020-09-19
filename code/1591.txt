@@ -1,0 +1,70 @@
+class Solution {
+    int MAX=1000;
+    int MIN=-1000;
+    Set<Integer>all=new HashSet<>();
+    Set<Integer>done=new HashSet<>();
+    public boolean isPrintable(int[][] grid) {
+        
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                all.add(grid[i][j]);
+            }
+        }
+        
+        while(done.size()!=all.size()){
+            int T=-1;
+            for(Integer e:all){
+                if(done.contains(e))continue;
+                T=e;
+                break;
+            }
+            int pos[]=new int[]{MAX,MAX,MIN,MIN};
+            
+            for(int i=0;i<grid.length;i++){
+                for(int j=0;j<grid[0].length;j++){
+                    if(grid[i][j]==T){
+                        pos[0]=Math.min(pos[0],i);pos[1]=Math.min(pos[1],j);
+                        pos[2]=Math.max(pos[2],i);pos[3]=Math.max(pos[3],j);
+                    }
+                }
+            }
+            //zoom smaller,all element inside must be print first
+            done.add(T);
+            if(!dfs(grid,pos,T)){
+                return false;
+            }
+
+        }
+        
+        return true;
+    }
+    
+    public boolean dfs(int grid[][],int pos[],int cur){
+        //print(grid);System.out.println(done);
+        for(int i=pos[0];i<=pos[2];i++){
+            for(int j=pos[1];j<=pos[3];j++){
+                if(grid[i][j]==cur){
+                    grid[i][j]=0;
+                    continue;
+                }
+                if(grid[i][j]==0)continue;
+                if(done.contains(grid[i][j]))return false;
+                
+                int newpos[]=new int[]{MAX,MAX,MIN,MIN};
+                for(int x=0;x<grid.length;x++){
+                    for(int y=0;y<grid[0].length;y++){
+                        if(grid[x][y]==grid[i][j]){
+                            newpos[0]=Math.min(newpos[0],x);newpos[1]=Math.min(newpos[1],y);
+                            newpos[2]=Math.max(newpos[2],x);newpos[3]=Math.max(newpos[3],y);
+                        }
+                    }
+                }
+                done.add(grid[i][j]);
+                if(!dfs(grid,newpos,grid[i][j]))return false;
+            }
+        }
+        
+        return true;
+    }
+    
+}
