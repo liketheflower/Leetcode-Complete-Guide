@@ -468,7 +468,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 21
+ 统计(1800+ 题量)： 22
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -567,7 +567,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
   484A. [ Bits	 (1700) (Bit+Greedy) ](./code/484A.txt) <br />
   778A. [ String Game	 (1700) (Binary Search) ](./code/778A.txt) <br />
   706D. [ Vasiliy's Multiset	 (1800) (Trie) ](./code/706D.txt) <br />
-  
+  721C. [ Journey	 (1800) (Graph) ](./code/721C.txt) <br />
  
   #  Algorithm Template 
   [Suffix Array (后缀数组 (nlog^2 n))](./template/suffixArray.txt) <br />
