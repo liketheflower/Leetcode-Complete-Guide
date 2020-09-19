@@ -1,0 +1,49 @@
+class Solution {
+    public int minDeletionSize(String[] A) {
+        int n=A[0].length();
+        int res=0;
+        
+        List<int[]>list=new ArrayList<>();
+        list.add(new int[]{0,A.length-1});
+        
+        for(int i=0;i<n;i++){
+            boolean good=true;
+            for(int pair[]:list){
+                good&=(issort(A,i,pair[0],pair[1]));
+            }
+            if(good){
+                List<int[]>newsplit=new ArrayList<>();
+                for(int pair[]:list){
+                    int table[][]=new int[26][2];
+                    for(int j=0;j<26;j++){
+                        table[j][0]=Integer.MAX_VALUE;
+                        table[j][1]=Integer.MIN_VALUE;
+                    }
+                    
+                    for(int j=pair[0];j<=pair[1];j++){
+                        table[A[j].charAt(i)-'a'][0]=Math.min(table[A[j].charAt(i)-'a'][0],j);
+                        table[A[j].charAt(i)-'a'][1]=Math.max(table[A[j].charAt(i)-'a'][1],j);
+                    }
+                    for(int j=0;j<26;j++){
+                        if(table[j][0]==Integer.MAX_VALUE)continue;
+                        newsplit.add(new int[]{table[j][0],table[j][1]});
+                    }
+                }
+                
+                list=newsplit;
+            }else{
+                res++;
+            }
+        }
+        return res;
+    }
+    
+    
+    public boolean issort(String A[],int index,int l,int r){
+        for(int i=l+1;i<=r;i++){
+            if(A[i].charAt(index)>=A[i-1].charAt(index))continue;
+            return false;
+        }
+        return true;
+    }
+}
