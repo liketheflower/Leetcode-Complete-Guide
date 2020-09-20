@@ -1,0 +1,50 @@
+import java.math.*; 
+class Solution {
+    long mod=1000000007;
+    long fact[];
+    int k;
+    long dp[][];
+    public int keyboard(int k, int n) {
+        this.k=k;
+        fact=new long[n+1];
+        fact[0]=1;
+        for(int i=1;i<fact.length;i++){
+            fact[i]=fact[i-1]*i;
+            fact[i]%=mod;
+        }
+        
+        dp=new long[26][n+1];
+        for(int i=0;i<dp.length;i++){
+            Arrays.fill(dp[i],-1);
+        }
+        return (int)(dfs(0,n));
+        
+    }
+    
+    public long dfs(int index,int n){
+        //System.out.println(index+"  "+n);
+        if(n==0)return 1;
+        if(index>=26)return 0;
+        if(dp[index][n]!=-1)return dp[index][n];
+        long res=0;
+        
+        int max=Math.min(n,k);
+        for(int i=0;i<=max;i++){
+            long com=C(n,i);
+            long total=com*dfs(index+1,n-i);
+            res+=total;res%=mod;
+        }
+        dp[index][n]=res;
+        return res;
+    }
+    
+    public long C(int i,int j){ // C(20,3)=20!/(17!*3!)
+        if(j==0)return 1;
+		long mod=1000000007;
+		long a=fact[i];
+		long b=((fact[i-j]%mod)*(fact[j]%mod))%mod;
+		BigInteger B= BigInteger.valueOf(b);
+		long binverse=B.modInverse(BigInteger.valueOf(mod)).longValue();
+		return ((a)*(binverse%mod))%mod;
+	}
+}
