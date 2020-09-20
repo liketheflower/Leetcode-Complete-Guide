@@ -1,0 +1,86 @@
+class Solution {
+    PriorityQueue<Integer>minheap=new PriorityQueue<>();
+    PriorityQueue<Integer>maxheap=new PriorityQueue<>((a,b)->{
+        return b-a;
+    });
+    int mod=1000000007;
+    long lsum=0,rsum=0;
+    public int[] numsGame(int[] A) {
+        int res[]=new int[A.length];
+        for(int i=0;i<A.length;i++){
+            A[i]-=i;
+        }
+        
+        for(int i=0;i<A.length;i++){
+            add(A[i]);
+            long median=getmedian();
+            long l=maxheap.size()*median;//all less than median
+            long r=minheap.size()*median;//all larger than median
+
+            long sum=Math.abs(l-lsum)+Math.abs(r-rsum);
+            sum%=mod;
+            res[i]=(int)(sum);
+        }
+
+        return res;
+    }
+
+    public void add(int num){
+        if(minheap.size()==0&&maxheap.size()==0){
+            minheap.add(num);
+            rsum+=num;
+            return;
+        }
+
+        if(minheap.size()==0){
+            if(num<maxheap.peek()){
+                maxheap.add(num);
+                lsum+=num;
+            }else{
+                minheap.add(num);
+                rsum+=num;
+            }
+        }
+        else if(maxheap.size()==0){
+            if(num>=minheap.peek()){
+                minheap.add(num);rsum+=num;
+            }else{
+                maxheap.add(num); lsum+=num;
+            }
+        }else{
+            if(num>=minheap.peek()){
+                minheap.add(num);rsum+=num;
+            }else{
+                maxheap.add(num);lsum+=num;
+            }
+        }
+
+
+
+        
+        if(minheap.size()>maxheap.size()){
+             while(minheap.size()-maxheap.size()>1){
+                int peek=minheap.peek();
+                rsum-=peek;lsum+=peek;
+                maxheap.add(minheap.poll());
+            }
+        }else{
+            while(maxheap.size()-minheap.size()>1){
+                int peek=maxheap.peek();
+                rsum+=peek;lsum-=peek;
+                minheap.add(maxheap.poll());
+            }
+        }
+
+    }
+
+    public int getmedian(){
+        int size=minheap.size()+maxheap.size();
+        if(size%2==1){
+            if(maxheap.size()>minheap.size())return maxheap.peek();
+            else return minheap.peek();
+        }else{
+            return maxheap.peek()+(minheap.peek()-maxheap.peek())/2;
+        }
+    }
+}
