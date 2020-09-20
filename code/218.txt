@@ -1,0 +1,48 @@
+class Solution {
+    public List<List<Integer>> getSkyline(int[][] A) {
+        
+        List<List<Integer>>res=new ArrayList<>();
+        List<int[]>list=new ArrayList<>();
+        for(int p[]:A){
+            list.add(new int[]{p[0],p[2]});
+            list.add(new int[]{p[1],-p[2]});
+        }
+        Collections.sort(list,(a1,a2)->{
+            if(a1[0]==a2[0])return a2[1]-a1[1];
+            return a1[0]-a2[0];
+        });
+        PriorityQueue<Integer>pq=new PriorityQueue<>((a,b)->{
+            return b-a;
+        });
+        pq.add(0);
+        for(int pair[]:list){
+            int x=pair[0],y=pair[1];
+            if(y>0){
+                if(y>pq.peek()){
+                    List<Integer>arr=new ArrayList<>();
+                    arr.add(x);arr.add(y);
+                    res.add(arr); 
+                }
+                pq.add(y);
+                
+            }else{
+                int top=pq.peek();
+                if(-y==top){
+                    pq.remove(-y);
+                    if(-y!=pq.peek()){
+                        List<Integer>arr=new ArrayList<>();
+                        arr.add(x);arr.add(pq.peek());
+                        res.add(arr);
+                    }
+
+                }else{
+                    pq.remove(-y);
+                }
+
+            }
+            
+        }
+        
+        return res;
+    }
+}
