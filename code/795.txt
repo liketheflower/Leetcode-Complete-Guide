@@ -1,0 +1,26 @@
+class Solution {
+    public int numSubarrayBoundedMax(int[] A, int L, int R) {
+        int res=0;
+        int max=Integer.MIN_VALUE;
+        int left=0;
+        int nearest=-1;
+        for(int i=0;i<A.length;i++){
+            max=Math.max(A[i],max);
+            if(max>R){
+                nearest=-1;
+                left=i+1;
+                max=Integer.MIN_VALUE;
+                continue;
+            }
+
+            if(A[i]>=L&&A[i]<=R){
+                nearest=i;
+            }
+            
+            if(nearest!=-1){
+                res+=(nearest-left+1);
+            }
+        }
+        return res;
+    }
+}
