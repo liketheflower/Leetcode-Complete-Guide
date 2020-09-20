@@ -1,0 +1,30 @@
+class Solution {
+    public List<Integer> fallingSquares(int[][] A) {
+        long max=0;
+        List<Integer>res=new ArrayList<>();
+       
+        List<long[]>list=new ArrayList<>();
+        list.add(new long[]{0,Integer.MAX_VALUE,0});
+        
+        //can not sort
+        for(int i=0;i<A.length;i++){
+            int pair[]=A[i];
+            long len=pair[1];
+            long l=pair[0],r=l+len-1;
+            long m=0;
+            
+            for(long pos[]:list){
+                if(pos[1]<l)continue;
+                if(pos[0]>r)continue;
+                m=Math.max(m,pos[2]+len);
+            }
+            
+            list.add(new long[]{l,r,m});
+            max=Math.max(max,m);
+            res.add((int)(max));
+        }
+        
+
+        return res;
+    }
+}
