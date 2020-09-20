@@ -1,0 +1,71 @@
+class Solution {
+    int n;int k;
+    Set<String>set=new HashSet<>();
+    public int paintingPlan(int n, int k) {
+        this.n=n;this.k=k;
+        int res=0;
+        int grid[][]=new int[n][n];
+        
+        int all=(1<<n)-1;
+        
+        for(int i=0;i<=all;i++){
+            for(int j=0;j<=all;j++){
+                if(check(i,j))res++;
+            }
+        }
+        
+        return res;
+    }
+    
+    public boolean check(int r,int c){
+        int grid[][]=new int[n][n];
+        int sum=0;
+        //System.out.println(Integer.toBinaryString(r)+"  "+Integer.toBinaryString(c));
+        for(int i=0;i<7;i++){
+            int b=r&1;r>>=1;
+            if(b==1){
+                fill1(grid,i);
+            }
+        }
+        
+        for(int i=0;i<7;i++){
+            int b=c&1;c>>=1;
+            if(b==1){
+                fill2(grid,i);
+            }
+        }
+        
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                sum+=grid[i][j];
+            }
+        }
+        String code=encode(grid);
+        if(set.contains(code))return false;
+        set.add(code);
+        return sum==k;
+    }
+    
+    public void fill1(int grid[][],int r){
+        for(int i=0;i<grid[0].length;i++){
+            grid[r][i]=1;
+        }
+    }
+    
+    public void fill2(int grid[][],int c){
+        for(int i=0;i<grid.length;i++){
+            grid[i][c]=1;
+        }
+    }
+    
+    public String encode(int grid[][]){
+        StringBuilder str=new StringBuilder();
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                str.append(grid[i][j]+",");
+            }
+        }
+        return str.toString();
+    }
+    
+}
