@@ -587,6 +587,9 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
   778A. [ String Game	 (1700) (Binary Search) ](./code/778A.txt) <br />
   706D. [ Vasiliy's Multiset	 (1800) (Trie) ](./code/706D.txt) <br />
   721C. [ Journey	 (1800) (Graph) ](./code/721C.txt) <br />
+  
+   ### NYU Progteam Friday Night 2/28/2019 (Greedy)
+   https://vjudge.net/contest/359373<br/><br/>
  
   #  Algorithm Template 
   [Suffix Array (后缀数组 (nlog^2 n))](./template/suffixArray.txt) <br />
