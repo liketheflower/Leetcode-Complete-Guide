@@ -589,7 +589,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
   721C. [ Journey	 (1800) (Graph) ](./code/721C.txt) <br />
   
    ### NYU Progteam Friday Night 2/28/2019 (Greedy)
-   https://vjudge.net/contest/359373<br/><br/>
+   https://vjudge.net/contest/359373<br/>
    
    1148A. [ Another One Bites The Dust (800) ](./code/1148A.txt) <br />
      
