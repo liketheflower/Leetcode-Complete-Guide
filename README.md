@@ -590,6 +590,9 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
   
    ### NYU Progteam Friday Night 2/28/2019 (Greedy)
    https://vjudge.net/contest/359373<br/><br/>
+   
+   1148A. [ Another One Bites The Dust (800) ](./code/1148A.txt) <br />
+     
  
   #  Algorithm Template 
   [Suffix Array (后缀数组 (nlog^2 n))](./template/suffixArray.txt) <br />
