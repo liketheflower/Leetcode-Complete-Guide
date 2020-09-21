@@ -592,7 +592,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
    https://vjudge.net/contest/359373<br/>
    
    1148A. [ Another One Bites The Dust (800) ](./code/1148A.txt) <br />
-     
+   1158B. [ Game with Telephone Numbers (1200) (Greedy+Game) ](./code/1158B.txt) <br />  
  
   #  Algorithm Template 
   [Suffix Array (后缀数组 (nlog^2 n))](./template/suffixArray.txt) <br />
