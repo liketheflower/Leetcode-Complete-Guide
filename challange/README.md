@@ -16,6 +16,6 @@
 |9/19/2020|[838. Push Dominoes](https://leetcode.com/problems/push-dominoes/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/838.txt)|BFS|
 |9/20/2020|[955. Delete Columns to Make Sorted II](https://leetcode.com/problems/delete-columns-to-make-sorted-ii/)|[M+](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/955.txt)|Sort|
 |9/21/2020|[1589. Maximum Sum Obtained of Any Permutation](https://leetcode.com/problems/maximum-sum-obtained-of-any-permutation/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1589.txt)|Greedy+Array|
-|9/22/2020|[57. Insert Interval](https://leetcode.com/problems/insert-interval/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/57.txt)|Stack|
+|9/22/2020|[57. Insert Interval](https://leetcode.com/problems/insert-interval/)|[M-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/57.txt)|Stack|
 |||||
 
