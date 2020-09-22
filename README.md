@@ -72,6 +72,7 @@ CF 分目测评估：
 #57. [Insert Interval(M-) 1400](./code/57.txt) <br />
 #84. [Largest Rectangle in Histogram (H-) 1700](./code/84.txt) <br />
 #94. [Binary Tree Inorder Traversal (M-) 1400](./code/94.txt) <br />
+#150. [Evaluate Reverse Polish Notation (M) 1500](./code/150.txt) <br />
 #316. [Remove Duplicate Letters (M+) 1600](./code/316.txt) <br />
 #682. [Baseball Game (E+) 1100](./code/682.txt) <br />
 #735. [Asteroid Collision (M-) 1400](./code/735.txt) <br />
