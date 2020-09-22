@@ -594,7 +594,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
    
    1148A. [ Another One Bites The Dust (800) ](./code/1148A.txt) <br />
    1158B. [ Game with Telephone Numbers (1200) (Greedy+Game) ](./code/1158B.txt) <br />  
-   383A. [ Milking cows (1600)  ](./code/383A.txt) <br />
+   383A. [ Milking cows (1600)](./code/383A.txt) <br />
  
   #  Algorithm Template 
   [Suffix Array (后缀数组 (nlog^2 n))](./template/suffixArray.txt) <br />
