@@ -21,6 +21,7 @@ CF 分目测评估：
 #01. [判定字符是否唯一 (E) 800](./interview/01.txt) <br />
 #02. [ 判定是否互为字符重排 (E) 800](./interview/02.txt) <br />
 #03. [ URL化 (E) 800](./interview/03.txt) <br />
+#04. [ 回文排列 (E) 900](./interview/04.txt) <br />
 
 ---
 ### Array
