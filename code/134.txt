@@ -1,0 +1,31 @@
+class Solution {
+    public int canCompleteCircuit(int[] gas, int[] cost) {
+        int dis[]=new int[gas.length];
+        for(int i=0;i<gas.length;i++){
+            dis[i]=gas[i]-cost[i];
+        }
+        List<Integer>list=new ArrayList<>();
+        for(int i=0;i<2;i++){
+            for(int j:dis){
+                list.add(j);
+            }
+        }
+        
+        int sum=0;
+        int size=0;
+        for(int i=0;i<list.size();i++){
+            sum+=list.get(i);
+            if(sum<0){
+                sum=0;size=0;
+                continue;
+            }
+            size++;
+            if(size==gas.length){
+                return i-gas.length+1;
+            }
+        }
+        
+        
+        return -1;
+    }
+}
