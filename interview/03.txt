@@ -1,0 +1,13 @@
+class Solution {
+    public String replaceSpaces(String S, int n) {
+        StringBuilder str=new StringBuilder();
+        for(int i=0;i<n;i++){
+            if(S.charAt(i)==' '){
+                str.append("%20");
+            }else{
+                str.append(S.charAt(i)+"");
+            }
+        }
+        return str.toString();
+    }
+}
