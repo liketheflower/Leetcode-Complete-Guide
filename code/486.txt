@@ -1,0 +1,35 @@
+class Solution {
+    int dp[][][];
+    public boolean PredictTheWinner(int[] A) {
+        dp=new int[A.length][A.length][2];
+        for(int i=0;i<dp.length;i++){
+            for(int j=0;j<dp[0].length;j++){
+                Arrays.fill(dp[i][j],-1);
+            }
+        }
+        int sum=0;
+        for(int i:A)sum+=i;
+        int max=dfs(A,0,A.length-1,0);
+        if(max*2>=sum){
+            return true;
+        }
+        return false;
+    }
+    
+    public int dfs(int A[],int l,int r,int turn){
+        if(l>r)return 0;
+        if(dp[l][r][turn]!=-1)return dp[l][r][turn];
+       
+        int next=1;
+        if(turn==1)next=0;
+        
+        int res=0;
+        if(turn==0){
+            res=Math.max(A[l]+dfs(A,l+1,r,next),A[r]+dfs(A,l,r-1,next));
+        }else{
+            res=Math.min(dfs(A,l+1,r,next),dfs(A,l,r-1,next));
+        }
+        dp[l][r][turn]=res;
+        return res;
+    }
+}
