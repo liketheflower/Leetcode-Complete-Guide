@@ -275,6 +275,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #395. [Longest Substring with At Least K Repeating Characters (M+) 1700](./code/395.txt) <br />
 #713. [Subarray Product Less Than K (M) 1500](./code/713.txt) <br />
 #992. [Subarrays with K Different Integers (H) 1800](./code/992.txt) <br />
+#1052. [Grumpy Bookstore Owner (M) 1500](./code/1052.txt) <br />
 #1208. [Get Equal Substrings Within Budget (M-) 1400](./code/1208.txt) <br />
 
 ---
