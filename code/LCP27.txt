@@ -50,3 +50,107 @@ class BlackBox {
  * int param_1 = obj.open(index,direction);
  * obj.close(index);
  */
+ 
+ 
+ treemap 找循环解法
+ 
+ 
+ 
+ class BlackBox {
+    int cnt;
+    int A[];int B[];
+    int group=0;
+    Map<String,Integer>map=new HashMap<>();
+    Map<String,Integer>pos=new HashMap<>();
+    TreeMap<Integer,Integer>treemaps[];
+    public BlackBox(int n, int m) {
+        cnt=2*(m+n);
+        
+        A=new int[cnt];//positive,negtive
+        B=new int[cnt];//positive,negtive
+
+        for(int i=0;i<A.length;i++){
+            A[i]=(cnt-i)%cnt;//observation:because sum is total
+            B[i]= (m*2-i+cnt) % cnt;
+        }
+
+        for(int i=0;i<cnt;i++){
+            if(!map.containsKey(i+",1")){
+                circle(i,1);
+            }
+            if(!map.containsKey(i+",-1")){
+                circle(i,-1);
+            }
+        }
+        treemaps=new TreeMap[group+1];
+        for(int i=0;i<treemaps.length;i++){
+            treemaps[i]=new TreeMap<>();
+        }
+    }
+    
+    public void circle(int index,int dir){
+        Set<String>set=new HashSet<>();
+        int start=index;
+        int i=0;
+        while(true){
+            String state=index+","+dir;
+            if(set.contains(state))break;
+            
+            map.put(state,group);
+            pos.put(state,i++);
+            set.add(state);
+            if(dir==1){
+                index=A[index];
+            }else{
+                index=B[index];
+            }
+            dir*=-1;
+        }
+        group++;
+    }
+
+
+    public int open(int index, int direction) {
+        String state1=index+","+direction;
+        String state2=index+","+-direction;
+
+        int id1=map.get(state1);
+        int val1=pos.get(state1);
+
+        int id2=map.get(state2);
+        int val2=pos.get(state2);
+
+        treemaps[id1].put(val1,index);
+        treemaps[id2].put(val2,index);
+
+
+        Integer ceil=treemaps[id1].ceilingKey(val1+1);
+        if(ceil!=null){
+            return treemaps[id1].get(ceil);
+        }
+
+        ceil=treemaps[id1].ceilingKey(-1);
+        return treemaps[id1].get(ceil);
+    }
+    
+    public void close(int index) {
+        String a=index+",-1";
+        String b=index+",1";
+        
+        int id1=map.get(a);
+        int id2=map.get(b);
+
+        int v1=pos.get(a);
+        int v2=pos.get(b);
+
+        if(treemaps[id1].containsKey(v1))treemaps[id1].remove(v1);
+        if(treemaps[id2].containsKey(v2))treemaps[id2].remove(v2);
+    }
+}
+
+/**
+ * Your BlackBox object will be instantiated and called as such:
+ * BlackBox obj = new BlackBox(n, m);
+ * int param_1 = obj.open(index,direction);
+ * obj.close(index);
+ */
