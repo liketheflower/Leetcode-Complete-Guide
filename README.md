@@ -587,6 +587,11 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  D. [Three Sequences (2200)](./code/770D.txt) <br />
  
  ### Codeforces Round #672 (Div. 2)
+ A. [ Cubes Sorting  ](./contest/672A.txt) <br />
+ B. [Rock and Lever](./contest/672B.txt) <br />
+ C1. [Pokémon Army (easy version) ](./contest/672C1.txt) <br />
+ 
+ 
  
   ### Educational Codeforces Round 83 (Div. 2)
  1312B. [ Bogo Sort	(DIV 2) (1000) ](./code/1312B.txt) <br />
