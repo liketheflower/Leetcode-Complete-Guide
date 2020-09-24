@@ -18,5 +18,6 @@
 |9/21/2020|[1589. Maximum Sum Obtained of Any Permutation](https://leetcode.com/problems/maximum-sum-obtained-of-any-permutation/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1589.txt)|Greedy+Array|
 |9/22/2020|[57. Insert Interval](https://leetcode.com/problems/insert-interval/)|[M-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/57.txt)|Stack|
 |9/23/2020|[486. Predict the Winner](https://leetcode.com/problems/predict-the-winner/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/486.txt)|DP|
+|9/24/2020|[146. LRU Cache](https://leetcode.com/problems/lru-cache/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/146.txt)|DP|
 |||||
 
