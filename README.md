@@ -1,4 +1,4 @@
- # [想参加每日打卡挑战？](https://github.com/JunBinLiang/Leetcode-Complete-Guide/tree/master/challange) <br /><br /><br />
+ # [想参加每日打卡挑战？ (Leetcode Daily Challange)](https://github.com/JunBinLiang/Leetcode-Complete-Guide/tree/master/challange) <br /><br /><br />
  
  <img src="images/LeetCode_logo.png" width=30% align=right />  
  
