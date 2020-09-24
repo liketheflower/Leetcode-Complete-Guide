@@ -586,6 +586,8 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  C. [Link Cut Centroids (1700)](./code/770C.txt) <br />
  D. [Three Sequences (2200)](./code/770D.txt) <br />
  
+ ### Codeforces Round #672 (Div. 2)
+ 
   ### Educational Codeforces Round 83 (Div. 2)
  1312B. [ Bogo Sort	(DIV 2) (1000) ](./code/1312B.txt) <br />
  1312C. [ Adding Power	(DIV 2) (1400) number theory](./code/1312C.txt) <br />
