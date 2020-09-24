@@ -1,0 +1,52 @@
+暴力：
+
+class BlackBox {
+    int cnt;
+    boolean state[];
+    int open=0;
+    int A[];
+    int B[];
+    public BlackBox(int n, int m) {
+        cnt=2*(m+n);
+        state=new boolean[cnt];
+        A=new int[cnt];//positive,negtive
+        B=new int[cnt];//positive,negtive
+
+        for(int i=0;i<A.length;i++){
+            A[i]=(cnt-i)%cnt;//observation:because sum is total
+            B[i]= (m*2-i+cnt) % cnt;
+        }
+
+    }
+    
+    public int open(int index, int direction) {
+        if(!state[index]){
+            state[index]=true;
+            open++;
+        }
+        if(open==1)return index;
+
+        do{
+            if(direction==1){
+                index=A[index];
+            }else{
+                index=B[index];
+            }
+            if(state[index])break;
+            direction*=-1;
+        }while(!state[index]);
+        return index;
+    }
+    
+    public void close(int index) {
+        state[index]=false;
+        open--;
+    }
+}
+
+/**
+ * Your BlackBox object will be instantiated and called as such:
+ * BlackBox obj = new BlackBox(n, m);
+ * int param_1 = obj.open(index,direction);
+ * obj.close(index);
+ */
