@@ -1,0 +1,65 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    final int MAX=999999;
+    public int navigation(TreeNode root) {
+        int A[]=dfs(root);
+        int res=min(A[2],A[3]);
+        return res;
+    }
+    // Need input:     provide, no provide(无灯)  (bad)
+    // No input need:  provide, no provide(?)  (good)  肯定有灯，但不一定能提供辐射
+
+    public int[] dfs(TreeNode root){
+        if(root==null){
+            return null;
+        }
+        if(root.left==null&&root.right==null){
+            return new int[]{MAX,0,1,MAX};
+        }
+
+        int res[]=new int[]{MAX,MAX,MAX,MAX};
+        int l[]=dfs(root.left);
+        int r[]=dfs(root.right);
+
+        if(root.left!=null&&root.right!=null){
+            res[1]=MAX;//全空是的答案不成立
+            ////////////////////////////////////
+            res[0]=min(l[2]+r[1],r[2]+l[1]);//坏，提供灯
+            res[0]=min(l[3]+r[1],r[3]+l[1]);//坏，提供灯
+            res[0]=min(res[0],min(l[0]+r[1],r[0]+l[1]));//坏，提供灯
+            res[2]=min(res[2],min(l[0]+r[0],min(l[0]+r[2],l[0]+r[3])));//好，提供灯
+            res[2]=min(res[2],min(r[0]+l[0],min(r[0]+l[2],r[0]+l[3])));//好，提供灯
+            res[2]=min(res[2],min(l[2]+r[2],l[2]+r[3]));//好，提供灯
+            res[2]=min(res[2],min(l[2]+r[2],l[3]+r[2]));//好，提供灯
+            res[2]=min(res[2],l[3]+r[3]);//好，提供灯
+            res[3]=min(l[2]+r[1],r[2]+l[1]);//好，不提供灯       
+        }
+        else if(root.left!=null){
+            //only 4 possibility
+            res[0]=min(l[0],l[3]);//坏，提供灯
+            res[1]=l[1];//坏，不提供灯，全空
+            res[2]=min(res[2],min(l[2],1+l[3]));//好，提供灯
+            res[3]=min(res[3],min(1+l[0],1+l[1]));//好，不提供灯
+        }
+        else if(root.right!=null){
+            res[0]=min(r[0],r[3]);//坏，提供灯
+            res[1]=r[1];//坏，不提供灯，全空
+            res[2]=min(res[2],min(r[2],1+r[3]));//好，提供灯
+            res[3]=min(res[3],min(1+r[0],1+r[1]));//好，不提供灯
+        }
+        return res;
+    }
+
+    public int min(int a,int b){
+        return Math.min(a,b);
+    }
+
+}
