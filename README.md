@@ -367,7 +367,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #LCP23. [魔术排列   (M+) 1600](./code/LCP23.txt) <br />
 #LCP24. [数字游戏   (H+) 2000](./code/LCP24.txt) <br />
 #LCP25. [古董键盘   (H) 1900](./code/LCP25.txt) <br />
-
+#LCP26. [导航装置   (H+) 2400](./code/LCP26.txt) <br />
 
 
 ---
