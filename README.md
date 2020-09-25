@@ -590,6 +590,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
  A. [ Cubes Sorting (Sort)  ](./contest/672A.txt) <br />
  B. [Rock and Lever (Bit)](./contest/672B.txt) <br />
  C1. [Pokémon Army (easy version) (DP)](./contest/672C1.txt) <br />
+ C2. [Pokémon Army (Hard version) (Greedy+Math)](./contest/672C2.txt) <br />
  D. [Rescue Nibel! (Combination)](./contest/672D.txt) <br />
  
  
