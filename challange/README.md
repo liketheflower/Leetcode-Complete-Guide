@@ -21,5 +21,6 @@
 |9/24/2020|[146. LRU Cache](https://leetcode.com/problems/lru-cache/)|[M+](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/146.txt)|Data Structure|
 |9/25/2020|[630.Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)|[H-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/630.txt)|Greedy|
 |9/26/2020|[1202. Smallest String With Swaps](https://leetcode.com/problems/smallest-string-with-swaps/)|[H-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1202.txt)|Union Find|
+|9/27/2020|[430. Flatten a Multilevel Doubly Linked Lis](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/430.txt)|LinkedList|
 |||||
 
