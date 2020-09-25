@@ -1,0 +1,32 @@
+class Solution {
+    public String decodeAtIndex(String s, int k) {
+        String res="";
+        long cnt=0;
+        
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(Character.isDigit(c)){
+                cnt*=(c-'0');
+            }else{
+                cnt++;
+            }
+        }
+        k%=cnt;
+        for(int i=s.length()-1;i>=0;i--){
+            char c=s.charAt(i);
+            if(k==0&&!Character.isDigit(c)){
+                res=c+"";
+                break;
+            }
+            if(Character.isDigit(c)){
+                cnt/=(c-'0');
+            }else{
+                cnt--;
+            }
+            k%=cnt;
+        }
+        return res;
+    }
+    
+
+}
