@@ -1,0 +1,55 @@
+class Solution {
+    public String smallestStringWithSwaps(String s, List<List<Integer>> pairs) {
+        StringBuilder str=new StringBuilder();
+        
+        int nums[]=new int[s.length()];
+        for(int i=0;i<nums.length;i++){
+            nums[i]=i;
+        }
+        
+        for(List<Integer>pair:pairs){
+            int v1=pair.get(0);
+            int v2=pair.get(1);
+            
+            int r1=find(nums,v1);
+            int r2=find(nums,v2);
+            if(r1!=r2){
+                nums[r1]=r2;
+            }
+        }
+        
+        Map<Integer,Integer>index=new HashMap<>();
+        Map<Integer,List<Character>>map=new HashMap<>();
+        for(int i=0;i<s.length();i++){
+            int r=find(nums,i);
+            if(!map.containsKey(r)){
+                index.put(r,0);
+                map.put(r,new ArrayList<>());
+            }
+            map.get(r).add(s.charAt(i));
+        }
+        
+        for(Integer root:map.keySet()){
+            List<Character>list=map.get(root);
+            Collections.sort(list);
+        }
+        
+        for(int i=0;i<s.length();i++){
+            int r=find(nums,i);
+            int pos=index.get(r);
+            index.put(r,pos+1);
+            str.append(""+map.get(r).get(pos));
+        }
+        
+        
+        return str.toString();
+        
+    }
+    
+     public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+}
