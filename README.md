@@ -95,6 +95,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #2. [Add Two Numbers (M-) 1300](./code/2.txt) <br />
 #146. [LRU Cache (M+) 1600](./code/146.txt) <br />
 #328. [Odd Even Linked List (M-) 1300](./code/328.txt) <br />
+#430. [Flatten a Multilevel Doubly Linked List (M) 1500](./code/430.txt) <br />
 #876. [Middle of the Linked List (E) 900](./code/876.txt) <br />
 #950. [Reveal Cards In Increasing Order (M) 1500](./code/950.txt) <br />
 
