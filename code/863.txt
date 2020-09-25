@@ -1,0 +1,60 @@
+思路：
+1. dfs 建立树图
+2. bfs 找level k 的
+
+代码：
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    Map<Integer,List<Integer>>map=new HashMap<>();
+    public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
+        dfs(-1,root);
+        List<Integer>res=new ArrayList<>();
+        Set<Integer>set=new HashSet<>();
+        set.add(target.val);
+        Queue<Integer>q=new LinkedList<>();
+        q.add(target.val);
+        int level=0;
+        while(q.size()!=0){
+            int size=q.size();
+            for(int i=0;i<size;i++){
+                int parent=q.poll();
+                if(level==k){
+                    res.add(parent);
+                }
+                List<Integer>childs=map.get(parent);
+                if(childs==null)continue;
+                for(int c:childs){
+                   if(!set.contains(c)){
+                       set.add(c);
+                       q.add(c);
+                   } 
+                }
+            }
+            if(level==k)break;
+            level++;
+        }
+        return res;
+    }
+    
+    public void dfs(int parent,TreeNode root){
+        if(root==null)return;
+        if(parent!=-1){
+            if(!map.containsKey(root.val))map.put(root.val,new ArrayList<>());
+            if(!map.containsKey(parent))map.put(parent,new ArrayList<>());
+            map.get(parent).add(root.val);
+            map.get(root.val).add(parent);
+        }
+        
+        dfs(root.val,root.left);
+        dfs(root.val,root.right);
+    }
+}
