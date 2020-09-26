@@ -643,6 +643,9 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   1392D. [Omkar and Bed Wars	(Global) (1700) DP ](./code/1392D.txt) <br />
   1392F. [Omkar and Landslide	(Global) (2400) Math+observation ](./code/1392F.txt) <br />
   
+  
+   #  参考
+   1. 最大权闭合子图 （https://www.cnblogs.com/TreeDream/p/5942354.html#_labelTop）  <br/>
 
 
   
