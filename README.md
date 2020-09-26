@@ -142,6 +142,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 2. Size of a minimum node cover always equals the size of a maximum matching. <br/>
 3. The complement of a maximum independent set is a minimum vertex cover(MAX Flow).<br/>
 Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/maximum-independent-set-in-bipartite-graphs.html<br/>
+最大流: https://blog.csdn.net/chinacoy/article/details/45040897 <br/>
 
 #1349. [Maximum Students Taking Exam (H+) 2000](./code/1349.txt) <br />
 #LCP04. [覆盖 (H+) 2000](./code/LCP04.txt) <br />
