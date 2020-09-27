@@ -1,0 +1,28 @@
+class Solution {
+    
+    public int maximumRequests(int n, int[][] A) {
+        int res=0;
+        int total=(1<<(A.length))-1;
+        for(int i=1;i<=total;i++){
+            int cur=i;
+            int net[]=new int[n];
+            for(int j=0;j<=A.length;j++){
+                int b=cur&1;cur>>=1;
+                if(b==1){
+                    net[A[j][0]]--;
+                    net[A[j][1]]++;
+                }
+            }
+            boolean flag=true;
+            for(int x:net){
+                if(x!=0)flag=false;
+            }
+            if(flag){
+                res=Math.max(res,Integer.bitCount(i));
+            }
+        }
+        return res;
+    }
+    
+    
+}
