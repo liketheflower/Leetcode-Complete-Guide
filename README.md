@@ -347,6 +347,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #409. [Longest Palindrom (E) 900](./code/409.txt) <br />
 #594. [Longest Harmonious Subsequence (E) 1000](./code/594.txt) <br />
 #804. [Unique Morse Code Words (E) 800](./code/804.txt) <br />
+#893. [ Groups of Special-Equivalent Strings (E) 1000](./code/893.txt) <br />
 #954. [Array of Doubled Pairs(M-) 1400](./code/954.txt) <br />
 #1267. [Count Servers that Communicate (M-) 1300](./code/1267.txt) <br />
 #1282. [Group the People Given the Group Size They Belong To (M-) 1300](./code/1282.txt) <br />
