@@ -519,7 +519,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 23
+ 统计(1800+ 题量)： 25
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -601,11 +601,11 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  D. [Three Sequences (2200)](./code/770D.txt) <br />
  
  ### Codeforces Round #672 (Div. 2)
- A. [ Cubes Sorting (Sort)  ](./contest/672A.txt) <br />
- B. [Rock and Lever (Bit)](./contest/672B.txt) <br />
- C1. [Pokémon Army (easy version) (DP)](./contest/672C1.txt) <br />
- C2. [Pokémon Army (Hard version) (Greedy+Math)](./contest/672C2.txt) <br />
- D. [Rescue Nibel! (Combination)](./contest/672D.txt) <br />
+ A. [ Cubes Sorting (Sort) (900) ](./contest/672A.txt) <br />
+ B. [Rock and Lever (Bit) (1200)_](./contest/672B.txt) <br />
+ C1. [Pokémon Army (easy version) (DP) (1300)](./contest/672C1.txt) <br />
+ C2. [Pokémon Army (Hard version) (Greedy+Math) (2100)](./contest/672C2.txt) <br />
+ D. [Rescue Nibel! (Combination) (1800)](./contest/672D.txt) <br />
  
  
   ### Educational Codeforces Round 83 (Div. 2)
