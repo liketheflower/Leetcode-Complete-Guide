@@ -70,6 +70,7 @@ CF 分目测评估：
 #1255. [Maximum Score Words Formed by Letters (H-) 1700](./code/1255.txt) <br />
 #1377. [Frog Position After T Seconds (M+) 1600](./code/1377.txt) <br />
 #1559. [Detect Cycles in 2D Grid (H-) 1700](./code/1559.txt) <br />
+#1601. [Maximum Number of Achievable Transfer Requests (H-) 1700](./1601.txt) <br />
 #LCP7. [传递信息 (M) 1400](./code/LCP7.txt) <br />
 
 ---
