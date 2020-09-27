@@ -87,6 +87,7 @@ CF 分目测评估：
 #1047. [Remove All Adjacent Duplicates In String (E) 1000](./code/1047.txt) <br />
 #1063. [Number of Valid Subarrays (H-) 1700](./code/1063.txt) <br />
 #1081. [Smallest Subsequence of Distinct Characters (M+) 1600](./code/1081.txt) <br />
+#1190. [Reverse Substrings Between Each Pair of Parentheses (M-) 1400](./code/1190.txt) <br />
 #1209. [Remove All Adjacent Duplicates in String II (M-) 1400](./code/1209.txt) <br />
 #1544. [Make The String Great (E+) 1100](./code/1544.txt) <br />
 
