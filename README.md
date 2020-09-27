@@ -611,6 +611,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   ### Codeforces Round #673 (Div. 2)
  A. [ Copy-paste (900) ](./contest/673A.txt) <br />
  B. [ Two Arrays (1100) ](./contest/673B.txt) <br />
+ C. [ K-Amazing Number (1500) ](./contest/673C.txt) <br />
 
  
   ### Educational Codeforces Round 83 (Div. 2)
