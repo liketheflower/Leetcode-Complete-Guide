@@ -1,0 +1,34 @@
+class Solution {
+    boolean res=false;
+    public boolean isAdditiveNumber(String num) {
+        dfs(num,0,new ArrayList<>());
+        return res;
+    }
+    
+    public void dfs(String s,int index,List<Double>cur){
+        if(index>=s.length()){
+            if(cur.size()<3)return;
+            res=true;
+            return;
+        }
+        
+        for(int i=index;i<s.length();i++){
+            String sub=s.substring(index,i+1);
+            if(s.charAt(index)=='0'&&sub.length()>1)return;
+            double num=Double.parseDouble(sub);
+            if(cur.size()<2){
+                cur.add(num);
+                dfs(s,i+1,cur);
+                cur.remove(cur.size()-1);
+            }else{
+                double a=cur.get(cur.size()-2);
+                double b=cur.get(cur.size()-1);
+                if(a+b!=num)continue;
+                if(num>a+b)break;
+                cur.add(num);
+                dfs(s,i+1,cur);
+                cur.remove(cur.size()-1);
+            }
+        }
+    }
+}
