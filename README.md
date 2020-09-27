@@ -515,7 +515,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 22
+ 统计(1800+ 题量)： 23
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -644,7 +644,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   1062D. [Fun with Integers	(DIV 2) (1800) Graph ](./code/1062D.txt) <br />
   1392D. [Omkar and Bed Wars	(Global) (1700) DP ](./code/1392D.txt) <br />
   1392F. [Omkar and Landslide	(Global) (2400) Math+observation ](./code/1392F.txt) <br />
-  311E. [Biologist	(MIN CUT) (2300) Math+observation ](./code/311E.txt) <br />
+  311E. [Biologist	(MIN CUT) (2300) ](./code/311E.txt) <br />
   
   
    #  参考
