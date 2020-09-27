@@ -64,13 +64,13 @@ CF 分目测评估：
 #838. [ Push Dominoes (M) 1500](./code/838.txt) <br />
 #967. [Numbers With Same Consecutive Differences (M) 1500](./code/967.txt) <br />
 #979. [Distribute Coins in Binary Tree (M+) 1600](./code/979.txt) <br />
-#1020. [Number of Enclaves (M-) 1400](./1020.txt) <br />
-#1239. [Maximum Length of a Concatenated String with Unique Characters (M) 1500](./1239.txt) <br />
+#1020. [Number of Enclaves (M-) 1400](./code/1020.txt) <br />
+#1239. [Maximum Length of a Concatenated String with Unique Characters (M) 1500](./code/1239.txt) <br />
 #1240. [Tiling a Rectangle with the Fewest Squares (H+) 2000](./1240.txt) <br />
 #1255. [Maximum Score Words Formed by Letters (H-) 1700](./code/1255.txt) <br />
 #1377. [Frog Position After T Seconds (M+) 1600](./code/1377.txt) <br />
 #1559. [Detect Cycles in 2D Grid (H-) 1700](./code/1559.txt) <br />
-#1601. [Maximum Number of Achievable Transfer Requests (H-) 1700](./1601.txt) <br />
+#1601. [Maximum Number of Achievable Transfer Requests (H-) 1700](./code/1601.txt) <br />
 #LCP7. [传递信息 (M) 1400](./code/LCP7.txt) <br />
 
 ---
