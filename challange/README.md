@@ -22,6 +22,6 @@
 |9/25/2020|[630.Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)|[H-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/630.txt)|Greedy|
 |9/26/2020|[1202. Smallest String With Swaps](https://leetcode.com/problems/smallest-string-with-swaps/)|[H-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1202.txt)|Union Find|
 |9/27/2020|[430. Flatten a Multilevel Doubly Linked Lis](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/430.txt)|LinkedList|
-|9/28/2020|[1601. Maximum Number of Achievable Transfer Requests](https://leetcode.com/problems/maximum-number-of-achievable-transfer-requests/)|[M](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1601.txt)|DFS|
+|9/28/2020|[1601. Maximum Number of Achievable Transfer Requests](https://leetcode.com/problems/maximum-number-of-achievable-transfer-requests/)|[H-](https://github.com/JunBinLiang/Leetcode-Complete-Guide/blob/master/code/1601.txt)|DFS|
 |||||
 
