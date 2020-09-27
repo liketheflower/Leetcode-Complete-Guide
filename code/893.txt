@@ -1,0 +1,33 @@
+class Solution {
+    public int numSpecialEquivGroups(String[] A) {
+        int res=0;
+        Map<String,Integer>map=new HashMap<>();
+        for(String s:A){
+            int t1[]=new int[26];
+            int t2[]=new int[26];
+            for(int i=0;i<s.length();i++){
+                char c=s.charAt(i);
+                if(i%2==0){
+                    t1[c-'a']++;
+                }else{
+                    t2[c-'a']++;
+                }
+            }
+            String s1=hash(t1);
+            String s2=hash(t2);
+            String state=s1+"|"+s2;
+            if(!map.containsKey(state))map.put(state,0);
+            map.put(state,map.get(state)+1);
+        }
+        
+        return map.size();
+    }
+    
+    public String hash(int A[]){
+        StringBuilder str=new StringBuilder();
+        for(int i:A){
+            str.append(i+",");
+        }
+        return str.toString();
+    }
+}
