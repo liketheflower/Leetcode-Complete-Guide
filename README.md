@@ -608,6 +608,10 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  D. [Rescue Nibel! (Combination) (1800)](./contest/672D.txt) <br />
  
  
+  ### Codeforces Round #673 (Div. 2)
+ A. [ Copy-paste (900) ](./contest/673A.txt) <br />
+
+ 
   ### Educational Codeforces Round 83 (Div. 2)
  1312B. [ Bogo Sort	(DIV 2) (1000) ](./code/1312B.txt) <br />
  1312C. [ Adding Power	(DIV 2) (1400) number theory](./code/1312C.txt) <br />
