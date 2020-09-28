@@ -616,10 +616,10 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  
    ### Codeforces Round #674 (Div. 3)
- A. [Floor Number  ](./contest/674A.txt) <br />
- B. [ Symmetric Matrix  ](./contest/674B.txt) <br />
- C. [ Increase and Copy  (Binary Search+Math) ](./contest/674C.txt) <br />
- D. [ Non-zero Segments ](./contest/674D.txt) <br />
+ A. [Floor Number (800)  ](./contest/674A.txt) <br />
+ B. [ Symmetric Matrix (900) ](./contest/674B.txt) <br />
+ C. [ Increase and Copy  (Binary Search+Math) (1100) ](./contest/674C.txt) <br />
+ D. [ Non-zero Segments  (1500)](./contest/674D.txt) <br />
 
  
   ### Educational Codeforces Round 83 (Div. 2)
