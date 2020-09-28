@@ -613,6 +613,13 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  B. [ Two Arrays (1100) ](./contest/673B.txt) <br />
  C. [ K-Amazing Number (1500) ](./contest/673C.txt) <br />
  D. [ Make Them Equal (1800) Greedy ](./contest/673D.txt) <br />
+ 
+ 
+   ### Codeforces Round #674 (Div. 3)
+ A. [Floor Number  ](./contest/674A.txt) <br />
+ B. [ Symmetric Matrix  ](./contest/674B.txt) <br />
+ C. [ Increase and Copy  (Binary Search+Math) ](./contest/674C.txt) <br />
+ D. [ Non-zero Segments ](./contest/674D.txt) <br />
 
  
   ### Educational Codeforces Round 83 (Div. 2)
