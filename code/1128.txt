@@ -1,0 +1,22 @@
+class Solution {
+    public int numEquivDominoPairs(int[][] A) {
+        for(int pair[]:A){
+            Arrays.sort(pair);
+        }
+        
+        Map<String,Integer>map=new HashMap<>();
+        for(int pair[]:A){
+            String s=pair[0]+","+pair[1];
+            if(!map.containsKey(s))map.put(s,0);
+            map.put(s,map.get(s)+1);
+        }
+        int res=0;
+        for(String key:map.keySet()){
+            int cnt=map.get(key);
+            if(cnt<2)continue;
+            res+=(cnt*(cnt-1)/2);
+        }
+        
+        return res;
+    }
+}
