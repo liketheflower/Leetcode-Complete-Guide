@@ -1,0 +1,33 @@
+class Solution {
+    boolean res=false;
+    int dp[]=new int[4];
+    int t;
+    public boolean makesquare(int[] A) {
+        if(A.length<4)return false;
+        int sum=0;
+        for(int i:A)sum+=i;
+        if(sum%4!=0)return false;
+        t=sum/4;
+        Arrays.sort(A);
+        dfs(A,0);
+        return res;
+    }
+    public void dfs(int A[],int index){
+        if(res)return;
+        if(index>=A.length){
+            if(check())res=true;
+            return;
+        }
+        for(int i=0;i<4;i++){
+            if(A[index]+dp[i]>t)break;
+            dp[i]+=A[index];
+            dfs(A,index+1);
+            if(res)return;
+            dp[i]-=A[index];
+        }
+    }
+    public boolean check(){
+        for(int i:dp)if(i!=t)return false;
+        return true;
+    }
+}
