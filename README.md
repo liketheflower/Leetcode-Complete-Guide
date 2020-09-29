@@ -60,6 +60,7 @@ CF 分目测评估：
 #301. [Remove Invalid Parentheses (H-) 1600](./code/301.txt) <br />
 #306. [Additive Number (M) 1500](./code/306.txt) <br />
 #417. [Pacific Atlantic Water Flow (M+) 1600](./code/417.txt) <br />
+#473. [Matchsticks to Square (M+) 1600](./code/473.txt) <br />
 #488. [Zuma Game (H) 1800](./code/488.txt) <br />
 #565. [Array Nesting (M-) 1400](./code/565.txt) <br />
 #838. [ Push Dominoes (M) 1500](./code/838.txt) <br />
