@@ -632,6 +632,11 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  1312D. [ Count the Arrays	(DIV 2) (1700) 组合数学+number theory](./code/1312D.txt) <br />
  1312E. [ Array Shrinking	(DIV 2) (2100) 区间dp](./code/1312E.txt) <br />
  
+   ### Educational Codeforces Round 93 (Div. 2)
+ EDU93B. [  Substring Removal Game	 (800) ](./contest/EDU93B.txt) <br />
+ EDU93C. [ Good Subarrays	 (1600) Math+prefixSum](./contest/EDU93C.txt) <br />
+
+ 
  <br><br><br>
    ### NYU Progteam Spring Break Practice 3/16/2020
   https://vjudge.net/contest/362056<br/><br/>
