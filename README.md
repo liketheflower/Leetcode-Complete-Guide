@@ -522,7 +522,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 28
+ 统计(1800+ 题量)： 29
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -637,7 +637,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  EDU93B. [  Bad Triangle	 (800) ](./contest/EDU93A.txt) <br />
  EDU93B. [  Substring Removal Game	 (800) ](./contest/EDU93B.txt) <br />
  EDU93C. [ Good Subarrays	 (1600) Math+prefixSum](./contest/EDU93C.txt) <br />
-
+ EDU93D. [ Colored Rectangles	 (1800) DP](./contest/EDU93D.txt) <br />
  
  <br><br><br>
    ### NYU Progteam Spring Break Practice 3/16/2020
