@@ -614,7 +614,8 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  A. [ Copy-paste (900) ](./contest/673A.txt) <br />
  B. [ Two Arrays (1100) ](./contest/673B.txt) <br />
  C. [ K-Amazing Number (1500) ](./contest/673C.txt) <br />
- D. [ Make Them Equal (1800) Greedy ](./contest/673D.txt) <br />
+ D. [ Make Them Equal (2000) Greedy ](./contest/673D.txt) <br />
+ E. [ Xor Inverse (2000) Bit+Trie ](./contest/673E.txt) <br />
  
  
    ### Codeforces Round #674 (Div. 3)
