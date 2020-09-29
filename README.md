@@ -633,6 +633,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  1312E. [ Array Shrinking	(DIV 2) (2100) 区间dp](./code/1312E.txt) <br />
  
    ### Educational Codeforces Round 93 (Div. 2)
+ EDU93B. [  Bad Triangle	 (800) ](./contest/EDU93A.txt) <br />
  EDU93B. [  Substring Removal Game	 (800) ](./contest/EDU93B.txt) <br />
  EDU93C. [ Good Subarrays	 (1600) Math+prefixSum](./contest/EDU93C.txt) <br />
 
