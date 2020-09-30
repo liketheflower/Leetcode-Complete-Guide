@@ -1,0 +1,50 @@
+class Solution {
+    public int matrixScore(int[][] A) {
+        for(int i=0;i<A.length;i++){
+            if(A[i][0]==0)flipr(A,i);
+        }
+        
+        for(int c=1;c<A[0].length;c++){
+            int ones=0;
+            for(int r=0;r<A.length;r++){
+                ones+=A[r][c];
+            }
+            if(ones<A.length-ones){
+                flipc(A,c);
+            }
+        }
+        
+        int res=0;
+        for(int i=0;i<A.length;i++){
+            int index=0;int b=0;
+            for(int j=A[0].length-1;j>=0;j--){
+                if(A[i][j]==1){
+                    b=b|(1<<index);
+                }
+                index++;
+            }
+            res+=b;
+        }
+        return res;
+        
+    }
+    
+    public void flipr(int A[][],int r){
+        for(int i=0;i<A[0].length;i++){
+            if(A[r][i]==0)A[r][i]=1;
+            else A[r][i]=0;
+        }
+    }
+    
+    public void flipc(int A[][],int c){
+        for(int i=0;i<A.length;i++){
+            if(A[i][c]==0)A[i][c]=1;
+            else A[i][c]=0;
+        }
+    }
+}
+
+
+//0011
+//1010
+//1100
