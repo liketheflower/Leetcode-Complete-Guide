@@ -1,0 +1,28 @@
+class Solution {
+    public int numFriendRequests(int[] A) {
+        int res=0;
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int i=0;i<A.length;i++){
+            if(!map.containsKey(A[i]))map.put(A[i],0);
+            map.put(A[i],map.get(A[i])+1);
+        }
+        
+        for(int i=0;i<A.length;i++){
+            int a=A[i];
+            for(Integer key:map.keySet()){
+                int b=key;
+                if(b>a)continue;
+                if(b>100&&a<100)continue;
+                if(b<=a*0.5+7)continue;
+                if(a==b){
+                    res+=map.get(b)-1;
+                }else{
+                    res+=map.get(b);
+                }
+            }
+        }
+        
+        return res;
+        
+    }
+}
