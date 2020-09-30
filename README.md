@@ -208,6 +208,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #718. [Maximum Length of Repeated Subarray (M) 1500](./code/718.txt) <br />
 #727. [Minimum Window Subsequence (H) 1800](./code/727.txt) <br />
 #741. [Cherry Pickup (H) 1800](./code/741.txt) <br />
+#764. [Largest Plus Sign (M) 1500](./code/764.txt) <br />
 #798. [Smallest Rotation with Highest Score (H) 1900](./code/798.txt) <br />
 #801. [Minimum Swaps To Make Sequences Increasing (M+) 1600](./code/801.txt) <br />
 #805. [Split Array With Same Average (H) 1800](./code/805.txt) <br />
