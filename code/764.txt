@@ -1,0 +1,77 @@
+class Solution {
+    public int orderOfLargestPlusSign(int N, int[][] mines) {
+        int res=0;
+        int A[][]=new int[N][N];
+        for(int i=0;i<A.length;i++){
+            Arrays.fill(A[i],1);
+        }
+        for(int pair[]:mines){
+            A[pair[0]][pair[1]]=0;
+        }
+        
+        int dp1[][]=new int[N][N];//left
+        int dp2[][]=new int[N][N];//right
+        int dp3[][]=new int[N][N];//up
+        int dp4[][]=new int[N][N];//down
+        
+        for(int i=0;i<A.length;i++){
+            int sum=0;
+            for(int j=0;j<A.length;j++){
+                if(A[i][j]==1)sum++;
+                else sum=0;
+                dp1[i][j]=sum;
+            }
+        }
+        
+        for(int i=0;i<A.length;i++){
+            int sum=0;
+            for(int j=A.length-1;j>=0;j--){
+                if(A[i][j]==1)sum++;
+                else sum=0;
+                dp2[i][j]=sum;
+                
+            }
+        }
+        
+        
+        for(int i=0;i<A.length;i++){
+            int sum=0;
+            for(int j=0;j<A.length;j++){
+                if(A[j][i]==1)sum++;
+                else sum=0;
+                dp3[j][i]=sum;
+            }
+        }
+        
+        for(int i=0;i<A.length;i++){
+            int sum=0;
+            for(int j=A.length-1;j>=0;j--){
+                if(A[j][i]==1)sum++;
+                else sum=0;
+                dp4[j][i]=sum;
+            }
+        }
+        
+        
+        for(int i=0;i<A.length;i++){
+            for(int j=0;j<A.length;j++){
+                if(A[i][j]==1){
+                    int a=Math.min(dp1[i][j],Math.min(dp2[i][j],dp3[i][j]));
+                    a=Math.min(a,dp4[i][j]);
+                    res=Math.max(res,a);
+                }
+            }
+        }
+        
+        return res;
+    
+    }
+    
+    public void print(int A[][]){
+        for(int i=0;i<A.length;i++){
+            for(int j=0;j<A[0].length;j++){
+                System.out.print(A[i][j]+" ");
+            }System.out.println();
+        }System.out.println("***********");
+    }
+}
