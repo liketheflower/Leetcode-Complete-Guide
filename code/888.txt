@@ -1,0 +1,23 @@
+class Solution {
+    public int[] fairCandySwap(int[] A, int[] B) {
+        int asum=0,bsum=0;
+        for(int i:A)asum+=i;
+        for(int i:B)bsum+=i;
+        int avg=(asum+bsum)/2;
+        int res[]=new int[2];
+        
+        Set<Integer>set=new HashSet<>();
+        for(int i:A)set.add(i);
+        
+        for(int i:B){
+            int dif=bsum-avg;
+            if(set.contains(i-dif)){
+                res[0]=i-dif;
+                res[1]=i;
+                break;
+            }
+        }
+        
+        return res;
+    }
+}
