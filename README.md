@@ -580,6 +580,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  A. [Remove Smallest (800) ](./contest/661A.txt) <br />
  B. [Gifts Fixing (800)](./contest/661B.txt) <br />
  C. [Boat Competition (1200)](./contest/661C.txt) <br />
+ D. [Binary String To Subsequences (1500)](./contest/661D.txt) <br />
  
  
  ### Codeforces Round #666 (Div. 2)
