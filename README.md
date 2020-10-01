@@ -534,7 +534,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 30
+ 统计(1800+ 题量)： 31
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -588,7 +588,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  C. [Boat Competition (1200)](./contest/661C.txt) <br />
  D. [Binary String To Subsequences (1500)](./contest/661D.txt) <br />
  E1. [Weights Division (easy version) (2000)](./contest/661E1.txt) <br />
- 
+ E2. [Weights Division (Hard version) (2200)](./contest/661E2.txt) <br />
  
  ### Codeforces Round #666 (Div. 2)
  A. [Juggling Letters (800) ](./code/666A.txt) <br />
