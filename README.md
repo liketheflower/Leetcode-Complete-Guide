@@ -577,8 +577,8 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  
   ### Codeforces Round #661 (Div. 3)
- A. [Remove Smallest (800) ](./code/661A.txt) <br />
- B. [Gifts Fixing (800)](./code/661B.txt) <br />
+ A. [Remove Smallest (800) ](./contest/661A.txt) <br />
+ B. [Gifts Fixing (800)](./contest/661B.txt) <br />
 
  
  
