@@ -292,6 +292,12 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #1109. [Corporate Flight Bookings (M) 1500](./code/1109.txt) <br />
 #1538. [Guess the Majority in a Hidden Array (M+) 1700](./code/1538.txt) <br />
 
+
+---
+### Two Pointer
+#524. [Longest Word in Dictionary through Deleting (M-) 1400](./code/524.txt) <br />
+
+
 ---
 ### Sliding Window
 #76. [Minimum Window Substring (M+) 1700](./code/76.txt) <br />
