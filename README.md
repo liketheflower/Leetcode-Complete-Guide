@@ -575,6 +575,13 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  E. [New Year Parties (1800)    (Greedy)](./code/611E.txt) <br />
  F. [DIY Garland (2200)    (Greedy+Tree+Heap)](./code/611F.txt) <br />
  
+ 
+  ### Codeforces Round #661 (Div. 3)
+ A. [Remove Smallest (800) ](./code/661A.txt) <br />
+ B. [Gifts Fixing (800)](./code/661B.txt) <br />
+
+ 
+ 
  ### Codeforces Round #666 (Div. 2)
  A. [Juggling Letters (800) ](./code/666A.txt) <br />
  B. [Power Sequence (1500)](./code/666B.txt) <br />
