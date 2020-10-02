@@ -661,6 +661,14 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  EDU93C. [ Good Subarrays	 (1600) Math+prefixSum](./contest/EDU93C.txt) <br />
  EDU93D. [ Colored Rectangles	 (1800) DP](./contest/EDU93D.txt) <br />
  
+ 
+ 
+   ### Grakn Forces 2020 (Div. 2)
+ GFA. [ Circle Coloring	 (800) ](./contest/GFA.txt) <br />
+ GFB. [ Arrays Sum	 (1400) (Math) ](./contest/GFB.txt) <br />
+ GFC. [ Discrete Acceleration	 (1500) Binary Search](./contest/GFC.txt) <br />
+ 
+ 
  <br><br><br>
    ### NYU Progteam Spring Break Practice 3/16/2020
   https://vjudge.net/contest/362056<br/><br/>
