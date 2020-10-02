@@ -535,7 +535,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 31
+ 统计(1800+ 题量)： 32
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -667,7 +667,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  GFA. [ Circle Coloring	 (800) ](./contest/GFA.txt) <br />
  GFB. [ Arrays Sum	 (1400) (Math) ](./contest/GFB.txt) <br />
  GFC. [ Discrete Acceleration	 (1500) Binary Search](./contest/GFC.txt) <br />
- 
+ GFD. [ Searchlights	 (2000)](./contest/GFD.txt) <br />
  
  <br><br><br>
    ### NYU Progteam Spring Break Practice 3/16/2020
