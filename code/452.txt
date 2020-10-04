@@ -1,0 +1,20 @@
+class Solution {
+    public int findMinArrowShots(int[][] A) {
+        if(A.length==0)return 0;
+        int cnt=1;
+        Arrays.sort(A,(a,b)->{
+            long x=a[1];
+            long y=b[1];
+            return Long.compare(x,y);
+        });
+        
+        int end=A[0][1];
+        for(int i=1;i<A.length;i++){
+            if(A[i][0]<=end)continue;
+            cnt++;
+            end=A[i][1];
+        }
+        
+        return cnt;
+    }
+}
