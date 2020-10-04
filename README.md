@@ -311,6 +311,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #933. [Number of recent call (E) 1000](./code/933.txt) <br />
 #992. [Subarrays with K Different Integers (H) 1800](./code/992.txt) <br />
 #1052. [Grumpy Bookstore Owner (M) 1500](./code/1052.txt) <br />
+#1156. [Swap For Longest Repeated Character Substring (M) 1500](./code/1156.txt) <br />
 #1208. [Get Equal Substrings Within Budget (M-) 1400](./code/1208.txt) <br />
 
 ---
