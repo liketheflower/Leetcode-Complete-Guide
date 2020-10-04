@@ -1,0 +1,33 @@
+class Solution {
+    public int numDecodings(String s) {
+        if(s.charAt(0)=='0')return 0;
+        int dp[]=new int[s.length()];
+        dp[0]=1;
+        for(int i=1;i<s.length();i++){
+            int pre=s.charAt(i-1)-'0';
+            char c=s.charAt(i);
+            if(c=='0'){
+                if(pre>2||pre==0)return 0;
+                dp[i]=get(dp,i-2);
+            }
+            else if(c-'0'>6){
+                if(pre>=2)dp[i]=dp[i-1];
+                else dp[i]=dp[i-1]+get(dp,i-2);
+                
+            }else{
+                if(pre==1||pre==2){
+                    dp[i]=dp[i-1]+get(dp,i-2);
+                }else{
+                    dp[i]=dp[i-1];
+                }
+            }
+            
+        }
+        return dp[dp.length-1];
+    }
+    
+    public int get(int dp[],int i){
+        if(i<0)return 1;
+        return dp[i];
+    }
+}
