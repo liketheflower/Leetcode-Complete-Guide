@@ -671,7 +671,8 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  GFB. [ Arrays Sum	 (1400) (Math) ](./contest/GFB.txt) <br />
  GFC. [ Discrete Acceleration	 (1500) Binary Search](./contest/GFC.txt) <br />
  GFD. [ Searchlights	 (2000)](./contest/GFD.txt) <br />
- GFF. [ Two Different	 (2300)](./contest/GFF.txt) <br />
+ GFE. [ Avoid Rainbow Cycles	 (2400) (Union Find)](./contest/GFE.txt) <br />
+ GFF. [ Two Different	 (2300)(Bit Mask)](./contest/GFF.txt) <br />
  
  <br><br><br>
    ### NYU Progteam Spring Break Practice 3/16/2020
