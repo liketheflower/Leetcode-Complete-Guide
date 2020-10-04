@@ -654,6 +654,16 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  E. [ Rock, Paper, Scissors (1800) (MAX Flow)](./contest/674E.txt) <br />
  F. [  Number of Subsequences (2000) (Combanation+Math)](./contest/674F.txt) <br />
  
+ 
+ 
+ ### Codeforces Round #675 (Div. 2)
+ A. [A - Fence  ](./contest/675A.txt) <br />
+ B. [ Nice Matrix ](./contest/675B.txt) <br />
+ C. [ Bargain ](./contest/675C.txt) <br />
+
+ 
+ 
+ 
   ### Educational Codeforces Round 83 (Div. 2)
  1312B. [ Bogo Sort	(DIV 2) (1000) ](./code/1312B.txt) <br />
  1312C. [ Adding Power	(DIV 2) (1400) number theory](./code/1312C.txt) <br />
