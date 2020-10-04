@@ -345,7 +345,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 ---
 ### Implementation
 #7. [Reverse Integer (E) 900](./code/7.txt) <br />
-#26. [Remove Duplicates from Sorted Array (H) 1800](./code/26.txt) <br />
+#26. [Remove Duplicates from Sorted Array (E) 800](./code/26.txt) <br />
 #68. [Text Justification (H) 1800](./code/68.txt) <br />
 #118. [Pascal's Triangle (E) 900](./code/118.txt) <br />
 #202. [Happy Number (E) 800](./code/202.txt) <br />
