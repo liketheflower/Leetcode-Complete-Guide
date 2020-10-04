@@ -1,0 +1,43 @@
+class Solution {
+    int table[]=new int[26];
+    Map<Character,Integer>map=new HashMap<>();
+    public int maxRepOpt1(String s) {
+        Queue<Character>q=new LinkedList<>();
+        for(int i=0;i<s.length();i++){
+            table[s.charAt(i)-'a']++;
+        }
+        int res=0;
+       
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            q.add(c);
+            if(!map.containsKey(c))map.put(c,0);
+            map.put(c,map.get(c)+1);
+            while(!good()){
+                char f=q.poll();
+                map.put(f,map.get(f)-1);
+                if(map.get(f)==0)map.remove(f);
+            }
+            
+            res=Math.max(res,q.size());
+        }
+        
+        return res;
+    }
+    
+    public boolean good(){
+        if(map.size()==1)return true;
+        if(map.size()>2)return false;
+        List<Character>list=new ArrayList<>();
+        boolean hasone=false;
+        for(Character key:map.keySet()){
+            list.add(key);
+            if(map.get(key)==1)hasone=true;
+        }
+        if(!hasone)return false;
+        
+        if(map.get(list.get(0))==1&&table[list.get(1)-'a']>map.get(list.get(1)))return true;
+        if(map.get(list.get(1))==1&&table[list.get(0)-'a']>map.get(list.get(0)))return true;
+        return false;
+    }
+}
