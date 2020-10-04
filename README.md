@@ -660,7 +660,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  A. [A - Fence  ](./contest/675A.txt) <br />
  B. [ Nice Matrix ](./contest/675B.txt) <br />
  C. [ Bargain ](./contest/675C.txt) <br />
-
+ D. [ Returning Home (Graph+Shortest Path) ](./contest/675D.txt) <br />
  
  
  
