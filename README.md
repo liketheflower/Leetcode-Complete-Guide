@@ -124,6 +124,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #910. [Smallest Range II (H-) 1700](./code/910.txt) <br />
 #1121. [Divide Array Into Increasing Sequence (H-) 1700](./code/1121.txt) <br />
 #1199. [Minimum Time Building Block (H) 1800](./code/1199.txt) <br />
+#1288. [Remove Covered Intervals (M-) 1400](./code/1288.txt) <br />
 #1326.[Minimum Number of Taps to Open to Water a Garden   (H) 1800](./code/1326.txt) <br />
 #1328.[Break a Palindrome   (M-) 1300](./code/1328.txt) <br />
 #1383.[Maximum Performance of a Team   (H-) 1700](./code/1383.txt) <br />
