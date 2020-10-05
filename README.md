@@ -542,7 +542,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 37
+ 统计(1800+ 题量)： 38
  
  
   ### Beta Round #4 (Div. 2)
