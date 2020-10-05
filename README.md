@@ -549,6 +549,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  A. [Watermelon (800) ](./contest/BETA4A.txt) <br />
  B. [Before an exam (1200) ](./contest/BETA4B.txt) <br />
  C. [Registration System (1200) ](./contest/BETA4C.txt) <br />
+ D. [Mysterious Present (1700) DP](./contest/BETA4D.txt) <br />
   
  
  ### Codeforces Round #150 (Div. 1)
