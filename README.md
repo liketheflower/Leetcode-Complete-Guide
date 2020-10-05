@@ -542,7 +542,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 36
+ 统计(1800+ 题量)： 37
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -668,10 +668,10 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  
  ### Codeforces Round #675 (Div. 2)
- A. [A - Fence  ](./contest/675A.txt) <br />
- B. [ Nice Matrix ](./contest/675B.txt) <br />
- C. [ Bargain ](./contest/675C.txt) <br />
- D. [ Returning Home (Graph+Shortest Path) ](./contest/675D.txt) <br />
+ A. [A - Fence  (800)](./contest/675A.txt) <br />
+ B. [ Nice Matrix (1300)](./contest/675B.txt) <br />
+ C. [ Bargain (1700)](./contest/675C.txt) <br />
+ D. [ Returning Home (2300) (Graph+Shortest Path) ](./contest/675D.txt) <br />
  
  
  
