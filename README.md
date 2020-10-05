@@ -572,6 +572,15 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  F. [Graph Without Long Directed Paths(1700)  (二分图解)](./code/550F.txt) <br />
  
  
+ 
+   ### Codeforces Round #605 (Div. 3)
+ A. [Three Friends (900) ](./contest/605A.txt) <br />
+ B. [Snow Walking Robot (1200)](./contest/605B.txt) <br />
+ C. [ Yet Another Broken Keyboard (1200)  Math+Com](./contest/605C.txt) <br />
+ D. [Remove One Element (1500)  DP](./contest/605D.txt) <br />
+
+ 
+ 
   ### Codeforces Round #640 (Div. 4)
  A. [Sum of Round Numbers (800) ](./code/640A.txt) <br />
  B. [Same Parity Summands (1200)](./code/640B.txt) <br />
