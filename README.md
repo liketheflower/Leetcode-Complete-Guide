@@ -542,7 +542,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 35
+ 统计(1800+ 题量)： 36
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
@@ -579,7 +579,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  C. [ Yet Another Broken Keyboard (1200)  Math+Com](./contest/605C.txt) <br />
  D. [Remove One Element (1500)  DP](./contest/605D.txt) <br />
  E. [Nearest Opposite Parity (1900)  反向+多源dfs](./contest/605E.txt) <br />
- 
+ F. [Two Bracket Sequences (2200)  dp](./contest/605F.txt) <br />
  
   ### Codeforces Round #640 (Div. 4)
  A. [Sum of Round Numbers (800) ](./code/640A.txt) <br />
