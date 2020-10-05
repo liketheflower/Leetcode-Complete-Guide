@@ -544,6 +544,12 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  # :punch: CodeForce Contest
  统计(1800+ 题量)： 37
  
+ 
+  ### Beta Round #4 (Div. 2)
+ A. [Watermelon (800) ](./contest/BETA4A.txt) <br />
+
+ 
+ 
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
  B. [Hydra (2000) (集合相交)](./code/150B.txt) <br />
