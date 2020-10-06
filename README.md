@@ -122,6 +122,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #857. [Minimum Cost to Hire K Workers (H) 1800](./code/857.txt) <br />
 #861. [Score After Flipping Matrix (M) 1500](./code/861.txt) <br />
 #910. [Smallest Range II (H-) 1700](./code/910.txt) <br />
+#1029. [Two City Scheduling (M+) 1600](./code/1029.txt) <br />
 #1121. [Divide Array Into Increasing Sequence (H-) 1700](./code/1121.txt) <br />
 #1199. [Minimum Time Building Block (H) 1800](./code/1199.txt) <br />
 #1288. [Remove Covered Intervals (M-) 1400](./code/1288.txt) <br />
