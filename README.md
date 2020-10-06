@@ -542,10 +542,11 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 38
+ 统计(1800+ 题量)： 39
  
   
   ### Beta Round #3 
+  B. [Lorry (1900)贪心 + sort ](./contest/BETA3B.txt) <br />
   D. [Least Cost Bracket Sequence (2600)贪心 ](./contest/BETA3D.txt) <br />
  
  
