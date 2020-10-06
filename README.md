@@ -742,6 +742,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   [Max Flow Dinic  ](./template/maxflow.txt) <br />
   
   #  CodeForce 高分精算 
+  23C. [Oranges and Apples (2500) Greedy ](./code/23C.txt) <br />
   383C. [Propagating tree	(DIV 1) (2000) 树状区间线段树 ](./code/383C.txt) <br />
   1062D. [Fun with Integers	(DIV 2) (1800) Graph ](./code/1062D.txt) <br />
   1392D. [Omkar and Bed Wars	(Global) (1700) DP ](./code/1392D.txt) <br />
