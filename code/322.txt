@@ -1,0 +1,21 @@
+class Solution {
+    public int coinChange(int[] A, int N) {
+        if(N==0)return 0;
+        int dp[]=new int[N+1];
+        Arrays.fill(dp,1000000);
+        for(int i=1;i<=N;i++){
+            for(int coin:A){
+                if(coin>i)continue;
+                if(i==coin){
+                    dp[i]=1;
+                }else{
+                    if(dp[i-coin]!=-1){
+                        dp[i]=Math.min(dp[i],1+dp[i-coin]);
+                    }
+                }
+            }
+        }
+        if(dp[N]==1000000)return -1;
+        return dp[N];
+    }
+}
