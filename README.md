@@ -64,6 +64,7 @@ CF 分目测评估：
 #488. [Zuma Game (H) 1800](./code/488.txt) <br />
 #565. [Array Nesting (M-) 1400](./code/565.txt) <br />
 #690. [Employee Importance (M-) 1200](./code/690.txt) <br />
+#761. [Special Binary String (H) 1800](./code/761.txt) <br />
 #838. [ Push Dominoes (M) 1500](./code/838.txt) <br />
 #967. [Numbers With Same Consecutive Differences (M) 1500](./code/967.txt) <br />
 #979. [Distribute Coins in Binary Tree (M+) 1600](./code/979.txt) <br />
