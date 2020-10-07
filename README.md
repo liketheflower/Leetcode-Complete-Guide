@@ -348,6 +348,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #843. [Guess The World (H-) 1700](./code/843.txt) <br />
 #877. [Stone Game (M+) 1600](./code/877.txt) <br />
 #913. [Cat and Mouse (H+) 2400](./code/913.txt) <br />
+#1025. [Divisor Game (E+) 1100](./code/1025.txt) <br />
 #1140. [Stone Game II (M+) 1600](./code/1140.txt) <br />
 
 ---
