@@ -98,6 +98,7 @@ CF 分目测评估：
 ### LinkedList
 Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #2. [Add Two Numbers (M-) 1300](./code/2.txt) <br />
+#83. [Remove Duplicates from Sorted List (E) 1000](./code/83.txt) <br />
 #141. [Linked List Cycle (E) 141](./code/1000.txt) <br />
 #146. [LRU Cache (M+) 1600](./code/146.txt) <br />
 #237. [Delete Node in a Linked List(E) 1000](./code/237.txt) <br />
