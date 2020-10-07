@@ -1,0 +1,33 @@
+class Solution {
+    public String makeLargestSpecial(String s) {
+        if(s.length()<=2)return s;
+        Stack<Integer>stack=new Stack<>();
+        List<String>res=new ArrayList<>();
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='1'){
+                stack.push(i);
+            }else{
+                int top=stack.pop();
+                if(stack.size()==0){
+                    String sub=s.substring(top,i+1);
+                    if(i==s.length()-1&&top==0){
+                        res.add("1"+makeLargestSpecial(s.substring(1,s.length()-1))+"0");
+                    }else{
+                        res.add(makeLargestSpecial(sub));
+                    }
+                }
+                
+            }
+        }
+        Collections.sort(res); //can bubble sort it
+        return combine(res);
+    }
+    
+    public String combine(List<String>arr){
+        StringBuilder str=new StringBuilder();
+        for(int i=arr.size()-1;i>=0;i--){
+            str.append(arr.get(i));
+        }
+        return str.toString();
+    }
+}
