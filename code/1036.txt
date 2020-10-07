@@ -1,0 +1,62 @@
+class Solution {
+    Queue<int[]>q=new LinkedList<>();
+    Set<String>set=new HashSet<>();
+    public boolean isEscapePossible(int[][] blocked, int[] A, int[] B) {
+        int n=blocked.length;
+        int cnt=0;
+        q.add(new int[]{A[0],A[1]});
+        
+        for(int pair[]:blocked){
+            set.add(pair[0]+","+pair[1]);
+        }
+        boolean check1=false,check2=false;
+        while(q.size()!=0){
+            int top[]=q.poll();
+            int r=top[0];
+            int c=top[1];
+            cnt++;
+            if(cnt>n*n){
+                check1=true;
+                break;
+            }
+            if(r==B[0]&&c==B[1])return true;
+            add(r+1,c);
+            add(r-1,c);
+            add(r,c+1);
+            add(r,c-1);
+        }
+        
+        cnt=0;
+        set=new HashSet<>();
+        q=new LinkedList<>();
+        for(int pair[]:blocked){
+            set.add(pair[0]+","+pair[1]);
+        }
+        q.add(new int[]{B[0],B[1]});
+        
+        while(q.size()!=0){
+            int top[]=q.poll();
+            int r=top[0];
+            int c=top[1];
+            cnt++;
+            if(cnt>n*n){
+                check2=true;
+                break;
+            }
+            if(r==A[0]&&c==A[1])return true;
+            add(r+1,c);
+            add(r-1,c);
+            add(r,c+1);
+            add(r,c-1);
+        }
+        return check1&&check2;
+    }
+    
+    public void add(int r,int c){
+        if(r<0||c<0||r>=1000000||c>=1000000)return;
+        String state=r+","+c;
+        if(set.contains(state))return;
+        set.add(state);
+        q.add(new int[]{r,c});
+    }
+}
