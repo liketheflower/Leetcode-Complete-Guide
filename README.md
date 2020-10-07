@@ -123,6 +123,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #699. [Falling Squares (H-) 1700](./code/699.txt) <br />
 #729. [My Calendar I (M) 1500](./code/729.txt) <br />
 #731. [My Calendar II (M+) 1600](./code/731.txt) <br />
+#763. [Partition Labels (M) 1500](./code/763.txt) <br />
 #765. [Couple Holding Hands (H-) 1600](./code/765.txt) <br />
 #767. [Reorganize String (M) 1500](./code/767.txt) <br />
 #857. [Minimum Cost to Hire K Workers (H) 1800](./code/857.txt) <br />
