@@ -47,6 +47,7 @@ CF 分目测评估：
 #847. [Shortest Path Visiting All Nodes (H) 1800](./code/847.txt) <br />
 #854. [K-Similar String (H) 1800](./code/854.txt) <br />
 #994. [Rotting Orange (M) 1400](./code/994.txt) <br />
+#1036. [Escape a Large Maze (H) 1800](./code/1036.txt) <br />
 #1298. [Maximum Candies You Can Get from Boxes (H-) 1700](./code/1298.txt) <br />
 #1329. [Sort the Matrix Diagonally (M) 1500](./code/1329.txt) <br />
 #1439. [Find the Kth Smallest Sum of a Matrix With Sorted Rows (H) 1800](./code/1439.txt) <br />
