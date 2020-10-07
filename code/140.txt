@@ -1,0 +1,38 @@
+class Solution {
+    List<String> res=new ArrayList<>();
+    List<String>dp[];
+    List<String> wordDict;
+    String s;
+    public List<String> wordBreak(String s, List<String> wordDict) {
+        this.s=s;
+        this.wordDict=wordDict;
+        dp=new ArrayList[s.length()];
+        
+        List<String> list = dfs(0);
+        
+        return list;
+    }
+    
+    public List<String> dfs(int i){
+        if(i>=s.length()){
+            String empty="";
+            List<String>l=new ArrayList<>();
+            l.add(empty);
+            return l;
+        }
+        if(dp[i]!=null)return dp[i];
+        List<String>res=new ArrayList<>();
+        for(String w:wordDict){
+            if(i+w.length()-1>=s.length())continue;
+            String sub=s.substring(i,i+w.length());
+            if(!sub.equals(w))continue;
+            List<String>back=dfs(i+w.length());
+            for(String str:back){
+                if(str.length()!=0)res.add(w+" "+str);
+                else res.add(w);
+            }
+        }
+        dp[i]=res;
+        return res;
+    }
+}
