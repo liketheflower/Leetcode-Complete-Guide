@@ -120,6 +120,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #406. [Queue Reconstruction by Height (M) 1500](./code/406.txt) <br />
 #435. [Non-overlapping Intervals (M) 1500](./code/435.txt) <br />
 #452. [Minimum Number of Arrows to Burst Balloonss (M) 1500](./code/452.txt) <br />
+#522. [Longest Uncommon Subsequence II (M-) 1300](./code/522.txt) <br />
 #630. [Course Schedule III (H-) 1700](./code/630.txt) <br />
 #699. [Falling Squares (H-) 1700](./code/699.txt) <br />
 #729. [My Calendar I (M) 1500](./code/729.txt) <br />
