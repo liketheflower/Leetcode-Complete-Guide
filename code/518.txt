@@ -1,0 +1,15 @@
+class Solution {
+    public int change(int N, int[] coins) {
+        int dp[]=new int[N+1];
+        dp[0]=1;
+        for(int i:coins){
+            for(int j=1;j<=N;j++){
+                if(j>=i){
+                    dp[j]+=dp[j-i];
+                }
+            }
+        }
+        return dp[N];
+    }
+}
+
