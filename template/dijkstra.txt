@@ -1,0 +1,25 @@
+		long dis[]=new long[N+1];
+		int path[]=new int[N+1];
+		Arrays.fill(dis,MAX);
+		boolean visit[]=new boolean[N+1];
+		dis[1]=0;
+		visit[1]=true;
+		PriorityQueue<Integer>q=new PriorityQueue<>((a,b)->{
+			return Long.compare(dis[a],dis[b]);
+		});
+		q.add(1);
+		while(q.size()!=0){
+			int v=q.poll();
+			visit[v]=false;
+			List<int[]>childs=adjecent[v];
+			for(int A[]:childs){
+				if(dis[A[0]]>A[1]+dis[v]){
+					dis[A[0]]=A[1]+dis[v];
+					path[A[0]]=v;
+					if(!visit[A[0]]){
+						q.add(A[0]);
+						visit[A[0]]=true;
+					}
+				}
+			}
+		}
