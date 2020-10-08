@@ -563,7 +563,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 41
+ 统计(1800+ 题量)： 42
  
   
   ### Beta Round #3 
@@ -784,6 +784,8 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
    1. 最大权闭合子图 (https://www.cnblogs.com/TreeDream/p/5942354.html#_labelTop)  (强顶)<br/>
       证明 1: https://blog.csdn.net/yo_bc/article/details/75322370 <br/>
       证明 2: https://www.cnblogs.com/dilthey/p/7565206.html <br/>
+  2. 2-SAT Template: <br/>
+  https://github.com/JunBinLiang/Competitive-Coding/blob/master/2-SAT.cpp
 
   
 
