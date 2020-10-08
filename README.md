@@ -175,6 +175,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #154. [Find Minimum in Rotated Sorted Array II (H-) 1700](./code/154.txt) <br />
 #302. [包含全部黑色像素的最小矩形 (H-) 1700](./code/302.txt) <br />
 #373. [Find K Pairs with Smallest Sums (M) 1500](./code/373.txt) <br />
+#704. [Binary Search(E) 900](./code/704.txt) <br />
 #744. [Find Smallest Letter Greater Than Target (M-) 1200](./code/744.txt) <br />
 #786. [K-th Smallest Prime Fraction (H) 1800](./code/786.txt) <br />
 #911. [Online Election(M) 1500](./code/911.txt) <br />
