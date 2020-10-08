@@ -630,8 +630,6 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  F. [DIY Garland (2200)    (Greedy+Tree+Heap)](./code/611F.txt) <br />
  
  
-   ### Codeforces Round #656 (Div. 3)
- 
  
   ### Codeforces Round #661 (Div. 3)
  A. [Remove Smallest (800) ](./contest/661A.txt) <br />
