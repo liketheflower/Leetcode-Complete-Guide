@@ -1,0 +1,23 @@
+	public void add(int u,int v){
+		adjecent[u].add(v);
+		rev[v].add(u);
+	}
+ 
+	public void dfs1(int root){
+		visit[root]=true;
+		List<Integer>childs=adjecent[root];
+		for(int c:childs){
+			if(visit[c])continue;
+			dfs1(c);
+		}
+		order[cnt++]=root;
+	}
+	
+	public void dfs2(int root,int color){
+		comp[root]=color;
+		List<Integer>childs=rev[root];
+		for(int c:childs){
+			if(comp[c]!=-1)continue;
+			dfs2(c,color);
+		}	
+	}
