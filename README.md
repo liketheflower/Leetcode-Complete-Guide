@@ -577,7 +577,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  D. [Mysterious Present (1700) DP](./contest/BETA4D.txt) <br />
  
    ### Beta Round #25 (Div. 2)
- A. [ IQ test (1200) ](./contest/BETA25A.txt) <br />
+ A. [ IQ test (1300) ](./contest/BETA25A.txt) <br />
 
   
  
