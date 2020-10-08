@@ -786,7 +786,8 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
       证明 1: https://blog.csdn.net/yo_bc/article/details/75322370 <br/>
       证明 2: https://www.cnblogs.com/dilthey/p/7565206.html <br/>
   2. 2-SAT Template: <br/>
-  https://github.com/JunBinLiang/Competitive-Coding/blob/master/2-SAT.cpp
+  https://github.com/JunBinLiang/Competitive-Coding/blob/master/2-SAT.cpp<br/>
+  https://cp-algorithms.com/graph/2SAT.html#toc-tgt-2
 
   
 
