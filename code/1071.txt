@@ -1,0 +1,22 @@
+class Solution {
+    public String gcdOfStrings(String s, String t) {
+        int n=Math.min(s.length(),t.length());
+        String res="";
+        for(int i=n;i>=1;i--){
+            if(s.length()%i!=0||t.length()%i!=0)continue;
+            String sub=s.substring(0,i);
+            int t1=s.length()/i;
+            int t2=t.length()/i;
+            StringBuilder str1=new StringBuilder();
+            for(int j=0;j<t1;j++){
+                str1.append(sub);
+            }
+            StringBuilder str2=new StringBuilder();
+            for(int j=0;j<t2;j++){
+                str2.append(sub);
+            }
+            if(str1.toString().equals(s)&&str2.toString().equals(t))return sub;
+        }
+        return "";
+    }
+}
