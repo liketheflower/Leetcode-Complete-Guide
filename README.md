@@ -768,6 +768,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   [Max Flow Dinic  ](./template/maxflow.txt) <br />
   [Shortest Path ](./template/dijkstra.txt) <br />
   [2 SAT ](./code/776D.txt) <br />
+  [ Kosaraju ](./cotemplatede/Kosaraju.txt) <br />
   
   #  CodeForce 高分精算 
   23C. [Oranges and Apples (2500) Greedy ](./code/23C.txt) <br />
