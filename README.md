@@ -578,7 +578,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
    ### Beta Round #25 (Div. 2)
  A. [ IQ test (1300) ](./contest/BETA25A.txt) <br />
-
+ B. [ Phone Number (1100) ](./contest/BETA25B.txt) <br />
   
  
  ### Codeforces Round #150 (Div. 1)
