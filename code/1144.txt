@@ -1,0 +1,25 @@
+class Solution {
+    public int movesToMakeZigzag(int[] A) {
+        int res=Integer.MAX_VALUE;
+        int cnt1=0;int cnt2=0;
+        
+        for(int i=1;i<A.length;i+=2){
+            if(A[i]<get(A,i-1)&&A[i]<get(A,i+1))continue;
+            cnt1+=A[i]-Math.min(get(A,i-1),get(A,i+1));
+            cnt1++;
+        }
+        
+        for(int i=0;i<A.length;i+=2){
+            if(A[i]<get(A,i-1)&&A[i]<get(A,i+1))continue;
+            cnt2+=A[i]-Math.min(get(A,i-1),get(A,i+1));
+            cnt2++;
+        }
+        
+        return Math.min(cnt1,cnt2);
+    }
+    
+    public int get(int A[],int i){
+        if(i<0||i>=A.length)return Integer.MAX_VALUE;
+        return A[i];
+    }
+}
