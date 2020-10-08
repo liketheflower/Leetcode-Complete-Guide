@@ -359,6 +359,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #292. [Nime Game (M-) 1400](./code/292.txt) <br />
 #486. [Predict the Winner (M) 1500](./code/486.txt) <br />
 #521. [ Longest Uncommon Subsequence I (E) 800](./code/521.txt) <br />
+#789. [ Escape The Ghosts (M-) 1400](./code/789.txt) <br />
 #843. [Guess The World (H-) 1700](./code/843.txt) <br />
 #877. [Stone Game (M+) 1600](./code/877.txt) <br />
 #913. [Cat and Mouse (H+) 2400](./code/913.txt) <br />
