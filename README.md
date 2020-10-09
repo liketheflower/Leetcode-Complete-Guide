@@ -588,6 +588,11 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  D. [Roads not only in Berland (1900) (Union Find) ](./contest/BETA25D.txt) <br />
  E. [Test(2200) (KMP) ](./contest/BETA25E.txt) <br />
   
+  
+ ### Beta Round #40 (Div. 2)
+ A. [ Translation (800) ](./contest/BETA40A.txt) <br />
+
+  
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
