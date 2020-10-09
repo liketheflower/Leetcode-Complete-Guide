@@ -591,7 +591,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   
  ### Beta Round #40 (Div. 2)
  A. [ Translation (800) ](./contest/BETA40A.txt) <br />
-
+ B. [ Martian Dollar (1400) ](./contest/BETA40B.txt) <br />
   
  
  ### Codeforces Round #150 (Div. 1)
