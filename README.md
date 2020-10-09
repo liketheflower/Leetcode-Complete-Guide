@@ -567,7 +567,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 42
+ 统计(1800+ 题量)： 43
  
   
   ### Beta Round #3 
@@ -586,6 +586,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  B. [ Phone Number (1100) ](./contest/BETA25B.txt) <br />
  C. [ Roads in Berland (1900)  (Shortest path+path compression)](./contest/BETA25C.txt) <br />
  D. [Roads not only in Berland (1900) (Union Find) ](./contest/BETA25D.txt) <br />
+ E. [Test(2200) (KMP) ](./contest/BETA25E.txt) <br />
   
  
  ### Codeforces Round #150 (Div. 1)
