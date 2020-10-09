@@ -195,6 +195,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #236. [Lowest Common Ancestor of a Binary Tree   (M-) 1400](./code/236.txt) <br />
 #654. [Maximum Binary Tree (M-) 1400](./code/654.txt) <br />
 #669. [Trim a Binary Search Tree (M-) 1400](./code/669.txt) <br />
+#872. [Leaf-Similar Trees (E) 900](./code/872.txt) <br />
 #1080. [Insufficient Nodes in Root to Leaf Paths (M) 1500](./code/1080.txt) <br />
 #1110. [Delete Nodes And Return Forest (M-) 1400](./code/1110.txt) <br />
 #1123. [Lowest Common Ancestor of Deepest Leaves (M) 1500](./code/1123.txt) <br />
