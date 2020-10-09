@@ -567,7 +567,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 44
+ 统计(1800+ 题量)： 45
  
   
   ### Beta Round #3 
@@ -593,6 +593,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  A. [ Translation (800) ](./contest/BETA40A.txt) <br />
  B. [ Martian Dollar (1400) ](./contest/BETA40B.txt) <br />
  C. [Email address (1300) ](./contest/BETA40C.txt) <br />
+ D. [Pawn (1900) dp+打表](./contest/BETA40D.txt) <br />
  E. [3-Cycle (1900) (Graph+Thinking+Observation) ](./contest/BETA40E.txt) <br />
  
  ### Codeforces Round #150 (Div. 1)
