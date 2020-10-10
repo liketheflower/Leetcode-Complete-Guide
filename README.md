@@ -644,14 +644,6 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  E. [Nearest Opposite Parity (1900)  反向+多源dfs](./contest/605E.txt) <br />
  F. [Two Bracket Sequences (2200)  dp](./contest/605F.txt) <br />
  
-  ### Codeforces Round #640 (Div. 4)
- A. [Sum of Round Numbers (800) ](./code/640A.txt) <br />
- B. [Same Parity Summands (1200)](./code/640B.txt) <br />
- C. [K-th Not Divisible by n (1200)](./code/640C.txt) <br />
- D. [Alice, Bob and Candies (1300)](./code/640D.txt) <br />
- E. [Special Element (1500) (暴力)](./code/640E.txt) <br />
- F. [Binary String Reconstruction (1500) (暴力+观察)](./code/640F.txt) <br />
- G. [Special Permutation (1600) (观察+Implementation)](./code/640G.txt) <br />
  
   ### Codeforces Round #611 (Div. 3)
  A. [Minutes Before the New Year (800) ](./code/611A.txt) <br />
@@ -665,6 +657,17 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
    ### Codeforces Round #617 (Div. 3)
    A. [ Array with Odd Sum (800) ](./contest/617A.txt) <br />
    B. [Food Buying (900) ](./contest/617B.txt) <br />
+   B. [Yet Another Walking Robot (1500) ](./contest/617C.txt) <br />
+ 
+   ### Codeforces Round #640 (Div. 4)
+ A. [Sum of Round Numbers (800) ](./code/640A.txt) <br />
+ B. [Same Parity Summands (1200)](./code/640B.txt) <br />
+ C. [K-th Not Divisible by n (1200)](./code/640C.txt) <br />
+ D. [Alice, Bob and Candies (1300)](./code/640D.txt) <br />
+ E. [Special Element (1500) (暴力)](./code/640E.txt) <br />
+ F. [Binary String Reconstruction (1500) (暴力+观察)](./code/640F.txt) <br />
+ G. [Special Permutation (1600) (观察+Implementation)](./code/640G.txt) <br />
+ 
  
   ### Codeforces Round #661 (Div. 3)
  A. [Remove Smallest (800) ](./contest/661A.txt) <br />
