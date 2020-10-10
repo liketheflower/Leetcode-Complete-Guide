@@ -1,0 +1,16 @@
+class Solution {
+    public int minMoves(int[] A) {
+        //sum + t (n-1) = (min+t)*n
+        //sum+tn-t=min*n+tn
+        //sum-t=min*n
+        
+        int min=Integer.MAX_VALUE;
+        int sum=0;
+        int n=A.length;
+        for(int i:A){
+            sum+=i;
+            min=Math.min(min,i);
+        }
+        return sum-min*n;
+    }
+}
