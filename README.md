@@ -571,7 +571,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 49
+ 统计(1800+ 题量)： 50
  
   
   ### Beta Round #3 
@@ -661,6 +661,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
    D. [Fight with Monsters (1500) (Math+Sort) ](./contest/617D.txt) <br />
    E1. [String Coloring (easy version) (1800) (Observation + Greedy) ](./contest/617E1.txt) <br />
    E2. [String Coloring (hard version) (2000) ](./contest/617E2.txt) <br />
+   F. [Berland Beauty (2100) (dfs+tree+greedy+sort) ](./contest/617F.txt) <br />
  
    ### Codeforces Round #640 (Div. 4)
  A. [Sum of Round Numbers (800) ](./code/640A.txt) <br />
