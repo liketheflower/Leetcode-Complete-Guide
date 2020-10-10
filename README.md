@@ -664,7 +664,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
    ### Codeforces Round #617 (Div. 3)
    A. [ Array with Odd Sum (800) ](./contest/617A.txt) <br />
- 
+   B. [Food Buying (900) ](./contest/617B.txt) <br />
  
   ### Codeforces Round #661 (Div. 3)
  A. [Remove Smallest (800) ](./contest/661A.txt) <br />
