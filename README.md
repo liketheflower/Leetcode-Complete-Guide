@@ -660,6 +660,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
    C. [Yet Another Walking Robot (1500) ](./contest/617C.txt) <br />
    D. [Fight with Monsters (1500) (Math+Sort) ](./contest/617D.txt) <br />
    E1. [String Coloring (easy version) (1800) (Observation + Greedy) ](./contest/617E1.txt) <br />
+   E2. [String Coloring (hard version) (2000) ](./contest/617E2.txt) <br />
  
    ### Codeforces Round #640 (Div. 4)
  A. [Sum of Round Numbers (800) ](./code/640A.txt) <br />
