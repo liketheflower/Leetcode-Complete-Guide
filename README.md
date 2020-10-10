@@ -348,6 +348,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 ---
 ### String
 #6. [ZigZag Conversion (M-) 1300](./code/6.txt) <br />
+#9. [Palindrom Number (E) 900](./code/9.txt) <br />
 #242. [Valid Anagram (E) 900](./code/242.txt) <br />
 #336. [Palindrome Pairs (H) 1800](./code/336.txt) <br />
 #696. [Count Binary Substrings (E) 1000](./code/696.txt) <br />
