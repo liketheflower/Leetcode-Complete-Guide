@@ -1,0 +1,55 @@
+class Solution {
+    int grid[][];
+    public int cutOffTree(List<List<Integer>> forest) {
+        int res=0;
+        PriorityQueue<int[]>pq=new PriorityQueue<>((a,b)->{
+            return a[2]-b[2];
+        });
+        grid=new int[forest.size()][forest.get(0).size()];
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                grid[i][j]=forest.get(i).get(j);
+                if(grid[i][j]>1){
+                    pq.add(new int[]{i,j,grid[i][j]});
+                }
+            }
+        }
+        int sr=0,sc=0;
+        while(pq.size()!=0){
+            int pair[]=pq.poll();
+            int r=pair[0],c=pair[1],target=pair[2];
+            int dis=bfs(sr,sc,target);
+            if(dis==-1)return -1;
+            res+=dis;
+            sr=r;
+            sc=c;
+        }
+        return res;
+    }
+    
+    public int bfs(int sr,int sc,int T){
+        Queue<int[]>q=new LinkedList<>();
+        boolean visit[][]=new boolean[grid.length][grid[0].length];
+        visit[sr][sc]=true;
+        q.add(new int[]{sr,sc,0});
+        
+        while(q.size()!=0){
+            int pair[]=q.poll();
+            int r=pair[0];int c=pair[1];int level=pair[2];
+            if(grid[r][c]==T)return level;
+            
+            add(q,r+1,c,visit,level+1);
+            add(q,r-1,c,visit,level+1);
+            add(q,r,c+1,visit,level+1);
+            add(q,r,c-1,visit,level+1);
+        }
+        return -1;
+    }
+    public void add(Queue<int[]>q,int r,int c,boolean visit[][],int level){
+        if(r<0||c<0||r>=grid.length||c>=grid[0].length)return;
+        if(visit[r][c])return;
+        if(grid[r][c]==0)return;
+        visit[r][c]=true;
+        q.add(new int[]{r,c,level});
+    }
+}
