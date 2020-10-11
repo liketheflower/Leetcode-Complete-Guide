@@ -393,6 +393,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #201. [Bitwise AND of Numbers Range (M+) 1600](./code/201.txt) <br />
 #898. [Bitwise ORs of Subarrays (M+) 1600](./code/898.txt) <br />
 #1178. [Number of Valid Words for Each Puzzle (H-) 1700](./code/1178.txt) <br />
+#1290. [Convert Binary Number in a Linked List to Integer (E) 900](./code/1290.txt) <br />
 #1611. [ Minimum One Bit Operations to Make Integers Zero (H) 1800](./code/1611.txt) <br />
 
 ---
