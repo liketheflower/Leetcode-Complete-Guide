@@ -158,6 +158,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1361. [Validate Binary Tree Nodes (M) 1500](./code/1361.txt) <br />
 #1522. [Diameter of N-Ary Tree (M-) 1300](./code/1522.txt) <br />
 #1568. [Minimum Number of Days to Disconnect Island (H-) 1700](./code/1568.txt) <br />
+#1615. [Maximal Network Rank (M) 1500](./code/1615.txt) <br />
 
 ---
 ### Maxflow - Bipartite Matching (二分图匹配)
