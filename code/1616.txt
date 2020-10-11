@@ -1,0 +1,37 @@
+class Solution {
+    int N;
+    public boolean checkPalindromeFormation(String s1, String s2) {
+        if(isP(s1)||isP(s2))return true;
+        N=s1.length();
+        if(check(s1,s2)||check(s2,s1))return true;
+        return false;
+    }
+    
+    public boolean check(String s1,String s2){
+        int l=0,r=s2.length()-1;
+        while(l<s1.length()){
+            if(s1.charAt(l)==s2.charAt(r)){
+                l++;r--;
+            }else{
+                String sub1=s2.substring(l,r+1);
+                String sub2=s1.substring(l,r+1);
+                if(isP(sub1)||isP(sub2))return true;
+                break;
+            }
+        }
+        return false;
+    }
+    
+    
+    
+    public boolean isP(String s){
+		int l=0,r=s.length()-1;
+		while(l<r){
+			if(s.charAt(l)!=s.charAt(r))return false;
+			l++;r--;
+		}
+		return true;
+	}
+}
+
+
