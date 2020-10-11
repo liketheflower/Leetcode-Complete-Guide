@@ -1,0 +1,88 @@
+class Solution {
+    List<Integer>adjecent[];
+    boolean visit[];
+    int d=-1;
+    int b=-1;
+    public int[] countSubgraphsForEachDiameter(int n, int[][] edges) {
+        int res[]=new int[n-1];
+        visit=new boolean[n];
+        adjecent=new ArrayList[n];
+        for(int i=0;i<n;i++){
+            adjecent[i]=new ArrayList<>();
+        }
+        
+        for(int pair[]:edges){
+            int v1=pair[0]-1;int v2=pair[1]-1;
+            adjecent[v1].add(v2);
+            adjecent[v2].add(v1);
+        }
+        
+            
+            for(int j=1;j<(1<<n);j++){
+                
+                int root=first(j);
+                d=-1;
+                b=j;
+                
+                dfs1(root);
+                if(b!=0){
+                    continue;
+                }
+                
+                b=j;
+                dfs(root);
+                if(d<0)continue;
+
+                res[d-1]++;
+            }
+        
+        return res;
+    }
+    
+    public int first(int bit){
+        for(int i=0;i<18;i++){
+            if((bit&(1<<i))!=0)return i;
+        }
+        return -1;
+    }
+    
+    
+     int off(int n, int k) 
+    { 
+        
+        return (n & ~(1 << (k))); 
+    }
+    
+    public void dfs1(int root){
+        b=off(b,root);
+        List<Integer>childs=adjecent[root];
+       
+        for(int c:childs){
+            if(visit[c])continue;
+            if(((1<<c)&b)==0)continue;
+            dfs1(c);
+        }
+    }
+    
+    
+    public int dfs(int root){
+        b=off(b,root);
+        List<Integer>childs=adjecent[root];
+        List<Integer>list=new ArrayList<>();
+        for(int c:childs){
+            if(visit[c])continue;
+            if(((1<<c)&b)==0)continue;
+            int back=dfs(c);
+            list.add(back);
+        }
+        Collections.sort(list);
+        if(list.size()==0)return 1;
+        if(list.size()==1){
+            d=Math.max(d,list.get(0));
+            return list.get(0)+1;
+        }
+        d=Math.max(d,list.get(list.size()-1)+list.get(list.size()-2));
+        return list.get(list.size()-1)+1;
+        
+    }
+}
