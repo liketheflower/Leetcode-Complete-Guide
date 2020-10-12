@@ -577,7 +577,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 50
+ 统计(1800+ 题量)： 51
  
   
   ### Beta Round #3 
@@ -776,6 +776,14 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  GFD. [ Searchlights	 (2000)](./contest/GFD.txt) <br />
  GFE. [ Avoid Rainbow Cycles	 (2400) (Union Find)](./contest/GFE.txt) <br />
  GFF. [ Two Different	 (2300)(Bit Mask)](./contest/GFF.txt) <br />
+ 
+ 
+  ### Codeforces Global Round 11
+ GLOA. [ Avoiding Zero	 (900) ](./contest/GLOA.txt) <br />
+ GLOB. [Chess Cheater	 (1400) (Sort+Greedy) ](./contest/GLOB.txt) <br />
+ GLOC. [ The Hard Work of Paparazzi	 (2000) DP](./contest/GLOC.txt) <br />
+
+ 
  
  <br><br><br>
    ### NYU Progteam Spring Break Practice 3/16/2020
