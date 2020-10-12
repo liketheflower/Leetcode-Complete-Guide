@@ -1,0 +1,37 @@
+class Solution {
+    public int clumsy(int N) {
+       if(N<=4){
+           if(N==1)return N;
+           if(N==2)return N*(N-1);
+           if(N==3)return N*(N-1)/(N-2);
+           if(N==4)return N*(N-1)/(N-2)+(N-3);
+       }
+        
+        
+        int res=0;
+        int add=0;
+        List<Integer>list=new ArrayList<>();
+        while(N>=4){
+            add+=(N-3);
+            int mul=1;
+            mul=N*(N-1)/(N-2);
+            list.add(mul);
+            N-=4;
+        }
+        
+        if(N<4){
+           if(N==1)list.add(N);
+           if(N==2)list.add(N*(N-1));
+           if(N==3)list.add(N*(N-1)/(N-2)); 
+       }
+        
+        
+        
+        res+=add;
+        for(int i=0;i<list.size();i++){
+            if(i==0)res+=list.get(i);
+            else res-=list.get(i);
+        }
+        return res;
+    }
+}
