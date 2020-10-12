@@ -203,6 +203,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #1110. [Delete Nodes And Return Forest (M-) 1400](./code/1110.txt) <br />
 #1123. [Lowest Common Ancestor of Deepest Leaves (M) 1500](./code/1123.txt) <br />
 #1339. [Maximum Product of Splitted Binary Tree (M) 1500](./code/1339.txt) <br />
+#1457. [Pseudo-Palindromic Paths in a Binary Tree (M-) 1300](./code/1457.txt) <br />
 #1490. [Clone N-tree (M-) 1300](./code/1490.txt) <br />
 #1516. [Move Sub-Tree of N-Ary Tree (H-) 1700](./code/1516.txt) <br />
 #1617. [Count Subtrees With Max Distance Between Cities (H) 1800](./code/1617.txt) <br />
