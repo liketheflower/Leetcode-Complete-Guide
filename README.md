@@ -108,6 +108,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #82. [Remove Duplicates from Sorted List II (M-) 1300](./code/82.txt) <br />
 #83. [Remove Duplicates from Sorted List (E) 1000](./code/83.txt) <br />
 #86. [Partition List (M-) 1300](./code/86.txt) <br />
+#92. [Reverse LinkedList II (M) 1500](./code/92.txt) <br />
 #141. [Linked List Cycle (E) 141](./code/1000.txt) <br />
 #146. [LRU Cache (M+) 1600](./code/146.txt) <br />
 #203. [Remove Linked List Elements (E) 900](./code/203.txt) <br />
