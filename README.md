@@ -267,6 +267,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #1359. [Count All Valid Pickup and Delivery Options (H-) 1700](./code/1359.txt) <br />
 #1388. [Pizza With 3n Slices (H) 1800](./code/1388.txt) <br />
 #1402. [Reducing Dishes (H-) 1600](./code/1402.txt) <br />
+#1458. [Max Dot Product of Two Subsequences (H-) 1600](./code/1458.txt) <br />
 #1478. [Allocate Mailboxes (H) 1900](./code/1478.txt) <br />
 #1546. [Maximum Number of Non-Overlapping Subarrays With Sum Equals Target (M+) 1600](./code/1546.txt) <br />
 #1548. [The Most Similar Path in a Graph  (H) 1800](./code/1548.txt) <br />
