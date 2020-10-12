@@ -297,6 +297,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #1128. [Number of Equivalent Domino Pairs (E) 1000](./code/1128.txt) <br />
 #1131. [Maximum of Absolute Value Expression (M+) 1600](./code/1131.txt) <br />
 #1237. [ Find Positive Integer Solution for a Given Equation (E) 1000](./code/1237.txt) <br />
+#1415. [ The k-th Lexicographical String of All Happy Strings of Length n (M+) 1600](./code/1415.txt) <br />
 #1498. [Number of Subsequences That Satisfy the Given Sum Condition (M+) 1600](./code/1498.txt) <br />
 #1551. [Minimum Operations to Make Array Equal (M-) 1200](./code/1551.txt) <br />
 #1573. [Number of Ways to Split a String (M) 1500](./code/1573.txt) <br />
