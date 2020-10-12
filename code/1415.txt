@@ -1,0 +1,45 @@
+class Solution {
+    public String getHappyString(int n, int k) {
+        StringBuilder str=new StringBuilder();
+        
+        int sum=1;
+        for(int i=0;i<n-1;i++){
+            sum*=2;
+        }
+        
+        if(sum*3<k)return "";
+        
+        char table[]=new char[]{'a','b','c'};
+        char t1[]=new char[]{'a','b'};
+        char t2[]=new char[]{'a','c'};
+        char t3[]=new char[]{'b','c'};
+        char pre='1';
+        k--;
+        
+        int first=(k)/sum;
+        str.append(table[first]);
+        pre=table[first];
+        k%=sum;
+        sum/=2;
+        
+        for(int i=1;i<n;i++){
+            int g=(k)/sum;
+            
+            if(pre=='a'){
+                pre=t3[g];
+            }
+            else if(pre=='b'){
+                pre=t2[g];
+            }else{
+                pre=t1[g];
+            }
+            
+            str.append(pre+"");
+            k%=sum;
+            sum/=2;
+        }
+        
+        
+        return str.toString();
+    }
+}
