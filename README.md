@@ -782,7 +782,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  GLOA. [ Avoiding Zero	 (900) ](./contest/GLOA.txt) <br />
  GLOB. [Chess Cheater	 (1400) (Sort+Greedy) ](./contest/GLOB.txt) <br />
  GLOC. [ The Hard Work of Paparazzi	 (2000) DP](./contest/GLOC.txt) <br />
-
+ GLOD. [ Unshuffling a Deck	 (2000) sort](./contest/GLOD.txt) <br />
  
  
  <br><br><br>
