@@ -1,0 +1,38 @@
+class Solution {
+    public int visiblePoints(List<List<Integer>> points, int angle, List<Integer> location) {
+        int x=location.get(0);
+        int y=location.get(1);
+        int res=0;int cnt=0;
+        List<Double>list=new ArrayList<>();
+        List<Double>list1=new ArrayList<>();
+        for(List<Integer>pair:points){
+            int x1=pair.get(0);
+            int y1=pair.get(1);
+            if(x1==x&&y1==y){
+                cnt++;continue;
+            }
+            double ang = Math.toDegrees(Math.atan2(y1 - y,x1 - x));
+            list.add(ang);
+            if(ang<0){
+                ang+=360;
+                list.add(ang);
+            }
+            
+        }
+        
+        Collections.sort(list);
+
+        Queue<Double>q=new LinkedList<>();
+        for(int i=0;i<list.size();i++){
+            double cur=list.get(i);
+            q.add(cur);
+            while((q.size()>0&&cur-q.peek()>angle)||q.size()>points.size()){
+                q.poll();
+            }
+            res=Math.max(res,q.size()+cnt);
+        }
+        
+        res=Math.max(res,cnt);
+        return res;
+    }
+}
