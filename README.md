@@ -300,6 +300,9 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #LCP3. [机器人大冒险 (M) 1500](./code/LCP3.txt) <br />
 #LCP11. [期望个数统计 (M-) 1400](./code/LCP11.txt) <br />
 
+### Geometry
+#1610. [ Maximum Number of Visible Points(H) 1800](./code/1610.txt) <br />
+
 ---
 ### Moore's Voting
 #169. [Majority Element (M-) 1200](./code/169.txt) <br />
