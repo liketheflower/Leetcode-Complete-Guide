@@ -1,0 +1,24 @@
+class Solution {
+    public int findMinFibonacciNumbers(int k) {
+        int max=1;
+        List<Integer>list=new ArrayList<>();
+        list.add(1);
+        list.add(1);
+        while(max<=k){
+            int size=list.size();
+            int cur=list.get(size-1)+list.get(size-2);
+            max=cur;
+            list.add(cur);
+        }
+        
+        int res=0;
+        for(int i=list.size()-1;i>=0;i--){
+            int cur=list.get(i);
+            if(k>=cur){
+                res++;
+                k-=cur;
+            }
+        }
+        return res;
+    }
+}
