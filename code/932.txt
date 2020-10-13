@@ -1,0 +1,23 @@
+class Solution {
+    public int[] beautifulArray(int N) {
+        //must be no arithmetic-subsequence
+        if(N==1)return new int[]{1};
+        if(N==2)return new int[]{1,2};
+        
+        int A[]=new int[N];
+        int mid=(N+1)/2;
+        int l[]=beautifulArray(mid);
+        for(int i=0;i<mid;i++){
+            A[i]=l[i]*2-1;
+        }
+        
+        int index=mid;
+        for(int i=0;i<l.length;i++){
+            int base=l[i];
+            if(base*2>N)continue;
+            A[index++]=base*2;
+        }
+        
+        return A;   
+    }
+}
