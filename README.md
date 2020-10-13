@@ -433,6 +433,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #315. [Count of Smaller Numbers After Self(H-) 1700](./code/315.txt) <br />
 #327. [Count of Range Sum(H) 1800](./code/327.txt) <br />
 #454. [4 sum II (M-) 1400](./code/454.txt) <br />
+#932. [Beautiful Array (M+) 1700](./code/932.txt) <br />
 
 ---
 ### Union Find
