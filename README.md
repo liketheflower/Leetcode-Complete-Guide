@@ -74,6 +74,7 @@ CF 分目测评估：
 #838. [ Push Dominoes (M) 1500](./code/838.txt) <br />
 #967. [Numbers With Same Consecutive Differences (M) 1500](./code/967.txt) <br />
 #979. [Distribute Coins in Binary Tree (M+) 1600](./code/979.txt) <br />
+#988. [  Smallest String Starting From Leaf (M) 1500](./code/988.txt) <br />
 #1020. [Number of Enclaves (M-) 1400](./code/1020.txt) <br />
 #1239. [Maximum Length of a Concatenated String with Unique Characters (M) 1500](./code/1239.txt) <br />
 #1240. [Tiling a Rectangle with the Fewest Squares (H+) 2000](./1240.txt) <br />
