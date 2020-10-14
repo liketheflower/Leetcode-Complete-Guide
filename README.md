@@ -293,6 +293,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 ### Math
 #60. [Permutation Sequence (M+) 1600](./code/60.txt) <br />
 #172. [Factorial Trailing Zeroes (M-) 1400](./code/172.txt) <br />
+#396. [Rotate Function (M-) 1400](./code/396.txt) <br />
 #453. [Minimum Moves to Equal Array Elements (E+) 1100](./code/453.txt) <br />
 #463. [Island Perimeter (E)) 900](./code/463.txt) <br />
 #598. [Range Addition II (E)) 900](./code/598.txt) <br />
