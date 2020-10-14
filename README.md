@@ -636,6 +636,13 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  D. [Dot (1900) (Game+Dp)](./contest/BETA63D.txt) <br />
  E. [Subsegments (1800) (Sliding Window)](./contest/BETA63E.txt) <br />
  
+ 
+  ### Beta Round #98 (Div. 2)
+ A. [ Postcards and photos (900) ](./contest/BETA98A.txt) <br />
+ B. [Permutation (1000) ](./contest/BETA98B.txt) <br />
+ C. [History (1500) ](./contest/BETA98C.txt) <br />
+ D. [Palindromes1 (1900) (DP)](./contest/BETA98D.txt) <br />
+ 
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
  B. [Hydra (2000) (集合相交)](./code/150B.txt) <br />
