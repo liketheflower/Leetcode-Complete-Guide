@@ -1,0 +1,46 @@
+class Solution {
+    int dp[][];
+    public int superEggDrop(int K, int N) {
+        dp=new int[K+1][N+1];
+        return dfs(K,N);
+    }
+    
+    public int dfs(int k,int N){
+        if(k==1)return N;
+        if(N==0||N==1)return N;
+       
+        
+        if(dp[k][N]!=0)return dp[k][N];
+        
+        int res=Integer.MAX_VALUE;
+        
+        //General transition
+        
+        /*for(int i=1;i<N;i++){
+            res=Math.min(res,1+Math.max(dfs(k-1,i-1),dfs(k,N-i)));
+        }*/
+        
+        
+        //observation
+        //more egg => less step
+        
+        int l=1,r=N-1;
+        res=1+Math.max(dfs(k-1,0),dfs(k,N-1));
+        while(l<=r){
+            int mid=l+(r-l)/2;
+            int left=1+dfs(k-1,mid-1);
+            int right=1+dfs(k,N-mid);
+            int max=Math.max(left,right);
+            res=Math.min(res,max);
+            if(left>right){
+                r=mid-1;
+            }else{
+                l=mid+1;
+            }
+        }
+        
+
+        dp[k][N]=res;
+        return res;
+    }
+}
