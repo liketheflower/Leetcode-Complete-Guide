@@ -1,0 +1,108 @@
+class LFUCache {
+    int size=0;
+    int capacity;
+    Map<Integer,Node>map=new HashMap<>();
+    DD A[]=new DD[5000];
+    int min=1;
+    public LFUCache(int capacity) {
+        this.capacity=capacity;
+        for(int i=0;i<A.length;i++){
+            A[i]=new DD();
+        }
+    }
+    
+    public int get(int key) {
+        if(!map.containsKey(key))return -1;
+        
+        Node node=map.get(key);
+        int oldcnt=node.cnt;
+        A[oldcnt].remove(node);
+        if(oldcnt==min&&A[oldcnt].size==0)min++;
+        node.cnt++;
+        A[node.cnt].addLast(node);
+        
+        return node.val;
+    }
+    
+    public void put(int key, int value) {
+        if(capacity==0)return;
+        if(map.containsKey(key)){
+            Node node=map.get(key);
+            node.val=value;
+            int oldcnt=node.cnt;
+            A[oldcnt].remove(node);
+            if(oldcnt==min&&A[oldcnt].size==0)min++;
+            node.cnt++;
+            A[node.cnt].addLast(node);
+        }else{
+             size++;
+             if(size>capacity){
+                size--;
+                int k=A[min].removeFirst();
+                map.remove(k);
+             }
+            
+             Node node=new Node();
+             node.val=value;
+             node.cnt=1;
+             node.key=key;
+             map.put(key,node);
+             A[1].addLast(node);
+             min=1;
+        }
+        
+
+    }
+    
+    class DD{
+        int size=0;
+        Node head;
+        Node tail;
+        public DD(){
+            head=new Node();
+            tail=new Node();
+            head.next=tail;
+            tail.pre=head;
+        }
+        
+        public void remove(Node node){
+            Node next=node.next;
+            Node pre=node.pre;
+            pre.next=next;
+            next.pre=pre;
+            size--;
+        }
+        
+        public int removeFirst(){
+            Node next=head.next;
+            head.next=next.next;
+            next.next.pre=head;
+            size--;
+            return next.key;
+        }
+        
+        public void addLast(Node node){
+            size++;
+            Node pre=tail.pre;
+            pre.next=node;
+            node.pre=pre;
+            node.next=tail;
+            tail.pre=node;
+        }
+    }
+    
+    class Node{
+        Node pre;
+        Node next;
+        int val;
+        int cnt=0;
+        int key=0;
+    }
+}
+
+/**
+ * Your LFUCache object will be instantiated and called as such:
+ * LFUCache obj = new LFUCache(capacity);
+ * int param_1 = obj.get(key);
+ * obj.put(key,value);
+ */
