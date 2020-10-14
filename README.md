@@ -600,7 +600,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 53
+ 统计(1800+ 题量)： 54
  
   
   ### Beta Round #3 
@@ -641,7 +641,8 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  A. [ Postcards and photos (900) ](./contest/BETA98A.txt) <br />
  B. [Permutation (1000) ](./contest/BETA98B.txt) <br />
  C. [History (1500) ](./contest/BETA98C.txt) <br />
- D. [Palindromes1 (1900) (DP)](./contest/BETA98D.txt) <br />
+ D. [Palindromes (1900) (DP)](./contest/BETA98D.txt) <br />
+ E. [Last Chance (2000) (Segment Tree + prefix sum)](./contest/BETA98E.txt) <br />
  
  ### Codeforces Round #150 (Div. 1)
  A. [The Brand New Function (1600) ](./code/150A.txt) <br />
