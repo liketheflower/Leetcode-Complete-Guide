@@ -641,6 +641,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  A. [ cAPS lOCK (1000) ](./contest/BETA95A.txt) <br />
  B. [ Opposites Attract (1200) ](./contest/BETA95B.txt) <br />
  C. [ The World is a Theatre (1400) ](./contest/BETA95C.txt) <br />
+ D. [ Subway (1600) (Graph Cycle)](./contest/BETA95D.txt) <br />
  
   ### Beta Round #98 (Div. 2)
  A. [ Postcards and photos (900) ](./contest/BETA98A.txt) <br />
