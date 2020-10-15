@@ -33,6 +33,7 @@ CF 分目测评估：
 #442. [Find All Duplicates in an Array (M-) 1400](./code/442.txt) <br />
 #795. [Number of Subarrays with Bounded Maximum (M) 1500](./code/795.txt) <br />
 #797. [All Paths From Source to Target (M) 1500](./code/797.txt) <br />
+#852. [Peak Index in a Mountain Array (E) 800](./code/852.txt) <br />
 #867. [Transpose Matrix (E) 900](./code/867.txt) <br />
 #905. [Sort Array By Parity (E) 800](./code/905.txt) <br />
 #944. [Delete Columns to Make Sorted (E) 900](./code/944.txt) <br />
