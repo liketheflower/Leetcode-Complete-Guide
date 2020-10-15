@@ -1,0 +1,66 @@
+class Solution {
+public:
+    vector<int>res;
+    bool found=false;
+    vector<int> splitIntoFibonacci(string s) {
+        long first=0;
+        for(int i=0;i<s.size();i++){
+            if(i!=0&&first==0)break;
+            first=first*10+s[i]-'0';
+            if(first>=INT_MAX)break;
+            long second=0;
+            for(int j=i+1;j<s.size();j++){
+                if(j!=i+1&&second==0)break;
+                second=second*10+s[j]-'0';
+                if(second>=INT_MAX)break;
+                vector<long>A;
+                A.push_back(first);
+                A.push_back(second);
+                dfs(s,j+1,A,0,true);
+            }
+        }
+        return res;
+    }
+    
+    void dfs(string s,int i,vector<long>A,long cur,bool start){
+        if(found)return;
+        if(i>=s.size()){
+            if(start&&A.size()>2){
+                found=true;
+                for(long &x:A){
+                    res.push_back((int)(x));
+                }
+            }
+            return;
+        }
+        int digit=s[i]-'0';
+        if(cur==0&&!start){
+            return;
+        }
+        
+        cur=cur*10+digit;
+        if(cur>INT_MAX)return;
+        
+        long f1=A[A.size()-2];
+        long f2=A[A.size()-1];
+        
+        
+        if(cur>f1+f2){
+            return;
+        }
+        
+        if(cur==f1+f2){
+           A.push_back(cur);
+           dfs(s,i+1,A,0,true);
+        }
+        
+        if(cur<f1+f2){
+            dfs(s,i+1,A,cur,false);
+        }
+        
+      
+        
+    }
+    
+    
+};
