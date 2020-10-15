@@ -637,6 +637,11 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  E. [Subsegments (1800) (Sliding Window)](./contest/BETA63E.txt) <br />
  
  
+   ### Beta Round #95 (Div. 2)
+ A. [ cAPS lOCK (1000) ](./contest/BETA95A.txt) <br />
+
+ 
+ 
   ### Beta Round #98 (Div. 2)
  A. [ Postcards and photos (900) ](./contest/BETA98A.txt) <br />
  B. [Permutation (1000) ](./contest/BETA98B.txt) <br />
