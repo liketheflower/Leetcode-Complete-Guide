@@ -364,6 +364,10 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #1456. [Maximum Number of Vowels in a Substring of Given Length (M-) 1300](./code/1456.txt) <br />
 
 ---
+### Two Pointer
+#881. [Boats to Save People (M-) 1400](./code/881.txt) <br />
+
+---
 ### Sort
 #179. [Largest Number (M) 1500](./code/179.txt) <br />
 #252. [Meeting Room (E) 1000](./code/252.txt) <br />
