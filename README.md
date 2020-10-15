@@ -73,6 +73,7 @@ CF 分目测评估：
 #690. [Employee Importance (M-) 1200](./code/690.txt) <br />
 #761. [Special Binary String (H) 1800](./code/761.txt) <br />
 #838. [ Push Dominoes (M) 1500](./code/838.txt) <br />
+#842. [ Split Array into Fibonacci Sequence(M+) 1600](./code/842.txt) <br />
 #967. [Numbers With Same Consecutive Differences (M) 1500](./code/967.txt) <br />
 #979. [Distribute Coins in Binary Tree (M+) 1600](./code/979.txt) <br />
 #988. [  Smallest String Starting From Leaf (M) 1500](./code/988.txt) <br />
