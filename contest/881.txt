@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int numRescueBoats(vector<int>& A, int limit) {
+        sort(A.begin(),A.end());
+        int cnt=0;
+        vector<bool>visit(A.size());
+        int r=A.size()-1;
+        for(int i=0;i<A.size();i++){
+            if(visit[i])continue;
+            visit[i]=true;
+            while(r>i){
+                if(A[i]+A[r]<=limit){
+                    visit[r]=true;
+                    r--;
+                    break;
+                }else{
+                    r--;
+                }
+            }
+            cnt++;
+            
+        }
+        
+        
+        return cnt;
+    }
+};
