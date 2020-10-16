@@ -121,6 +121,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #203. [Remove Linked List Elements (E) 900](./code/203.txt) <br />
 #237. [Delete Node in a Linked List(E) 1000](./code/237.txt) <br />
 #328. [Odd Even Linked List (M-) 1300](./code/328.txt) <br />
+#341. [Flatten Nested List Iterator (M-) 1400](./code/341.txt) <br />
 #430. [Flatten a Multilevel Doubly Linked List (M) 1500](./code/430.txt) <br />
 #460. [LFU (H) 1800](./code/460.txt) <br />
 #817. [Linked List Components (M-) 1300](./code/817.txt) <br />
