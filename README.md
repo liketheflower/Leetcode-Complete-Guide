@@ -196,6 +196,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #704. [Binary Search(E) 900](./code/704.txt) <br />
 #744. [Find Smallest Letter Greater Than Target (M-) 1200](./code/744.txt) <br />
 #786. [K-th Smallest Prime Fraction (H) 1800](./code/786.txt) <br />
+#792. [Number of Matching Subsequences (M+) 1600](./code/792.txt) <br />
 #911. [Online Election(M) 1500](./code/911.txt) <br />
 #1095. [Find in Mountain Array (H-) 1700](./code/1095.txt) <br />
 #1292. [Maximum Side Length of a Square with Sum Less than or Equal to Threshold (M+) 1600](./code/1292.txt) <br />
