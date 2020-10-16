@@ -1,0 +1,44 @@
+class Solution {
+public:
+    int minMutation(string start, string end, vector<string>& bank) {
+        unordered_set<string>hash;
+        for(string &s:bank){
+            hash.insert(s);
+        }
+        
+        queue<pair<string,int>>q;
+        q.push({start,0});
+        while(q.size()!=0){
+            pair<string,int>p=q.front();
+            q.pop();
+            string s1=p.first;
+            int level=p.second;
+            
+            if(s1==end)return level;
+            vector<string>visit;
+            
+            for(auto it=hash.begin();it!=hash.end();it++){
+                string s2=*it;
+                if(check(s1,s2)){
+                    visit.push_back(s2);
+                    q.push({s2,level+1});
+                }
+            }
+            
+            for(string &w:visit){
+                hash.erase(w);
+            }
+        }
+        
+        return -1;
+        
+    }
+    
+    bool check(string s1,string s2){
+        int cnt=0;
+        for(int i=0;i<s1.size();i++){
+            if(s1[i]!=s2[i])cnt++;
+        }
+        return cnt==1;
+    }
+};
