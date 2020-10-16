@@ -1,0 +1,35 @@
+class Solution {
+public:
+    vector<int> advantageCount(vector<int>& A, vector<int>& B) {
+        vector<int>res(A.size(),-1);
+        vector<vector<int>>V;
+        vector<int>notuse;
+        for(int i=0;i<B.size();i++){
+            V.push_back({B[i],i});
+        }
+        
+        sort(A.begin(),A.end());
+        sort(V.begin(),V.end(),[](const vector<int>&a,const vector<int>&b){
+            return a[0]<b[0];
+        });
+        
+        int j=0;
+        
+        for(int i=0;i<V.size();i++){
+            while(j<A.size()&&A[j]<=V[i][0]){
+                notuse.push_back(A[j]);
+                j++;
+            }
+            if(j>=A.size())break;
+            res[V[i][1]]=A[j];
+            j++;
+        }
+        
+        j=0;
+        for(int i=0;i<res.size();i++){
+            if(res[i]==-1)res[i]=notuse[j++];
+        }
+        
+        return res;
+    }
+};
