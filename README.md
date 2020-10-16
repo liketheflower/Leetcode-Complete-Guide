@@ -313,6 +313,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #1006. [ Clumsy Factorial (M) 1500](./code/1006.txt) <br />
 #1024. [Vedio Stichting (M) 1600](./code/1024.txt) <br />
 #1041. [Robot Bounded In Circle (M) 1500](./code/1041.txt) <br />
+#1103. [ Distribute Candies to People(E+) 1300](./code/1103.txt) <br />
 #1128. [Number of Equivalent Domino Pairs (E) 1000](./code/1128.txt) <br />
 #1131. [Maximum of Absolute Value Expression (M+) 1600](./code/1131.txt) <br />
 #1237. [ Find Positive Integer Solution for a Given Equation (E) 1000](./code/1237.txt) <br />
