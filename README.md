@@ -212,6 +212,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #101. [Symmetric Tree (M-) 1300](./code/101.txt) <br />
 #110. [Balanced Binary Tree  (E) 900](./code/110.txt) <br />
 #236. [Lowest Common Ancestor of a Binary Tree   (M-) 1400](./code/236.txt) <br />
+#617. [Merge Binary Tree (E) 1000](./code/617.txt) <br />
 #654. [Maximum Binary Tree (M-) 1400](./code/654.txt) <br />
 #669. [Trim a Binary Search Tree (M-) 1400](./code/669.txt) <br />
 #872. [Leaf-Similar Trees (E) 900](./code/872.txt) <br />
