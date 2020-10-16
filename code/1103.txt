@@ -1,0 +1,39 @@
+class Solution {
+public:
+    vector<int> distributeCandies(int k, int n) {
+        vector<int>res(n);
+        long l=1,r=k;
+        long end=-1;
+        
+        while(l<=r){
+            long mid=l+(r-l)/2;
+            long sum=mid*(mid+1)/2;
+            if(sum<=k){
+                end=mid;
+                l=mid+1;
+            }else{
+                r=mid-1;
+            }
+        }
+       
+        
+        for(int i=0;i<n;i++){
+            if(i+1>end){
+                break;
+            }
+            
+            int first=(i+1);
+            int t=(end-(i+1))/n;
+            if(t==0){
+                res[i]=first;
+                continue;
+            }
+            int last=first+t*n;
+            res[i]=(first+last)*(t+1)/2;
+        }
+        
+        int mod=k-(end*(1+end)/2);
+        res[(end%n)]+=mod;
+        return res;
+    }
+};
