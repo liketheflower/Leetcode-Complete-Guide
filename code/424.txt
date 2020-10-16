@@ -1,0 +1,30 @@
+class Solution {
+public:
+    int characterReplacement(string s, int k) {
+        vector<int>A(26);
+        queue<char>q;
+        int res=0;
+        for(int i=0;i<s.size();i++){
+            char c=s[i];
+            A[c-'A']++;
+            q.push(c);
+            while(q.size()>0&&bad(A,k)){
+                char front=q.front();
+                q.pop();
+                A[front-'A']--;
+            }
+            res=max(res,(int)(q.size()));
+        }
+        return res;
+    }
+    
+    bool bad(vector<int>& A,int k){
+        int mx=0;
+        int sum=0;
+        for(int &i:A){
+            mx=max(mx,i);
+            sum+=i;
+        }
+        return sum-mx>k;
+    }
+};
