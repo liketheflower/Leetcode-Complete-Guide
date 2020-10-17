@@ -340,6 +340,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 ---
 ### Segment Tree
 #308. [Range Sum Query 2D - Mutable (2D Segment Tree) (H) 2100](./code/308.txt) <br />
+#715. [Range Module (H) 1900](./code/715.txt) <br />
 #1585. [Check If String Is Transformable With Substring Sort Operations (Segment Tree) (H+) 2400](./code/1585.txt) <br />
 #LCP5. [发leetcoin (H+) 2300](./code/LCP5.txt) <br />
 
