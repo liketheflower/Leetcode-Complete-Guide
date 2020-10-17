@@ -1,0 +1,94 @@
+class RangeModule {
+    Seg seg;
+    public RangeModule() {
+        seg=new Seg(1,1000000001);
+    }
+    
+    public void addRange(int left, int right) {
+        seg.update(left,right-1,true);
+    }
+    
+    public boolean queryRange(int left, int right) {
+        boolean res = seg.query(left,right-1);
+        return res;
+    }
+    
+    public void removeRange(int left, int right) {
+        seg.update(left,right-1,false);
+    }
+    
+}
+
+    class Seg{
+        int l,r;
+        boolean state=false;
+        Seg left=null,right=null;
+        public Seg(int l,int r){
+            this.l=l;
+            this.r=r;
+        }
+        
+        public boolean query(int s,int e){
+            if(l==s&&r==e){
+                return this.state;
+            }
+            int mid=l+(r-l)/2; 
+            
+            if(left==null){
+                left=new Seg(l,mid);left.state=state;
+            }
+            if(right==null){
+                right=new Seg(mid+1,r);right.state=state;
+            }
+            
+            
+            if(e<=mid){
+                return left.query(s,e);
+            }
+            else if(s>=mid+1){
+                return right.query(s,e);
+            }else{
+                return (left.query(s,mid))&(right.query(mid+1,e));
+            }
+        }
+
+        public void update(int s,int e,boolean val){
+            
+            if(l==s&&r==e){
+                this.state=val;
+                this.left=null;
+                this.right=null;
+                return;
+            }
+            int mid=l+(r-l)/2;
+            
+             if(left==null){
+                left=new Seg(l,mid);left.state=state;
+            }
+            if(right==null){
+                right=new Seg(mid+1,r);right.state=state;
+            }
+            
+            if(e<=mid){
+                left.update(s,e,val);
+            }else if(s>=mid+1){
+                right.update(s,e,val);
+            }else{
+                left.update(s,mid,val);
+                right.update(mid+1,e,val);
+            }
+            this.state=right.state&&left.state;
+        }
+        
+        public String toString(){
+            return "["+l+","+r+","+state+"]";
+        }
+    }
+
+/**
+ * Your RangeModule object will be instantiated and called as such:
+ * RangeModule obj = new RangeModule();
+ * obj.addRange(left,right);
+ * boolean param_2 = obj.queryRange(left,right);
+ * obj.removeRange(left,right);
+ */
