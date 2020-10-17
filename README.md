@@ -327,6 +327,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #1498. [Number of Subsequences That Satisfy the Given Sum Condition (M+) 1600](./code/1498.txt) <br />
 #1551. [Minimum Operations to Make Array Equal (M-) 1200](./code/1551.txt) <br />
 #1573. [Number of Ways to Split a String (M) 1500](./code/1573.txt) <br />
+#1622. [Fancy Sequence (H+) 2000](./code/1622.txt) <br />
 #LCP3. [机器人大冒险 (M) 1500](./code/LCP3.txt) <br />
 #LCP11. [期望个数统计 (M-) 1400](./code/LCP11.txt) <br />
 
