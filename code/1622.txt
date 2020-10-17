@@ -1,0 +1,62 @@
+import java.math.*; 
+class Fancy {
+    int mod=1000000007;
+    long A[]=new long[100010];
+    long B[]=new long[100010];
+    long C[]=new long[100010];
+    int index=-1;
+    public void append(int val) {
+        index++;
+        A[index]=val;
+        B[index]=0;
+        C[index]=1;
+        if(index>0){
+            B[index]=B[index-1];
+            C[index]=C[index-1];
+        }
+    }
+    
+    public void addAll(int inc) {
+        B[index]+=inc;B[index]%=mod;
+    }
+    
+    public void multAll(int m) {
+        B[index]*=m;
+        B[index]%=mod;
+        C[index]*=m;
+        C[index]%=mod;
+    }
+    
+    public int getIndex(int idx) {
+        if(idx>index)return -1;
+        long ori=A[idx];
+        long pre=get(B,idx-1);
+        long tomul=CC(index,idx-1);
+        long toadd=B[index]-(get(B,idx-1)*tomul)%mod;
+        if(toadd<0)toadd+=mod;
+        ori=ori*tomul+toadd;
+        return (int)(ori%mod);
+    }
+    public long CC(int i,int j){
+        if(j<0)return C[i];
+		long mod=1000000007;
+		long a=C[i];
+		long b=C[j];
+		BigInteger B= BigInteger.valueOf(b);
+		long binverse=B.modInverse(BigInteger.valueOf(mod)).longValue();
+		return ((a)*(binverse%mod))%mod;
+	}
+    public long get(long arr[],int i){
+        if(i<0)return 0;
+        return arr[i];
+    }
+}
+
+/**
+ * Your Fancy object will be instantiated and called as such:
+ * Fancy obj = new Fancy();
+ * obj.append(val);
+ * obj.addAll(inc);
+ * obj.multAll(m);
+ * int param_4 = obj.getIndex(idx);
+ */
