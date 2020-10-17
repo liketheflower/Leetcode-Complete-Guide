@@ -1,0 +1,36 @@
+class Solution {
+    int mod=1000000007;
+    public int numberOfSets(int n, int k) {
+        long dp[]=new long[n];
+        for(int i=0;i<n;i++){
+            dp[i]=i;
+        }
+        
+        for(int i=1;i<k;i++){
+            long pre[]=pre(dp);
+            pre=pre(pre);
+            dp=new long[n];
+            for(int j=i+1;j<n;j++){
+                long total=pre[j-1];
+                dp[j]=total%mod;
+            }
+        }
+        
+        long res=0;
+        for(long i:dp){
+            res+=i;
+            res%=mod;
+        }
+        return (int)(res);
+    }
+    public long[] pre(long A[]){
+        long sum=0;
+        long pre[]=new long[A.length];
+        for(int i=0;i<A.length;i++){
+            sum+=A[i];sum%=mod;
+            pre[i]=sum;
+        }
+        return pre;
+    }
+    
+}
