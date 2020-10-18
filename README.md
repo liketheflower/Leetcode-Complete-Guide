@@ -73,6 +73,7 @@ CF 分目测评估：
 #417. [Pacific Atlantic Water Flow (M+) 1600](./code/417.txt) <br />
 #473. [Matchsticks to Square (M+) 1600](./code/473.txt) <br />
 #488. [Zuma Game (H) 1800](./code/488.txt) <br />
+#491. [Increasing Subsequences (M) 1500](./code/491.txt) <br />
 #565. [Array Nesting (M-) 1400](./code/565.txt) <br />
 #690. [Employee Importance (M-) 1200](./code/690.txt) <br />
 #761. [Special Binary String (H) 1800](./code/761.txt) <br />
