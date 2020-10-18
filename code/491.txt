@@ -1,0 +1,39 @@
+class Solution {
+public:
+    unordered_set<string>hash;
+    vector<vector<int>>res;
+    vector<vector<int>> findSubsequences(vector<int>& nums) {
+        vector<int>A;
+        dfs(nums,0,A);
+        return res;
+    }
+    
+    void dfs(vector<int>&A,int index,vector<int>&cur){
+        if(index>=A.size()){
+            if(cur.size()>=2){
+                string s="";
+                for(int i=0;i<cur.size();i++){
+                    s.push_back((char)(cur[i]));
+                    s.push_back(',');
+                }
+                if(hash.find(s)==hash.end()){
+                    res.push_back(cur);
+                    hash.insert(s);
+                }
+            }
+            return;
+        }
+        
+        int last=-1000;
+        if(cur.size()>0){
+            last=cur[cur.size()-1];
+        }
+        
+        if(A[index]>=last){
+            cur.push_back(A[index]);
+            dfs(A,index+1,cur);
+            cur.pop_back();
+        }
+        dfs(A,index+1,cur);
+    }
+};
