@@ -407,6 +407,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #936. [Stamping The Sequence (H+) 2300](./code/936.txt) <br />
 #1163. [Last Substring in Lexicographical Order (H-) 1700](./code/1163.txt) <br />
 #1616. [Split Two Strings to Make Palindrome (M+) 1600](./code/1616.txt) <br />
+#1624. [Largest Substring Between Two Equal Characters (E) 900](./code/1624.txt) <br />
 
 ---
 ### Game Theory
