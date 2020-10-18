@@ -1,0 +1,51 @@
+class Solution {
+    public String findLexSmallestString(String s, int a, int b) {
+        Set<String>set=new HashSet<>();
+        String res=s;
+        Queue<String>q=new LinkedList<>();
+        q.add(s);
+        set.add(s);
+
+        
+        while(q.size()!=0){
+            String top=q.poll();
+                      
+            if(res.compareTo(top)>0){
+                res=top;
+            }
+            
+            String news1=add(top,a);
+            String news2=top.substring(top.length()-b,top.length())+top.substring(0,top.length()-b);
+            
+            if(!set.contains(news1)){
+                set.add(news1);
+                q.add(news1);
+            }
+            
+            if(!set.contains(news2)){
+                set.add(news2);
+                q.add(news2);
+            }
+        }  
+        return res;
+    }
+    
+    
+    public String add(String s,int a){
+        StringBuilder str=new StringBuilder();
+        
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            int digit=c-'0';
+            if(i%2==1){
+                digit=digit+a;
+                digit%=10;
+                str.append(digit+"");
+            }else{
+                str.append(c+"");
+            }
+        }
+        
+        return str.toString();
+    }
+}
