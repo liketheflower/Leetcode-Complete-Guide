@@ -469,6 +469,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #1202. [Smallest String With Swaps (M+) 1600](./code/1202.txt) <br />
 #1579. [Remove Max Number of Edges to Keep Graph Fully Traversable (H) 1900](./code/1579.txt) <br />
 #1584. [Min Cost to Connect All Points (M) 1500](./code/1584.txt) <br />
+#1627. [Graph Connectivity With Threshold (H) 1800](./code/1627.txt) <br />
 
 ---
 
