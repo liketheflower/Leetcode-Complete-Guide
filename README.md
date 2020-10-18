@@ -169,6 +169,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #133. [Clone Graph(M) 1500](./code/133.txt) <br />
 #785. [Is Graph Bipartite?(M) 1500](./code/785.txt) <br />
 #863. [All Nodes Distance K in Binary Tree(M) 1500](./code/863.txt) <br />
+#1042. [Flower Planting With No Adjacent(E+) 1300](./code/1042.txt) <br />
 #1153. [String Transform into another String (H-) 1700](./code/1153.txt) <br />
 #1192. [Critical Connection (H) 1900](./code/1192.txt) <br />
 #1334. [Find the City With the Smallest Number of Neighbors at a Threshold Distance (M) 1500 (Floyd-Warshall)](./code/1334.txt) <br />
