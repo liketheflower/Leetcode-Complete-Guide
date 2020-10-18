@@ -1,0 +1,31 @@
+class Solution {
+public:
+    vector<int> gardenNoAdj(int n, vector<vector<int>>& paths) {
+        vector<vector<int>>graph(n+1);
+        for(vector<int>&pair:paths){
+            graph[pair[0]-1].push_back(pair[1]-1);
+            graph[pair[1]-1].push_back(pair[0]-1);
+        }
+        
+        vector<int>res(n);
+        
+        for(int i=0;i<n;i++){
+            vector<int>&childs=graph[i];
+            vector<bool>color(5,false);
+            
+            for(int &c:childs){
+                color[res[c]]=true;
+            }
+            
+            for(int j=1;j<=4;j++){
+                if(!color[j]){
+                    res[i]=j;
+                    break;
+                }
+            }
+        }
+        
+        
+        return res;
+    }
+};
