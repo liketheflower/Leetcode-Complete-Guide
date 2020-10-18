@@ -59,6 +59,7 @@ CF 分目测评估：
 #1298. [Maximum Candies You Can Get from Boxes (H-) 1700](./code/1298.txt) <br />
 #1329. [Sort the Matrix Diagonally (M) 1500](./code/1329.txt) <br />
 #1439. [Find the Kth Smallest Sum of a Matrix With Sorted Rows (H) 1800](./code/1439.txt) <br />
+#1625. [Lexicographically Smallest String After Applying Operations (M) 1500](./code/1625.txt) <br />
 #LCP 09. [最小跳跃次数 (H) 1800](./code/LCP09.txt) <br />
 
 ---
