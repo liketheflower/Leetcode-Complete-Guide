@@ -435,6 +435,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #118. [Pascal's Triangle (E) 900](./code/118.txt) <br />
 #202. [Happy Number (E) 800](./code/202.txt) <br />
 #747. [Largest Number At Least Twice of Others (E) 900](./code/747.txt) <br />
+#806. [Number of Lines To Write String (E) 900](./code/806.txt) <br />
 #1071. [Greatest Common Divisor of Strings (E) 900](./code/1071.txt) <br />
 #1550. [Three Consecutive Odds (E-) 700](./code/1550.txt) <br />
 
