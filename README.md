@@ -151,6 +151,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #861. [Score After Flipping Matrix (M) 1500](./code/861.txt) <br />
 #870. [ Advantage Shuffle (M) 1500 (sort+2 pointer)](./code/870.txt) <br />
 #910. [Smallest Range II (H-) 1700](./code/910.txt) <br />
+#1007. [Minimum Domino Rotations For Equal Row (M) 1500](./code/1007.txt) <br />
 #1029. [Two City Scheduling (M+) 1600](./code/1029.txt) <br />
 #1111. [ Maximum Nesting Depth of Two Valid Parentheses Strings (M+) 1600](./code/1111.txt) <br />
 #1121. [Divide Array Into Increasing Sequence (H-) 1700](./code/1121.txt) <br />
