@@ -1,0 +1,26 @@
+class Solution {
+public:
+    vector<int> maxDepthAfterSplit(string seq) {
+        vector<int>res(seq.size());
+        vector<int>A;
+        
+        for(int i=0;i<seq.size();i++){
+            if(seq[i]=='('){
+                A.push_back(i);
+            }else{
+                int last=A.size()-1;
+                if(A.size()%2==1){
+                    res[i]=0;
+                    res[A[last]]=0;
+                }else{
+                    res[i]=1;
+                    res[A[last]]=1;
+                }
+                A.pop_back();
+            }
+        }
+        
+        
+        return res;
+    }
+};
