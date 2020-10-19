@@ -1,0 +1,35 @@
+class Solution {
+public:
+    bool reorderedPowerOf2(int N) {
+        string s=to_string(N);
+        vector<string>A;
+        
+        vector<int>t(10);
+        for(char &c:s){
+            t[c-'0']++;
+        }
+        
+        for(int i=0;i<=30;i++){
+            int pow=1<<i;
+            A.push_back(to_string(pow));
+        }
+        
+        for(string &pow:A){
+            if(check(t,pow))return true;
+        }
+        return false;
+    }
+    
+    bool check(vector<int>&t,string s){
+        vector<int>t1(10);
+        for(char &c:s){
+            t1[c-'0']++;
+        }
+        
+        for(int i=0;i<t.size();i++){
+            if(t[i]!=t1[i])return false;
+        }
+        
+        return true;
+    }
+};
