@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int addDigits(int num) {
+        while(num>=10){
+            string s=to_string(num);
+            num=0;
+            for(char &c:s){
+                num+=(c-'0');
+            }
+        }
+        return num;
+    }
+};
