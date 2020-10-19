@@ -661,7 +661,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   
   ### Beta Round #34 (Div. 2) 
   A. [ Reconnaissance 2 (800) ](./contest/BETA34A.txt) <br />
-  
+  B. [ Sale  (900) ](./contest/BETA34B.txt) <br /> 
   
  ### Beta Round #40 (Div. 2)
  A. [ Translation (800) ](./contest/BETA40A.txt) <br />
