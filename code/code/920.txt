@@ -1,0 +1,26 @@
+dp[L][N] : 长度+ number of unique song 
+
+
+
+代码：
+
+
+class Solution {
+public:
+    int numMusicPlaylists(int N, int L, int k) {
+        int mod=1000000007;
+        vector<vector<long>>dp(L,vector<long>(N+1,0));
+        
+        dp[0][1]=N;
+        
+        for(int i=1;i<L;i++){
+            for(int j=1;j<=N;j++){
+                dp[i][j]=dp[i-1][j-1]*(N-(j-1));
+                dp[i][j]%=mod;
+                dp[i][j]+=dp[i-1][j]*max(0,j-k);
+                dp[i][j]%=mod;
+            }
+        }
+        return (int)(dp[L-1][N]);
+    }
+};
