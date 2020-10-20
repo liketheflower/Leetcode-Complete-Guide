@@ -458,7 +458,8 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #898. [Bitwise ORs of Subarrays (M+) 1600](./code/898.txt) <br />
 #1178. [Number of Valid Words for Each Puzzle (H-) 1700](./code/1178.txt) <br />
 #1290. [Convert Binary Number in a Linked List to Integer (E) 900](./code/1290.txt) <br />
-#1317. [ Find the Longest Substring Containing Vowels in Even Counts (M) 1500](./code/1317.txt) <br />
+#1371. [ Find the Longest Substring Containing Vowels in Even Counts (M) 1500](./code/1371.txt) <br />
+#1318. [ Minimum Flips to Make a OR b Equal to c (M) 1500](./code/1318.txt) <br />
 #1404. [ Number of Steps to Reduce a Number in Binary Representation to One (M+) 1600](./code/1404.txt) <br />
 #1611. [ Minimum One Bit Operations to Make Integers Zero (H) 1800](./code/1611.txt) <br />
 
