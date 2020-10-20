@@ -639,7 +639,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 55
+ 统计(1800+ 题量)： 56
  
   
   ### Beta Round #3 
@@ -757,6 +757,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
    ### Codeforces Round #624 (Div. 3)
    A. [Add Odd or Subtract Even (800) ](./code/624A.txt) <br />
    B. [WeirdSort (1200) ](./code/624A.txt) <br />
+   F. [Moving Point (1900)  Segment Tree](./code/624F.txt) <br />
  
    ### Codeforces Round #640 (Div. 4)
  A. [Sum of Round Numbers (800) ](./code/640A.txt) <br />
