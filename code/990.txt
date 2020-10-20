@@ -1,0 +1,44 @@
+class Solution {
+public:
+    bool equationsPossible(vector<string>& A) {
+        vector<int>nums(256);
+        for(int i=0;i<nums.size();i++){
+            nums[i]=i;
+        }
+        
+        for(string &s:A){
+            char a=s[0];
+            char b=s[3];
+            char sym=s[1];
+            if(sym=='='){
+                int r1=find(nums,a);
+                int r2=find(nums,b);
+                if(r1!=r2){
+                    nums[r1]=r2;
+                }
+            }
+        }
+        
+        for(string &s:A){
+            char a=s[0];
+            char b=s[3];
+            char sym=s[1];
+            if(sym=='!'){
+                int r1=find(nums,a);
+                int r2=find(nums,b);
+                if(r1==r2){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
+    
+    int find(vector<int>&nums,int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+};
