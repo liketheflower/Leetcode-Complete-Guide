@@ -201,6 +201,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #153. [Find Minimum in Rotated Sorted Array (M+) 1600](./code/153.txt) <br />
 #154. [Find Minimum in Rotated Sorted Array II (H-) 1700](./code/154.txt) <br />
 #302. [包含全部黑色像素的最小矩形 (H-) 1700](./code/302.txt) <br />
+#352. [ Data Stream as Disjoint Intervals (H-) 1700](./code/352.txt) <br />
 #373. [Find K Pairs with Smallest Sums (M) 1500](./code/373.txt) <br />
 #436. [ Find Right Interval (M) 1500](./code/436.txt) <br />
 #475. [Heaters (M) 1500](./code/475.txt) <br />
