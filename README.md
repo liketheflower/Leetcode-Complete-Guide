@@ -282,6 +282,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #902. [Numbers At Most N Given Digit Set (H) 1800](./code/902.txt) <br />
 #903. [Valid Permutations for DI Sequence (H) 1800](./code/903.txt) <br />
 #918. [Maximum Sum Circular Subarray (M) 1500](./code/918.txt) <br />
+#920. [Number of Music Playlists (H) 1800](./code/920.txt) <br />
 #940. [Distinct Subsequences II (H) 1800](./code/940.txt) <br />
 #943. [Find the Shortest Superstring (H) 1900](./code/943.txt) <br />
 #968. [Binary Tree Camera (H+) 2000](./code/968.txt) <br />
