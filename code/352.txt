@@ -1,0 +1,73 @@
+class SummaryRanges {
+public:
+    /** Initialize your data structure here. */
+    vector<vector<int>>A;
+    unordered_set<int>hash;
+    SummaryRanges() {
+        
+    }
+    
+    void addNum(int val) {
+        if(hash.find(val)!=hash.end())return;
+        hash.insert(val);
+        if(A.size()==0){
+            A.push_back({val,val});
+            return;
+        }
+        
+        int l=0,r=A.size()-1;
+        int pos=-1;
+        while(l<=r){
+            int mid=l+(r-l/2);
+            if(val>A[mid][1]){
+                pos=mid;
+                l=mid+1;
+            }else{
+                r=mid-1;
+            }
+        }
+        
+        if(pos==-1){
+            if(A[0][0]-1==val){
+                A[0][0]=val;
+            }else{
+                A.insert(A.begin()+0,{val,val});
+            }
+            
+        }else{
+            if(pos==A.size()-1){
+                if(val==A[A.size()-1][1]+1){
+                    A[A.size()-1][1]=val;
+                }else{
+                    A.push_back({val,val});
+                }
+            }else{
+                vector<int>&pre=A[pos];
+                vector<int>&next=A[pos+1];
+                if(next[0]-pre[1]==2){
+                    pre[1]=next[1];
+                    A.erase(A.begin()+pos+1);
+                }
+                else if(val-pre[1]==1){
+                    pre[1]=val;
+                }
+                else if(next[0]-val==1){
+                    next[0]=val;
+                }else{
+                     A.insert(A.begin()+pos+1,{val,val});
+                }
+            }
+        }
+    }
+    
+    vector<vector<int>> getIntervals() {
+        return A;
+    }
+};
+
+/**
+ * Your SummaryRanges object will be instantiated and called as such:
+ * SummaryRanges* obj = new SummaryRanges();
+ * obj->addNum(val);
+ * vector<vector<int>> param_2 = obj->getIntervals();
+ */
