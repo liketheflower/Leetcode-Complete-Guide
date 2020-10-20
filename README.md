@@ -487,6 +487,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 ---
 ### Union Find
 #947. [Most Stones Removed with Same Row or Column (M) 1500](./code/947.txt) <br />
+#990. [Satisfiability of Equality Equations (M) 1500](./code/990.txt) <br />
 #1202. [Smallest String With Swaps (M+) 1600](./code/1202.txt) <br />
 #1579. [Remove Max Number of Edges to Keep Graph Fully Traversable (H) 1900](./code/1579.txt) <br />
 #1584. [Min Cost to Connect All Points (M) 1500](./code/1584.txt) <br />
