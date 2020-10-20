@@ -317,6 +317,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 ### Math
 #60. [Permutation Sequence (M+) 1600](./code/60.txt) <br />
 #172. [Factorial Trailing Zeroes (M-) 1400](./code/172.txt) <br />
+#233. [Number of Digit One (H) 1900](./code/233.txt) <br />
 #396. [Rotate Function (M-) 1400](./code/396.txt) <br />
 #440. [ K-th Smallest in Lexicographical Order (H+) 1900](./code/440.txt) <br />
 #453. [Minimum Moves to Equal Array Elements (E+) 1100](./code/453.txt) <br />
