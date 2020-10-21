@@ -1,0 +1,7 @@
+# Write your MySQL query statement below   DATEDIFF
+
+SELECT id from
+(SELECT a.id as id,a.recordDate as adate,b.recordDate as bdate,
+ a.Temperature  as atemp,b.Temperature as btemp from
+Weather  as a,Weather  as b)as com
+where DATEDIFF(adate,bdate)=1 and atemp>btemp; 
