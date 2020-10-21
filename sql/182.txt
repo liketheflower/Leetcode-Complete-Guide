@@ -1,0 +1,5 @@
+SELECT Email from
+(SELECT Email, COUNT(Email) as num 
+from Person
+Group by Email) as temp
+where temp.num>1;
