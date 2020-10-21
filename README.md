@@ -868,7 +868,14 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  B. [ Nice Matrix (1300)](./contest/675B.txt) <br />
  C. [ Bargain (1700)](./contest/675C.txt) <br />
  D. [ Returning Home (2300) (Graph+Shortest Path) ](./contest/675D.txt) <br />
- 
+
+ ### Codeforces Round #677 (Div. 3)
+ A. [Boring Apartments  ](./contest/677A.txt) <br />
+ B. [ Yet Another Bookshelf ](./contest/677B.txt) <br />
+ C. [Dominant Piranha ](./contest/677C.txt) <br />
+ D. [ Districts Connection](./contest/677D.txt) <br />
+ E. [ Two Round Dances](./contest/677E.txt) <br />
+ F. [ Zero Remainder Sum](./contest/677F.txt) <br />
  
  
   ### Educational Codeforces Round 83 (Div. 2)
