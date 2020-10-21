@@ -1,0 +1,18 @@
+#left join
+SELECT c.Employee from
+(SELECT a.Name as Employee, a.ManagerId as ManagerId,b.Salary as Salary from
+Employee  as a
+left join
+Employee  as b ON
+a.ManagerId=b.Id and a.Salary>b.Salary) as c
+where c.ManagerId>0 and c.Salary>0;
+
+
+#general join
+
+
+SELECT a.Name as Employee from
+Employee  as a
+join
+Employee  as b ON
+a.ManagerId=b.Id and a.Salary>b.Salary;
