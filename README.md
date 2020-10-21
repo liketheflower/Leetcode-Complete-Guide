@@ -496,6 +496,9 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #1627. [Graph Connectivity With Threshold (H) 1800](./code/1627.txt) <br />
 
 ---
+### SQL
+
+---
 
 ---
 ### 力扣秋季赛
