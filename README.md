@@ -258,6 +258,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #188. [Best Time to Buy and Sell Stock IV (H) 1800](./code/188.txt) <br />
 #198. [House Robber (M) 1400](./code/198.txt) <br />
 #213. [House Robber II (M) 1500](./code/213.txt) <br />
+#279. [Perfect Square(M-) 1300](./code/279.txt) <br />
 #309. [Best Time to Buy and Sell Stock with Cooldown (M) 1500](./code/309.txt) <br />
 #312. [ Burst Balloons (H) 1800](./code/312.txt) <br />
 #322. [Coin Change (M-) 1400](./code/322.txt) <br />
