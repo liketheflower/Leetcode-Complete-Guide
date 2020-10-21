@@ -665,7 +665,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 57
+ 统计(1800+ 题量)： 58
  
   
   ### Beta Round #3 
@@ -876,7 +876,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  D. [ Districts Connection (1200)](./contest/677D.txt) <br />
  E. [ Two Round Dances (1300)](./contest/677E.txt) <br />
  F. [ Zero Remainder Sum (2100)](./contest/677F.txt) <br />
- 
+ G. [Reducing Delivery Cost (2100) (Shortest Path)](./contest/677G.txt) <br />
  
   ### Educational Codeforces Round 83 (Div. 2)
  1312B. [ Bogo Sort	(DIV 2) (1000) ](./code/1312B.txt) <br />
