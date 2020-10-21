@@ -665,7 +665,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 56
+ 统计(1800+ 题量)： 57
  
   
   ### Beta Round #3 
@@ -870,12 +870,12 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  D. [ Returning Home (2300) (Graph+Shortest Path) ](./contest/675D.txt) <br />
 
  ### Codeforces Round #677 (Div. 3)
- A. [Boring Apartments  ](./contest/677A.txt) <br />
- B. [ Yet Another Bookshelf ](./contest/677B.txt) <br />
- C. [Dominant Piranha ](./contest/677C.txt) <br />
- D. [ Districts Connection](./contest/677D.txt) <br />
- E. [ Two Round Dances](./contest/677E.txt) <br />
- F. [ Zero Remainder Sum](./contest/677F.txt) <br />
+ A. [Boring Apartments (800) ](./contest/677A.txt) <br />
+ B. [ Yet Another Bookshelf (800)](./contest/677B.txt) <br />
+ C. [Dominant Piranha (900)](./contest/677C.txt) <br />
+ D. [ Districts Connection (1200)](./contest/677D.txt) <br />
+ E. [ Two Round Dances (1300)](./contest/677E.txt) <br />
+ F. [ Zero Remainder Sum (2100)](./contest/677F.txt) <br />
  
  
   ### Educational Codeforces Round 83 (Div. 2)
