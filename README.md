@@ -502,6 +502,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #182. [Duplicate Emails (E)](./sql/182.txt) <br />
 #183. [Customers Who Never Order (E)](./sql/183.txt) <br />
 #197. [Rising Temperature (E)](./sql/197.txt) <br />
+#595. [Big Countries (E)](./sql/595.txt) <br />
 #596. [Classes More Than 5 Students (E)](./sql/596.txt) <br />
 #620. [Not Boring Movie (E)](./sql/620.txt) <br />
 
