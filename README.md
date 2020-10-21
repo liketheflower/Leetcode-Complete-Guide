@@ -501,6 +501,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #181. [Employees Earning More Than Their Managers (E)](./sql/181.txt) <br />
 #182. [Duplicate Emails (E)](./sql/182.txt) <br />
 #183. [Customers Who Never Order (E)](./sql/183.txt) <br />
+#197. [Rising Temperature (E)](./sql/197.txt) <br />
 
 ---
 
