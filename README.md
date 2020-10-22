@@ -326,7 +326,8 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #396. [Rotate Function (M-) 1400](./code/396.txt) <br />
 #440. [ K-th Smallest in Lexicographical Order (H+) 1900](./code/440.txt) <br />
 #453. [Minimum Moves to Equal Array Elements (E+) 1100](./code/453.txt) <br />
-#463. [Island Perimeter (E)) 900](./code/463.txt) <br />
+#463. [Island Perimeter (E) 900](./code/463.txt) <br />
+#553. [Optimal division (M-) 1300](./code/553.txt) <br />
 #598. [Range Addition II (E)) 900](./code/598.txt) <br />
 #836. [Rectangle Overlap (E+) 1100](./code/836.txt) <br />
 #869. [Reordered Power of 2 (M-) 1300](./code/869.txt) <br />
