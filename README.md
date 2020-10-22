@@ -264,6 +264,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #322. [Coin Change (M-) 1400](./code/322.txt) <br />
 #363. [Max Sum of Rectangle No Larger Than K (M) 1800](./code/363.txt) <br />
 #403. [Frog Jump (H-) 1700](./code/403.txt) <br />
+#413. [Arithmetic Slices (M) 1500](./code/413.txt) <br />
 #446. [Arithmetic Slices II - Subsequence (H-) 1700](./code/446.txt) <br />
 #466. [Count Repetition (H) 1800](./code/466.txt) <br />
 #514. [Freedom Trail (H) 1800](./code/514.txt) <br />
