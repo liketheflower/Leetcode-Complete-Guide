@@ -665,7 +665,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 58
+ 统计(1800+ 题量)： 59
  
   
   ### Beta Round #3 
@@ -949,6 +949,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   1392D. [Omkar and Bed Wars	(Global) (1700) DP ](./code/1392D.txt) <br />
   1392F. [Omkar and Landslide	(Global) (2400) Math+observation ](./code/1392F.txt) <br />
   1428E. [Carrots for Rabbits (2200) pq+greedy ](./code/1428E.txt) <br />
+  1428F. [Fruit Sequence(2400) Math+Monoti Stack](./code/1428F.txt) <br />
   311E. [Biologist	(MIN CUT) (2300) ](./code/311E.txt) <br />
   
   
