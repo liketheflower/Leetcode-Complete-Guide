@@ -340,6 +340,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #908. [Smallest Range I (E+) 1100](./code/908.txt) <br />
 #976. [Largest Perimeter Triangle (E) 900](./code/976.txt) <br />
 #1006. [ Clumsy Factorial (M) 1500](./code/1006.txt) <br />
+#1018. [ Binary Prefix Divisible By 5 (E) 1000](./code/1018.txt) <br />
 #1024. [Vedio Stichting (M) 1600](./code/1024.txt) <br />
 #1041. [Robot Bounded In Circle (M) 1500](./code/1041.txt) <br />
 #1103. [ Distribute Candies to People(E+) 1300](./code/1103.txt) <br />
