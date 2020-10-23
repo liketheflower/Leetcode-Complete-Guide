@@ -707,6 +707,11 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  D. [Pawn (1900) dp+打表](./contest/BETA40D.txt) <br />
  E. [3-Cycle (1900) (Graph+Thinking+Observation) ](./contest/BETA40E.txt) <br />
  
+  ### Beta Round #59 (Div. 2)
+ A. [ Sinking Ship (800) ](./contest/BETA59A.txt) <br />
+ B. [Settlers' Training (1200) ](./contest/BETA59B.txt) <br />
+ D. [Bulls and Cows (1700) ](./contest/BETA59C.txt) <br />
+
  
  ### Beta Round #63 (Div. 2)
  A. [ Young Physicist1 (1000) ](./contest/BETA63A.txt) <br />
