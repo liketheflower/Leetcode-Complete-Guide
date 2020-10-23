@@ -673,7 +673,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 60
+ 统计(1800+ 题量)： 61
  
   
   ### Beta Round #3 
@@ -710,8 +710,8 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   ### Beta Round #59 (Div. 2)
  A. [ Sinking Ship (800) ](./contest/BETA59A.txt) <br />
  B. [Settlers' Training (1200) ](./contest/BETA59B.txt) <br />
- D. [Bulls and Cows (1700) ](./contest/BETA59C.txt) <br />
-
+ C. [Bulls and Cows (1700) ](./contest/BETA59C.txt) <br />
+ D. [Dividing Islands (1900) (Greedy+Implmentation) ](./contest/BETA59D.txt) <br />
  
  ### Beta Round #63 (Div. 2)
  A. [ Young Physicist1 (1000) ](./contest/BETA63A.txt) <br />
