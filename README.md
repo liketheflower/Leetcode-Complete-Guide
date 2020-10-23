@@ -16,7 +16,7 @@ CF 分目测评估：
 ***(代码以 C++ 和 Java 进行题解)***<br/><br/>
 
 
-# [C++ Prep](./cpp) <br/><br/><br/>
+# [C++ Crash Course](./cpp) <br/><br/><br/>
 
 ---
 ### 程序员面试经典
