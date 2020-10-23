@@ -17,7 +17,7 @@ CF 分目测评估：
 
 
 
-### [c++ Prep] (./cpp/README.md) <br />
+### [c++ Prep] (./cpp) <br />
 
 
 
