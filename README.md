@@ -17,9 +17,6 @@ CF 分目测评估：
 
 
 
-### [c++ Prep] (./cpp) <br />
-
-
 
 ---
 ### 程序员面试经典
@@ -27,6 +24,7 @@ CF 分目测评估：
 #02. [ 判定是否互为字符重排 (E) 800](./interview/02.txt) <br />
 #03. [ URL化 (E) 800](./interview/03.txt) <br />
 #04. [ 回文排列 (E) 900](./interview/04.txt) <br />
+#. [c++ Prep] (./cpp) <br />
 
 ---
 ### Array
