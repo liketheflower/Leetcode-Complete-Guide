@@ -1,5 +1,5 @@
  # [想参加每日打卡挑战？ (Leetcode Daily Challange)](https://github.com/JunBinLiang/Leetcode-Complete-Guide/tree/master/challange) <br />
- # [C++ Crash Course](./cpp) <br/><br/><br/>
+ # [C++ Crash Course](./cpp) <br/><br/>
  
  
  <img src="images/LeetCode_logo.png" width=30% align=right />  
