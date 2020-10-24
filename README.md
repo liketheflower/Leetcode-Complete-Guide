@@ -712,6 +712,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  B. [Settlers' Training (1200) ](./contest/BETA59B.txt) <br />
  C. [Bulls and Cows (1700) ](./contest/BETA59C.txt) <br />
  D. [Dividing Islands (1900) (Greedy+Implmentation) ](./contest/BETA59D.txt) <br />
+ E. [Sweet Game (2000) (Game Theory+Matrix) ](./contest/BETA59E.txt) <br />
  
  ### Beta Round #63 (Div. 2)
  A. [ Young Physicist1 (1000) ](./contest/BETA63A.txt) <br />
