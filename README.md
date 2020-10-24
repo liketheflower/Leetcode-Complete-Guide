@@ -673,7 +673,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 61
+ 统计(1800+ 题量)： 63
  
   
   ### Beta Round #3 
@@ -763,6 +763,15 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  E. [Median String (1900)   (数学位算)](./code/550E.txt) <br />
  F. [Graph Without Long Directed Paths(1700)  (二分图解)](./code/550F.txt) <br />
  
+ 
+ ### Codeforces Round #595 (Div. 3)
+ A. [Yet Another Dividing into Teams (800) ](./contest/595A.txt) <br />
+ B1. [Booking Exchange (Easy) (1000) ](./contest/595B1.txt) <br />
+ B2. [Books Exchange (hard version) (1300) ](./contest/595B2.txt) <br />
+ C1. [Good Number (Easy) (1300) ](./contest/595C1.txt) <br />
+ C2. [Good Number  (hard version) (1500) ](./contest/595C2.txt) <br />
+ D1. [Too Many Segments (easy version) (1800) ](./contest/595D1.txt) <br />
+ D2. [Too Many Segments (hard version) (1800) ](./contest/595D2.txt) <br />
  
  
    ### Codeforces Round #605 (Div. 3)
