@@ -772,7 +772,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  C2. [Good Number  (hard version) (1500) ](./contest/595C2.txt) <br />
  D1. [Too Many Segments (easy version) (1800) ](./contest/595D1.txt) <br />
  D2. [Too Many Segments (hard version) (1800) ](./contest/595D2.txt) <br />
- 
+ E. [By Elevator or Stairs? (1700) (DP) ](./contest/595E.txt) <br />
  
    ### Codeforces Round #605 (Div. 3)
  A. [Three Friends (900) ](./contest/605A.txt) <br />
