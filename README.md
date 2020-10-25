@@ -419,6 +419,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #791. [Custom Sort String (M-) 1300](./code/791.txt) <br />
 #955. [Delete Columns to Make Sorted II (M+) 1600](./code/955.txt) <br />
 #1366. [Rank Teams by Votes (M+) 1600](./code/1366.txt) <br />
+#1629. [Slowest Key (E) 900](./code/1629.txt) <br />
 
 ---
 ### String
