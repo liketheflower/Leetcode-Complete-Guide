@@ -173,6 +173,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 #1540.[Can Convert String in K Moves  (M) 1500](./code/1540.txt) <br />
 #1591.[Strange Printer II  (H) 1800](./code/1591.txt) <br />
 #1605.[Find Valid Matrix Given Row and Column Sums  (M+) 1700](./code/1605.txt) <br />
+#1632.[Rank Transform of a Matrix (H+) 2000](./code/1632.txt) <br />
 #LCP 06. [拿硬币 (E) 800](./code/LCP06.txt) <br />
 
 ---
