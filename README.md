@@ -673,7 +673,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 64
+ 统计(1800+ 题量)： 65
  
   
   ### Beta Round #3 
@@ -773,6 +773,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  D1. [Too Many Segments (easy version) (1800) ](./contest/595D1.txt) <br />
  D2. [Too Many Segments (hard version) (1800) ](./contest/595D2.txt) <br />
  E. [By Elevator or Stairs? (1700) (DP) ](./contest/595E.txt) <br />
+ F. [Maximum Weight Subset (2200) (Tree DP) ](./contest/595F.txt) <br />
  
    ### Codeforces Round #605 (Div. 3)
  A. [Three Friends (900) ](./contest/605A.txt) <br />
