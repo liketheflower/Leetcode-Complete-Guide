@@ -676,7 +676,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 65
+ 统计(1800+ 题量)： 66
  
   
   ### Beta Round #3 
@@ -980,6 +980,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   1428E. [Carrots for Rabbits (2200) pq+greedy ](./code/1428E.txt) <br />
   1428F. [Fruit Sequence(2400) Math+Monoti Stack](./code/1428F.txt) <br />
   1428G1. [G1 - Lucky Numbers (Easy Version)(2900) 0-k knapsack to 0-1 knapsack](./code/1428G1.txt) <br />
+   1436D. [Bandit in a City	(1900) Tree+Greedy](./code/1436D.txt) <br />
   311E. [Biologist	(MIN CUT) (2300) ](./code/311E.txt) <br />
   
   
