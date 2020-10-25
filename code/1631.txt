@@ -1,0 +1,36 @@
+class Solution {
+    int dis[][];
+    Queue<int[]>q;
+    public int minimumEffortPath(int[][] A) {
+        q=new LinkedList<>();
+        dis=new int[A.length][A[0].length];
+        for(int i=0;i<dis.length;i++){
+            for(int j=0;j<dis[0].length;j++){
+                dis[i][j]=Integer.MAX_VALUE;
+            }
+        }
+        dis[0][0]=0;
+        q.add(new int[]{0,0});
+        
+        
+        while(q.size()!=0){
+            int top[]=q.poll();
+            int r=top[0],c=top[1];
+            add(A,r,c,r+1,c);
+            add(A,r,c,r-1,c);
+            add(A,r,c,r,c+1);
+            add(A,r,c,r,c-1);
+        }
+        return dis[A.length-1][A[0].length-1];
+    }
+    
+    public void add(int A[][],int prer,int prec,int r,int c){
+        if(r<0||c<0||r>=A.length||c>=A[0].length)return;
+        int cur=A[r][c];
+        int dif=Math.abs(A[prer][prec]-cur);
+        if(Math.max(dif,dis[prer][prec])<dis[r][c]){
+            dis[r][c]=Math.max(dif,dis[prer][prec]);
+            q.add(new int[]{r,c});
+        }
+    }
+}
