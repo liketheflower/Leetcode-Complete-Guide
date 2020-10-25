@@ -1,0 +1,132 @@
+class Solution {
+    public int[][] matrixRankTransform(int[][] A) {
+        int R=A.length;int C=A[0].length;
+        int cnt[]=new int[R*C];
+        int nums[]=new int[R*C];
+        for(int i=0;i<nums.length;i++){
+            nums[i]=i;
+        }
+        int res[][]=new int[R][C];
+        Map<Integer,List<int[]>>map=new HashMap<>();
+        List<int[]>sort=new ArrayList<>();
+        int id=0;
+        for(int i=0;i<A.length;i++){
+            for(int j=0;j<A[0].length;j++){
+                sort.add(new int[]{i,j,A[i][j]});
+                res[i][j]=1000000;
+                if(!map.containsKey(A[i][j]))map.put(A[i][j],new ArrayList<>());
+                map.get(A[i][j]).add(new int[]{i,j,id++});
+            }
+        }
+        Collections.sort(sort,(a,b)->{
+            return a[2]-b[2];
+        });
+        
+        for(Integer key:map.keySet()){
+            List<int[]>list=map.get(key);
+            Collections.sort(list,(a,b)->{
+                return a[0]-b[0];
+            });
+            for(int i=1;i<list.size();i++){
+                int cur[]=list.get(i);
+                int pre[]=list.get(i-1);
+                if(cur[0]==pre[0]){
+                    int r1=find(nums,pre[2]);
+                    int r2=find(nums,cur[2]);
+                    nums[r1]=r2;
+                }
+            }
+            Collections.sort(list,(a,b)->{
+                return a[1]-b[1];
+            });
+            for(int i=1;i<list.size();i++){
+                int cur[]=list.get(i);
+                int pre[]=list.get(i-1);
+                if(cur[1]==pre[1]){
+                    int r1=find(nums,pre[2]);
+                    int r2=find(nums,cur[2]);
+                    nums[r1]=r2;
+                }
+            }
+        }
+        
+        id=0;
+        List<int[]>all[]=new ArrayList[R*C];
+        for(int i=0;i<all.length;i++){
+            all[i]=new ArrayList<>();
+        }
+        for(int i=0;i<A.length;i++){
+            for(int j=0;j<A[0].length;j++){
+                int r=find(nums,id);id++;
+                all[r].add(new int[]{i,j});
+            }
+        }
+        
+        
+        int first[]=sort.get(0);
+        res[first[0]][first[1]]=1;
+        cnt[find(nums,first[0]*A[0].length+first[1])]=1;
+        
+        for(int j=1;j<sort.size();j++){
+            int top[]=sort.get(j);
+            int r=top[0];int c=top[1];
+            int index=0;
+            boolean need=false;
+            for(int i=0;i<A[0].length;i++){
+                if(i==c)continue;
+                if(A[r][i]<A[r][c]){
+                    int pos=r*A[0].length+i;
+                    int root=find(nums,pos);
+                    index=Math.max(index,cnt[root]);
+                }
+                else if(A[r][i]==A[r][c]&&res[r][i]!=1000000){
+                    int pos=r*A[0].length+i;
+                    int root=find(nums,pos);
+                    index=Math.max(index,cnt[root]-1);
+                }
+            }
+            for(int i=0;i<A.length;i++){
+                if(i==r)continue;
+                if(A[i][c]<A[r][c]){
+                    int pos=i*A[0].length+c;
+                    int root=find(nums,pos);
+                    index=Math.max(index,cnt[root]);
+                }else if(A[i][c]==A[r][c]&&res[i][c]!=1000000){
+                    int pos=i*A[0].length+c;
+                    int root=find(nums,pos);
+                    index=Math.max(index,cnt[root]-1);
+                }
+            }
+           
+            int pos=r*A[0].length+c;
+            int root=find(nums,pos);
+            cnt[root]=Math.max(cnt[root],index+1);
+            res[r][c]=index+1;
+            
+        }
+        
+        id=0;
+        for(int i=0;i<A.length;i++){
+            for(int j=0;j<A[0].length;j++){
+                int root=find(nums,id);
+                id++;
+                res[i][j]=cnt[root];
+                
+            }
+        }
+        return res;
+    }
+    
+    public int find(int nums[],int x){//union find => find method
+		if(nums[x]==x)return x;
+		int root=find(nums,nums[x]);
+		nums[x]=root;
+		return root;
+	}
+    
+}
+
+
+
+
+
