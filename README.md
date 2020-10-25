@@ -312,6 +312,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #1359. [Count All Valid Pickup and Delivery Options (H-) 1700](./code/1359.txt) <br />
 #1388. [Pizza With 3n Slices (H) 1800](./code/1388.txt) <br />
 #1402. [Reducing Dishes (H-) 1600](./code/1402.txt) <br />
+#1420. [Build Array Where You Can Find The Maximum Exactly K Comparisons(H) 1800](./code/1420.txt) <br />
 #1458. [Max Dot Product of Two Subsequences (H-) 1600](./code/1458.txt) <br />
 #1473. [Paint House III (H) 1800](./code/1473.txt) <br />
 #1478. [Allocate Mailboxes (H) 1900](./code/1478.txt) <br />
