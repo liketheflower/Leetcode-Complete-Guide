@@ -1,0 +1,66 @@
+class Solution {
+public:
+    unordered_map<string,int>hash;
+    int MAX=10000000;
+    int dp[65][1<<16][2];
+    vector<int> smallestSufficientTeam(vector<string>& A, vector<vector<string>>& people) {
+        vector<int>res;
+        memset(dp,-1,sizeof(dp));
+        for(int i=0;i<A.size();i++){
+            hash[A[i]]=i;
+        }
+        vector<int>P;
+        for(int i=0;i<people.size();i++){
+            vector<string>&skills=people[i];
+            int bit=0;
+            for(string& s:skills){
+                int id=hash[s];
+                bit=bit|(1<<id);
+            }
+            P.push_back(bit);
+        }
+        int state=(1<<(A.size()))-1;
+        int cnt=dfs(P,0,state);
+        
+        for(int i=0;i<P.size();i++){
+            if(dp[i][state][1]==i){
+                res.push_back(i);
+                state=off(state,P[i]);
+            }
+        }
+        
+        return res;
+    }
+    
+    int dfs(vector<int>&A,int index,int state){
+        if(index>=A.size()){
+            if(state==0)return 0;
+            return MAX;
+        }
+        if(dp[index][state][0]!=-1)return dp[index][state][0];
+        
+        int res=MAX;
+        int man=A[index];
+        
+        int a=dfs(A,index+1,state);
+        int b=1+dfs(A,index+1,off(state,man));
+        
+        res=a;
+        if(b<res){
+            res=b;
+            dp[index][state][1]=index;
+        }
+
+        dp[index][state][0]=res;
+        return res;
+    }
+    
+    int off(int state,int man){
+        for(int i=0;i<17;i++){
+            if((man&(1<<i))!=0&&(state&(1<<i))){
+                state=state^(1<<i);
+            }
+        }
+        return state;
+    }
+};
