@@ -980,6 +980,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   1062D. [Fun with Integers	(DIV 2) (1800) Graph ](./code/1062D.txt) <br />
   1392D. [Omkar and Bed Wars	(Global) (1700) DP ](./code/1392D.txt) <br />
   1392F. [Omkar and Landslide	(Global) (2400) Math+observation ](./code/1392F.txt) <br />
+  1423J. [Bubble Cup hypothesis (2400) dp ](./code/1423J.txt) <br />
   1428E. [Carrots for Rabbits (2200) pq+greedy ](./code/1428E.txt) <br />
   1428F. [Fruit Sequence(2400) Math+Monoti Stack](./code/1428F.txt) <br />
   1428G1. [G1 - Lucky Numbers (Easy Version)(2900) 0-k knapsack to 0-1 knapsack](./code/1428G1.txt) <br />
