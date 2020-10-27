@@ -1,0 +1,18 @@
+int solve(vector<int>& A, int k) {
+    int time=0;
+    int pre[100001];//time zone
+    memset(pre,-1,sizeof(pre));
+    for(int i=0;i<A.size();i++){
+        int cur=A[i];
+        if(pre[cur]==-1){
+            time++;
+        }else{
+            int dif=time-pre[cur];
+            int add=max(0,k-dif);
+            time+=(add+1);
+        }
+        pre[cur]=time;
+    }
+    
+    return time;
+}
