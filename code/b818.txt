@@ -1,0 +1,42 @@
+int solve(vector<int>& nums, int k) {
+    if(nums.size()<2)return 0;
+    int mod=1000000007;
+    long res=0;
+    vector<int>A(nums.size());
+    vector<int>B(nums.size());
+    vector<long>front(nums.size());
+    vector<long>back(nums.size());
+    long sum=0;
+    int cnt=0;
+    for(int i=0;i<nums.size();i++){
+        if(nums[i]<k){
+            cnt=0;
+        }else{
+            cnt++;
+            A[i]=cnt;
+        }
+        sum+=cnt;
+        front[i]=sum;
+    }
+    
+    cnt=0;sum=0;
+    
+    for(int i=nums.size()-1;i>=0;i--){
+        if(nums[i]<k){
+            cnt=0;
+        }else{
+            cnt++;
+            B[i]=cnt;
+        }
+        sum+=cnt;
+        back[i]=sum;
+    }
+    
+    for(int i=0;i<nums.size()-1;i++){
+        res+=(A[i]*back[i+1]);
+        res%=mod;
+    }
+    return (int)(res);
+    
+    
+}
