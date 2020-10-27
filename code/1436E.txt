@@ -1,3 +1,5 @@
+提示：看相同的两个数之间有没有出现 1 to A[i]-1,如果有，次数为mex。 枚举所有可能的mex，看看最后第一个不行的是哪一个
+
 // Don't place your source in a package
 import java.util.*;
 import java.lang.*;
