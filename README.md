@@ -229,6 +229,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 
 ---
 ### Tree
+#96. [ Unique Binary Search Trees (M+) 1600](./code/96.txt) <br />
 #98. [Validate Binary Search Tree (M) 1500](./code/98.txt) <br />
 #101. [Symmetric Tree (M-) 1300](./code/101.txt) <br />
 #110. [Balanced Binary Tree  (E) 900](./code/110.txt) <br />
