@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int memo[20][20];
+    int n;
+    int numTrees(int n) {
+        this->n=n;
+        memset(memo,-1,sizeof(memo));
+        return dfs(1,0);
+    }
+    
+    int dfs(int N,int level){
+        if(N==n){
+            return 1;
+        }
+        if(memo[N][level]!=-1)return memo[N][level];
+        int res=0;
+        for(int i=0;i<=level+1;i++){
+            res+=dfs(N+1,i);
+        }
+        memo[N][level]=res;
+        return res;
+    }
+};
