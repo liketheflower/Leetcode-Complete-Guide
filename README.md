@@ -677,6 +677,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  #B744. [Lowest Sum of Pair Larger than Target(M-)1400](./code/b744.txt) <br />
  #B747. [Minimum Time to Finish K Tasks(H-)1700](./code/b747.txt) <br />
  #B748. [Maximum XOR Queries(H)1800 (Trie)](./code/b748.txt) <br />
+ #B816. [Task Run(E+)1100 (Array)](./code/b816.txt) <br />
  
  <br /><br />
  
