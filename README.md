@@ -678,6 +678,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  #B747. [Minimum Time to Finish K Tasks(H-)1700](./code/b747.txt) <br />
  #B748. [Maximum XOR Queries(H)1800 (Trie)](./code/b748.txt) <br />
  #B816. [Task Run(E+)1100 (Array)](./code/b816.txt) <br />
+ #B818. [Non-Overlapping Pairs of Sublists(M+)1600 (Array)](./code/b818.txt) <br />
  
  <br /><br />
  
