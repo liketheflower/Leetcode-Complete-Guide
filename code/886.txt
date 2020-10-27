@@ -1,0 +1,40 @@
+class Solution {
+public:
+    int col[2100];
+    bool res=true;
+    bool possibleBipartition(int N, vector<vector<int>>& dislikes) {
+        vector<vector<int>>graph(N+1);
+        memset(col,-1,sizeof(col));
+        for(vector<int>&pair:dislikes){
+            int v1=pair[0];
+            int v2=pair[1];
+            graph[v1].push_back(v2);
+            graph[v2].push_back(v1);
+        }
+        for(int i=1;i<=N;i++){
+            if(col[i]==-1){
+                dfs(graph,i,0);
+            }
+        }
+        
+        return res;
+    }
+    
+    void dfs(vector<vector<int>>&graph,int cur,int color){
+        col[cur]=color;
+        int nextcolor=0;
+        if(color==0)nextcolor=1;
+        vector<int>&next=graph[cur];
+        
+        for(int &c:next){
+            if(col[c]!=-1){
+                if(col[c]==color){
+                    res=false;
+                    return;
+                }
+            }else{
+                dfs(graph,c,nextcolor);
+            }
+        }
+    }
+};
