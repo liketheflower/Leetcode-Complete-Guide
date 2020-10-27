@@ -1,0 +1,20 @@
+class Solution {
+public:
+    double champagneTower(int total, int query_row, int query_glass) {
+        double A[102][102];
+        memset(A,0,sizeof(A));
+        A[0][0]=total;
+        
+        for(int r=0;r<query_row;r++){
+            for(int i=0;i<=r;i++){
+                if(A[r][i]>1.0){
+                    double half=(A[r][i]-1.0)/2;
+                    A[r+1][i]+=half;
+                    A[r+1][i+1]+=half;
+                }
+            }
+        }
+        
+        return min(A[query_row][query_glass],1.0);
+    }
+};
