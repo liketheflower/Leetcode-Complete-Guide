@@ -978,7 +978,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   [2 SAT ](./code/776D.txt) <br />
   [ Kosaraju ](./template/Kosaraju.txt) <br />
    [ Fenwick Tree ](./template/BIT.txt) <br />
-   [ Hopcroft ](./template/Hopcroft.txt) <br />
+   [ Hopcroft  (Solving Maximum matching Cardinality for Bipartile Graph)](./template/Hopcroft.txt) <br />
      [ Min Seg ](./template/seg1.txt) <br />
   
   #  CodeForce 高分精算 
