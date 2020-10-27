@@ -687,7 +687,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 68
+ 统计(1800+ 题量)： 69
  
   
   ### Beta Round #3 
@@ -978,6 +978,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   [2 SAT ](./code/776D.txt) <br />
   [ Kosaraju ](./template/Kosaraju.txt) <br />
    [ Fenwick Tree ](./template/BIT.txt) <br />
+   [ Hopcroft ](./template/Hopcroft.txt) <br />
      [ Min Seg ](./template/seg1.txt) <br />
   
   #  CodeForce 高分精算 
