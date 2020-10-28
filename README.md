@@ -258,6 +258,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 
 ---
 ### DP
+#10. [Regular Expression Matching (H) 1900](./code/10.txt) <br />
 #44. [Wildcard Matching (H-) 1700](./code/44.txt) <br />
 #85. [Maximal Rectangle (H-) 1700](./code/85.txt) <br />
 #91. [Decode Way (M+) 1700](./code/91.txt) <br />
