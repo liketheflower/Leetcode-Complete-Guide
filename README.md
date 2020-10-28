@@ -284,6 +284,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
 #518. [Coin Change 2 (M) 1500](./code/518.txt) <br />
 #691. [Stickers to Spell Word (H) 1900](./code/691.txt) <br />
 #714. [Best Time to Buy and Sell Stock with Transaction Fee (M+) 1600](./code/714.txt) <br />
+#717. [1-bit and 2-bit Characters (E) 1000](./code/717.txt) <br />
 #718. [Maximum Length of Repeated Subarray (M) 1500](./code/718.txt) <br />
 #727. [Minimum Window Subsequence (H) 1800](./code/727.txt) <br />
 #740. [Delete and Earn (M) 1500](./code/740.txt) <br />
