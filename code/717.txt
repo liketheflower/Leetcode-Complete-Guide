@@ -1,0 +1,17 @@
+class Solution {
+public:
+    bool isOneBitCharacter(vector<int>& A) {
+        vector<bool>dp(A.size()+1);
+        dp[0]=true;
+        for(int i=1;i<=A.size();i++){
+            int b=A[i-1];
+            if(b==0){
+                dp[i]=dp[i-1];
+            }
+            if(i-2>=0&&A[i-2]==1&&i!=A.size()){
+                dp[i]=dp[i]|dp[i-2];
+            }
+        }
+        return dp[A.size()];
+    }
+};
