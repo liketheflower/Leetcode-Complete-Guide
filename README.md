@@ -181,6 +181,7 @@ Note: LinkedList can be used as stack or queue or deque<br/><br/>
 ### Graph
 #133. [Clone Graph(M) 1500](./code/133.txt) <br />
 #785. [Is Graph Bipartite?(M) 1500](./code/785.txt) <br />
+#802. [Find Eventual Safe States(M+) 1700](./code/802.txt) <br />
 #863. [All Nodes Distance K in Binary Tree(M) 1500](./code/863.txt) <br />
 #886. [Possible Bipartition(M) 1500](./code/886.txt) <br />
 #1042. [Flower Planting With No Adjacent(E+) 1300](./code/1042.txt) <br />
