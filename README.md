@@ -693,7 +693,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
  
  ---
  # :punch: CodeForce Contest
- 统计(1800+ 题量)： 72
+ 统计(1800+ 题量)： 73
  
   
   ### Beta Round #3 
@@ -1006,6 +1006,7 @@ Reference : https://ali-ibrahim137.github.io/competitive/programming/2020/01/02/
   1435E. [Solo mid Oracle	(2100) Math](./code/1435E.txt) <br />
    1436D. [Bandit in a City	(1900) Tree+Greedy](./code/1436D.txt) <br />
    1436E. [Complicated Computations	(2400) Segment Tree+Thinking](./code/1436E.txt) <br />
+   1437C. [Chef Monocarp	(1800) DP](./code/1437C.txt) <br />
   311E. [Biologist	(MIN CUT) (2300) ](./code/311E.txt) <br />
   
   
