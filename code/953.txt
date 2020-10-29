@@ -1,0 +1,25 @@
+class Solution {
+public:
+    bool isAlienSorted(vector<string>& words, string order) {
+        vector<int>A(26);
+        for(int i=0;i<order.size();i++){
+            A[order[i]-'a']=i;
+        }
+        vector<string>S;
+        for(string &w:words){
+            string s="";
+            for(int i=0;i<w.size();i++){
+                int pos=A[w[i]-'a'];
+                char c=(char)(pos+'a');
+                s.push_back(c);
+            }
+            S.push_back(s);
+        }
+        
+        for(int i=1;i<S.size();i++){
+            if(S[i]<S[i-1])return false;
+        }
+        
+        return true;
+    }
+};
