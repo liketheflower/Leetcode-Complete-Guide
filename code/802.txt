@@ -1,0 +1,59 @@
+class Solution {
+public:
+    int state[10010];//[0:not visit 1:stack  2:visit]
+    bool cycle[10010];
+    bool good=true;
+    vector<int> eventualSafeNodes(vector<vector<int>>& graph) {
+        vector<int>res;
+        memset(state,0,sizeof(state));
+        memset(cycle,false,sizeof(cycle));
+        int n=graph.size();
+        
+        for(int i=0;i<n;i++){
+            if(state[i]==0){
+                good=true;
+                dfs(graph,i);
+                
+            }
+        }
+        for(int i=0;i<n;i++){
+            if(!cycle[i])res.push_back(i);
+        }
+        
+        return res;
+    }
+    
+    
+    void dfs(vector<vector<int>>& graph,int root){
+       
+        state[root]=1;
+        vector<int>&childs=graph[root];
+        
+        for(int c:childs){
+            if(state[c]==2){
+                if(cycle[c]){
+                    cycle[root]=true;
+                    good=false;
+                    break;
+                }
+                continue;
+            }
+            
+            if(state[c]==0){
+                dfs(graph,c);
+            }
+            else{
+                good=false;
+                cycle[root]=true;
+                break;
+            }
+            
+            if(!good){
+                cycle[root]=true;
+                break;
+            }
+        }
+        state[root]=2;
+        
+    }
+};
