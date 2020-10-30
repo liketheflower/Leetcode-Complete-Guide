@@ -1,0 +1,15 @@
+class Solution {
+    public boolean differByOne(String[] A) {
+        int m=A[0].length();
+        for(int i=0;i<m;i++){
+            Set<String>set=new HashSet<>();
+            for(String w:A){
+                String s=w.substring(0,i)+w.substring(i+1);
+                if(set.contains(s))return true;
+                set.add(s);
+            }
+        }
+        
+        return false;
+    }
+}
