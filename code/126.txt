@@ -1,0 +1,90 @@
+class Solution {
+public:
+    vector<vector<string>>res;
+
+    vector<vector<string>> findLadders(string begin, string end, vector<string>& A) {
+        int eindex=-1;
+        vector<int>dis(A.size()+5,INT_MAX);
+        for(int i=0;i<A.size();i++){
+            if(A[i]==end)eindex=i;
+        }
+        if(eindex==-1)return res;
+        
+        vector<unordered_set<int>>graph(A.size());
+        A.push_back(begin);
+        
+        vector<vector<int>>adjecent(A.size());
+        
+        for(int i=0;i<A.size();i++){
+            for(int j=i+1;j<A.size();j++){
+                if(check(A[i],A[j])){
+                    adjecent[i].push_back(j);
+                    adjecent[j].push_back(i);
+                }
+            }
+        }
+        
+        
+        bool finish=false;
+        int deep=-1;
+        queue<vector<int>>q;
+        q.push({(int)(A.size()-1),0});
+        dis[(int)(A.size()-1)]=0;
+        
+        while(q.size()!=0){
+            vector<int>p=q.front();
+            q.pop();
+            int index=p[0];
+            int level=p[1];
+            
+            if(finish&&level>deep)break;
+            if(index==eindex){
+                deep=level;
+                finish=true;
+            }
+           
+            vector<int>&next=adjecent[index];
+           
+            for(int c:next){
+                 if(level+1<=dis[c]){
+                    //cout<<c<<"  ";
+                    dis[c]=level+1;
+                    q.push({c,level+1});
+                    graph[c].insert(index);
+                }
+            }
+        }
+        
+        vector<string>cur;
+        cur.push_back(end);
+        dfs(A,graph,eindex,cur);
+        
+        return res;
+    }
+    
+    void dfs(vector<string>&A,vector<unordered_set<int>>&graph,int root,vector<string>&cur){
+        if(root==A.size()-1){
+            reverse(cur.begin(),cur.end());
+            res.push_back(cur);
+            reverse(cur.begin(),cur.end());
+            return;
+        }
+        unordered_set<int>&next=graph[root];
+        for(auto it=next.begin();it!=next.end();it++){
+            int c=*it;
+            cur.push_back(A[c]);
+            dfs(A,graph,c,cur);
+            cur.pop_back();
+        }
+    }
+    
+  
+    bool check(string &s,string& t){
+        int cnt=0;
+        for(int i=0;i<s.size();i++){
+            if(s[i]!=t[i])cnt++;
+            if(cnt>1)return false;
+        }
+        return true;
+    }
+};
