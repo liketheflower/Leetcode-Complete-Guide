@@ -33,6 +33,7 @@ CF 分目测评估：
 #252. [Meeting Rooms (E) 900](./code/252.txt) <br />
 #253. [Meeting Rooms (M) 1500](./code/253.txt) <br />
 #276. [Paint Fence (E+) 1200](./code/276.txt) <br />
+#582. [Kill Process (M-) 1400](./code/582.txt) <br />
 
 ---
 ### Array
